@@ -4,6 +4,7 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a, .hero-actions a, .final-cta a, .pricing-card a");
 const form = document.querySelector("[data-early-form]");
 const successMessage = document.querySelector("[data-form-success]");
+const errorMessage = document.querySelector("[data-form-error]");
 const storageKey = "filterWizardEarlyAccess";
 
 function setHeaderState() {
@@ -63,7 +64,7 @@ function saveSubmission(submission) {
   localStorage.setItem(storageKey, JSON.stringify(submissions));
 }
 
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
   event.preventDefault();
 
   if (!form.checkValidity()) {
@@ -73,6 +74,7 @@ function handleFormSubmit(event) {
 
   const formData = new FormData(form);
   const photo = formData.get("filterPhoto");
+  const submitButton = form.querySelector(".form-submit");
   const submission = {
     name: formData.get("name"),
     email: formData.get("email"),
@@ -89,15 +91,41 @@ function handleFormSubmit(event) {
     submittedAt: new Date().toISOString()
   };
 
-  saveSubmission(submission);
-  console.log("Filter Wizard early access submission:", submission);
+  successMessage.hidden = true;
+  errorMessage.hidden = true;
+  submitButton.disabled = true;
+  submitButton.textContent = "Joining...";
 
-  successMessage.hidden = false;
-  form.reset();
-  successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Formspree submission failed with status ${response.status}`);
+    }
+
+    saveSubmission(submission);
+    console.log("Filter Wizard early access submission:", submission);
+
+    successMessage.hidden = false;
+    form.reset();
+    successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } catch (error) {
+    console.error("Filter Wizard Formspree submission error:", error);
+    errorMessage.hidden = false;
+    errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Join Early Access";
+  }
 }
 
-if (header && navToggle && navMenu && form && successMessage) {
+if (header && navToggle && navMenu && form && successMessage && errorMessage) {
   setHeaderState();
   setupRevealAnimations();
 
@@ -123,5 +151,6 @@ if (header && navToggle && navMenu && form && successMessage) {
 
   form.addEventListener("input", () => {
     successMessage.hidden = true;
+    errorMessage.hidden = true;
   });
 }

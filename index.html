@@ -199,7 +199,8 @@
             <span>Join the early access list and we'll contact you before the first limited batch opens.</span>
           </div>
         </div>
-        <form class="signup-form reveal" data-early-form>
+        <form class="signup-form reveal" action="https://formspree.io/f/mzdlpbwp" method="POST" enctype="multipart/form-data" data-early-form>
+          <input type="hidden" name="_subject" value="New Filter Wizard early access signup">
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
@@ -255,6 +256,7 @@
           </div>
           <button class="btn btn-primary form-submit" type="submit">Join Early Access</button>
           <p class="form-success" role="status" aria-live="polite" data-form-success hidden>You're on the Filter Wizard early access list. We'll contact you before the first limited batch opens.</p>
+          <p class="form-error" role="alert" data-form-error hidden>Something went wrong while joining the list. Please try again in a moment.</p>
         </form>
       </div>
     </section>

@@ -794,6 +794,12 @@ input[type="file"] {
   margin-top: 4px;
 }
 
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 .form-success {
   margin: 0;
   padding: 14px 16px;
@@ -801,6 +807,16 @@ input[type="file"] {
   border-radius: 10px;
   color: var(--green-dark);
   background: #e8f8ef;
+  font-weight: 750;
+}
+
+.form-error {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid #f0b4b4;
+  border-radius: 10px;
+  color: #9f2f2f;
+  background: #fff0f0;
   font-weight: 750;
 }
 
