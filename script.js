@@ -4,6 +4,7 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a, .hero-actions a, .final-cta a, .pricing-card a");
 const form = document.querySelector("[data-early-form]");
 const successMessage = document.querySelector("[data-form-success]");
+const storageKey = "filterWizardEarlyAccess";
 
 function setHeaderState() {
   header.classList.toggle("scrolled", window.scrollY > 8);
@@ -49,9 +50,9 @@ function setupRevealAnimations() {
 
 function getStoredSubmissions() {
   try {
-    return JSON.parse(localStorage.getItem("filterflowEarlyAccess")) || [];
+    return JSON.parse(localStorage.getItem(storageKey)) || [];
   } catch (error) {
-    console.warn("FilterFlow submissions could not be read from localStorage.", error);
+    console.warn("Filter Wizard submissions could not be read from localStorage.", error);
     return [];
   }
 }
@@ -59,11 +60,16 @@ function getStoredSubmissions() {
 function saveSubmission(submission) {
   const submissions = getStoredSubmissions();
   submissions.push(submission);
-  localStorage.setItem("filterflowEarlyAccess", JSON.stringify(submissions));
+  localStorage.setItem(storageKey, JSON.stringify(submissions));
 }
 
 function handleFormSubmit(event) {
   event.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
 
   const formData = new FormData(form);
   const photo = formData.get("filterPhoto");
@@ -84,32 +90,38 @@ function handleFormSubmit(event) {
   };
 
   saveSubmission(submission);
-  console.log("FilterFlow early access submission:", submission);
+  console.log("Filter Wizard early access submission:", submission);
 
   successMessage.hidden = false;
   form.reset();
   successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
-setHeaderState();
-setupRevealAnimations();
+if (header && navToggle && navMenu && form && successMessage) {
+  setHeaderState();
+  setupRevealAnimations();
 
-window.addEventListener("scroll", setHeaderState, { passive: true });
+  window.addEventListener("scroll", setHeaderState, { passive: true });
 
-navToggle.addEventListener("click", toggleNav);
+  navToggle.addEventListener("click", toggleNav);
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (navMenu.classList.contains("open")) {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navMenu.classList.contains("open")) {
+        closeNav();
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navMenu.classList.contains("open")) {
       closeNav();
     }
   });
-});
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && navMenu.classList.contains("open")) {
-    closeNav();
-  }
-});
+  form.addEventListener("submit", handleFormSubmit);
 
-form.addEventListener("submit", handleFormSubmit);
+  form.addEventListener("input", () => {
+    successMessage.hidden = true;
+  });
+}
