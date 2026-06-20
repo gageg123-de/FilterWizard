@@ -73,21 +73,11 @@ async function handleFormSubmit(event) {
   }
 
   const formData = new FormData(form);
-  const photo = formData.get("filterPhoto");
   const submitButton = form.querySelector(".form-submit");
   const submission = {
     name: formData.get("name"),
     email: formData.get("email"),
     phone: formData.get("phone"),
-    customerType: formData.get("customerType"),
-    filterCount: formData.get("filterCount"),
-    filterSize: formData.get("filterSize"),
-    frequency: formData.get("frequency"),
-    filterPhoto: photo && photo.name ? {
-      name: photo.name,
-      type: photo.type,
-      size: photo.size
-    } : null,
     submittedAt: new Date().toISOString()
   };
 
