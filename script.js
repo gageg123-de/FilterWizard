@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a, .hero-actions a, .final-cta a, .pricing-card a");
+const planButtons = document.querySelectorAll("[data-plan]");
 const form = document.querySelector("[data-early-form]");
 const successMessage = document.querySelector("[data-form-success]");
 const errorMessage = document.querySelector("[data-form-error]");
@@ -64,6 +65,28 @@ function saveSubmission(submission) {
   localStorage.setItem(storageKey, JSON.stringify(submissions));
 }
 
+function handlePlanSelection(event) {
+  event.preventDefault();
+
+  const selectedPlan = event.currentTarget.dataset.plan;
+  const matchingOption = Array.from(form.querySelectorAll('input[name="selectedPlan"]'))
+    .find((input) => input.value === selectedPlan);
+  const formSection = document.querySelector("#early-access");
+
+  if (matchingOption) {
+    matchingOption.checked = true;
+  }
+
+  formSection.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start"
+  });
+
+  window.setTimeout(() => {
+    form.querySelector("#name").focus({ preventScroll: true });
+  }, 450);
+}
+
 async function handleFormSubmit(event) {
   event.preventDefault();
 
@@ -73,11 +96,14 @@ async function handleFormSubmit(event) {
   }
 
   const formData = new FormData(form);
+  const selectedPlan = formData.get("selectedPlan") || "Not specified";
+  formData.set("selectedPlan", selectedPlan);
   const submitButton = form.querySelector(".form-submit");
   const submission = {
     name: formData.get("name"),
     email: formData.get("email"),
     phone: formData.get("phone"),
+    selectedPlan,
     submittedAt: new Date().toISOString()
   };
 
@@ -129,6 +155,10 @@ if (header && navToggle && navMenu && form && successMessage && errorMessage) {
         closeNav();
       }
     });
+  });
+
+  planButtons.forEach((button) => {
+    button.addEventListener("click", handlePlanSelection);
   });
 
   document.addEventListener("keydown", (event) => {

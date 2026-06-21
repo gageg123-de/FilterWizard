@@ -166,7 +166,7 @@
               <li>Size tracking</li>
               <li>Delivery reminders</li>
             </ul>
-            <a class="btn btn-secondary" href="#early-access">Reserve Starter</a>
+            <a class="btn btn-secondary" href="#early-access" data-plan="Starter">Reserve Starter</a>
           </article>
           <article class="pricing-card popular reveal">
             <div class="popular-badge">Most Popular</div>
@@ -178,7 +178,7 @@
               <li>Quarterly delivery planning</li>
               <li>Photo-based size support</li>
             </ul>
-            <a class="btn btn-primary" href="#early-access">Reserve Whole Home</a>
+            <a class="btn btn-primary" href="#early-access" data-plan="Whole Home">Reserve Whole Home</a>
           </article>
           <article class="pricing-card reveal">
             <h3>Reminder Only</h3>
@@ -189,7 +189,7 @@
               <li>Saved home filter profile</li>
               <li>One-click reorder help</li>
             </ul>
-            <a class="btn btn-secondary" href="#early-access">Reserve Reminder Only</a>
+            <a class="btn btn-secondary" href="#early-access" data-plan="Reminder Only">Reserve Reminder Only</a>
           </article>
         </div>
         <p class="pricing-note reveal">Early access pricing. Final pricing may vary based on filter size, quantity, and shipping.</p>
@@ -221,6 +221,28 @@
             <label for="phone">Phone number</label>
             <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
           </div>
+          <fieldset class="plan-interest">
+            <legend>Which option interests you most?</legend>
+            <p class="field-helper">Optional, but it helps us understand what homeowners want first.</p>
+            <div class="plan-options">
+              <label>
+                <input type="radio" name="selectedPlan" value="Starter">
+                <span><strong>Starter</strong><small>$19.99 every 90 days</small></span>
+              </label>
+              <label>
+                <input type="radio" name="selectedPlan" value="Whole Home">
+                <span><strong>Whole Home</strong><small>$29.99 every 90 days</small></span>
+              </label>
+              <label>
+                <input type="radio" name="selectedPlan" value="Reminder Only">
+                <span><strong>Reminder Only</strong><small>$4.99/month</small></span>
+              </label>
+              <label>
+                <input type="radio" name="selectedPlan" value="Not Sure Yet">
+                <span><strong>Not sure yet</strong><small>Help me decide later</small></span>
+              </label>
+            </div>
+          </fieldset>
           <button class="btn btn-primary form-submit" type="submit">Join Early Access</button>
           <p class="form-trust">No spam. Just early access updates.</p>
           <p class="form-success" role="status" aria-live="polite" data-form-success hidden>You're on the Filter Wizard early access list. We'll contact you before the first limited batch opens.</p>

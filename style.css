@@ -749,44 +749,69 @@ input[type="file"] {
   padding: 11px;
 }
 
-.frequency-field {
+.plan-interest {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-.frequency-options {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 8px;
+.field-helper {
+  margin: 4px 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-.frequency-options label {
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.plan-options label {
   cursor: pointer;
 }
 
-.frequency-options input {
+.plan-options input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.frequency-options span {
+.plan-options span {
   display: grid;
   place-items: center;
-  min-height: 48px;
+  min-height: 68px;
+  padding: 10px 12px;
   border: 1px solid #cddde7;
   border-radius: 10px;
   background: #fbfdff;
-  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.frequency-options input:checked + span {
+.plan-options span:hover {
+  transform: translateY(-1px);
+  border-color: #aacde2;
+}
+
+.plan-options small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.plan-options input:checked + span {
   color: var(--blue-dark);
   background: var(--blue-soft);
   border-color: var(--blue);
   box-shadow: 0 0 0 4px rgba(36, 119, 212, 0.1);
+}
+
+.plan-options input:focus-visible + span {
+  outline: 3px solid rgba(47, 179, 109, 0.42);
+  outline-offset: 3px;
 }
 
 .form-submit {
@@ -1176,7 +1201,7 @@ details p {
   .card-grid.five,
   .benefit-list,
   .form-row.two-col,
-  .frequency-options {
+  .plan-options {
     grid-template-columns: 1fr;
   }
 
