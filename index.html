@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Filter Wizard helps homeowners find the right air filter size, remember replacement dates, and reserve automatic filter deliveries.">
-  <title>Filter Wizard | Never Guess Your Air Filter Size Again</title>
+  <title>Filter Wizard | Never Forget Your Air Filter Again</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64VWBW3NHS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -28,9 +28,7 @@
       </button>
       <div class="nav-links" data-nav-menu>
         <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#early-access">Early Access</a>
+        <a class="nav-cta" href="#early-access" data-scroll-to-hero>Join Early Access</a>
       </div>
     </nav>
   </header>
@@ -39,318 +37,100 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Home air filter subscriptions</p>
-          <h1>Never Guess Your Air Filter Size Again</h1>
-          <p class="hero-subtitle">Filter Wizard helps you identify your filter size, remember replacement dates, and reserve the right filters before your HVAC system starts begging for mercy.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#early-access">Join Early Access</a>
-            <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
-          </div>
-          <p class="trust-copy">Built for busy homeowners, landlords, first-time buyers, and property managers.</p>
+          <p class="eyebrow">Simple home filter care</p>
+          <h1>Never Forget Your Air Filter Again</h1>
+          <p class="hero-subtitle">Get the right filter delivered on schedule.</p>
+          <ul class="hero-benefits">
+            <li>We help identify your filter size</li>
+            <li>Automatic replacement reminders</li>
+            <li>Delivery on your schedule</li>
+          </ul>
+          <form class="hero-signup" id="early-access" action="https://formspree.io/f/mzdlpbwp" method="POST" data-early-form data-form-location="hero">
+            <input type="hidden" name="_subject" value="New Filter Wizard early access signup">
+            <input type="hidden" name="source" value="Hero Email Form">
+            <div class="hero-form-row">
+              <label class="sr-only" for="hero-email">Email address</label>
+              <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+              <button class="btn btn-primary form-submit" type="submit">Join Early Access</button>
+            </div>
+            <p class="hero-form-trust">No payment required. Founding members get first access.</p>
+            <p class="form-success" role="status" aria-live="polite" data-form-success hidden>You're on the Filter Wizard early access list. We'll contact you before the first limited batch opens.</p>
+            <p class="form-error" role="alert" data-form-error hidden>Something went wrong while joining the list. Please try again in a moment.</p>
+          </form>
+          <p class="founding-copy">Founding members receive first access when delivery begins.</p>
         </div>
-
         <div class="hero-visual image-card reveal">
           <img class="hero-image" src="assets/images/hero-filter-wizard-homeowner.png" alt="Homeowner checking phone while replacing a clean HVAC air filter." width="1536" height="1024" fetchpriority="high">
-          <div class="hero-proof-panel" aria-label="Filter Wizard preview details">
-            <span><strong>Size Saved</strong><small>20x20x1</small></span>
-            <span><strong>Next Change</strong><small>90 Days</small></span>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section problem-section" id="problem">
+    <section class="section benefits-section compact-section" id="benefits">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">The hidden maintenance chore</p>
-          <h2>A small chore can turn into an expensive maintenance problem.</h2>
-          <p>Replacement dates slip, filter sizes get forgotten, and dirty filters can make the system work harder than it should.</p>
+        <div class="compact-heading reveal">
+          <p class="eyebrow">Less guesswork, better timing</p>
+          <h2>Why Homeowners Use Filter Wizard</h2>
         </div>
-        <div class="problem-feature image-card reveal">
-          <img class="problem-image" src="assets/images/dirty-vs-clean-filter.png" alt="Dirty HVAC filter compared with a clean replacement filter." width="1536" height="1024" loading="lazy">
-          <div>
-            <p class="eyebrow">Clean filter, clearer choice</p>
-            <h3>See the difference before your HVAC system feels it.</h3>
-            <p>A fresh filter is a small household habit that supports better airflow, easier maintenance, and fewer last-minute hardware store runs.</p>
-          </div>
-        </div>
-        <div class="card-grid four">
-          <article class="info-card reveal">
-            <div class="icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 7h8M8 12h8M8 17h5"/><path d="M5 3h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/></svg>
-            </div>
-            <h3>Dates get missed</h3>
-            <p>Most people do not remember the exact day their filter should be replaced, especially when life gets busy.</p>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">01</span>
+            <h3>Never forget replacement dates</h3>
           </article>
-          <article class="info-card reveal">
-            <div class="icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 12h10"/><path d="m11 8 4 4-4 4"/><path d="M18 7v10"/></svg>
-            </div>
-            <h3>Sizes are unclear</h3>
-            <p>Many homeowners do not know the exact filter size until they pull the old one out and read the frame.</p>
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">02</span>
+            <h3>Find the right filter size</h3>
           </article>
-          <article class="info-card reveal">
-            <div class="icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3>Airflow suffers</h3>
-            <p>A dirty filter can reduce airflow, making rooms less comfortable and the system less efficient.</p>
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">03</span>
+            <h3>Avoid reduced airflow</h3>
           </article>
-          <article class="info-card reveal">
-            <div class="icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-3 3-3-3 3-3Z"/></svg>
-            </div>
-            <h3>HVAC systems work harder</h3>
-            <p>Poor filter maintenance can add strain to equipment that is already expensive to repair or replace.</p>
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">04</span>
+            <h3>Get filters delivered on schedule</h3>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how-it-works">
+    <section class="section comparison-section">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>A simple system for keeping clean filters on schedule.</h2>
-          <p>Filter Wizard is designed around the way real households manage maintenance: quickly, clearly, and with minimal effort.</p>
+        <div class="compact-heading reveal">
+          <p class="eyebrow">A difference you can see</p>
+          <h2>What Happens When Filters Are Forgotten?</h2>
+          <p>Most homeowners do not realize how dirty their filter gets before it is replaced.</p>
         </div>
-        <div class="steps">
-          <article class="step-card reveal">
-            <div class="step-media">
-              <img class="step-image step-image-contain" src="assets/images/upload-filter-photo.png" alt="Smartphone taking a photo of an HVAC air filter size label." width="1536" height="1024" loading="lazy">
-            </div>
-            <div class="step-body">
-              <span class="step-number">01</span>
-              <h3>Upload a Photo</h3>
-              <p>Send a photo of your current filter label or type in the dimensions if you already know them.</p>
-            </div>
-          </article>
-          <article class="step-card reveal">
-            <div class="step-media">
-              <img class="step-image step-image-contain step-phone-image" src="assets/images/filter-size-identified.png" alt="Phone screen showing saved air filter size and replacement status." width="1024" height="1536" loading="lazy">
-            </div>
-            <div class="step-body">
-              <span class="step-number">02</span>
-              <h3>Filter Size Identified</h3>
-              <p>Select a 30, 60, or 90 day cadence based on your home, pets, and HVAC use.</p>
-            </div>
-          </article>
-          <article class="step-card reveal">
-            <div class="step-media">
-              <img class="step-image step-image-cover" src="assets/images/filter-delivery-box.png" alt="Filter Wizard delivery box on a front doorstep." width="1536" height="1024" loading="lazy">
-            </div>
-            <div class="step-body">
-              <span class="step-number">03</span>
-              <h3>Filters Delivered</h3>
-              <p>Your replacement is planned before the next change date, so the filter is ready when launch shipments begin.</p>
-            </div>
-          </article>
-        </div>
+        <figure class="comparison-card reveal">
+          <img src="assets/images/before-after-dirty-clean-filter.png" alt="Dirty clogged HVAC filter beside a clean replacement filter." width="1536" height="1024" loading="lazy">
+          <figcaption>A clogged filter can reduce airflow, increase HVAC strain, and make your system work harder.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section pricing-section" id="pricing">
+    <section class="section compact-section" id="how-it-works">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Early access pricing</p>
-          <h2>Pick the plan that matches your home.</h2>
-          <p>These launch validation plans help us learn what homeowners need before the first limited batch opens.</p>
+        <div class="compact-heading reveal">
+          <p class="eyebrow">Three simple steps</p>
+          <h2>How It Works</h2>
         </div>
-        <div class="pricing-grid">
-          <article class="pricing-card reveal">
-            <h3>Starter</h3>
-            <p class="price">$19.99 <span>every 90 days</span></p>
-            <p>Best for homes with one standard filter.</p>
-            <ul>
-              <li>One standard replacement filter</li>
-              <li>Size tracking</li>
-              <li>Delivery reminders</li>
-            </ul>
-            <a class="btn btn-secondary" href="#early-access" data-plan="Starter">Reserve Starter</a>
-          </article>
-          <article class="pricing-card popular reveal">
-            <div class="popular-badge">Most Popular</div>
-            <h3>Whole Home</h3>
-            <p class="price">$29.99 <span>every 90 days</span></p>
-            <p>Best for homes with multiple filters.</p>
-            <ul>
-              <li>Multiple filter tracking</li>
-              <li>Quarterly delivery planning</li>
-              <li>Photo-based size support</li>
-            </ul>
-            <a class="btn btn-primary" href="#early-access" data-plan="Whole Home">Reserve Whole Home</a>
-          </article>
-          <article class="pricing-card reveal">
-            <h3>Reminder Only</h3>
-            <p class="price">$4.99 <span>/month</span></p>
-            <p>Best for people who want size tracking and replacement reminders before buying filters.</p>
-            <ul>
-              <li>Reminder-only support</li>
-              <li>Saved home filter profile</li>
-              <li>One-click reorder help</li>
-            </ul>
-            <a class="btn btn-secondary" href="#early-access" data-plan="Reminder Only">Reserve Reminder Only</a>
-          </article>
-        </div>
-        <p class="pricing-note reveal">Early access pricing. Final pricing may vary based on filter size, quantity, and shipping.</p>
-      </div>
-    </section>
-
-    <section class="section form-section" id="early-access">
-      <div class="container form-layout">
-        <div class="form-copy reveal">
-          <p class="eyebrow">Reserve your spot</p>
-          <h2>Reserve Your Filter Wizard Early Access Spot</h2>
-          <p>Join the early access list. We'll contact you before the first limited batch opens and confirm your filter size later.</p>
-          <div class="mini-benefit">
-            <strong>Simple early access</strong>
-            <span>Join the early access list and we'll contact you before the first limited batch opens.</span>
-          </div>
-        </div>
-        <form class="signup-form reveal" action="https://formspree.io/f/mzdlpbwp" method="POST" enctype="multipart/form-data" data-early-form>
-          <input type="hidden" name="_subject" value="New Filter Wizard early access signup">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="form-row">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
-          </div>
-          <fieldset class="plan-interest">
-            <legend>Which option interests you most?</legend>
-            <p class="field-helper">Optional, but it helps us understand what homeowners want first.</p>
-            <div class="plan-options">
-              <label>
-                <input type="radio" name="selectedPlan" value="Starter">
-                <span><strong>Starter</strong><small>$19.99 every 90 days</small></span>
-              </label>
-              <label>
-                <input type="radio" name="selectedPlan" value="Whole Home">
-                <span><strong>Whole Home</strong><small>$29.99 every 90 days</small></span>
-              </label>
-              <label>
-                <input type="radio" name="selectedPlan" value="Reminder Only">
-                <span><strong>Reminder Only</strong><small>$4.99/month</small></span>
-              </label>
-              <label>
-                <input type="radio" name="selectedPlan" value="Not Sure Yet">
-                <span><strong>Not sure yet</strong><small>Help me decide later</small></span>
-              </label>
-            </div>
-          </fieldset>
-          <button class="btn btn-primary form-submit" type="submit">Join Early Access</button>
-          <p class="form-trust">No spam. Just early access updates.</p>
-          <p class="form-success" role="status" aria-live="polite" data-form-success hidden>You're on the Filter Wizard early access list. We'll contact you before the first limited batch opens.</p>
-          <p class="form-error" role="alert" data-form-error hidden>Something went wrong while joining the list. Please try again in a moment.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section benefits-section" id="benefits">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Why it helps</p>
-          <h2>Cleaner airflow with less home maintenance friction.</h2>
-        </div>
-        <div class="benefit-list reveal">
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M8 7v10M12 7v10M16 7v10"/></svg></div>
-            <h3>No more guessing filter sizes</h3>
-            <p>Save your filter dimensions once and keep them ready for every future replacement.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v3M17 3v3"/><path d="M4 8h16"/><path d="M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1z"/><path d="M9 14l2 2 4-5"/></svg></div>
-            <h3>No more forgetting replacement dates</h3>
-            <p>Reserve reminders around the cadence that fits your home, pets, and HVAC use.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h12"/><path d="m13 8 4 4-4 4"/><path d="M4 7h7M4 17h9"/></svg></div>
-            <h3>Better airflow</h3>
-            <p>Fresh filters help air move more freely through the rooms you use every day.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-3 3-3-3 3-3z"/></svg></div>
-            <h3>Easier home maintenance</h3>
-            <p>Turn one more recurring chore into a simple system instead of a last-minute errand.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
-            <h3>Simple quarterly delivery</h3>
-            <p>Plan around a clean 90-day rhythm and keep the right filter within reach.</p>
-          </article>
+        <ol class="compact-steps reveal">
+          <li><span>1</span><strong>Tell us about your home filter</strong></li>
+          <li><span>2</span><strong>We help confirm the right size</strong></li>
+          <li><span>3</span><strong>Get replacements on schedule</strong></li>
+        </ol>
+        <div class="section-action reveal">
+          <a class="btn btn-primary" href="#early-access" data-scroll-to-hero>Join Early Access</a>
         </div>
       </div>
     </section>
 
-    <section class="section audience-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Who it is for</p>
-          <h2>Built For People Who Have Better Things To Remember</h2>
+    <section class="section final-cta-block">
+      <div class="container final-cta-inner reveal">
+        <div>
+          <p class="eyebrow">One less chore to remember</p>
+          <h2>Ready to stop thinking about air filters?</h2>
+          <p>Get reminders, sizing help, and scheduled delivery when Filter Wizard launches.</p>
         </div>
-        <div class="card-grid five">
-          <article class="audience-card reveal"><div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg></div><h3>Busy homeowners</h3><p>Keep routine maintenance moving without adding another calendar task.</p></article>
-          <article class="audience-card reveal"><div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div><h3>First-time homeowners</h3><p>Build the right maintenance habits before small chores become expensive surprises.</p></article>
-          <article class="audience-card reveal"><div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h9v18"/><path d="M15 8h3a2 2 0 0 1 2 2v11"/><path d="M8 7h3M8 11h3M8 15h3"/></svg></div><h3>Landlords</h3><p>Track filter needs across rentals and reduce tenant confusion about sizing.</p></article>
-          <article class="audience-card reveal"><div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M5 4h14v16H5z"/><path d="M8 4V2h8v2"/></svg></div><h3>Property managers</h3><p>Make recurring filter replacement easier to coordinate across multiple units.</p></article>
-          <article class="audience-card reveal"><div class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M20 8a3 3 0 0 1 0 6"/><path d="M4 8a3 3 0 0 0 0 6"/></svg></div><h3>Families</h3><p>Spend less time managing household supplies and more time on the day that is already full.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq-section" id="faq">
-      <div class="container faq-layout">
-        <div class="section-heading reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2>Questions before you reserve early access?</h2>
-        </div>
-        <div class="faq-list reveal">
-          <details>
-            <summary>How do I know what filter size I need?</summary>
-            <p>Most filters have dimensions printed on the cardboard frame. If you cannot find the size, you can upload a photo and we'll use it to help identify the right replacement.</p>
-          </details>
-          <details>
-            <summary>Can I upload a photo of my current filter?</summary>
-            <p>Yes. Filter Wizard supports photo uploads so you can share the label or frame of your current filter when you reserve early access.</p>
-          </details>
-          <details>
-            <summary>Is this a subscription?</summary>
-            <p>Filter Wizard is validating automatic replacement deliveries. Early access helps confirm which sizes, quantities, and delivery schedules homeowners want most.</p>
-          </details>
-          <details>
-            <summary>When will the first batch ship?</summary>
-            <p>Filter Wizard is currently validating demand. We'll contact early access members before the first limited batch opens.</p>
-          </details>
-          <details>
-            <summary>Can I cancel or pause?</summary>
-            <p>Yes. The planned service is designed around flexible household needs, including the ability to pause or cancel before future shipments.</p>
-          </details>
-          <details>
-            <summary>Do you support homes with multiple filters?</summary>
-            <p>Yes. The Whole Home plan is intended for homes with more than one filter, and the form asks how many filters your home uses.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta section">
-      <div class="container final-cta-grid">
-        <div class="final-cta-copy reveal">
-          <p class="eyebrow">Ready when your filter is not</p>
-          <h2>Make Air Filter Replacement One Less Thing To Remember</h2>
-          <p>Join early access and let Filter Wizard help track your size, timing, and first replacement batch.</p>
-          <a class="btn btn-primary" href="#early-access">Join Early Access</a>
-        </div>
-        <div class="dashboard-mockup reveal">
-          <div class="dashboard-frame">
-            <img class="dashboard-preview" src="assets/images/subscription-reminder-dashboard.png" alt="Filter Wizard dashboard showing saved filter size, next replacement date, and delivery scheduled." width="1536" height="1024" loading="lazy">
-          </div>
-        </div>
+        <a class="btn btn-primary" href="#early-access" data-scroll-to-hero>Join Early Access</a>
       </div>
     </section>
   </main>
@@ -363,13 +143,11 @@
             <img class="site-logo footer-logo" src="assets/images/filter-wizard-logo.png" alt="Filter Wizard" width="270" height="96" loading="lazy">
           </span>
         </a>
-        <p>Filter Wizard helps homeowners find the right air filter size, remember replacement dates, and reserve automatic filter deliveries.</p>
+        <p>Simple filter sizing, reminders, and scheduled delivery.</p>
       </div>
       <div class="footer-links" aria-label="Footer navigation">
         <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#early-access">Early Access</a>
+        <a href="#early-access" data-scroll-to-hero>Early Access</a>
       </div>
     </div>
     <div class="container disclaimer">

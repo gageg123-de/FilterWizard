@@ -1,15 +1,21 @@
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
-const navLinks = document.querySelectorAll(".nav-links a, .footer-links a, .hero-actions a, .final-cta a, .pricing-card a");
-const planButtons = document.querySelectorAll("[data-plan]");
-const form = document.querySelector("[data-early-form]");
-const successMessage = document.querySelector("[data-form-success]");
-const errorMessage = document.querySelector("[data-form-error]");
+const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
+const earlyAccessForm = document.querySelector("[data-early-form]");
+const ctaScrollLinks = document.querySelectorAll("[data-scroll-to-hero]");
 const storageKey = "filterWizardEarlyAccess";
 
+function trackEvent(eventName, parameters = {}) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, parameters);
+  }
+}
+
 function setHeaderState() {
-  header.classList.toggle("scrolled", window.scrollY > 8);
+  if (header) {
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }
 }
 
 function closeNav() {
@@ -44,7 +50,7 @@ function setupRevealAnimations() {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12 }
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -65,30 +71,20 @@ function saveSubmission(submission) {
   localStorage.setItem(storageKey, JSON.stringify(submissions));
 }
 
-function handlePlanSelection(event) {
-  event.preventDefault();
-
-  const selectedPlan = event.currentTarget.dataset.plan;
-  const matchingOption = Array.from(form.querySelectorAll('input[name="selectedPlan"]'))
-    .find((input) => input.value === selectedPlan);
-  const formSection = document.querySelector("#early-access");
-
-  if (matchingOption) {
-    matchingOption.checked = true;
-  }
-
-  formSection.scrollIntoView({
-    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-    block: "start"
-  });
-
-  window.setTimeout(() => {
-    form.querySelector("#name").focus({ preventScroll: true });
-  }, 450);
-}
-
 async function handleFormSubmit(event) {
   event.preventDefault();
+
+  const form = event.currentTarget;
+  const formLocation = "hero";
+  const source = "Hero Email Form";
+  const successMessage = form.querySelector("[data-form-success]");
+  const errorMessage = form.querySelector("[data-form-error]");
+  const submitButton = form.querySelector(".form-submit");
+
+  trackEvent("hero_form_submit_attempt", {
+    form_location: formLocation,
+    form_source: source
+  });
 
   if (!form.checkValidity()) {
     form.reportValidity();
@@ -96,15 +92,14 @@ async function handleFormSubmit(event) {
   }
 
   const formData = new FormData(form);
-  const selectedPlan = formData.get("selectedPlan") || "Not specified";
-  formData.set("selectedPlan", selectedPlan);
-  const submitButton = form.querySelector(".form-submit");
+  const submittedAt = new Date().toISOString();
+  formData.set("submittedAt", submittedAt);
+
   const submission = {
-    name: formData.get("name"),
     email: formData.get("email"),
-    phone: formData.get("phone"),
-    selectedPlan,
-    submittedAt: new Date().toISOString()
+    phone: formData.get("phone") || "",
+    source,
+    submittedAt
   };
 
   successMessage.hidden = true;
@@ -127,38 +122,56 @@ async function handleFormSubmit(event) {
 
     saveSubmission(submission);
     console.log("Filter Wizard early access submission:", submission);
+    trackEvent("early_access_signup_success", {
+      form_location: formLocation,
+      form_source: source
+    });
 
-    successMessage.hidden = false;
     form.reset();
-    successMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    successMessage.hidden = false;
+    successMessage.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "nearest"
+    });
   } catch (error) {
     console.error("Filter Wizard Formspree submission error:", error);
+    trackEvent("early_access_signup_error", {
+      form_location: formLocation,
+      form_source: source
+    });
+
     errorMessage.hidden = false;
-    errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    errorMessage.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "nearest"
+    });
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = "Join Early Access";
   }
 }
 
-if (header && navToggle && navMenu && form && successMessage && errorMessage) {
-  setHeaderState();
-  setupRevealAnimations();
+function handleCtaScroll(event) {
+  event.preventDefault();
+  trackEvent("cta_scroll_to_hero_click", {
+    link_text: event.currentTarget.textContent.trim()
+  });
 
-  window.addEventListener("scroll", setHeaderState, { passive: true });
+  earlyAccessForm.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "center"
+  });
+}
 
+setHeaderState();
+setupRevealAnimations();
+window.addEventListener("scroll", setHeaderState, { passive: true });
+
+if (navToggle && navMenu) {
   navToggle.addEventListener("click", toggleNav);
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navMenu.classList.contains("open")) {
-        closeNav();
-      }
-    });
-  });
-
-  planButtons.forEach((button) => {
-    button.addEventListener("click", handlePlanSelection);
+    link.addEventListener("click", closeNav);
   });
 
   document.addEventListener("keydown", (event) => {
@@ -166,11 +179,16 @@ if (header && navToggle && navMenu && form && successMessage && errorMessage) {
       closeNav();
     }
   });
+}
 
-  form.addEventListener("submit", handleFormSubmit);
-
-  form.addEventListener("input", () => {
-    successMessage.hidden = true;
-    errorMessage.hidden = true;
+if (earlyAccessForm) {
+  earlyAccessForm.addEventListener("submit", handleFormSubmit);
+  earlyAccessForm.addEventListener("input", () => {
+    earlyAccessForm.querySelector("[data-form-success]").hidden = true;
+    earlyAccessForm.querySelector("[data-form-error]").hidden = true;
   });
 }
+
+ctaScrollLinks.forEach((link) => {
+  link.addEventListener("click", handleCtaScroll);
+});
