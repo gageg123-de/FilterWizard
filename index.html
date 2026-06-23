@@ -60,7 +60,13 @@
           <p class="founding-copy">Founding members receive first access when delivery begins.</p>
         </div>
         <div class="hero-visual image-card reveal">
-          <img class="hero-image" src="assets/images/hero-filter-wizard-homeowner.png" alt="Homeowner checking phone while replacing a clean HVAC air filter." width="1536" height="1024" fetchpriority="high">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="assets/images/hero-filter-wizard-homeowner-640.webp 640w, assets/images/hero-filter-wizard-homeowner-960.webp 960w, assets/images/hero-filter-wizard-homeowner-1280.webp 1280w"
+              sizes="(max-width: 820px) calc(100vw - 28px), 465px">
+            <img class="hero-image" src="assets/images/hero-filter-wizard-homeowner.png" alt="Homeowner checking phone while replacing a clean HVAC air filter." width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
         </div>
       </div>
     </section>
@@ -100,7 +106,13 @@
           <p>Most homeowners do not realize how dirty their filter gets before it is replaced.</p>
         </div>
         <figure class="comparison-card reveal">
-          <img src="assets/images/before-after-dirty-clean-filter.png" alt="Dirty clogged HVAC filter beside a clean replacement filter." width="1536" height="1024" loading="lazy">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="assets/images/before-after-dirty-clean-filter-640.webp 640w, assets/images/before-after-dirty-clean-filter-960.webp 960w, assets/images/before-after-dirty-clean-filter-1280.webp 1280w"
+              sizes="(max-width: 920px) calc(100vw - 48px), 848px">
+            <img src="assets/images/before-after-dirty-clean-filter.png" alt="Dirty clogged HVAC filter beside a clean replacement filter." width="1536" height="1024" loading="lazy" decoding="async">
+          </picture>
           <figcaption>A clogged filter can reduce airflow, increase HVAC strain, and make your system work harder.</figcaption>
         </figure>
       </div>

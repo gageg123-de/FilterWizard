@@ -351,6 +351,11 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.hero-visual picture,
+.comparison-card picture {
+  display: block;
+}
+
 .hero-image {
   width: 100%;
   aspect-ratio: 3 / 2;
