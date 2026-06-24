@@ -127,6 +127,7 @@ select {
   border-radius: 9px;
   color: var(--blue-dark);
   background: var(--blue-soft);
+  white-space: nowrap;
 }
 
 .nav-toggle {
@@ -318,8 +319,15 @@ a:focus-visible {
 
 .hero-signup .form-submit {
   width: auto;
-  min-width: 170px;
+  min-width: 230px;
   margin: 0;
+}
+
+.hero-form-pain {
+  margin: 0 0 9px;
+  color: #334351;
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 .hero-form-trust,
@@ -763,6 +771,7 @@ select:user-invalid {
 
   .nav-cta {
     background: var(--blue-soft);
+    white-space: normal;
   }
 
   .hero-grid,
