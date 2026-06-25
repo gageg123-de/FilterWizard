@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Filter Wizard helps homeowners find the right air filter size, remember replacement dates, and reserve automatic filter deliveries.">
-  <title>Filter Wizard | Never Forget Your Air Filter Again</title>
+  <meta name="description" content="Reserve a Filter Wizard air filter subscription plan with founding-member pricing, free shipping, and no payment collected today.">
+  <title>Filter Wizard | Air Filter Delivery Made Simple</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64VWBW3NHS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -35,7 +35,10 @@
       </button>
       <div class="nav-links" data-nav-menu>
         <a href="#how-it-works">How It Works</a>
-        <a class="nav-cta" href="#early-access" data-scroll-to-hero>Get 50% Off</a>
+        <a href="#plans">Plans</a>
+        <a href="#filter-finder">Filter Finder</a>
+        <a href="#early-access">Early Access</a>
+        <a class="nav-cta" href="#plans" data-subscription-cta>Lock In Founder Pricing</a>
       </div>
     </nav>
   </header>
@@ -44,9 +47,28 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-intro reveal">
-          <p class="eyebrow">SIMPLE HOME FILTER CARE</p>
-          <h1>Never Forget Your Air Filter Again</h1>
-          <p class="hero-subtitle">We'll find your filter and remind you when it's time to replace it.</p>
+          <p class="eyebrow">AIR FILTER DELIVERY MADE SIMPLE</p>
+          <h1>Never Think About Your Air Filter Again</h1>
+          <p class="hero-subtitle">Get the right replacement filters delivered on schedule before your old filter becomes a problem.</p>
+          <ul class="hero-value-pills" aria-label="Filter Wizard subscription benefits">
+            <li>&#10003; Right Filter</li>
+            <li>&#10003; Auto Reminders</li>
+            <li>&#10003; Free Shipping</li>
+          </ul>
+          <div class="countdown-badge hero-countdown" data-countdown-view>
+            <span>Founder Pricing Ends In:</span>
+            <strong data-countdown>48:00:00</strong>
+            <small>Reserve now before launch pricing ends.</small>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#plans" data-subscription-cta>Lock In Founder Pricing</a>
+            <a class="btn btn-secondary" href="#filter-finder">Not sure what filter you need? Find My Filter</a>
+          </div>
+          <ul class="trust-row" aria-label="Subscription trust notes">
+            <li>Free shipping included</li>
+            <li>No payment today</li>
+            <li>Cancel or change anytime</li>
+          </ul>
         </div>
         <div class="hero-visual image-card reveal">
           <picture>
@@ -57,94 +79,171 @@
             <img class="hero-image" src="assets/images/filter-wizard-hero-dirty-clean.webp" alt="Homeowner comparing a dirty air filter with a clean replacement filter" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
           </picture>
         </div>
-        <div class="hero-signup-panel reveal">
-          <p class="hero-benefit-line">We'll identify your filter and help deliver replacements on schedule.</p>
-          <form class="hero-signup" id="early-access" action="https://formspree.io/f/mzdlpbwp" method="POST" data-early-form data-form-location="hero">
-            <input type="hidden" name="_subject" value="New Filter Wizard early access signup">
-            <input type="hidden" name="source" value="Hero Email Form">
-            <p class="offer-badge" aria-label="Founding Member Offer">&#127881; FOUNDING MEMBER OFFER</p>
-            <p class="hero-form-pain">Join today and get <strong>50% OFF</strong> your first order.</p>
-            <div class="hero-form-row">
-              <label class="sr-only" for="hero-email">Email address</label>
-              <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
-              <button class="btn btn-primary form-submit" type="submit">Get My 50% Off</button>
-            </div>
-            <p class="hero-form-trust">No payment. No spam.</p>
-            <p class="form-success" role="status" aria-live="polite" data-form-success hidden>You're on the list. We'll email your launch discount and early access details soon.</p>
-            <p class="form-error" role="alert" data-form-error hidden>Something went wrong while joining the list. Please try again in a moment.</p>
-          </form>
-        </div>
       </div>
     </section>
 
-    <section class="section benefits-section compact-section" id="benefits">
+    <section class="section switch-section">
       <div class="container">
         <div class="compact-heading reveal">
-          <p class="eyebrow">Less guesswork, better timing</p>
-          <h2>Why Homeowners Use Filter Wizard</h2>
+          <p class="eyebrow">Built for real life</p>
+          <h2>Why Homeowners Switch</h2>
         </div>
-        <div class="benefit-grid">
-          <article class="benefit-card reveal">
-            <span aria-hidden="true">01</span>
-            <h3>Find the right filter</h3>
+        <div class="switch-grid">
+          <article class="switch-card reveal">
+            <span aria-hidden="true">&#10005;</span>
+            <p>Forget replacement dates</p>
           </article>
-          <article class="benefit-card reveal">
-            <span aria-hidden="true">02</span>
-            <h3>Never miss a replacement</h3>
+          <article class="switch-card reveal">
+            <span aria-hidden="true">&#10005;</span>
+            <p>Reduced HVAC efficiency</p>
           </article>
-          <article class="benefit-card reveal">
-            <span aria-hidden="true">03</span>
-            <h3>Scheduled delivery made simple</h3>
+          <article class="switch-card reveal">
+            <span aria-hidden="true">&#10005;</span>
+            <p>Last-minute filter runs</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section comparison-section">
-      <div class="container">
-        <div class="compact-heading reveal">
-          <p class="eyebrow">A difference you can see</p>
-          <h2>What Happens When Filters Are Forgotten?</h2>
-          <p>Most homeowners do not realize how dirty their filter gets before it is replaced.</p>
-        </div>
-        <figure class="comparison-card reveal">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/before-after-dirty-clean-filter-640.webp 640w, assets/images/before-after-dirty-clean-filter-960.webp 960w, assets/images/before-after-dirty-clean-filter-1280.webp 1280w"
-              sizes="(max-width: 920px) calc(100vw - 48px), 848px">
-            <img src="assets/images/before-after-dirty-clean-filter.png" alt="Dirty clogged HVAC filter beside a clean replacement filter." width="1536" height="1024" loading="lazy" decoding="async">
-          </picture>
-          <figcaption>A clogged filter can reduce airflow, increase HVAC strain, and make your system work harder.</figcaption>
-        </figure>
+        <p class="switch-solution reveal">Filter Wizard automatically handles all three.</p>
       </div>
     </section>
 
     <section class="section compact-section" id="how-it-works">
       <div class="container">
         <div class="compact-heading reveal">
-          <p class="eyebrow">Three simple steps</p>
-          <h2>How It Works</h2>
+          <p class="eyebrow">Simple scheduled delivery</p>
+          <h2>How Filter Wizard Works</h2>
         </div>
-        <ol class="compact-steps reveal">
-          <li><span>1</span><strong>Tell us about your home filter</strong></li>
-          <li><span>2</span><strong>We help confirm the right size</strong></li>
-          <li><span>3</span><strong>Get replacements on schedule</strong></li>
-        </ol>
-        <div class="section-action reveal">
-          <a class="btn btn-primary" href="#early-access" data-scroll-to-hero>Join Early Access</a>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">01</span>
+            <h3>Choose Your Filter</h3>
+            <p>Already know your size? Great. Not sure? We'll help you find it.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">02</span>
+            <h3>Pick Your Schedule</h3>
+            <p>Choose 30, 60, or 90 day delivery based on your home.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <span aria-hidden="true">03</span>
+            <h3>Fresh Filters Arrive</h3>
+            <p>We ship replacements automatically with free shipping included.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta-block">
+    <section class="section pricing-section" id="plans">
+      <div class="container">
+        <div class="compact-heading reveal">
+          <p class="eyebrow">Founding Member Pricing</p>
+          <h2>Choose Your Delivery Plan</h2>
+          <p>Simple scheduled air filter delivery with free shipping included.</p>
+          <p>Founding Members receive 50% off their first order.</p>
+        </div>
+        <div class="countdown-badge pricing-countdown reveal">
+          <span>Founder Pricing Ends In:</span>
+          <strong data-countdown>48:00:00</strong>
+          <small>Reserve now before launch pricing ends.</small>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <div class="plan-head">
+              <h3>Essential</h3>
+              <p>Single-filter homes that want simple scheduled replacement.</p>
+            </div>
+            <div class="price-stack">
+              <span>Planned regular price</span>
+              <del>$29.99 / month</del>
+              <span>Founder price</span>
+              <strong>$14.99 <small>/ month</small></strong>
+            </div>
+            <p class="shipping-note">Free shipping included</p>
+            <ul>
+              <li>1 standard filter delivery</li>
+              <li>Choose 30, 60, or 90 day schedule</li>
+              <li>Replacement reminders</li>
+              <li>Skip or reschedule anytime</li>
+              <li>Free shipping included</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-plan-button data-plan="Essential" data-regular="$29.99 / month" data-founder="$14.99 / month">Lock In Founder Pricing</button>
+          </article>
+
+          <article class="pricing-card featured reveal">
+            <p class="popular-badge">Best Value</p>
+            <div class="plan-head">
+              <h3>Plus</h3>
+              <p>Homes that want better filtration and more flexibility.</p>
+            </div>
+            <div class="price-stack">
+              <span>Planned regular price</span>
+              <del>$39.99 / month</del>
+              <span>Founder price</span>
+              <strong>$19.99 <small>/ month</small></strong>
+            </div>
+            <p class="shipping-note">Free shipping included</p>
+            <ul>
+              <li>1 premium filter delivery</li>
+              <li>Choose 30, 60, or 90 day schedule</li>
+              <li>Better filtration options</li>
+              <li>Replacement reminders</li>
+              <li>Skip or reschedule anytime</li>
+              <li>Free shipping included</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-plan-button data-plan="Plus" data-regular="$39.99 / month" data-founder="$19.99 / month">Lock In Founder Pricing</button>
+          </article>
+
+          <article class="pricing-card reveal">
+            <div class="plan-head">
+              <h3>Home+</h3>
+              <p>Homes with multiple returns or more than one filter size.</p>
+            </div>
+            <div class="price-stack">
+              <span>Planned regular price</span>
+              <del>$59.99 / month</del>
+              <span>Founder price</span>
+              <strong>Starting at $29.99 <small>/ month</small></strong>
+            </div>
+            <p class="shipping-note">Free shipping included</p>
+            <ul>
+              <li>Multiple filter support</li>
+              <li>Custom delivery schedule</li>
+              <li>Replacement reminders</li>
+              <li>Flexible plan setup</li>
+              <li>Skip or reschedule anytime</li>
+              <li>Free shipping included</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-plan-button data-plan="Home+" data-regular="$59.99 / month" data-founder="Starting at $29.99 / month">Lock In Founder Pricing</button>
+          </article>
+        </div>
+        <p class="pricing-disclaimer reveal">Founder pricing reflects the first-order launch offer. Final subscription pricing may vary by filter size, filter type, and number of filters. No payment is collected today.</p>
+      </div>
+    </section>
+
+    <section class="section finder-lite-section" id="filter-finder">
+      <div class="container finder-lite-card reveal">
+        <div>
+          <p class="eyebrow">Filter Finder</p>
+          <h2>Not Sure What Filter You Need?</h2>
+          <p>Use our quick Filter Finder to help identify your size before your first delivery.</p>
+        </div>
+        <button class="btn btn-secondary" type="button" data-open-reservation>Find My Filter</button>
+      </div>
+    </section>
+
+    <section class="section final-cta-block" id="early-access">
       <div class="container final-cta-inner reveal">
         <div>
-          <p class="eyebrow">One less chore to remember</p>
-          <h2>Ready to stop thinking about air filters?</h2>
-          <p>Get reminders, sizing help, and scheduled delivery when Filter Wizard launches.</p>
+          <p class="offer-badge final-offer-badge">FOUNDING MEMBER OFFER</p>
+          <h2>Join Early. <span>Get 50% Off Your First Order.</span></h2>
+          <p>We're validating early demand before launch. Founding Members get first access, free shipping on subscriptions, and 50% off their first order.</p>
+          <div class="countdown-badge final-countdown">
+            <span>Founder Pricing Ends In:</span>
+            <strong data-countdown>48:00:00</strong>
+            <small>Reserve now before launch pricing ends.</small>
+          </div>
+          <p class="hero-form-trust">No payment today. Free shipping included on every subscription.</p>
         </div>
-        <a class="btn btn-primary" href="#early-access" data-scroll-to-hero>Join Early Access</a>
+        <button class="btn btn-primary" type="button" data-open-reservation>Lock In Founder Pricing</button>
       </div>
     </section>
   </main>
@@ -157,18 +256,64 @@
             <img class="site-logo footer-logo" src="assets/images/filter-wizard-logo.png" alt="Filter Wizard" width="270" height="96" loading="lazy">
           </span>
         </a>
-        <p>Simple filter sizing, reminders, and scheduled delivery.</p>
+        <p>Scheduled air filter delivery with free shipping, reminders, and founding-member savings.</p>
       </div>
       <div class="footer-links" aria-label="Footer navigation">
         <a href="#how-it-works">How It Works</a>
-        <a href="#early-access" data-scroll-to-hero>Early Access</a>
+        <a href="#plans">Plans</a>
+        <a href="#filter-finder">Filter Finder</a>
+        <a href="#early-access">Early Access</a>
       </div>
     </div>
     <div class="container disclaimer">
-      Filter Wizard is currently validating early demand. Joining early access does not guarantee immediate shipment.
+      Filter Wizard is currently validating early demand. Reserving a plan does not create a paid subscription or guarantee immediate shipment.
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="modal-backdrop" data-modal-backdrop hidden>
+    <section class="reservation-modal" role="dialog" aria-modal="true" aria-labelledby="reservation-title">
+      <button class="modal-close" type="button" aria-label="Close reservation form" data-close-modal onclick="closeReservation()">&times;</button>
+      <p class="eyebrow">Founding Member Access</p>
+      <h2 id="reservation-title">Reserve Your Founding Member Pricing</h2>
+      <p>Filter Wizard is launching soon. Reserve your plan today and get 50% off your first order as a Founding Member.</p>
+      <div class="selected-plan-card">
+        <p>Selected plan: <strong data-selected-plan>Plus</strong></p>
+        <del data-selected-regular>$39.99 / month</del>
+        <span>Founder Price</span>
+        <strong data-selected-founder>$19.99 / month</strong>
+        <p class="shipping-note">Free Shipping Included</p>
+      </div>
+      <div class="modal-trust-list" aria-label="Reservation benefits">
+        <span>✓ Free shipping included</span>
+        <span>✓ Cancel anytime</span>
+        <span>✓ No payment today</span>
+      </div>
+      <form class="reservation-form" action="https://formspree.io/f/mzdlpbwp" method="POST" data-reservation-form>
+        <input type="hidden" name="_subject" value="New Filter Wizard subscription interest">
+        <input type="hidden" name="source" value="Plan Reservation">
+        <input type="hidden" name="selectedPlan" data-plan-field>
+        <input type="hidden" name="plannedRegularPrice" data-regular-field>
+        <input type="hidden" name="founderPrice" data-founder-field>
+        <label class="sr-only" for="reservation-email">Email address</label>
+        <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+        <p class="scarcity-note">Founder pricing ends when Filter Wizard officially launches.</p>
+        <button class="btn btn-primary form-submit" type="submit">Reserve My Plan</button>
+        <p class="form-trust">No payment today. No spam. We'll email you when your plan is ready.</p>
+        <p class="form-error" role="alert" data-form-error hidden>Something went wrong while reserving your plan. Please try again in a moment.</p>
+      </form>
+      <div class="reservation-success" role="status" aria-live="polite" data-reservation-success hidden>
+        <h3>You're officially on the Founding Member list.</h3>
+        <p>We'll email your launch date, selected subscription plan, and your 50% founder discount.</p>
+        <ul>
+          <li>✓ 50% off your first order</li>
+          <li>✓ Free shipping included</li>
+          <li>✓ Priority launch access</li>
+        </ul>
+        <button class="btn btn-primary" type="button" data-continue-browsing>Continue Browsing</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js?v=modal-fix-2"></script>
 </body>
 </html>

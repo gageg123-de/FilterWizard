@@ -2,9 +2,25 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
-const earlyAccessForm = document.querySelector("[data-early-form]");
-const ctaScrollLinks = document.querySelectorAll("[data-scroll-to-hero]");
-const storageKey = "filterWizardEarlyAccess";
+const subscriptionCtas = document.querySelectorAll("[data-subscription-cta]");
+const planButtons = document.querySelectorAll("[data-plan-button]");
+const modalBackdrop = document.querySelector("[data-modal-backdrop]");
+const closeModalButton = document.querySelector("[data-close-modal]");
+const openReservationButtons = document.querySelectorAll("[data-open-reservation]");
+const reservationForm = document.querySelector("[data-reservation-form]");
+const reservationSuccess = document.querySelector("[data-reservation-success]");
+const continueBrowsingButton = document.querySelector("[data-continue-browsing]");
+const countdownEls = document.querySelectorAll("[data-countdown]");
+const countdownView = document.querySelector("[data-countdown-view]");
+const storageKey = "filterWizardReservations";
+const countdownKey = "filterWizardFounderOfferEndsAt";
+const fallbackPlan = {
+  plan: "Plus",
+  regular: "$39.99 / month",
+  founder: "$19.99 / month"
+};
+let selectedPlan = { ...fallbackPlan };
+let countdownViewed = false;
 
 function trackEvent(eventName, parameters = {}) {
   if (typeof window.gtag === "function") {
@@ -20,9 +36,9 @@ function setHeaderState() {
 
 function closeNav() {
   document.body.classList.remove("nav-open");
-  navMenu.classList.remove("open");
-  navToggle.setAttribute("aria-expanded", "false");
-  navToggle.setAttribute("aria-label", "Open navigation menu");
+  navMenu?.classList.remove("open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Open navigation menu");
 }
 
 function toggleNav() {
@@ -56,123 +72,224 @@ function setupRevealAnimations() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-function getStoredSubmissions() {
+function getStoredReservations() {
   try {
     return JSON.parse(localStorage.getItem(storageKey)) || [];
   } catch (error) {
-    console.warn("Filter Wizard submissions could not be read from localStorage.", error);
+    console.warn("Filter Wizard reservations could not be read from localStorage.", error);
     return [];
   }
 }
 
-function saveSubmission(submission) {
-  const submissions = getStoredSubmissions();
-  submissions.push(submission);
-  localStorage.setItem(storageKey, JSON.stringify(submissions));
+function saveReservation(reservation) {
+  try {
+    const reservations = getStoredReservations();
+    reservations.push(reservation);
+    localStorage.setItem(storageKey, JSON.stringify(reservations));
+  } catch (error) {
+    console.warn("Filter Wizard reservation could not be saved to localStorage.", error);
+  }
 }
 
-async function handleFormSubmit(event) {
-  event.preventDefault();
+function getCountdownEnd() {
+  const fortyEightHours = 48 * 60 * 60 * 1000;
+  const now = Date.now();
 
-  const form = event.currentTarget;
-  const formLocation = "hero";
-  const source = "Hero Email Form";
-  const successMessage = form.querySelector("[data-form-success]");
-  const errorMessage = form.querySelector("[data-form-error]");
-  const submitButton = form.querySelector(".form-submit");
+  try {
+    const stored = Number(localStorage.getItem(countdownKey));
+    if (stored && stored > now) return stored;
 
-  trackEvent("hero_form_submit_attempt", {
-    form_location: formLocation,
-    form_source: source
+    const end = now + fortyEightHours;
+    localStorage.setItem(countdownKey, String(end));
+    return end;
+  } catch (error) {
+    return now + fortyEightHours;
+  }
+}
+
+const countdownEnd = getCountdownEnd();
+
+function formatTime(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
+  const seconds = String(totalSeconds % 60).padStart(2, "0");
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+function updateCountdown() {
+  const remaining = countdownEnd - Date.now();
+  const display = remaining > 0 ? formatTime(remaining) : "Founder spots still open";
+  countdownEls.forEach((el) => {
+    el.textContent = display;
   });
+}
 
-  if (!form.checkValidity()) {
-    form.reportValidity();
+function setupCountdownTracking() {
+  if (!countdownView || !("IntersectionObserver" in window)) {
+    trackCountdownViewed();
     return;
   }
 
-  const formData = new FormData(form);
-  const submittedAt = new Date().toISOString();
-  formData.set("submittedAt", submittedAt);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          trackCountdownViewed();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
 
-  const submission = {
-    email: formData.get("email"),
-    phone: formData.get("phone") || "",
-    source,
-    submittedAt
-  };
+  observer.observe(countdownView);
+}
 
-  successMessage.hidden = true;
-  errorMessage.hidden = true;
-  submitButton.disabled = true;
-  submitButton.textContent = "Joining...";
+function trackCountdownViewed() {
+  if (countdownViewed) return;
+  countdownViewed = true;
+  trackEvent("founder_countdown_viewed");
+}
 
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json"
-      }
-    });
+function setSelectedPlan(plan) {
+  selectedPlan = plan;
+  document.querySelector("[data-selected-plan]").textContent = plan.plan;
+  document.querySelector("[data-selected-regular]").textContent = plan.regular;
+  document.querySelector("[data-selected-founder]").textContent = plan.founder;
+  document.querySelector("[data-plan-field]").value = plan.plan;
+  document.querySelector("[data-regular-field]").value = plan.regular;
+  document.querySelector("[data-founder-field]").value = plan.founder;
+}
 
-    if (!response.ok) {
-      throw new Error(`Formspree submission failed with status ${response.status}`);
+function openReservation(plan = fallbackPlan) {
+  setSelectedPlan(plan);
+
+  modalBackdrop.hidden = false;
+  modalBackdrop.style.display = "grid";
+  modalBackdrop.classList.remove("closing");
+
+  reservationSuccess.hidden = true;
+  reservationForm.hidden = false;
+
+  setFormMessage(reservationForm, "clear");
+  document.body.classList.add("modal-open");
+  document.documentElement.classList.add("modal-open");
+
+  setTimeout(() => {
+    reservationForm?.querySelector("input[name='email']")?.focus();
+  }, 50);
+
+  trackEvent("reservation_started", {
+    plan_name: plan.plan
+  });
+}
+
+function closeReservation() {
+  if (!modalBackdrop) return;
+
+  modalBackdrop.classList.remove("closing");
+  modalBackdrop.hidden = true;
+  modalBackdrop.style.display = "none";
+  document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
+}
+
+window.closeReservation = closeReservation;
+
+function setFormMessage(form, type, message = "") {
+  const successMessage = form.querySelector("[data-form-success]");
+  const errorMessage = form.querySelector("[data-form-error]");
+
+  if (type === "success") {
+    if (successMessage) successMessage.hidden = false;
+    if (errorMessage) errorMessage.hidden = true;
+    return;
+  }
+
+  if (type === "error") {
+    if (message && errorMessage) errorMessage.textContent = message;
+    if (errorMessage) errorMessage.hidden = false;
+    if (successMessage) successMessage.hidden = true;
+    return;
+  }
+
+  if (successMessage) successMessage.hidden = true;
+  if (errorMessage) errorMessage.hidden = true;
+}
+
+async function postToFormspree(form, formData) {
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json"
     }
+  });
 
-    saveSubmission(submission);
-    console.log("Filter Wizard early access submission:", submission);
-    trackEvent("early_access_signup_success", {
-      form_location: formLocation,
-      form_source: source
-    });
-    trackEvent("generate_lead", {
-      form_location: formLocation,
-      form_source: source
-    });
-
-    form.reset();
-    successMessage.hidden = false;
-    successMessage.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-      block: "nearest"
-    });
-  } catch (error) {
-    console.error("Filter Wizard Formspree submission error:", error);
-    trackEvent("early_access_signup_error", {
-      form_location: formLocation,
-      form_source: source
-    });
-
-    errorMessage.hidden = false;
-    errorMessage.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-      block: "nearest"
-    });
-  } finally {
-    submitButton.disabled = false;
-    submitButton.textContent = "Get My 50% Off";
+  if (!response.ok) {
+    throw new Error(`Formspree submission failed with status ${response.status}`);
   }
 }
 
-function handleCtaScroll(event) {
+async function handleReservationSubmit(event) {
   event.preventDefault();
-  trackEvent("cta_scroll_to_hero_click", {
-    link_text: event.currentTarget.textContent.trim()
-  });
 
-  earlyAccessForm.scrollIntoView({
-    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-    block: "center"
-  });
+  if (!reservationForm.checkValidity()) {
+    reservationForm.reportValidity();
+    return;
+  }
 
-  window.setTimeout(() => {
-    earlyAccessForm.querySelector("input[type='email']")?.focus({ preventScroll: true });
-  }, 350);
+  const formData = new FormData(reservationForm);
+  const submitButton = reservationForm.querySelector(".form-submit");
+  const submittedAt = new Date().toISOString();
+  const email = String(formData.get("email") || "").trim();
+
+  formData.set("submittedAt", submittedAt);
+  formData.set("selectedPlan", selectedPlan.plan);
+  formData.set("plannedRegularPrice", selectedPlan.regular);
+  formData.set("founderPrice", selectedPlan.founder);
+
+  setFormMessage(reservationForm, "clear");
+  submitButton.disabled = true;
+  submitButton.textContent = "Reserving...";
+
+  try {
+    await postToFormspree(reservationForm, formData);
+    const reservation = {
+      email,
+      selectedPlan: selectedPlan.plan,
+      plannedRegularPrice: selectedPlan.regular,
+      founderPrice: selectedPlan.founder,
+      freeShipping: true,
+      submittedAt
+    };
+    saveReservation(reservation);
+    console.log("Filter Wizard subscription interest:", reservation);
+    trackEvent("generate_lead", {
+      form_location: "reservation_modal",
+      plan_name: selectedPlan.plan
+    });
+    trackEvent("subscription_interest_confirmed", {
+      plan_name: selectedPlan.plan
+    });
+    reservationForm.hidden = true;
+    reservationSuccess.hidden = false;
+    reservationForm.reset();
+  } catch (error) {
+    console.error("Filter Wizard reservation submission error:", error);
+    setFormMessage(reservationForm, "error", "Something went wrong while reserving your plan. Please try again in a moment.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Reserve My Plan";
+  }
 }
 
 setHeaderState();
 setupRevealAnimations();
+setupCountdownTracking();
+updateCountdown();
+window.setInterval(updateCountdown, 1000);
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 if (navToggle && navMenu) {
@@ -181,22 +298,55 @@ if (navToggle && navMenu) {
   navLinks.forEach((link) => {
     link.addEventListener("click", closeNav);
   });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && navMenu.classList.contains("open")) {
-      closeNav();
-    }
-  });
 }
 
-if (earlyAccessForm) {
-  earlyAccessForm.addEventListener("submit", handleFormSubmit);
-  earlyAccessForm.addEventListener("input", () => {
-    earlyAccessForm.querySelector("[data-form-success]").hidden = true;
-    earlyAccessForm.querySelector("[data-form-error]").hidden = true;
+subscriptionCtas.forEach((cta) => {
+  cta.addEventListener("click", () => {
+    trackEvent("subscription_cta_clicked", {
+      link_text: cta.textContent.trim()
+    });
   });
-}
-
-ctaScrollLinks.forEach((link) => {
-  link.addEventListener("click", handleCtaScroll);
 });
+
+planButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const plan = {
+      plan: button.dataset.plan,
+      regular: button.dataset.regular,
+      founder: button.dataset.founder
+    };
+    trackEvent("plan_selected", {
+      plan_name: plan.plan
+    });
+    openReservation(plan);
+  });
+});
+
+openReservationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    openReservation(selectedPlan);
+  });
+});
+
+closeModalButton?.addEventListener("click", closeReservation);
+
+continueBrowsingButton?.addEventListener("click", closeReservation);
+
+modalBackdrop.addEventListener("click", function(event) {
+  if (event.target === modalBackdrop) {
+    closeReservation();
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    if (navMenu?.classList.contains("open")) closeNav();
+    closeReservation();
+  }
+});
+
+reservationForm?.addEventListener("input", () => {
+  setFormMessage(reservationForm, "clear");
+});
+
+reservationForm?.addEventListener("submit", handleReservationSubmit);
