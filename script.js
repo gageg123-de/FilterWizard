@@ -59,8 +59,8 @@ const countdownKey = "filterWizardFounderOfferEndsAt";
 const fallbackPlan = {
   plan: "Plus",
   regular: "$39.99 / month",
-  founder: "$19.99 / month",
-  savings: "You save $20"
+  founder: "$14.99 / month",
+  savings: "You save $25"
 };
 let selectedPlan = { ...fallbackPlan };
 let countdownViewed = false;
