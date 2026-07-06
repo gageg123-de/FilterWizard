@@ -1035,6 +1035,8 @@ input:focus-visible {
 }
 
 .recommendation-banner {
+  min-width: 0;
+  max-width: 100%;
   display: grid;
   gap: 4px;
   padding: 14px 16px;
@@ -1063,6 +1065,8 @@ input:focus-visible {
 }
 
 .recommendation-summary {
+  min-width: 0;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
@@ -1091,6 +1095,18 @@ input:focus-visible {
   color: var(--green-dark);
   font-size: 1.12rem;
   font-weight: 950;
+}
+
+.recommendation-size {
+  display: block;
+  color: var(--blue-dark);
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+.recommendation-months {
+  margin-top: 6px;
 }
 
 .finder-result.report-visible .recommendation-banner {
@@ -1254,10 +1270,13 @@ input:focus-visible {
 }
 
 .finder-result-block {
+  min-width: 0;
+  max-width: 100%;
   padding: 15px;
   border: 1px solid rgba(217, 231, 238, 0.95);
   border-radius: 16px;
   background: #f8fbfe;
+  overflow-wrap: anywhere;
 }
 
 .finder-result-size {
@@ -1346,6 +1365,8 @@ input:focus-visible {
 }
 
 .finder-months {
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1365,6 +1386,8 @@ input:focus-visible {
 }
 
 .finder-answer-pills {
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1949,6 +1972,8 @@ input:focus-visible {
 
 .reservation-form,
 .result-email-form {
+  min-width: 0;
+  max-width: 100%;
   display: grid;
   gap: 12px;
 }
@@ -2441,12 +2466,129 @@ input:focus {
 
   .finder-quiz,
   .finder-result {
-    gap: 14px;
-    padding: 16px;
+    gap: 9px;
+    padding: 12px;
   }
 
   .recommendation-summary {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 6px;
+  }
+
+  .recommendation-banner {
+    gap: 5px;
+    padding: 11px 12px;
+    border-radius: 14px;
+  }
+
+  .recommendation-banner strong {
+    font-size: 0.88rem;
+  }
+
+  .recommendation-size {
+    font-size: 1.55rem;
+  }
+
+  .recommendation-summary div {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .recommendation-summary small {
+    font-size: 0.64rem;
+  }
+
+  .recommendation-summary span {
+    font-size: 0.94rem;
+  }
+
+  .finder-report-header {
+    gap: 6px;
+  }
+
+  .finder-report-header h3 {
+    font-size: 1rem;
+  }
+
+  .finder-report-header p:not(.eyebrow) {
+    margin-top: 3px;
+    font-size: 0.82rem;
+  }
+
+  .finder-result-block {
+    padding: 10px 11px;
+    border-radius: 12px;
+  }
+
+  .finder-result-block p {
+    margin-top: 3px;
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+
+  .finder-result-primary span {
+    font-size: 1.28rem;
+  }
+
+  .finder-result-primary small {
+    margin-top: 5px;
+    padding: 4px 7px;
+    font-size: 0.7rem;
+  }
+
+  .finder-months {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .finder-months span {
+    min-width: 0;
+    padding: 5px 6px;
+    font-size: 0.72rem;
+  }
+
+  .finder-answer-pills {
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .finder-answer-pills span {
+    min-height: 24px;
+    padding: 4px 7px;
+    font-size: 0.72rem;
+  }
+
+  .finder-next-step {
+    gap: 7px;
+  }
+
+  .finder-next-step .btn {
+    min-height: 46px;
+  }
+
+  .result-email-form {
+    gap: 8px;
+  }
+
+  .result-email-form input {
+    min-height: 46px;
+  }
+
+  .finder-skip-email {
+    min-height: 30px;
+    font-size: 0.82rem;
+  }
+
+  .finder-result-next + .finder-result-next {
+    padding: 9px 10px;
+    background: #f8fbfe;
+  }
+
+  .finder-result-next + .finder-result-next .btn {
+    min-height: 42px;
   }
 
   .footer-links {

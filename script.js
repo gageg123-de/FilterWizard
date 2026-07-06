@@ -19,7 +19,7 @@ const knownSizeField = document.querySelector("[data-known-size-field]");
 const knownSizeOptions = document.querySelector("[data-known-size-options]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
 const finderResult = document.querySelector("[data-finder-result]");
-const finderResultSize = document.querySelector("[data-finder-result-size]");
+const finderResultSizeItems = document.querySelectorAll("[data-finder-result-size]");
 const finderLocationGuidance = document.querySelector("[data-finder-location-guidance]");
 const finderResultSchedule = document.querySelector("[data-finder-result-schedule]");
 const finderEmailNote = document.querySelector("[data-finder-email-note]");
@@ -461,7 +461,9 @@ function renderFinderReport(result) {
   const confirmedSize = result.knowsSize === "Yes, I know it" && hasSize;
 
   if (finderSizeTitle) finderSizeTitle.textContent = confirmedSize ? "✓ Filter Size Confirmed" : "Estimated Filter Size";
-  if (finderResultSize) finderResultSize.textContent = result.filterSize;
+  finderResultSizeItems.forEach((item) => {
+    item.textContent = result.filterSize;
+  });
   if (finderSizeStatus) finderSizeStatus.textContent = confirmedSize
     ? "We recognized this as a standard residential filter size."
     : "Size confirmation needed";
