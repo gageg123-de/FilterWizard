@@ -331,6 +331,31 @@ input:focus-visible {
   font-weight: 850;
 }
 
+.hero-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  padding: 0;
+  margin: 14px 0 0;
+  list-style: none;
+  color: #526170;
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
+.hero-trust-row li {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-trust-row li + li::before {
+  content: "/";
+  margin-right: 14px;
+  color: #9aa8b4;
+  font-weight: 700;
+}
+
 .trust-row {
   display: flex;
   flex-wrap: wrap;
@@ -2193,6 +2218,40 @@ input:focus {
   .hero-value-pills li {
     min-height: 28px;
     font-size: 0.76rem;
+  }
+
+  .hero-trust-row {
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 11px;
+    color: #5b6875;
+    font-size: 0.76rem;
+    line-height: 1.2;
+  }
+
+  .hero-trust-row li {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .hero-trust-row li:first-child {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .hero-trust-row li:last-child {
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+
+  .hero-trust-row li + li {
+    border-left: 1px solid rgba(100, 115, 129, 0.24);
+  }
+
+  .hero-trust-row li + li::before {
+    content: none;
   }
 
   .credibility-bar {
