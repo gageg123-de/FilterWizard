@@ -307,7 +307,11 @@ function showFinderStep(step) {
     clearFinderError(stepEl);
   });
 
-  if (finderBackButton) finderBackButton.hidden = finderCurrentStep === 1;
+  if (finderBackButton) {
+    finderBackButton.hidden = false;
+    finderBackButton.disabled = finderCurrentStep === 1;
+    finderBackButton.setAttribute("aria-disabled", String(finderCurrentStep === 1));
+  }
   if (finderNextButton) finderNextButton.hidden = finderCurrentStep === finderTotalSteps;
   if (finderCompleteButton) finderCompleteButton.hidden = finderCurrentStep !== finderTotalSteps;
   updateFinderProgress();
