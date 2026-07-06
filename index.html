@@ -3,8 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Filter Wizard helps homeowners find the right air filter, remember replacement dates, and get early access before launch.">
-  <title>Filter Wizard | Never Forget Your Air Filter Again</title>
+  <meta name="description" content="Filter Wizard helps homeowners find their air filter size, estimate a replacement schedule, and get early access to filter reminders and delivery.">
+  <link rel="canonical" href="https://filter-wizard.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://filter-wizard.com/">
+  <meta property="og:title" content="Filter Wizard | Find Your Air Filter Size in Under 60 Seconds">
+  <meta property="og:description" content="Use the free Filter Wizard tool to estimate your home air filter size and replacement schedule.">
+  <meta property="og:image" content="https://filter-wizard.com/assets/images/filter-wizard-hero-delivery.webp">
+  <meta property="og:site_name" content="Filter Wizard">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://filter-wizard.com/">
+  <meta name="twitter:title" content="Filter Wizard | Find Your Air Filter Size in Under 60 Seconds">
+  <meta name="twitter:description" content="Use the free Filter Wizard tool to estimate your home air filter size and replacement schedule.">
+  <meta name="twitter:image" content="https://filter-wizard.com/assets/images/filter-wizard-hero-delivery.webp">
+  <!-- TODO: Add social preview image at assets/images/filter-wizard-og-image.png, recommended size 1200x630. -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Filter Wizard",
+    "url": "https://filter-wizard.com/",
+    "description": "Filter Wizard helps homeowners find their air filter size, estimate a replacement schedule, and get early access to filter reminders and delivery.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://filter-wizard.com/#filter-finder",
+      "query-input": "required name=filter"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Filter Wizard",
+    "url": "https://filter-wizard.com/",
+    "logo": "https://filter-wizard.com/assets/images/filter-wizard-logo.png"
+  }
+  </script>
+  <title>Filter Wizard | Find Your Air Filter Size in Under 60 Seconds</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64VWBW3NHS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,6 +101,12 @@
             <a class="btn btn-primary" href="#filter-finder" data-hero-finder-cta>Start Free Filter Finder</a>
             <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
           </div>
+          <ul class="credibility-bar" aria-label="Filter Wizard trust badges">
+            <li>&#10003; Free to Use</li>
+            <li>&#10003; No Credit Card Required</li>
+            <li>&#10003; Takes Under 60 Seconds</li>
+            <li>&#10003; Mobile Friendly</li>
+          </ul>
         </div>
         <div class="hero-visual image-card reveal">
           <picture>
@@ -67,6 +116,32 @@
               sizes="(max-width: 820px) calc(100vw - 28px), 465px">
             <img class="hero-image" src="assets/images/filter-wizard-hero-delivery.webp" alt="Homeowner carrying a clean air filter into the house with a delivery box nearby" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
           </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-section">
+      <div class="container">
+        <div class="compact-heading reveal">
+          <p class="eyebrow">Why homeowners trust Filter Wizard</p>
+          <h2>A simple tool for one confusing home task</h2>
+        </div>
+        <div class="trust-card-grid">
+          <article class="trust-card reveal">
+            <span aria-hidden="true">✓</span>
+            <h3>Free Tool</h3>
+            <p>No payment required. Find your filter size completely free.</p>
+          </article>
+          <article class="trust-card reveal">
+            <span aria-hidden="true">✓</span>
+            <h3>Built for Homeowners</h3>
+            <p>Designed to simplify one of the most confusing home maintenance tasks.</p>
+          </article>
+          <article class="trust-card reveal">
+            <span aria-hidden="true">✓</span>
+            <h3>Privacy First</h3>
+            <p>We only ask for your email if you want reminders. No spam. Ever.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -151,6 +226,10 @@
         </div>
 
         <div class="finder-result" data-finder-result hidden>
+          <div class="recommendation-banner">
+            <strong><span aria-hidden="true">●</span> Recommendation Ready</strong>
+            <p>Based on your answers, we have generated your personalized filter recommendation.</p>
+          </div>
           <div class="finder-report-header">
             <div>
               <p class="eyebrow">Your Result</p>
@@ -226,6 +305,15 @@
       </div>
     </section>
 
+    <section class="section founder-note-section">
+      <div class="container founder-note-card reveal">
+        <p class="eyebrow">Why I built Filter Wizard</p>
+        <h2>Air filters should not be hard to manage.</h2>
+        <p>Most homeowners don't know their air filter size, forget when to replace it, or end up buying the wrong filter.</p>
+        <p>Filter Wizard was built to make finding the right filter fast and eventually automate reminders and replacement deliveries.</p>
+      </div>
+    </section>
+
     <section class="section final-cta-block" id="early-access">
       <div class="container final-cta-inner reveal">
         <div>
@@ -239,7 +327,8 @@
           <label class="sr-only" for="reservation-email">Email address</label>
           <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
           <button class="btn btn-primary form-submit" type="submit">Get Early Access</button>
-          <p class="form-trust">No payment. No spam.</p>
+          <p class="form-trust">Join the early access list and help shape Filter Wizard before launch.</p>
+          <p class="form-trust form-trust-secondary">No spam &bull; Free forever while in beta &bull; Unsubscribe anytime</p>
           <p class="form-error" role="alert" data-form-error hidden>Something went wrong. Please try again in a moment.</p>
         </form>
         <div class="reservation-success" role="status" aria-live="polite" data-reservation-success hidden>
@@ -265,6 +354,11 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#early-access">Email Me My Result</a>
       </div>
+    </div>
+    <div class="container footer-trust" aria-label="Filter Wizard trust indicators">
+      <span>&#128274; Secure website</span>
+      <span>&#128231; Email updates only if requested</span>
+      <span>&#127968; Built for homeowners</span>
     </div>
     <div class="container disclaimer">
       Filter Wizard is currently validating early demand. Joining early access does not start paid service or guarantee immediate shipment.
