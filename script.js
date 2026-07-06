@@ -17,8 +17,6 @@ const finderProgressLabel = document.querySelector("[data-finder-progress-label]
 const finderProgressBar = document.querySelector("[data-finder-progress-bar]");
 const knownSizeField = document.querySelector("[data-known-size-field]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
-const finderFinalSizeInput = document.querySelector("[data-finder-size-final]");
-const finderEmailInput = document.querySelector("[data-finder-email]");
 const finderResult = document.querySelector("[data-finder-result]");
 const finderResultSize = document.querySelector("[data-finder-result-size]");
 const finderLocationGuidance = document.querySelector("[data-finder-location-guidance]");
@@ -56,7 +54,6 @@ const finderState = {
   location: "",
   conditions: [],
   knownSize: "",
-  finalSize: "",
   email: "",
   recommendedSchedule: "",
   normalizedSize: ""
@@ -200,7 +197,6 @@ function resetFinderForModal() {
   finderState.location = "";
   finderState.conditions = [];
   finderState.knownSize = "";
-  finderState.finalSize = "";
   finderState.email = "";
   finderState.recommendedSchedule = "";
   finderState.normalizedSize = "";
@@ -212,7 +208,6 @@ function resetFinderForModal() {
   });
   if (knownSizeField) knownSizeField.hidden = true;
   if (finderKnownSizeInput) finderKnownSizeInput.value = "";
-  if (finderFinalSizeInput) finderFinalSizeInput.value = "";
   if (resultEmailInput) resultEmailInput.value = "";
   if (resultEmailForm) resultEmailForm.hidden = false;
   if (resultEmailSuccess) resultEmailSuccess.hidden = true;
@@ -250,8 +245,7 @@ function normalizeFilterSize(value) {
 
 function getFinderSize() {
   finderState.knownSize = finderKnownSizeInput?.value.trim() || "";
-  finderState.finalSize = finderFinalSizeInput?.value.trim() || "";
-  return normalizeFilterSize(finderState.finalSize || finderState.knownSize);
+  return normalizeFilterSize(finderState.knownSize);
 }
 
 function getFinderStepLabel(step) {
@@ -360,8 +354,7 @@ function setFinderOption(button) {
     knownSizeField.hidden = value !== "Yes, I know it";
     if (value === "Yes, I know it") {
       setTimeout(() => {
-        finderKnownSizeInput?.focus();
-        knownSizeField.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        finderKnownSizeInput?.focus({ preventScroll: true });
       }, 40);
     }
   }
@@ -567,7 +560,7 @@ async function completeFilterFinder() {
 
   const foundSize = getFinderSize();
   const filterType = getRecommendedFilterType();
-  finderState.email = finderEmailInput?.value.trim() || "";
+  finderState.email = "";
   finderState.recommendedSchedule = getRecommendedSchedule();
   finderState.normalizedSize = foundSize;
 
@@ -848,14 +841,6 @@ document.querySelectorAll("[data-finder-option]").forEach((button) => {
 
 finderKnownSizeInput?.addEventListener("input", () => {
   clearFinderError(document.querySelector('[data-finder-step="1"]'));
-});
-
-finderEmailInput?.addEventListener("input", () => {
-  clearFinderError(document.querySelector('[data-finder-step="4"]'));
-  if (!finderEmailEnteredTracked && finderEmailInput.value.trim()) {
-    finderEmailEnteredTracked = true;
-    trackEvent("filter_finder_email_entered");
-  }
 });
 
 resultEmailInput?.addEventListener("input", () => {
