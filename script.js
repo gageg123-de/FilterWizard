@@ -16,9 +16,8 @@ const finderCompleteButton = document.querySelector("[data-finder-complete]");
 const finderProgressLabel = document.querySelector("[data-finder-progress-label]");
 const finderProgressBar = document.querySelector("[data-finder-progress-bar]");
 const knownSizeField = document.querySelector("[data-known-size-field]");
+const knownSizeOptions = document.querySelector("[data-known-size-options]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
-const finderFinalSizeInput = document.querySelector("[data-finder-size-final]");
-const finderEmailInput = document.querySelector("[data-finder-email]");
 const finderResult = document.querySelector("[data-finder-result]");
 const finderResultSize = document.querySelector("[data-finder-result-size]");
 const finderLocationGuidance = document.querySelector("[data-finder-location-guidance]");
@@ -56,7 +55,6 @@ const finderState = {
   location: "",
   conditions: [],
   knownSize: "",
-  finalSize: "",
   email: "",
   recommendedSchedule: "",
   normalizedSize: ""
@@ -200,7 +198,6 @@ function resetFinderForModal() {
   finderState.location = "";
   finderState.conditions = [];
   finderState.knownSize = "";
-  finderState.finalSize = "";
   finderState.email = "";
   finderState.recommendedSchedule = "";
   finderState.normalizedSize = "";
@@ -210,9 +207,9 @@ function resetFinderForModal() {
     option.classList.remove("selected");
     option.setAttribute("aria-pressed", "false");
   });
+  knownSizeOptions?.classList.remove("knows-size-selected");
   if (knownSizeField) knownSizeField.hidden = true;
   if (finderKnownSizeInput) finderKnownSizeInput.value = "";
-  if (finderFinalSizeInput) finderFinalSizeInput.value = "";
   if (resultEmailInput) resultEmailInput.value = "";
   if (resultEmailForm) resultEmailForm.hidden = false;
   if (resultEmailSuccess) resultEmailSuccess.hidden = true;
@@ -250,8 +247,7 @@ function normalizeFilterSize(value) {
 
 function getFinderSize() {
   finderState.knownSize = finderKnownSizeInput?.value.trim() || "";
-  finderState.finalSize = finderFinalSizeInput?.value.trim() || "";
-  return normalizeFilterSize(finderState.finalSize || finderState.knownSize);
+  return normalizeFilterSize(finderState.knownSize);
 }
 
 function getFinderStepLabel(step) {
@@ -276,8 +272,15 @@ function getFinderStepName(step) {
 
 function updateFinderProgress() {
   if (!finderProgressLabel || !finderProgressBar) return;
-  finderProgressLabel.textContent = `Step ${finderCurrentStep} of ${finderTotalSteps} - ${getFinderStepLabel(finderCurrentStep)}`;
+  finderProgressLabel.textContent = `Step ${finderCurrentStep} • ${getFinderStepLabel(finderCurrentStep)}`;
   finderProgressBar.style.width = `${(finderCurrentStep / finderTotalSteps) * 100}%`;
+}
+
+function updateFinderActionLabels() {
+  if (!finderNextButton) return;
+  finderNextButton.textContent = finderCurrentStep === 1 && finderState.knowsSize === "Yes, I know it"
+    ? "Continue"
+    : "Next";
 }
 
 function clearFinderError(stepEl) {
@@ -308,6 +311,7 @@ function showFinderStep(step) {
   if (finderNextButton) finderNextButton.hidden = finderCurrentStep === finderTotalSteps;
   if (finderCompleteButton) finderCompleteButton.hidden = finderCurrentStep !== finderTotalSteps;
   updateFinderProgress();
+  updateFinderActionLabels();
 }
 
 function startFilterFinder() {
@@ -358,12 +362,13 @@ function setFinderOption(button) {
 
   if (group === "knowsSize" && knownSizeField) {
     knownSizeField.hidden = value !== "Yes, I know it";
+    knownSizeOptions?.classList.toggle("knows-size-selected", value === "Yes, I know it");
     if (value === "Yes, I know it") {
       setTimeout(() => {
-        finderKnownSizeInput?.focus();
-        knownSizeField.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        finderKnownSizeInput?.focus({ preventScroll: true });
       }, 40);
     }
+    updateFinderActionLabels();
   }
 }
 
@@ -378,7 +383,7 @@ function validateFinderStep(step = finderCurrentStep) {
     }
     if (finderState.knowsSize === "Yes, I know it" && !finderKnownSizeInput?.value.trim()) {
       setFinderError(stepEl, "Enter your filter size before continuing.");
-      finderKnownSizeInput?.focus();
+      finderKnownSizeInput?.focus({ preventScroll: true });
       return false;
     }
   }
@@ -567,7 +572,7 @@ async function completeFilterFinder() {
 
   const foundSize = getFinderSize();
   const filterType = getRecommendedFilterType();
-  finderState.email = finderEmailInput?.value.trim() || "";
+  finderState.email = "";
   finderState.recommendedSchedule = getRecommendedSchedule();
   finderState.normalizedSize = foundSize;
 
@@ -848,14 +853,6 @@ document.querySelectorAll("[data-finder-option]").forEach((button) => {
 
 finderKnownSizeInput?.addEventListener("input", () => {
   clearFinderError(document.querySelector('[data-finder-step="1"]'));
-});
-
-finderEmailInput?.addEventListener("input", () => {
-  clearFinderError(document.querySelector('[data-finder-step="4"]'));
-  if (!finderEmailEnteredTracked && finderEmailInput.value.trim()) {
-    finderEmailEnteredTracked = true;
-    trackEvent("filter_finder_email_entered");
-  }
 });
 
 resultEmailInput?.addEventListener("input", () => {

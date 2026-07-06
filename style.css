@@ -1101,6 +1101,14 @@ input:focus-visible {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.finder-options.knows-size-selected {
+  grid-template-columns: 1fr;
+}
+
+.finder-options.knows-size-selected .finder-option:not(.selected) {
+  display: none;
+}
+
 .finder-option {
   min-height: 58px;
   padding: 14px;
@@ -2179,7 +2187,7 @@ input:focus {
   .hero-value-pills {
     display: flex;
     gap: 7px;
-    margin-bottom: 10px;
+    margin: 10px 0 0;
   }
 
   .hero-value-pills li {
@@ -2188,10 +2196,7 @@ input:focus {
   }
 
   .credibility-bar {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 7px;
-    margin-top: 12px;
+    display: none;
   }
 
   .credibility-bar li {
@@ -2284,6 +2289,19 @@ input:focus {
     grid-template-columns: 1fr;
   }
 
+  .finder-step {
+    gap: 12px;
+  }
+
+  .finder-field {
+    gap: 7px;
+  }
+
+  .finder-option {
+    min-height: 50px;
+    padding: 11px 12px;
+  }
+
   .finder-actions,
   .finder-result-actions {
     display: grid;
@@ -2355,7 +2373,17 @@ input:focus {
   }
 
   .finder-modal-scroll {
-    padding: 20px;
+    padding: 16px;
+  }
+
+  .finder-modal-heading {
+    margin-bottom: 12px;
+  }
+
+  .finder-quiz,
+  .finder-result {
+    gap: 14px;
+    padding: 16px;
   }
 
   .recommendation-summary {
