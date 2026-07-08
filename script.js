@@ -30,6 +30,7 @@ const finderMonths = document.querySelector("[data-finder-months]");
 const finderCopyButton = document.querySelector("[data-finder-copy]");
 const finderCopyStatus = document.querySelector("[data-finder-copy-status]");
 const finderSizeTitle = document.querySelector("[data-finder-size-title]");
+const finderConfidenceText = document.querySelector("[data-finder-confidence-text]");
 const finderAnswerPills = document.querySelector("[data-finder-answer-pills]");
 const finderEmailSkipButton = document.querySelector("[data-finder-email-skip]");
 const finderEmailSkipped = document.querySelector("[data-finder-email-skipped]");
@@ -40,6 +41,7 @@ const finderProductSize = document.querySelector("[data-finder-product-size]");
 const finderProductMerv = document.querySelector("[data-finder-product-merv]");
 const finderProductBestFor = document.querySelector("[data-finder-product-best-for]");
 const finderProductPrice = document.querySelector("[data-finder-product-price]");
+const finderProductYearlyCost = document.querySelector("[data-finder-product-yearly-cost]");
 const finderProductSchedule = document.querySelector("[data-finder-product-schedule]");
 const finderProductCta = document.querySelector("[data-finder-product-cta]");
 const sizeAutocompleteInputs = document.querySelectorAll("[data-size-autocomplete]");
@@ -444,19 +446,29 @@ function getRecommendedFilterType() {
   if (conditions.includes("Allergies")) {
     return {
       type: "MERV 13",
-      copy: "MERV 13: Best for allergy-sensitive homes."
+      copy: "Best fit for allergy-sensitive homes and finer particle filtration."
     };
   }
   if (conditions.some((condition) => ["Pets", "Heavy dust"].includes(condition))) {
     return {
       type: "MERV 11",
-      copy: "MERV 11: Better for pets, dust, and higher filtration needs."
+      copy: "Better fit for pets, dust, and higher everyday filtration needs."
     };
   }
   return {
     type: "MERV 8",
-    copy: "MERV 8: Best for most standard homes."
+    copy: "Good fit for standard homes with normal dust levels."
   };
+}
+
+function getEstimatedYearlyCost(schedule, merv) {
+  if (merv === "MERV 13") {
+    return schedule === "Every 30-60 days" ? "$96-$150/year" : "$64-$100/year";
+  }
+  if (merv === "MERV 11") {
+    return schedule === "Every 30-60 days" ? "$72-$108/year" : "$48-$72/year";
+  }
+  return schedule === "Every 30-60 days" ? "$48-$84/year" : "$32-$56/year";
 }
 
 function getProductRecommendation(result) {
@@ -492,6 +504,7 @@ function getProductRecommendation(result) {
     merv,
     bestFor: details.bestFor,
     priceRange: details.priceRange,
+    yearlyCost: getEstimatedYearlyCost(result.recommendedSchedule, merv),
     schedule: result.recommendedSchedule
   };
 }
@@ -509,13 +522,14 @@ function renderFinderReport(result) {
   const hasSize = result.filterSize !== "Check before ordering";
   const confirmedSize = result.knowsSize === "Yes, I know it" && hasSize;
 
-  if (finderSizeTitle) finderSizeTitle.textContent = confirmedSize ? "✓ Filter Size Confirmed" : "Estimated Filter Size";
+  if (finderSizeTitle) finderSizeTitle.textContent = "Match Confidence";
+  if (finderConfidenceText) finderConfidenceText.textContent = confirmedSize ? "High confidence" : "Confirm before ordering";
   finderResultSizeItems.forEach((item) => {
     item.textContent = result.filterSize;
   });
   if (finderSizeStatus) finderSizeStatus.textContent = confirmedSize
-    ? "We recognized this as a standard residential filter size."
-    : "Size confirmation needed";
+    ? "Standard residential size"
+    : "Check the printed size first";
   if (finderLocationGuidance) {
     finderLocationGuidance.textContent = confirmedSize
       ? ""
@@ -553,6 +567,7 @@ function renderFinderReport(result) {
   if (finderProductMerv) finderProductMerv.textContent = result.productMerv;
   if (finderProductBestFor) finderProductBestFor.textContent = `Best for ${result.productBestFor}.`;
   if (finderProductPrice) finderProductPrice.textContent = result.productPrice;
+  if (finderProductYearlyCost) finderProductYearlyCost.textContent = `Estimated yearly cost: ${result.productYearlyCost}`;
   if (finderProductSchedule) finderProductSchedule.textContent = `Recommended replacement: ${result.productSchedule}`;
   if (finderProductImage) {
     const imageUrl = result.productImage;
@@ -590,6 +605,7 @@ function getFinderCopyText(result) {
     "Filter Wizard Recommendation",
     `Recommended filter: ${result.productTitle}`,
     `Estimated price range: ${result.productPrice}`,
+    `Estimated yearly cost: ${result.productYearlyCost}`,
     `Best for: ${result.productBestFor}`,
     `Filter size: ${result.filterSize}`,
     `Location: ${result.location}`,
@@ -631,6 +647,7 @@ function addResultFields(formData, result) {
   formData.set("recommendedFilterProduct", result.productTitle || "");
   formData.set("recommendedFilterBestFor", result.productBestFor || "");
   formData.set("estimatedFilterPrice", result.productPrice || "");
+  formData.set("estimatedYearlyCost", result.productYearlyCost || "");
   formData.set("productImage", result.productImage || "");
 }
 
@@ -693,6 +710,7 @@ async function completeFilterFinder() {
     productMerv: product.merv,
     productBestFor: product.bestFor,
     productPrice: product.priceRange,
+    productYearlyCost: product.yearlyCost,
     productSchedule: product.schedule
   });
 
