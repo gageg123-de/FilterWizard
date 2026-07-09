@@ -1055,6 +1055,28 @@ input:focus-visible {
   box-shadow: 0 12px 28px rgba(47, 179, 109, 0.08);
 }
 
+.finder-confidence-pill {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  min-height: 28px;
+  align-items: center;
+  margin-top: 4px;
+  padding: 5px 9px;
+  border: 1px solid rgba(36, 119, 212, 0.16);
+  border-radius: 999px;
+  color: var(--blue-dark);
+  background: var(--blue-soft);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.finder-confidence-pill.is-confirmed {
+  color: var(--green-dark);
+  border-color: rgba(47, 179, 109, 0.24);
+  background: #e8f8ef;
+}
+
 .recommendation-banner strong {
   display: inline-flex;
   align-items: center;
@@ -1395,15 +1417,38 @@ input:focus-visible {
   margin: 0;
 }
 
-.finder-product-content strong {
+.finder-product-title {
+  display: grid;
+  gap: 2px;
+}
+
+.finder-product-title strong {
   color: var(--blue-dark);
-  font-size: clamp(1.08rem, 3vw, 1.32rem);
-  line-height: 1.12;
+  font-size: clamp(1.18rem, 3.4vw, 1.55rem);
+  line-height: 1.05;
   overflow-wrap: anywhere;
+}
+
+.finder-product-title span {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
 .finder-product-content p {
   margin: 0;
+}
+
+.finder-product-best-for span:first-child {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.finder-product-best-for span:last-child {
+  color: var(--text);
+  font-weight: 850;
 }
 
 .finder-product-meta {
@@ -1431,7 +1476,7 @@ input:focus-visible {
 
 .finder-product-price {
   color: var(--green-dark);
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 950;
 }
 
@@ -1465,7 +1510,7 @@ input:focus-visible {
 
 .finder-result-next {
   border-color: rgba(36, 119, 212, 0.24);
-  background: linear-gradient(180deg, #edf6ff, #ffffff);
+  background: linear-gradient(180deg, #f4f9ff, #ffffff);
 }
 
 .finder-result-block p {
@@ -2734,8 +2779,12 @@ input:focus {
     gap: 6px;
   }
 
-  .finder-product-content strong {
+  .finder-product-title strong {
     font-size: 1rem;
+  }
+
+  .finder-product-title span {
+    font-size: 0.86rem;
   }
 
   .finder-product-meta {

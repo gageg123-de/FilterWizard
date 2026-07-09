@@ -20,29 +20,25 @@ const knownSizeOptions = document.querySelector("[data-known-size-options]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
 const finderResult = document.querySelector("[data-finder-result]");
 const finderResultSizeItems = document.querySelectorAll("[data-finder-result-size]");
-const finderLocationGuidance = document.querySelector("[data-finder-location-guidance]");
 const finderResultSchedule = document.querySelector("[data-finder-result-schedule]");
 const finderEmailNote = document.querySelector("[data-finder-email-note]");
-const finderSizeStatus = document.querySelector("[data-finder-size-status]");
 const finderMerv = document.querySelector("[data-finder-merv]");
 const finderMervCopy = document.querySelector("[data-finder-merv-copy]");
+const finderWhyTitle = document.querySelector("[data-finder-why-title]");
 const finderMonths = document.querySelector("[data-finder-months]");
 const finderCopyButton = document.querySelector("[data-finder-copy]");
 const finderCopyStatus = document.querySelector("[data-finder-copy-status]");
-const finderSizeTitle = document.querySelector("[data-finder-size-title]");
-const finderConfidenceText = document.querySelector("[data-finder-confidence-text]");
+const finderConfidencePill = document.querySelector("[data-finder-confidence-pill]");
 const finderAnswerPills = document.querySelector("[data-finder-answer-pills]");
 const finderEmailSkipButton = document.querySelector("[data-finder-email-skip]");
 const finderEmailSkipped = document.querySelector("[data-finder-email-skipped]");
 const finderProductImage = document.querySelector("[data-finder-product-image]");
 const finderProductPlaceholder = document.querySelector("[data-finder-product-placeholder]");
-const finderProductTitle = document.querySelector("[data-finder-product-title]");
-const finderProductSize = document.querySelector("[data-finder-product-size]");
-const finderProductMerv = document.querySelector("[data-finder-product-merv]");
+const finderProductSizeTitle = document.querySelector("[data-finder-product-size-title]");
+const finderProductTypeTitle = document.querySelector("[data-finder-product-type-title]");
 const finderProductBestFor = document.querySelector("[data-finder-product-best-for]");
 const finderProductPrice = document.querySelector("[data-finder-product-price]");
 const finderProductYearlyCost = document.querySelector("[data-finder-product-yearly-cost]");
-const finderProductSchedule = document.querySelector("[data-finder-product-schedule]");
 const finderProductCta = document.querySelector("[data-finder-product-cta]");
 const sizeAutocompleteInputs = document.querySelectorAll("[data-size-autocomplete]");
 const resultEmailForm = document.querySelector("[data-result-email-form]");
@@ -479,17 +475,17 @@ function getProductRecommendation(result) {
   const productDetails = {
     "MERV 13": {
       image: "assets/images/filter-product-merv-13.webp",
-      bestFor: "allergies, fine particles, and stronger filtration",
+      bestFor: "Allergies • Fine particles • Stronger filtration",
       priceRange: "Estimated $16-$25 each"
     },
     "MERV 11": {
       image: "assets/images/filter-product-merv-11.webp",
-      bestFor: "pets, dust, and improved everyday filtration",
+      bestFor: "Pets • Dust • Everyday filtration",
       priceRange: "Estimated $12-$18 each"
     },
     "MERV 8": {
       image: "assets/images/filter-product-merv-8.webp",
-      bestFor: "standard homes and everyday dust control",
+      bestFor: "Standard homes • Normal dust",
       priceRange: "Estimated $8-$14 each"
     }
   };
@@ -499,6 +495,8 @@ function getProductRecommendation(result) {
     title: size === "Check before ordering"
       ? `Confirm Size Before Ordering ${merv} Pleated Air Filter`
       : `${size} ${merv} Pleated Air Filter`,
+    sizeTitle: size === "Check before ordering" ? "Check before ordering" : size,
+    typeTitle: `${merv} Pleated Filter`,
     image: details.image,
     size,
     merv,
@@ -522,29 +520,24 @@ function renderFinderReport(result) {
   const hasSize = result.filterSize !== "Check before ordering";
   const confirmedSize = result.knowsSize === "Yes, I know it" && hasSize;
 
-  if (finderSizeTitle) finderSizeTitle.textContent = "Match Confidence";
-  if (finderConfidenceText) finderConfidenceText.textContent = confirmedSize ? "High confidence" : "Confirm before ordering";
+  if (finderConfidencePill) {
+    finderConfidencePill.textContent = confirmedSize ? "\u2713 High confidence" : "Confirm size before ordering";
+    finderConfidencePill.classList.toggle("is-confirmed", confirmedSize);
+  }
   finderResultSizeItems.forEach((item) => {
     item.textContent = result.filterSize;
   });
-  if (finderSizeStatus) finderSizeStatus.textContent = confirmedSize
-    ? "Standard residential size"
-    : "Check the printed size first";
-  if (finderLocationGuidance) {
-    finderLocationGuidance.textContent = confirmedSize
-      ? ""
-      : "Use the guidance below to confirm the printed size on your current filter's cardboard edge. " + getLocationGuidance(result.location);
-  }
   if (finderResultSchedule) finderResultSchedule.textContent = result.recommendedSchedule;
   if (finderMerv) finderMerv.textContent = result.recommendedFilterType;
   if (finderMervCopy) finderMervCopy.textContent = result.recommendedFilterCopy;
+  if (finderWhyTitle) finderWhyTitle.textContent = `Why we chose ${result.recommendedFilterType}`;
   if (finderAnswerPills) {
     finderAnswerPills.innerHTML = "";
     const answers = [
       result.knowsSize,
       result.location,
       ...(result.homeConditions.length ? result.homeConditions : ["Standard home conditions"])
-    ].filter(Boolean);
+    ].filter(Boolean).slice(0, 3);
     answers.forEach((answer) => {
       const pill = document.createElement("span");
       pill.textContent = `✓ ${answer}`;
@@ -562,13 +555,11 @@ function renderFinderReport(result) {
   if (resultEmailInput && result.email) {
     resultEmailInput.value = result.email;
   }
-  if (finderProductTitle) finderProductTitle.textContent = result.productTitle;
-  if (finderProductSize) finderProductSize.textContent = result.productSize;
-  if (finderProductMerv) finderProductMerv.textContent = result.productMerv;
-  if (finderProductBestFor) finderProductBestFor.textContent = `Best for ${result.productBestFor}.`;
+  if (finderProductSizeTitle) finderProductSizeTitle.textContent = result.productSizeTitle;
+  if (finderProductTypeTitle) finderProductTypeTitle.textContent = result.productTypeTitle;
+  if (finderProductBestFor) finderProductBestFor.textContent = result.productBestFor;
   if (finderProductPrice) finderProductPrice.textContent = result.productPrice;
   if (finderProductYearlyCost) finderProductYearlyCost.textContent = `Estimated yearly cost: ${result.productYearlyCost}`;
-  if (finderProductSchedule) finderProductSchedule.textContent = `Recommended replacement: ${result.productSchedule}`;
   if (finderProductImage) {
     const imageUrl = result.productImage;
 
@@ -705,6 +696,8 @@ async function completeFilterFinder() {
   const product = getProductRecommendation(result);
   Object.assign(result, {
     productTitle: product.title,
+    productSizeTitle: product.sizeTitle,
+    productTypeTitle: product.typeTitle,
     productImage: product.image,
     productSize: product.size,
     productMerv: product.merv,

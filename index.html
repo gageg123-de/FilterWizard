@@ -63,7 +63,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xbqsjc3yut");
   </script>
-  <link rel="stylesheet" href="style.css?v=result-polish-1">
+  <link rel="stylesheet" href="style.css?v=result-report-2">
 </head>
 <body>
   <header class="site-header" data-header>
@@ -224,6 +224,7 @@
           <div class="recommendation-banner">
             <strong><span aria-hidden="true">&#10003;</span> We Found Your Filter</strong>
             <span class="recommendation-size" data-finder-result-size>Check before ordering</span>
+            <span class="finder-confidence-pill" data-finder-confidence-pill>Confirm size before ordering</span>
             <div class="recommendation-summary">
               <div>
                 <small>MERV Type</small>
@@ -236,12 +237,6 @@
             </div>
             <div class="finder-months recommendation-months" data-finder-months></div>
           </div>
-          <div class="finder-report-header">
-            <div>
-              <h3>Your Best Match</h3>
-              <p>Based on your answers, this is the filter type and replacement plan we'd recommend.</p>
-            </div>
-          </div>
           <div class="finder-result-block finder-product-card">
             <div class="finder-product-layout">
               <div class="finder-product-image-wrap">
@@ -250,40 +245,32 @@
               </div>
               <div class="finder-product-content">
                 <p class="eyebrow">Recommended Product</p>
-                <strong data-finder-product-title>Confirm Size Before Ordering MERV 8 Pleated Air Filter</strong>
-                <div class="finder-product-meta">
-                  <span data-finder-product-size>Check before ordering</span>
-                  <span data-finder-product-merv>MERV 8</span>
+                <div class="finder-product-title">
+                  <strong data-finder-product-size-title>Check before ordering</strong>
+                  <span data-finder-product-type-title>MERV 8 Pleated Filter</span>
                 </div>
-                <p data-finder-product-best-for>Best for standard homes and everyday dust control</p>
+                <p class="finder-product-best-for"><span>Best for:</span> <span data-finder-product-best-for>Standard homes • Normal dust</span></p>
                 <p class="finder-product-price" data-finder-product-price>Estimated $8-$14 each</p>
                 <p class="finder-product-yearly-cost" data-finder-product-yearly-cost>Estimated yearly cost: $32-$56/year</p>
-                <p data-finder-product-schedule>Recommended replacement: Every 60-90 days</p>
                 <button class="btn btn-primary finder-product-cta" type="button" data-finder-product-cta>Email Me This Filter</button>
               </div>
             </div>
           </div>
           <p class="finder-email-note" data-finder-email-note hidden>We could not email your report, but your recommendation is shown above.</p>
-          <div class="finder-result-block finder-result-primary finder-result-size">
-            <strong data-finder-size-title>Match Confidence</strong>
-            <span data-finder-confidence-text>Confirm before ordering</span>
-            <small data-finder-size-status>Size confirmation needed</small>
-            <p data-finder-location-guidance>Check the printed size on your current filter's cardboard edge before ordering.</p>
-          </div>
           <div class="finder-result-block finder-filter-type">
-            <strong>Why We Chose This</strong>
+            <strong data-finder-why-title>Why we chose MERV 8</strong>
             <div class="finder-answer-pills" data-finder-answer-pills></div>
             <p data-finder-merv-copy>Good fit for standard homes with normal dust levels.</p>
           </div>
           <div class="finder-result-block finder-next-step finder-result-next">
-            <strong>Don't lose this recommendation</strong>
+            <strong>Save This Filter</strong>
             <p>We'll send your filter size, recommended MERV rating, estimated price range, and replacement schedule so you can find it later.</p>
             <form class="result-email-form" action="https://formspree.io/f/mzdlpbwp" method="POST" data-result-email-form>
               <input type="hidden" name="_subject" value="New Filter Wizard result reminder signup">
               <input type="hidden" name="source" value="Filter Finder Result">
               <label class="sr-only" for="result-email">Email address</label>
               <input id="result-email" name="email" type="email" autocomplete="email" placeholder="Email address" required data-result-email>
-              <button class="btn btn-primary form-submit" type="submit">Email Me My Recommendation</button>
+              <button class="btn btn-primary form-submit" type="submit">Save This Filter</button>
               <button class="finder-skip-email" type="button" data-finder-email-skip>Continue without email</button>
               <p class="form-trust">No payment today. No spam. You can unsubscribe anytime.</p>
               <p class="form-error" role="alert" data-form-error hidden>We could not email your report, but your recommendation is shown above.</p>
@@ -386,6 +373,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=result-polish-1"></script>
+  <script src="script.js?v=result-report-2"></script>
 </body>
 </html>
