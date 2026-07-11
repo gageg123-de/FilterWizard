@@ -1,0 +1,4 @@
+Contact: mailto:infofilterwizard@gmail.com
+Expires: 2027-07-10T00:00:00Z
+Preferred-Languages: en
+Canonical: https://filter-wizard.com/.well-known/security.txt
