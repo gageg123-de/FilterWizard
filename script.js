@@ -61,6 +61,8 @@ const resultEmailInput = document.querySelector("[data-result-email]");
 const resultEmailSuccess = document.querySelector("[data-result-email-success]");
 const earlyAccessForm = document.querySelector("[data-reservation-form]");
 const earlyAccessSuccess = document.querySelector("[data-reservation-success]");
+const articleEmailForm = document.querySelector("[data-article-email-form]");
+const articleEmailSuccess = document.querySelector("[data-article-email-success]");
 const readingProgress = document.querySelector("[data-reading-progress]");
 const articleContent = document.querySelector("[data-article-content]");
 const backToTopButton = document.querySelector("[data-back-to-top]");
@@ -1744,5 +1746,9 @@ resultEmailForm?.addEventListener("submit", (event) => {
 
 earlyAccessForm?.addEventListener("submit", (event) => {
   handleEmailFormSubmit(event, "early_access_submitted", earlyAccessSuccess);
+});
+
+articleEmailForm?.addEventListener("submit", (event) => {
+  handleEmailFormSubmit(event, "blog_email_signup", articleEmailSuccess);
 });
 
