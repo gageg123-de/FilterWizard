@@ -64,7 +64,7 @@ const earlyAccessSuccess = document.querySelector("[data-reservation-success]");
 const finderStorageKey = "filterWizardFinderResults";
 const emailStorageKey = "filterWizardEmailSignups";
 const finderTotalSteps = 4;
-const amazonAffiliateTag = "";
+const amazonAffiliateTag = "filterwizard-20";
 const genericProductImage = "assets/images/filter-product-generic.webp";
 const confirmSizeProductImage = "assets/images/filter-product-confirm-size.webp";
 const filterPriceRanges = {
@@ -747,37 +747,55 @@ function buildRetailerSearchQuery(result) {
     .trim();
 }
 
+function hasAmazonAffiliateTag(url) {
+  try {
+    const parsedUrl = new URL(url);
+    return parsedUrl.searchParams.get("tag") === amazonAffiliateTag;
+  } catch {
+    return false;
+  }
+}
+
 function getRetailerLinks(result) {
   const searchQuery = buildRetailerSearchQuery(result);
   const encodedSearchQuery = encodeURIComponent(searchQuery);
   const amazonUrl = amazonAffiliateTag
     ? `https://www.amazon.com/s?k=${encodedSearchQuery}&tag=${encodeURIComponent(amazonAffiliateTag)}`
     : `https://www.amazon.com/s?k=${encodedSearchQuery}`;
+  const amazonHasValidTag = hasAmazonAffiliateTag(amazonUrl);
+
+  if (!amazonHasValidTag) {
+    trackEvent("filter_wizard_amazon_tag_missing");
+  }
 
   return [
     {
       name: "Amazon",
-      subtext: "Fast shipping and multi-pack options",
-      // TODO: Add real Amazon Associates tag before monetized launch.
-      url: amazonUrl
+      subtext: "Fast shipping and broad filter-size availability",
+      url: amazonUrl,
+      recommended: true,
+      badge: "Recommended Retailer"
     },
     {
       name: "Home Depot",
       subtext: "Good for local pickup and common sizes",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://www.homedepot.com/s/${encodedSearchQuery}`
+      url: `https://www.homedepot.com/s/${encodedSearchQuery}`,
+      recommended: false
     },
     {
       name: "Lowe's",
       subtext: "Useful for pickup or delivery",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://www.lowes.com/search?searchTerm=${encodedSearchQuery}`
+      url: `https://www.lowes.com/search?searchTerm=${encodedSearchQuery}`,
+      recommended: false
     },
     {
       name: "Filterbuy",
       subtext: "Bulk packs and specialty sizes",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`
+      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`,
+      recommended: false
     }
   ];
 }
@@ -990,6 +1008,16 @@ function renderFinderReport(result) {
         const card = document.createElement("article");
         card.className = "finder-retailer-card";
 
+        if (retailer.recommended) {
+          card.classList.add("is-recommended");
+
+          const badge = document.createElement("span");
+          badge.className = "finder-retailer-badge";
+          badge.textContent = retailer.badge || "Recommended Retailer";
+
+          card.appendChild(badge);
+        }
+
         const title = document.createElement("strong");
         title.textContent = retailer.name;
 
@@ -1001,7 +1029,7 @@ function renderFinderReport(result) {
         link.href = retailer.url;
         link.target = "_blank";
         link.rel = "noopener sponsored nofollow";
-        link.textContent = "View Options";
+        link.textContent = retailer.recommended ? "Shop on Amazon" : "View Options";
         link.dataset.retailerName = retailer.name;
         link.dataset.retailerUrl = retailer.url;
         link.addEventListener("click", () => {
@@ -1013,7 +1041,11 @@ function renderFinderReport(result) {
             recommended_schedule: result.recommendedSchedule,
             replacement_interval_days: result.replacementIntervalDays,
             replacements_per_year: result.replacementsPerYear,
-            size_confidence_level: result.sizeConfidenceLevel
+            size_confidence_level: result.sizeConfidenceLevel,
+            is_recommended_retailer: Boolean(retailer.recommended),
+            affiliate_tag_present: retailer.name === "Amazon"
+              ? Boolean(amazonAffiliateTag)
+              : false
           });
         });
 
