@@ -61,6 +61,9 @@ const resultEmailInput = document.querySelector("[data-result-email]");
 const resultEmailSuccess = document.querySelector("[data-result-email-success]");
 const earlyAccessForm = document.querySelector("[data-reservation-form]");
 const earlyAccessSuccess = document.querySelector("[data-reservation-success]");
+const readingProgress = document.querySelector("[data-reading-progress]");
+const articleContent = document.querySelector("[data-article-content]");
+const backToTopButton = document.querySelector("[data-back-to-top]");
 const finderStorageKey = "filterWizardFinderResults";
 const emailStorageKey = "filterWizardEmailSignups";
 const finderTotalSteps = 4;
@@ -174,6 +177,21 @@ function setupRevealAnimations() {
   );
 
   revealItems.forEach((item) => observer.observe(item));
+}
+
+function updateReadingProgress() {
+  if (!readingProgress || !articleContent) return;
+
+  const rect = articleContent.getBoundingClientRect();
+  const articleTop = window.scrollY + rect.top;
+  const articleHeight = articleContent.offsetHeight - window.innerHeight;
+  const distance = window.scrollY - articleTop;
+  const progress = articleHeight > 0
+    ? Math.min(1, Math.max(0, distance / articleHeight))
+    : 0;
+
+  readingProgress.style.width = `${progress * 100}%`;
+  backToTopButton?.classList.toggle("visible", window.scrollY > 520);
 }
 
 function getFocusableElements(container) {
@@ -1513,7 +1531,14 @@ function setupSizeAutocomplete() {
 setHeaderState();
 setupRevealAnimations();
 setupSizeAutocomplete();
+updateReadingProgress();
 window.addEventListener("scroll", setHeaderState, { passive: true });
+window.addEventListener("scroll", updateReadingProgress, { passive: true });
+window.addEventListener("resize", updateReadingProgress);
+
+backToTopButton?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", toggleNav);
