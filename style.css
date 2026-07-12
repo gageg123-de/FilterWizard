@@ -3036,15 +3036,25 @@ input:focus-visible {
   bottom: 16px;
   z-index: 180;
   display: grid;
-  width: min(720px, calc(100% - 32px));
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
+  width: min(430px, calc(100% - 32px));
+  grid-template-columns: 1fr;
+  gap: 12px;
   align-items: center;
-  padding: 18px;
+  padding: 14px;
   border: 1px solid rgba(217, 231, 238, 0.95);
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 24px 70px rgba(11, 31, 53, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 260ms ease, transform 260ms ease, visibility 260ms ease;
+}
+
+.cookie-consent-banner.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .cookie-consent-banner[hidden],
@@ -3060,13 +3070,14 @@ input:focus-visible {
 .cookie-consent-copy p {
   margin: 5px 0 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .cookie-consent-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .cookie-consent-links a {
@@ -3080,13 +3091,14 @@ input:focus-visible {
 .cookie-settings-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: flex-end;
 }
 
 .cookie-consent-actions .btn,
 .cookie-settings-actions .btn {
-  min-height: 44px;
+  min-height: 40px;
+  padding: 9px 13px;
   white-space: nowrap;
 }
 
@@ -3625,9 +3637,10 @@ input:focus {
 
 @media (max-width: 640px) {
   .cookie-consent-banner {
-    right: 10px;
-    bottom: 10px;
-    width: calc(100% - 20px);
+    right: 12px;
+    left: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: auto;
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 14px;
@@ -4314,5 +4327,10 @@ input:focus {
 
   .finder-analyzing-spinner {
     animation: none;
+  }
+
+  .cookie-consent-banner {
+    transform: none;
+    transition: none;
   }
 }

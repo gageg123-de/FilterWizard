@@ -161,6 +161,8 @@ const consentManager = (() => {
   let lastSettingsTrigger = null;
   let clarityRetryCount = 0;
   let clarityRetryTimer = null;
+  let bannerShowTimer = null;
+  let bannerHideTimer = null;
 
   function getStoredConsent() {
     try {
@@ -241,16 +243,16 @@ const consentManager = (() => {
       banner.innerHTML = `
         <div class="cookie-consent-copy">
           <strong>Cookie choices</strong>
-          <p>We use cookies and similar technologies to understand site usage, improve Filter Wizard, and measure affiliate-link performance. You can accept or decline non-essential analytics cookies.</p>
+          <p>We use optional analytics cookies to improve Filter Wizard and measure site performance. You can accept or decline them.</p>
           <p class="cookie-consent-links">
             <a href="/cookie-policy.html">Cookie Policy</a>
             <a href="/privacy-policy.html">Privacy Policy</a>
           </p>
         </div>
         <div class="cookie-consent-actions">
-          <button class="btn btn-secondary" type="button" data-consent-settings>Cookie Settings</button>
+          <button class="btn btn-secondary" type="button" data-consent-settings>Settings</button>
           <button class="btn btn-secondary" type="button" data-consent-decline>Decline</button>
-          <button class="btn btn-primary" type="button" data-consent-accept>Accept Analytics</button>
+          <button class="btn btn-primary" type="button" data-consent-accept>Accept</button>
         </div>
       `;
       document.body.appendChild(banner);
@@ -293,11 +295,41 @@ const consentManager = (() => {
 
   function showConsentBanner() {
     buildConsentMarkup();
-    if (banner) banner.hidden = false;
+    if (!banner) return;
+
+    if (bannerHideTimer) {
+      window.clearTimeout(bannerHideTimer);
+      bannerHideTimer = null;
+    }
+
+    banner.hidden = false;
+    window.requestAnimationFrame(() => {
+      banner?.classList.add("is-visible");
+    });
+  }
+
+  function showConsentBannerAfterDelay() {
+    buildConsentMarkup();
+    if (!banner) return;
+    if (bannerShowTimer) window.clearTimeout(bannerShowTimer);
+    banner.classList.remove("is-visible");
+    banner.hidden = true;
+    bannerShowTimer = window.setTimeout(showConsentBanner, 900);
   }
 
   function hideConsentBanner() {
-    if (banner) banner.hidden = true;
+    if (!banner) return;
+    if (bannerShowTimer) {
+      window.clearTimeout(bannerShowTimer);
+      bannerShowTimer = null;
+    }
+    banner.classList.remove("is-visible");
+    if (bannerHideTimer) window.clearTimeout(bannerHideTimer);
+    bannerHideTimer = window.setTimeout(() => {
+      if (!banner?.classList.contains("is-visible")) {
+        banner.hidden = true;
+      }
+    }, 260);
   }
 
   function setDialogChoice(choice) {
@@ -316,6 +348,7 @@ const consentManager = (() => {
     lastSettingsTrigger = trigger;
     const storedConsent = getStoredConsent();
     setDialogChoice(storedConsent?.analytics || "denied");
+    hideConsentBanner();
     if (dialog) {
       dialog.hidden = false;
       document.body.classList.add("cookie-settings-open");
@@ -328,6 +361,9 @@ const consentManager = (() => {
   function closeCookieSettings() {
     if (dialog) dialog.hidden = true;
     document.body.classList.remove("cookie-settings-open");
+    if (!getStoredConsent()) {
+      showConsentBanner();
+    }
     if (lastSettingsTrigger && typeof lastSettingsTrigger.focus === "function") {
       lastSettingsTrigger.focus();
     }
@@ -411,7 +447,7 @@ const consentManager = (() => {
     } else {
       applyGoogleConsent("denied");
       applyClarityConsent("denied");
-      showConsentBanner();
+      showConsentBannerAfterDelay();
     }
   }
 
@@ -704,11 +740,6 @@ function closeFinderModal(reason = "closed") {
 
   if (!wasCompleted) {
     trackFinderAbandoned();
-    trackEvent("finder_abandoned", {
-      current_step: finderCurrentStep,
-      knows_size: finderState.knowsSize || "Not answered",
-      completed: false
-    });
   }
 
   finderModalOpener?.focus?.();
