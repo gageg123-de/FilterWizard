@@ -52,32 +52,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      analytics_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      wait_for_update: 500
-    });
-    try {
-      const storedConsent = JSON.parse(localStorage.getItem('filterWizardConsent') || 'null');
-      const sixMonths = 1000 * 60 * 60 * 24 * 183;
-      if (storedConsent && storedConsent.version === 1 && Date.now() - storedConsent.timestamp < sixMonths) {
-        gtag('consent', 'update', {
-          analytics_storage: storedConsent.analytics === 'granted' ? 'granted' : 'denied',
-          ad_storage: 'denied',
-          ad_user_data: 'denied',
-          ad_personalization: 'denied'
-        });
-      }
-    } catch (error) {
-      gtag('consent', 'update', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied'
-      });
-    }
     gtag('js', new Date());
 
     gtag('config', 'G-64VWBW3NHS');
@@ -89,7 +63,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xbqsjc3yut");
   </script>
-  <link rel="stylesheet" href="style.css?v=privacy-consent-1">
+  <link rel="stylesheet" href="style.css?v=blog-guides-1">
 </head>
 <body>
   <header class="site-header" data-header>
@@ -120,7 +94,7 @@
           <h1>Find the Right Air Filter in Under 60 Seconds</h1>
           <p class="hero-subtitle">Answer a few quick questions and Filter Wizard will help you identify your filter size, choose the right MERV rating, and compare trusted buying options.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#filter-finder" data-hero-finder-cta data-entry-point="hero">Start Free Filter Finder</a>
+            <a class="btn btn-primary" href="#filter-finder" data-hero-finder-cta>Start Free Filter Finder</a>
             <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
           </div>
           <ul class="hero-trust-row" aria-label="Filter Wizard trust badges">
@@ -175,7 +149,7 @@
           <p class="eyebrow">Free Filter Finder</p>
           <h2>Not sure what air filter to buy?</h2>
           <p>Use the free Filter Finder to get your size guidance, MERV recommendation, replacement timing, and suggested buying options in under 60 seconds.</p>
-          <button class="btn btn-secondary" type="button" data-finder-start data-entry-point="inline_cta">Start Free Filter Finder</button>
+          <button class="btn btn-secondary" type="button" data-finder-start>Start Free Filter Finder</button>
         </div>
       </div>
     </section>
@@ -204,7 +178,7 @@
             </div>
             <label class="finder-field" data-known-size-field hidden>
               <span>Enter your filter size</span>
-              <input type="text" data-finder-size-known data-size-autocomplete placeholder="Example: 20x25x1" inputmode="text" autocomplete="off" data-clarity-mask>
+              <input type="text" data-finder-size-known data-size-autocomplete placeholder="Example: 20x25x1" inputmode="text" autocomplete="off">
               <div class="size-suggestions" data-size-suggestions hidden></div>
             </label>
             <p class="finder-error" data-finder-error hidden></p>
@@ -320,7 +294,7 @@
             <p>Check the dimensions printed on the cardboard edge. The format usually looks like 20x25x1.</p>
             <label class="finder-field finder-size-confirmation-field">
               <span>Enter the size once you find it</span>
-              <input type="text" data-finder-confirm-size-input data-size-autocomplete placeholder="Example: 20x25x1" autocomplete="off" inputmode="text" data-clarity-mask>
+              <input type="text" data-finder-confirm-size-input data-size-autocomplete placeholder="Example: 20x25x1" autocomplete="off" inputmode="text">
               <div class="size-suggestions" data-size-suggestions hidden></div>
             </label>
             <button class="btn btn-primary" type="button" data-finder-confirm-size-button>Update My Recommendation</button>
@@ -333,7 +307,7 @@
             <p class="finder-retailer-summary"><span>Your recommended search</span> <strong data-finder-retailer-summary>Confirm size • MERV 8</strong></p>
             <!-- TODO: Replace placeholder retailer search links with real affiliate/deep links before monetized launch. -->
             <div class="finder-retailer-grid" data-finder-retailer-options></div>
-            <p class="finder-affiliate-disclosure">Affiliate disclosure: We may earn a commission from qualifying purchases made through Amazon links, at no extra cost to you.</p>
+            <p class="finder-affiliate-disclosure">As an Amazon Associate, Filter Wizard may earn from qualifying purchases.</p>
             <p class="finder-result-disclaimer">Filter Wizard provides general guidance. Confirm your exact size and HVAC manufacturer recommendations before ordering.</p>
           </div>
           <div class="finder-result-block finder-next-step finder-result-next">
@@ -343,7 +317,7 @@
               <input type="hidden" name="_subject" value="New Filter Wizard saved filter result">
               <input type="hidden" name="source" value="Saved Filter Result">
               <label class="sr-only" for="result-email">Email address</label>
-              <input id="result-email" name="email" type="email" autocomplete="email" placeholder="Email address" required data-result-email data-clarity-mask>
+              <input id="result-email" name="email" type="email" autocomplete="email" placeholder="Email address" required data-result-email>
               <button class="btn btn-primary form-submit" type="submit">Email Me My Filter Result</button>
               <p class="form-trust">No payment. No spam. Just your saved filter result and occasional replacement reminders.</p>
               <p class="form-error" role="alert" data-form-error hidden>We could not email your report, but your recommendation is shown above.</p>
@@ -463,7 +437,7 @@
           <input type="hidden" name="_subject" value="New Filter Wizard filter reminder signup">
           <input type="hidden" name="source" value="General Filter Reminder Signup">
           <label class="sr-only" for="reservation-email">Email address</label>
-          <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="Email address" required data-clarity-mask>
+          <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
           <button class="btn btn-primary form-submit" type="submit">Email Me My Filter Result</button>
           <p class="form-trust">No payment required. No spam. Unsubscribe anytime.</p>
           <p class="form-trust form-trust-secondary">General filter tips, saved results, and occasional replacement reminders.</p>
@@ -492,11 +466,6 @@
         <a href="#how-it-works">How It Works</a>
         <a href="/blog/">Blog</a>
         <a href="#early-access">Email Me My Result</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cookie-policy.html">Cookie Policy</a>
-        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        <a href="/terms-of-use.html">Terms of Use</a>
-        <button class="footer-cookie-settings" type="button" data-cookie-settings>Cookie Settings</button>
       </div>
     </div>
     <div class="container footer-trust" aria-label="Filter Wizard trust indicators">
@@ -505,11 +474,10 @@
       <span>&#127968; Built for homeowners</span>
     </div>
     <div class="container disclaimer">
-      <p>As an Amazon Associate I earn from qualifying purchases.</p>
       Filter Wizard provides general filter guidance and retailer search links. Always confirm your exact filter size before ordering.
     </div>
   </footer>
 
-  <script src="script.js?v=privacy-consent-1"></script>
+  <script src="script.js?v=amazon-click-tracking-1"></script>
 </body>
 </html>

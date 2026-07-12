@@ -97,18 +97,6 @@ let finderAnalysisStepTimer = null;
 let retailerViewedObserver = null;
 let retailerViewedTracked = false;
 
-const finderAnalyticsState = {
-  started: false,
-  completed: false,
-  abandoned: false,
-  lastCompletedStep: null,
-  completionSignature: null,
-  entryPoint: "unknown",
-  selectedSizePath: "",
-  enteredSizeSignature: "",
-  conditionsSignature: ""
-};
-
 const finderState = {
   knowsSize: "",
   location: "",
@@ -149,432 +137,6 @@ function trackEvent(eventName, parameters = {}) {
   if (typeof window.gtag === "function") {
     window.gtag("event", eventName, parameters);
   }
-}
-
-const consentManager = (() => {
-  const storageKey = "filterWizardConsent";
-  const consentVersion = 1;
-  const consentMaxAge = 1000 * 60 * 60 * 24 * 183;
-  let initialized = false;
-  let banner = null;
-  let dialog = null;
-  let lastSettingsTrigger = null;
-  let clarityRetryCount = 0;
-  let clarityRetryTimer = null;
-
-  function getStoredConsent() {
-    try {
-      const rawValue = localStorage.getItem(storageKey);
-      if (!rawValue) return null;
-      const parsedValue = JSON.parse(rawValue);
-      const isValid =
-        parsedValue &&
-        parsedValue.version === consentVersion &&
-        typeof parsedValue.timestamp === "number" &&
-        Date.now() - parsedValue.timestamp < consentMaxAge &&
-        (parsedValue.analytics === "granted" || parsedValue.analytics === "denied");
-
-      return isValid ? parsedValue : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function saveConsent(choice) {
-    const normalizedChoice = choice === "granted" ? "granted" : "denied";
-    const value = {
-      analytics: normalizedChoice,
-      timestamp: Date.now(),
-      version: consentVersion
-    };
-
-    try {
-      localStorage.setItem(storageKey, JSON.stringify(value));
-    } catch (error) {
-      console.warn("Filter Wizard could not save cookie consent.", error);
-    }
-
-    applyGoogleConsent(normalizedChoice);
-    applyClarityConsent(normalizedChoice);
-    return value;
-  }
-
-  function applyGoogleConsent(choice) {
-    if (typeof window.gtag !== "function") return;
-
-    window.gtag("consent", "update", {
-      analytics_storage: choice === "granted" ? "granted" : "denied",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied"
-    });
-  }
-
-  function applyClarityConsent(choice) {
-    const payload = {
-      ad_Storage: "denied",
-      analytics_Storage: choice === "granted" ? "granted" : "denied"
-    };
-
-    if (typeof window.clarity === "function") {
-      window.clarity("consentv2", payload);
-      clarityRetryCount = 0;
-      if (clarityRetryTimer) {
-        window.clearTimeout(clarityRetryTimer);
-        clarityRetryTimer = null;
-      }
-      return;
-    }
-
-    if (clarityRetryCount >= 8) return;
-    clarityRetryCount += 1;
-    clarityRetryTimer = window.setTimeout(() => applyClarityConsent(choice), 350);
-  }
-
-  function buildConsentMarkup() {
-    if (!banner) {
-      banner = document.createElement("section");
-      banner.className = "cookie-consent-banner";
-      banner.setAttribute("aria-label", "Cookie consent");
-      banner.setAttribute("role", "region");
-      banner.hidden = true;
-      banner.innerHTML = `
-        <div class="cookie-consent-copy">
-          <strong>Cookie choices</strong>
-          <p>We use cookies and similar technologies to understand site usage, improve Filter Wizard, and measure affiliate-link performance. You can accept or decline non-essential analytics cookies.</p>
-          <p class="cookie-consent-links">
-            <a href="/cookie-policy.html">Cookie Policy</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-          </p>
-        </div>
-        <div class="cookie-consent-actions">
-          <button class="btn btn-secondary" type="button" data-consent-settings>Cookie Settings</button>
-          <button class="btn btn-secondary" type="button" data-consent-decline>Decline</button>
-          <button class="btn btn-primary" type="button" data-consent-accept>Accept Analytics</button>
-        </div>
-      `;
-      document.body.appendChild(banner);
-    }
-
-    if (!dialog) {
-      dialog = document.createElement("div");
-      dialog.className = "cookie-settings-backdrop";
-      dialog.setAttribute("role", "dialog");
-      dialog.setAttribute("aria-modal", "true");
-      dialog.setAttribute("aria-labelledby", "cookie-settings-title");
-      dialog.hidden = true;
-      dialog.innerHTML = `
-        <div class="cookie-settings-panel" role="document">
-          <button class="modal-close cookie-settings-close" type="button" aria-label="Close cookie settings" data-consent-close>&times;</button>
-          <p class="eyebrow">Privacy controls</p>
-          <h2 id="cookie-settings-title">Cookie Settings</h2>
-          <p>Choose whether Filter Wizard can use non-essential analytics cookies. Essential preference storage keeps this choice in your browser.</p>
-          <fieldset class="cookie-choice-fieldset">
-            <legend>Analytics cookies</legend>
-            <label>
-              <input type="radio" name="filterWizardAnalyticsConsent" value="granted">
-              <span>Accept analytics</span>
-            </label>
-            <label>
-              <input type="radio" name="filterWizardAnalyticsConsent" value="denied">
-              <span>Decline analytics</span>
-            </label>
-          </fieldset>
-          <div class="cookie-settings-actions">
-            <button class="btn btn-secondary" type="button" data-consent-close>Cancel</button>
-            <button class="btn btn-primary" type="button" data-consent-save>Save Settings</button>
-          </div>
-          <p class="cookie-settings-note">Advertising storage remains denied. You can change this choice later from the footer.</p>
-        </div>
-      `;
-      document.body.appendChild(dialog);
-    }
-  }
-
-  function showConsentBanner() {
-    buildConsentMarkup();
-    if (banner) banner.hidden = false;
-  }
-
-  function hideConsentBanner() {
-    if (banner) banner.hidden = true;
-  }
-
-  function setDialogChoice(choice) {
-    if (!dialog) return;
-    const input = dialog.querySelector(`input[name="filterWizardAnalyticsConsent"][value="${choice === "granted" ? "granted" : "denied"}"]`);
-    if (input) input.checked = true;
-  }
-
-  function getDialogChoice() {
-    const selected = dialog?.querySelector('input[name="filterWizardAnalyticsConsent"]:checked');
-    return selected?.value === "granted" ? "granted" : "denied";
-  }
-
-  function openCookieSettings(trigger = null) {
-    buildConsentMarkup();
-    lastSettingsTrigger = trigger;
-    const storedConsent = getStoredConsent();
-    setDialogChoice(storedConsent?.analytics || "denied");
-    if (dialog) {
-      dialog.hidden = false;
-      document.body.classList.add("cookie-settings-open");
-      window.setTimeout(() => {
-        dialog?.querySelector('input[name="filterWizardAnalyticsConsent"]:checked')?.focus();
-      }, 0);
-    }
-  }
-
-  function closeCookieSettings() {
-    if (dialog) dialog.hidden = true;
-    document.body.classList.remove("cookie-settings-open");
-    if (lastSettingsTrigger && typeof lastSettingsTrigger.focus === "function") {
-      lastSettingsTrigger.focus();
-    }
-    lastSettingsTrigger = null;
-  }
-
-  function handleChoice(choice) {
-    saveConsent(choice);
-    hideConsentBanner();
-    closeCookieSettings();
-  }
-
-  function trapDialogFocus(event) {
-    if (dialog?.hidden || event.key !== "Tab") return;
-    const focusable = Array.from(dialog.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'))
-      .filter((item) => !item.disabled && item.offsetParent !== null);
-    if (!focusable.length) return;
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  }
-
-  function bindEvents() {
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-      const settingsButton = target.closest?.("[data-cookie-settings], [data-consent-settings]");
-      if (settingsButton) {
-        event.preventDefault();
-        openCookieSettings(settingsButton);
-        return;
-      }
-
-      if (target.closest?.("[data-consent-accept]")) {
-        handleChoice("granted");
-        return;
-      }
-
-      if (target.closest?.("[data-consent-decline]")) {
-        handleChoice("denied");
-        return;
-      }
-
-      if (target.closest?.("[data-consent-save]")) {
-        handleChoice(getDialogChoice());
-        return;
-      }
-
-      if (target.closest?.("[data-consent-close]") || target === dialog) {
-        closeCookieSettings();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && dialog && !dialog.hidden) {
-        closeCookieSettings();
-        return;
-      }
-      trapDialogFocus(event);
-    });
-  }
-
-  function initialize() {
-    if (initialized) return;
-    initialized = true;
-    buildConsentMarkup();
-    bindEvents();
-
-    const storedConsent = getStoredConsent();
-    if (storedConsent) {
-      applyGoogleConsent(storedConsent.analytics);
-      applyClarityConsent(storedConsent.analytics);
-      hideConsentBanner();
-    } else {
-      applyGoogleConsent("denied");
-      applyClarityConsent("denied");
-      showConsentBanner();
-    }
-  }
-
-  return {
-    initialize,
-    openCookieSettings
-  };
-})();
-
-function getFinderEntryPoint(opener) {
-  return opener?.dataset?.entryPoint || "unknown";
-}
-
-function resetFinderAnalytics(entryPoint = "unknown") {
-  finderAnalyticsState.started = false;
-  finderAnalyticsState.completed = false;
-  finderAnalyticsState.abandoned = false;
-  finderAnalyticsState.lastCompletedStep = null;
-  finderAnalyticsState.completionSignature = null;
-  finderAnalyticsState.entryPoint = entryPoint;
-  finderAnalyticsState.selectedSizePath = "";
-  finderAnalyticsState.enteredSizeSignature = "";
-  finderAnalyticsState.conditionsSignature = "";
-}
-
-function normalizeYesNo(value) {
-  return value ? "yes" : "no";
-}
-
-function getRecommendedMervSlug(result) {
-  return String(result?.recommendedFilterType || "")
-    .toLowerCase()
-    .replace(/\s+/g, "_") || "unknown";
-}
-
-function getReplacementIntervalMonths(intervalDays) {
-  const days = Number(intervalDays);
-  if (!Number.isFinite(days) || days <= 0) return "";
-  return Number((days / 30).toFixed(1));
-}
-
-function getResultType(result) {
-  if (!result) return "partial_recommendation";
-  return hasConfirmedFilterSize(result)
-    ? "complete_recommendation"
-    : "size_help_required";
-}
-
-function getConditionsSummary(conditions = []) {
-  if (!conditions.length) return "not_selected";
-  if (conditions.includes("None of these")) return "none";
-
-  const summaryParts = [];
-  if (conditions.includes("Pets")) summaryParts.push("pets");
-  if (conditions.includes("Allergies")) summaryParts.push("allergies");
-  if (conditions.includes("Heavy dust")) summaryParts.push("heavy_dust");
-  if (conditions.includes("Kids at home")) summaryParts.push("kids_at_home");
-
-  if (summaryParts.length === 0) return "not_selected";
-  if (summaryParts.length === 1) return summaryParts[0];
-  if (summaryParts.length === 2 && summaryParts.includes("pets") && summaryParts.includes("allergies")) {
-    return "pets_allergies";
-  }
-  return "multiple";
-}
-
-function trackFinderStarted(entryPoint = finderAnalyticsState.entryPoint) {
-  if (finderAnalyticsState.started) return;
-
-  finderAnalyticsState.started = true;
-  finderAnalyticsState.entryPoint = entryPoint || "unknown";
-  finderAnalyticsState.lastCompletedStep = "started";
-  trackEvent("filter_finder_started", {
-    entry_point: finderAnalyticsState.entryPoint,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterSizePathSelected(value) {
-  const sizeKnown = value === "Yes, I know it" ? "yes" : "no";
-  if (finderAnalyticsState.selectedSizePath === sizeKnown) return;
-
-  finderAnalyticsState.selectedSizePath = sizeKnown;
-  finderAnalyticsState.lastCompletedStep = "size_known_question";
-  trackEvent("filter_size_path_selected", {
-    size_known: sizeKnown,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterSizeEntered(normalizedFilterSize, inputMethod = "manual_entry") {
-  if (!normalizedFilterSize) return;
-  const signature = `${normalizedFilterSize}|${inputMethod}`;
-  if (finderAnalyticsState.enteredSizeSignature === signature) return;
-
-  finderAnalyticsState.enteredSizeSignature = signature;
-  finderAnalyticsState.lastCompletedStep = "size_entered";
-  trackEvent("filter_size_entered", {
-    filter_size: normalizedFilterSize,
-    input_method: inputMethod,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterConditionsSelected(conditions = finderState.conditions) {
-  const signature = [...conditions].sort().join("|") || "none";
-  if (finderAnalyticsState.conditionsSignature === signature) return;
-
-  finderAnalyticsState.conditionsSignature = signature;
-  finderAnalyticsState.lastCompletedStep = "conditions_selected";
-  trackEvent("filter_conditions_selected", {
-    pets: normalizeYesNo(conditions.includes("Pets")),
-    allergies: normalizeYesNo(conditions.includes("Allergies")),
-    smokers: "not_selected",
-    heavy_dust: normalizeYesNo(conditions.includes("Heavy dust")),
-    kids_at_home: normalizeYesNo(conditions.includes("Kids at home")),
-    household_conditions: getConditionsSummary(conditions),
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderCompletedResult(result) {
-  if (!result) return;
-
-  const filterSize = hasConfirmedFilterSize(result) ? result.filterSize : "unknown";
-  const signature = [
-    filterSize,
-    result.recommendedFilterType || "unknown",
-    result.replacementIntervalDays || "unknown",
-    getConditionsSummary(result.homeConditions)
-  ].join("|");
-
-  if (finderAnalyticsState.completed && finderAnalyticsState.completionSignature === signature) return;
-
-  finderAnalyticsState.completed = true;
-  finderAnalyticsState.abandoned = false;
-  finderAnalyticsState.lastCompletedStep = "recommendation_review";
-  finderAnalyticsState.completionSignature = signature;
-
-  trackEvent("filter_finder_completed", {
-    filter_size: filterSize,
-    recommended_merv: getRecommendedMervSlug(result),
-    replacement_interval_months: getReplacementIntervalMonths(result.replacementIntervalDays),
-    result_type: getResultType(result),
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderRestarted(previousStep = finderCurrentStep) {
-  trackEvent("filter_finder_restarted", {
-    previous_step: previousStep,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderAbandoned() {
-  if (!finderAnalyticsState.started || finderAnalyticsState.completed || finderAnalyticsState.abandoned) return;
-
-  finderAnalyticsState.abandoned = true;
-  trackEvent("filter_finder_abandoned", {
-    last_completed_step: finderAnalyticsState.lastCompletedStep || "started",
-    page_path: window.location.pathname
-  });
 }
 
 function getAmazonAffiliateTag(url) {
@@ -703,7 +265,6 @@ function closeFinderModal(reason = "closed") {
   });
 
   if (!wasCompleted) {
-    trackFinderAbandoned();
     trackEvent("finder_abandoned", {
       current_step: finderCurrentStep,
       knows_size: finderState.knowsSize || "Not answered",
@@ -719,14 +280,13 @@ function openFinderModal(opener = finderStartButton) {
 
   finderModalOpener = opener;
   finderCompleted = false;
-  resetFinderAnalytics(getFinderEntryPoint(opener));
   finderModal.hidden = false;
   finderModal.style.display = "grid";
   document.body.classList.add("modal-open");
   document.documentElement.classList.add("modal-open");
   trackEvent("filter_finder_modal_opened");
   resetFinderForModal();
-  startFilterFinder(finderAnalyticsState.entryPoint);
+  startFilterFinder();
 
   window.setTimeout(() => {
     const firstInteractive = finderModal.querySelector("[data-finder-option]") || finderModal.querySelector("button, input");
@@ -895,7 +455,7 @@ function showFinderStep(step) {
   updateFinderActionLabels();
 }
 
-function startFilterFinder(entryPoint = finderAnalyticsState.entryPoint) {
+function startFilterFinder() {
   if (!finderQuiz) return;
 
   finderQuiz.hidden = false;
@@ -903,7 +463,7 @@ function startFilterFinder(entryPoint = finderAnalyticsState.entryPoint) {
   if (finderResult) finderResult.hidden = true;
   finderResult?.classList.remove("report-visible");
   showFinderStep(1);
-  trackFinderStarted(entryPoint);
+  trackEvent("filter_finder_started");
 }
 
 function updateFinderConditions(button, value) {
@@ -935,7 +495,6 @@ function setFinderOption(button) {
     return;
   }
 
-  const previousValue = finderState[group];
   finderState[group] = value;
   document.querySelectorAll(`[data-finder-option="${group}"]`).forEach((option) => {
     const selected = option === button;
@@ -944,9 +503,6 @@ function setFinderOption(button) {
   });
 
   if (group === "knowsSize" && knownSizeField) {
-    if (previousValue !== value) {
-      trackFilterSizePathSelected(value);
-    }
     knownSizeField.hidden = value !== "Yes, I know it";
     if (value === "Yes, I know it") {
       setTimeout(() => {
@@ -1013,28 +569,6 @@ function trackFinderStepCompleted(step) {
     step_number: step,
     step_name: getFinderStepName(step)
   });
-
-  if (step === 1 && finderState.knowsSize === "Yes, I know it") {
-    const parsedSize = parseFilterSize(finderKnownSizeInput?.value);
-    if (parsedSize) {
-      trackFilterSizeEntered(
-        parsedSize.normalized,
-        finderState.sizeSelectedFromSuggestion ? "dropdown" : "manual_entry"
-      );
-    }
-  }
-
-  if (step === 2) {
-    finderAnalyticsState.lastCompletedStep = "filter_location";
-  }
-
-  if (step === 3) {
-    trackFilterConditionsSelected(finderState.conditions);
-  }
-
-  if (step === 4) {
-    finderAnalyticsState.lastCompletedStep = "recommendation_review";
-  }
 }
 
 function getLocationGuidance(location) {
@@ -1807,7 +1341,21 @@ async function completeFilterFinder() {
       size_confidence_level: result.sizeConfidenceLevel,
       has_confirmed_size: hasConfirmedFilterSize(result)
     });
-    trackFinderCompletedResult(result);
+    trackEvent("filter_finder_completed", {
+      knows_size: result.knowsSize,
+      normalized_filter_size: result.normalizedFilterSize,
+      location: result.location,
+      has_email: Boolean(result.email),
+      recommended_schedule: result.recommendedSchedule,
+      recommended_filter_type: result.recommendedFilterType,
+      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
+      replacement_interval_days: result.replacementIntervalDays,
+      replacements_per_year: result.replacementsPerYear,
+      size_confidence_level: result.sizeConfidenceLevel,
+      size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
+      has_valid_size: Boolean(parsedSize),
+      has_confirmed_size: hasConfirmedFilterSize(result)
+    });
     trackEvent("filter_finder_result_viewed", {
       knows_size: result.knowsSize,
       normalized_filter_size: result.normalizedFilterSize,
@@ -2031,21 +1579,7 @@ updateReadingProgress();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 window.addEventListener("resize", updateReadingProgress);
-consentManager.initialize();
-
 document.addEventListener("click", trackAmazonClick);
-document.addEventListener("click", (event) => {
-  const restartControl = event.target.closest?.('[data-filter-action="restart"]');
-  if (!restartControl) return;
-
-  const previousStep = finderCurrentStep;
-  trackFinderRestarted(previousStep);
-  finderCompleted = false;
-  resetFinderAnalytics(getFinderEntryPoint(restartControl));
-  resetFinderForModal();
-  startFilterFinder(finderAnalyticsState.entryPoint);
-});
-window.addEventListener("pagehide", trackFinderAbandoned);
 
 backToTopButton?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -2214,7 +1748,6 @@ finderConfirmSizeButton?.addEventListener("click", () => {
   }
 
   const normalized = parsedSize.normalized;
-  trackFilterSizeEntered(normalized, "manual_entry");
   latestFinderReport.filterSize = normalized;
   latestFinderReport.normalizedFilterSize = normalized;
   latestFinderReport.productSize = normalized;
