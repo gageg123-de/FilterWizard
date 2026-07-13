@@ -2391,6 +2391,83 @@ input:focus-visible {
   margin-top: 20px;
 }
 
+.article-share {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+  gap: 10px 12px;
+}
+
+.article-share-compact {
+  margin-top: 18px;
+}
+
+.article-share-card {
+  justify-content: space-between;
+  padding: 18px;
+  border: 1px solid rgba(217, 231, 238, 0.92);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 12px 30px rgba(11, 31, 53, 0.07);
+}
+
+.article-share-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.article-share-label {
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.article-share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+  gap: 8px;
+}
+
+.article-share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.62rem 0.9rem;
+  border: 1px solid rgba(35, 103, 201, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--blue-dark);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 850;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.article-share-button:hover,
+.article-share-button:focus-visible {
+  border-color: rgba(21, 132, 86, 0.34);
+  background: rgba(235, 249, 243, 0.92);
+  color: var(--green-dark);
+  transform: translateY(-1px);
+}
+
+.article-share-status {
+  min-height: 1.2em;
+  color: var(--green-dark);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
 .article-shell {
   display: grid;
   grid-template-columns: minmax(180px, 230px) minmax(0, 820px);
@@ -3710,6 +3787,23 @@ input:focus {
 
   .article-section {
     padding: 24px 0;
+  }
+
+  .article-share {
+    align-items: flex-start;
+  }
+
+  .article-share-card {
+    padding: 16px;
+  }
+
+  .article-share-actions {
+    width: 100%;
+  }
+
+  .article-share-button {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 120px;
   }
 
   .article-figure {

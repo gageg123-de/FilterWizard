@@ -663,6 +663,118 @@ function trackArticleFilterFinderClick(event) {
   });
 }
 
+function showShareStatus(component, message) {
+  const status = component?.querySelector("[data-share-status]");
+  if (!status) return;
+
+  window.clearTimeout(status.shareStatusTimer);
+  status.textContent = message;
+  status.shareStatusTimer = window.setTimeout(() => {
+    status.textContent = "";
+  }, 2000);
+}
+
+function copyTextToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+
+  return new Promise((resolve, reject) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.top = "-9999px";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      copied ? resolve() : reject(new Error("Copy command failed."));
+    } catch (error) {
+      document.body.removeChild(textarea);
+      reject(error);
+    }
+  });
+}
+
+function trackArticleShare(component, method) {
+  trackEvent("article_share_click", {
+    article_slug: component?.dataset.articleSlug || getArticleSlug() || "unknown",
+    share_method: method,
+    share_location: component?.dataset.shareLocation || "unknown"
+  });
+}
+
+function setupArticleShare() {
+  const shareComponents = document.querySelectorAll("[data-article-share]");
+  if (!shareComponents.length) return;
+
+  shareComponents.forEach((component) => {
+    const title = component.dataset.shareTitle || document.title;
+    const url = component.dataset.shareUrl || window.location.href;
+    const description = component.dataset.shareDescription || "";
+    const image = component.dataset.shareImage || "";
+    const encodedUrl = encodeURIComponent(url);
+    const encodedTitle = encodeURIComponent(title);
+    const encodedDescription = encodeURIComponent(description);
+    const encodedImage = encodeURIComponent(image);
+    const nativeButton = component.querySelector("[data-native-share]");
+    const facebookLink = component.querySelector("[data-facebook-share]");
+    const pinterestLink = component.querySelector("[data-pinterest-share]");
+    const emailLink = component.querySelector("[data-email-share]");
+    const copyButton = component.querySelector("[data-copy-share]");
+
+    if (facebookLink) {
+      facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+      facebookLink.addEventListener("click", () => trackArticleShare(component, "facebook"));
+    }
+
+    if (pinterestLink) {
+      pinterestLink.href = `https://www.pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodedImage}&description=${encodedDescription}`;
+      pinterestLink.addEventListener("click", () => trackArticleShare(component, "pinterest"));
+    }
+
+    if (emailLink) {
+      emailLink.href = `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`;
+      emailLink.addEventListener("click", () => trackArticleShare(component, "email"));
+    }
+
+    if (nativeButton) {
+      const canShare = typeof navigator.share === "function";
+      nativeButton.hidden = !canShare;
+      if (canShare) {
+        nativeButton.addEventListener("click", async () => {
+          trackArticleShare(component, "native");
+          try {
+            await navigator.share({
+              title,
+              text: description,
+              url
+            });
+          } catch (error) {
+            if (error?.name !== "AbortError") {
+              console.warn("Filter Wizard share failed.", error);
+            }
+          }
+        });
+      }
+    }
+
+    copyButton?.addEventListener("click", async () => {
+      trackArticleShare(component, "copy_link");
+      try {
+        await copyTextToClipboard(url);
+        showShareStatus(component, "Link copied");
+      } catch {
+        showShareStatus(component, "Unable to copy. Please copy the URL from your browser.");
+      }
+    });
+  });
+}
+
 function setHeaderState() {
   header?.classList.toggle("scrolled", window.scrollY > 8);
 }
@@ -2106,6 +2218,7 @@ function setupSizeAutocomplete() {
 setHeaderState();
 setupRevealAnimations();
 setupSizeAutocomplete();
+setupArticleShare();
 updateReadingProgress();
 trackArticlePageView();
 window.addEventListener("scroll", setHeaderState, { passive: true });
