@@ -2557,7 +2557,8 @@ input:focus-visible {
 
 .icon-list-grid div,
 .merv-card,
-.related-grid span {
+.related-grid span,
+.related-grid a {
   min-width: 0;
   padding: 16px;
   border: 1px solid rgba(217, 231, 238, 0.92);
@@ -2724,9 +2725,16 @@ input:focus-visible {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.related-grid span {
+.related-grid span,
+.related-grid a {
   color: var(--muted);
   font-weight: 850;
+  text-decoration: none;
+}
+
+.related-grid a:hover,
+.related-grid a:focus-visible {
+  color: var(--blue);
 }
 
 .reading-progress {

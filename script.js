@@ -96,6 +96,8 @@ let finderAnalyzingTimer = null;
 let finderAnalysisStepTimer = null;
 let retailerViewedObserver = null;
 let retailerViewedTracked = false;
+let articlePageViewTracked = false;
+const articleScrollDepthTracked = new Set();
 
 const finderAnalyticsState = {
   started: false,
@@ -651,6 +653,16 @@ function trackAmazonClick(event) {
   });
 }
 
+function trackArticleFilterFinderClick(event) {
+  const link = event.target.closest?.("[data-article-filter-finder-cta]");
+  if (!link) return;
+
+  trackEvent("article_filter_finder_click", {
+    article_slug: link.dataset.articleSlug || "unknown",
+    cta_location: "article_body"
+  });
+}
+
 function setHeaderState() {
   header?.classList.toggle("scrolled", window.scrollY > 8);
 }
@@ -706,6 +718,42 @@ function updateReadingProgress() {
 
   readingProgress.style.width = `${progress * 100}%`;
   backToTopButton?.classList.toggle("visible", window.scrollY > 520);
+  trackArticleScrollDepth(progress);
+}
+
+function getArticleSlug() {
+  if (!articleContent) return "";
+
+  return window.location.pathname
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.replace(/\.html$/, "") || "blog";
+}
+
+function trackArticlePageView() {
+  if (!articleContent || articlePageViewTracked) return;
+
+  articlePageViewTracked = true;
+  trackEvent("article_page_view", {
+    article_slug: getArticleSlug(),
+    page_path: window.location.pathname
+  });
+}
+
+function trackArticleScrollDepth(progress) {
+  if (!articleContent) return;
+
+  [25, 50, 75, 100].forEach((threshold) => {
+    if (progress * 100 < threshold || articleScrollDepthTracked.has(threshold)) return;
+
+    articleScrollDepthTracked.add(threshold);
+    trackEvent("article_scroll_depth", {
+      article_slug: getArticleSlug(),
+      scroll_depth: threshold,
+      page_path: window.location.pathname
+    });
+  });
 }
 
 function getFocusableElements(container) {
@@ -2059,12 +2107,14 @@ setHeaderState();
 setupRevealAnimations();
 setupSizeAutocomplete();
 updateReadingProgress();
+trackArticlePageView();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 window.addEventListener("resize", updateReadingProgress);
 consentManager.initialize();
 
 document.addEventListener("click", trackAmazonClick);
+document.addEventListener("click", trackArticleFilterFinderClick);
 document.addEventListener("click", (event) => {
   const restartControl = event.target.closest?.('[data-filter-action="restart"]');
   if (!restartControl) return;
