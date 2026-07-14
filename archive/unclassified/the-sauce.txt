@@ -1,0 +1,18 @@
+100 Pinterest Pins
+90 Facebook posts
+90 YouTube Shorts
+90 TikToks
+50 blog articles
+100 filter-size pages
+
+□ Find keyword
+□ Generate article with ChatGPT
+□ Create HTML page
+□ Add article to blog index
+□ Add homepage "Latest Guides" card
+□ Add 3-5 internal links
+□ Update sitemap.xml
+□ Push to GitHub
+□ Request indexing
+□ Share on Facebook
+□ Monitor Search Console

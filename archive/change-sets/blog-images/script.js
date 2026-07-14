@@ -1,0 +1,1754 @@
+﻿const header = document.querySelector("[data-header]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navMenu = document.querySelector("[data-nav-menu]");
+const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
+const heroFinderCta = document.querySelector("[data-hero-finder-cta]");
+const finderStartButton = document.querySelector("[data-finder-start]");
+const finderModal = document.querySelector("[data-finder-modal]");
+const finderModalCard = document.querySelector(".finder-modal");
+const finderCloseButton = document.querySelector("[data-finder-close]");
+const finderQuiz = document.querySelector("[data-finder-quiz]");
+const finderSteps = document.querySelectorAll("[data-finder-step]");
+const finderBackButton = document.querySelector("[data-finder-back]");
+const finderNextButton = document.querySelector("[data-finder-next]");
+const finderCompleteButton = document.querySelector("[data-finder-complete]");
+const finderProgressLabel = document.querySelector("[data-finder-progress-label]");
+const finderProgressBar = document.querySelector("[data-finder-progress-bar]");
+const knownSizeField = document.querySelector("[data-known-size-field]");
+const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
+const finderAnalyzing = document.querySelector("[data-finder-analyzing]");
+const finderAnalyzingSteps = document.querySelectorAll("[data-analyzing-step]");
+const finderResult = document.querySelector("[data-finder-result]");
+const finderResultHeading = document.querySelector("[data-finder-result-heading]");
+const finderResultSubheading = document.querySelector("[data-finder-result-subheading]");
+const finderResultSizeItems = document.querySelectorAll("[data-finder-result-size]");
+const finderResultSchedule = document.querySelector("[data-finder-result-schedule]");
+const finderNextChange = document.querySelector("[data-finder-next-change]");
+const finderYearlyCost = document.querySelector("[data-finder-yearly-cost]");
+const finderEmailNote = document.querySelector("[data-finder-email-note]");
+const finderMerv = document.querySelector("[data-finder-merv]");
+const finderMervCopy = document.querySelector("[data-finder-merv-copy]");
+const finderMervBenefit = document.querySelector("[data-finder-merv-benefit]");
+const finderMervCaution = document.querySelector("[data-finder-merv-caution]");
+const finderWhyTitle = document.querySelector("[data-finder-why-title]");
+const finderMonths = document.querySelector("[data-finder-months]");
+const finderCopyButton = document.querySelector("[data-finder-copy]");
+const finderCopyStatus = document.querySelector("[data-finder-copy-status]");
+const finderConfidencePill = document.querySelector("[data-finder-confidence-pill]");
+const finderAnswerPills = document.querySelector("[data-finder-answer-pills]");
+const finderInsightTitle = document.querySelector("[data-finder-insight-title]");
+const finderInsightCopy = document.querySelector("[data-finder-insight-copy]");
+const finderSizeGuidance = document.querySelector("[data-finder-size-guidance]");
+const finderSizeGuidanceCopy = document.querySelector("[data-finder-size-guidance-copy]");
+const finderConfirmSizeInput = document.querySelector("[data-finder-confirm-size-input]");
+const finderConfirmSizeButton = document.querySelector("[data-finder-confirm-size-button]");
+const finderConfirmSizeError = document.querySelector("[data-finder-confirm-size-error]");
+const finderProductImage = document.querySelector("[data-finder-product-image]");
+const finderProductPlaceholder = document.querySelector("[data-finder-product-placeholder]");
+const finderProductSizeTitle = document.querySelector("[data-finder-product-size-title]");
+const finderProductTypeTitle = document.querySelector("[data-finder-product-type-title]");
+const finderProductBestFor = document.querySelector("[data-finder-product-best-for]");
+const finderProductPrice = document.querySelector("[data-finder-product-price]");
+const finderProductCta = document.querySelector("[data-finder-product-cta]");
+const finderSkipToRetailers = document.querySelector("[data-finder-skip-to-retailers]");
+const finderContinueToRetailers = document.querySelector("[data-finder-continue-to-retailers]");
+const finderRetailerBlock = document.querySelector("[data-finder-retailer-block]");
+const finderRetailerOptions = document.querySelector("[data-finder-retailer-options]");
+const finderRetailerSummary = document.querySelector("[data-finder-retailer-summary]");
+const sizeAutocompleteInputs = document.querySelectorAll("[data-size-autocomplete]");
+const resultEmailForm = document.querySelector("[data-result-email-form]");
+const resultEmailInput = document.querySelector("[data-result-email]");
+const resultEmailSuccess = document.querySelector("[data-result-email-success]");
+const earlyAccessForm = document.querySelector("[data-reservation-form]");
+const earlyAccessSuccess = document.querySelector("[data-reservation-success]");
+const articleEmailForm = document.querySelector("[data-article-email-form]");
+const articleEmailSuccess = document.querySelector("[data-article-email-success]");
+const readingProgress = document.querySelector("[data-reading-progress]");
+const articleContent = document.querySelector("[data-article-content]");
+const backToTopButton = document.querySelector("[data-back-to-top]");
+const finderStorageKey = "filterWizardFinderResults";
+const emailStorageKey = "filterWizardEmailSignups";
+const finderTotalSteps = 4;
+const amazonAffiliateTag = "filterwizard-20";
+const genericProductImage = "assets/images/products/filter-product-generic.webp";
+const confirmSizeProductImage = "assets/images/products/filter-product-confirm-size.webp";
+const filterPriceRanges = {
+  "MERV 8": {
+    min: 8,
+    max: 14
+  },
+  "MERV 11": {
+    min: 12,
+    max: 18
+  },
+  "MERV 13": {
+    min: 16,
+    max: 25
+  }
+};
+
+let finderCurrentStep = 1;
+let finderEmailEnteredTracked = false;
+let latestFinderReport = null;
+let finderModalOpener = null;
+let finderCompleted = false;
+let finderAnalyzingTimer = null;
+let finderAnalysisStepTimer = null;
+let retailerViewedObserver = null;
+let retailerViewedTracked = false;
+
+const finderState = {
+  knowsSize: "",
+  location: "",
+  conditions: [],
+  knownSize: "",
+  email: "",
+  recommendedSchedule: "",
+  normalizedSize: "",
+  sizeSelectedFromSuggestion: false
+};
+
+const commonFilterSizes = [
+  "10x20x1",
+  "12x12x1",
+  "12x20x1",
+  "14x14x1",
+  "14x20x1",
+  "14x24x1",
+  "14x25x1",
+  "16x16x1",
+  "16x20x1",
+  "16x24x1",
+  "16x25x1",
+  "18x18x1",
+  "18x20x1",
+  "18x24x1",
+  "18x25x1",
+  "20x20x1",
+  "20x24x1",
+  "20x25x1",
+  "20x30x1",
+  "24x24x1",
+  "24x30x1",
+  "25x25x1"
+];
+
+function trackEvent(eventName, parameters = {}) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, parameters);
+  }
+}
+
+function setHeaderState() {
+  header?.classList.toggle("scrolled", window.scrollY > 8);
+}
+
+function closeNav() {
+  document.body.classList.remove("nav-open");
+  navMenu?.classList.remove("open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Open navigation menu");
+}
+
+function toggleNav() {
+  const isOpen = navToggle?.getAttribute("aria-expanded") === "true";
+  document.body.classList.toggle("nav-open", !isOpen);
+  navMenu?.classList.toggle("open", !isOpen);
+  navToggle?.setAttribute("aria-expanded", String(!isOpen));
+  navToggle?.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+}
+
+function setupRevealAnimations() {
+  const revealItems = document.querySelectorAll(".reveal");
+
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+function updateReadingProgress() {
+  if (!readingProgress || !articleContent) return;
+
+  const rect = articleContent.getBoundingClientRect();
+  const articleTop = window.scrollY + rect.top;
+  const articleHeight = articleContent.offsetHeight - window.innerHeight;
+  const distance = window.scrollY - articleTop;
+  const progress = articleHeight > 0
+    ? Math.min(1, Math.max(0, distance / articleHeight))
+    : 0;
+
+  readingProgress.style.width = `${progress * 100}%`;
+  backToTopButton?.classList.toggle("visible", window.scrollY > 520);
+}
+
+function getFocusableElements(container) {
+  return Array.from(
+    container?.querySelectorAll(
+      'a[href], button:not([disabled]):not([hidden]), input:not([disabled]):not([hidden]), select:not([disabled]):not([hidden]), textarea:not([disabled]):not([hidden]), [tabindex]:not([tabindex="-1"])'
+    ) || []
+  ).filter((element) => element.offsetParent !== null);
+}
+
+function closeFinderModal(reason = "closed") {
+  if (!finderModal || finderModal.hidden) return;
+
+  const wasCompleted = finderCompleted;
+  window.clearTimeout(finderAnalyzingTimer);
+  window.clearInterval(finderAnalysisStepTimer);
+  finderAnalyzingTimer = null;
+  finderAnalysisStepTimer = null;
+  retailerViewedObserver?.disconnect();
+  retailerViewedObserver = null;
+  retailerViewedTracked = false;
+  finderModal.hidden = true;
+  finderModal.style.display = "none";
+  document.body.classList.remove("modal-open");
+  document.documentElement.classList.remove("modal-open");
+
+  trackEvent("filter_finder_modal_closed", {
+    current_step: finderCurrentStep,
+    completed: wasCompleted,
+    reason
+  });
+
+  if (!wasCompleted) {
+    trackEvent("finder_abandoned", {
+      current_step: finderCurrentStep,
+      knows_size: finderState.knowsSize || "Not answered",
+      completed: false
+    });
+  }
+
+  finderModalOpener?.focus?.();
+}
+
+function openFinderModal(opener = finderStartButton) {
+  if (!finderModal) return;
+
+  finderModalOpener = opener;
+  finderCompleted = false;
+  finderModal.hidden = false;
+  finderModal.style.display = "grid";
+  document.body.classList.add("modal-open");
+  document.documentElement.classList.add("modal-open");
+  trackEvent("filter_finder_modal_opened");
+  resetFinderForModal();
+  startFilterFinder();
+
+  window.setTimeout(() => {
+    const firstInteractive = finderModal.querySelector("[data-finder-option]") || finderModal.querySelector("button, input");
+    firstInteractive?.focus();
+  }, 40);
+}
+
+function resetFinderForModal() {
+  window.clearTimeout(finderAnalyzingTimer);
+  window.clearInterval(finderAnalysisStepTimer);
+  finderAnalyzingTimer = null;
+  finderAnalysisStepTimer = null;
+  finderState.knowsSize = "";
+  finderState.location = "";
+  finderState.conditions = [];
+  finderState.knownSize = "";
+  finderState.email = "";
+  finderState.recommendedSchedule = "";
+  finderState.normalizedSize = "";
+  finderState.sizeSelectedFromSuggestion = false;
+  finderEmailEnteredTracked = false;
+
+  document.querySelectorAll("[data-finder-option]").forEach((option) => {
+    option.classList.remove("selected");
+    option.setAttribute("aria-pressed", "false");
+  });
+  if (knownSizeField) knownSizeField.hidden = true;
+  if (finderKnownSizeInput) finderKnownSizeInput.value = "";
+  if (finderConfirmSizeInput) finderConfirmSizeInput.value = "";
+  if (finderConfirmSizeError) {
+    finderConfirmSizeError.textContent = "";
+    finderConfirmSizeError.hidden = true;
+  }
+  if (resultEmailInput) resultEmailInput.value = "";
+  if (resultEmailForm) resultEmailForm.hidden = false;
+  if (resultEmailSuccess) resultEmailSuccess.hidden = true;
+  if (finderEmailNote) finderEmailNote.hidden = true;
+  if (finderCopyStatus) finderCopyStatus.hidden = true;
+  if (finderAnalyzing) finderAnalyzing.hidden = true;
+  finderAnalyzingSteps.forEach((step) => step.classList.remove("is-active"));
+  if (finderCompleteButton) finderCompleteButton.disabled = false;
+  retailerViewedObserver?.disconnect();
+  retailerViewedTracked = false;
+}
+
+function saveLatestToLocalStorage(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    console.warn("Filter Wizard could not save to localStorage.", error);
+  }
+}
+
+function normalizeFilterSize(value) {
+  const trimmed = String(value || "").trim();
+  if (!trimmed) return "";
+
+  const lowered = trimmed
+    .replace(/[X]/g, "x")
+    .replace(/\s*x\s*/g, "x")
+    .replace(/\s+/g, " ");
+
+  const spaceSeparatedNumbers = lowered.match(/^(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)$/);
+  if (spaceSeparatedNumbers) {
+    return `${spaceSeparatedNumbers[1]}x${spaceSeparatedNumbers[2]}x${spaceSeparatedNumbers[3]}`;
+  }
+
+  return lowered.replace(/\s+/g, "");
+}
+
+function parseFilterSize(value) {
+  const normalized = normalizeFilterSize(value);
+  const match = normalized.match(/^(\d{1,2}(?:\.\d+)?)x(\d{1,2}(?:\.\d+)?)x(\d{1,2}(?:\.\d+)?)$/);
+
+  if (!match) return null;
+
+  const width = Number(match[1]);
+  const height = Number(match[2]);
+  const depth = Number(match[3]);
+  const realistic = width >= 6
+    && width <= 40
+    && height >= 6
+    && height <= 40
+    && depth >= 0.5
+    && depth <= 12;
+
+  if (!realistic) return null;
+
+  return {
+    normalized,
+    width,
+    height,
+    depth
+  };
+}
+
+function isValidFilterSize(value) {
+  return Boolean(parseFilterSize(value));
+}
+
+function getFinderStepLabel(step) {
+  const labels = {
+    1: "Filter Size",
+    2: "Location",
+    3: "Home Conditions",
+    4: "Review"
+  };
+  return labels[step] || "Finder";
+}
+
+function getFinderStepName(step) {
+  const names = {
+    1: "filter_size",
+    2: "filter_location",
+    3: "home_conditions",
+    4: "review"
+  };
+  return names[step] || `step_${step}`;
+}
+
+function updateFinderProgress() {
+  if (!finderProgressLabel || !finderProgressBar) return;
+  finderProgressLabel.textContent = `Step ${finderCurrentStep} • ${getFinderStepLabel(finderCurrentStep)}`;
+  finderProgressBar.style.width = `${(finderCurrentStep / finderTotalSteps) * 100}%`;
+}
+
+function updateFinderActionLabels() {
+  if (!finderNextButton) return;
+  finderNextButton.textContent = finderCurrentStep === 1 && finderState.knowsSize === "Yes, I know it"
+    ? "Continue"
+    : "Next";
+}
+
+function clearFinderError(stepEl) {
+  const errorEl = stepEl?.querySelector("[data-finder-error]");
+  if (!errorEl) return;
+  errorEl.textContent = "";
+  errorEl.hidden = true;
+}
+
+function setFinderError(stepEl, message) {
+  const errorEl = stepEl?.querySelector("[data-finder-error]");
+  if (!errorEl) return;
+  errorEl.textContent = message;
+  errorEl.hidden = false;
+}
+
+function showFinderStep(step) {
+  finderCurrentStep = Math.min(finderTotalSteps, Math.max(1, step));
+
+  finderSteps.forEach((stepEl) => {
+    const isActive = Number(stepEl.dataset.finderStep) === finderCurrentStep;
+    stepEl.hidden = !isActive;
+    stepEl.classList.toggle("is-active", isActive);
+    clearFinderError(stepEl);
+  });
+
+  if (finderBackButton) {
+    finderBackButton.hidden = false;
+    finderBackButton.disabled = finderCurrentStep === 1;
+    finderBackButton.setAttribute("aria-disabled", String(finderCurrentStep === 1));
+  }
+  if (finderNextButton) finderNextButton.hidden = finderCurrentStep === finderTotalSteps;
+  if (finderCompleteButton) finderCompleteButton.hidden = finderCurrentStep !== finderTotalSteps;
+  updateFinderProgress();
+  updateFinderActionLabels();
+}
+
+function startFilterFinder() {
+  if (!finderQuiz) return;
+
+  finderQuiz.hidden = false;
+  if (finderAnalyzing) finderAnalyzing.hidden = true;
+  if (finderResult) finderResult.hidden = true;
+  finderResult?.classList.remove("report-visible");
+  showFinderStep(1);
+  trackEvent("filter_finder_started");
+}
+
+function updateFinderConditions(button, value) {
+  if (value === "None of these") {
+    finderState.conditions = button.classList.contains("selected") ? [] : ["None of these"];
+  } else {
+    const current = new Set(finderState.conditions.filter((condition) => condition !== "None of these"));
+    if (current.has(value)) {
+      current.delete(value);
+    } else {
+      current.add(value);
+    }
+    finderState.conditions = [...current];
+  }
+
+  document.querySelectorAll('[data-finder-option="conditions"]').forEach((option) => {
+    const selected = finderState.conditions.includes(option.dataset.value);
+    option.classList.toggle("selected", selected);
+    option.setAttribute("aria-pressed", String(selected));
+  });
+}
+
+function setFinderOption(button) {
+  const group = button.dataset.finderOption;
+  const value = button.dataset.value;
+
+  if (group === "conditions") {
+    updateFinderConditions(button, value);
+    return;
+  }
+
+  finderState[group] = value;
+  document.querySelectorAll(`[data-finder-option="${group}"]`).forEach((option) => {
+    const selected = option === button;
+    option.classList.toggle("selected", selected);
+    option.setAttribute("aria-pressed", String(selected));
+  });
+
+  if (group === "knowsSize" && knownSizeField) {
+    knownSizeField.hidden = value !== "Yes, I know it";
+    if (value === "Yes, I know it") {
+      setTimeout(() => {
+        finderKnownSizeInput?.focus({ preventScroll: true });
+      }, 40);
+    } else {
+      if (finderKnownSizeInput) finderKnownSizeInput.value = "";
+      finderState.knownSize = "";
+      finderState.normalizedSize = "";
+      finderState.sizeSelectedFromSuggestion = false;
+      clearFinderError(document.querySelector('[data-finder-step="1"]'));
+      hideSizeSuggestions(finderKnownSizeInput?.parentElement?.querySelector("[data-size-suggestions]"));
+    }
+    updateFinderActionLabels();
+  }
+}
+
+function validateFinderStep(step = finderCurrentStep) {
+  const stepEl = document.querySelector(`[data-finder-step="${step}"]`);
+  clearFinderError(stepEl);
+
+  if (step === 1) {
+    if (!finderState.knowsSize) {
+      setFinderError(stepEl, "Choose one option to continue.");
+      return false;
+    }
+    if (finderState.knowsSize === "Yes, I know it" && !finderKnownSizeInput?.value.trim()) {
+      setFinderError(stepEl, "Enter your filter size before continuing.");
+      finderKnownSizeInput?.focus({ preventScroll: true });
+      return false;
+    }
+    if (finderState.knowsSize === "Yes, I know it" && !isValidFilterSize(finderKnownSizeInput?.value)) {
+      setFinderError(stepEl, "Enter a size in width x height x depth format, such as 20x25x1.");
+      trackEvent("filter_finder_invalid_size_entered", {
+        raw_length: finderKnownSizeInput?.value.length || 0,
+        knows_size: finderState.knowsSize,
+        current_step: step
+      });
+      finderKnownSizeInput?.focus({ preventScroll: true });
+      return false;
+    }
+  }
+
+  if (step === 2 && !finderState.location) {
+    setFinderError(stepEl, "Choose where your filter is located.");
+    return false;
+  }
+
+  if (step === 3 && finderState.conditions.length === 0) {
+    setFinderError(stepEl, "Select anything that applies, or choose \"None of these.\"");
+    trackEvent("filter_finder_conditions_required", {
+      current_step: step,
+      knows_size: finderState.knowsSize || "Not answered",
+      location: finderState.location || "Not answered"
+    });
+    return false;
+  }
+
+  return true;
+}
+
+function trackFinderStepCompleted(step) {
+  trackEvent("filter_finder_step_completed", {
+    step_number: step,
+    step_name: getFinderStepName(step)
+  });
+}
+
+function getLocationGuidance(location) {
+  const guidance = {
+    "Ceiling return vent": "Check the edge of the filter behind your ceiling return grille. The size is usually printed on the cardboard frame.",
+    "Wall return vent": "Open the wall return grille and check the cardboard edge of the filter for printed dimensions like 20x25x1.",
+    "Furnace or air handler": "Look near the blower compartment or filter slot beside the furnace or air handler. The size is usually printed on the filter frame.",
+    "I'm not sure": "Look for a large return grille inside your home or a filter slot near your HVAC unit. The filter size is usually printed on the cardboard edge."
+  };
+  return guidance[location] || guidance["I'm not sure"];
+}
+
+function getReplacementPlan(conditions = []) {
+  const selected = new Set(conditions);
+  const hasPets = selected.has("Pets");
+  const hasAllergies = selected.has("Allergies");
+  const hasHeavyDust = selected.has("Heavy dust");
+  const hasKids = selected.has("Kids at home");
+  const hasNone = selected.has("None of these");
+  const demandingConditionCount = [hasPets, hasAllergies, hasHeavyDust].filter(Boolean).length;
+
+  if (demandingConditionCount >= 2) {
+    return {
+      intervalDays: 45,
+      scheduleLabel: "About every 45 days",
+      replacementsPerYear: Math.ceil(365 / 45)
+    };
+  }
+
+  if (hasPets || hasAllergies || hasHeavyDust) {
+    return {
+      intervalDays: 60,
+      scheduleLabel: "About every 60 days",
+      replacementsPerYear: Math.ceil(365 / 60)
+    };
+  }
+
+  if (hasKids) {
+    return {
+      intervalDays: 75,
+      scheduleLabel: "About every 75 days",
+      replacementsPerYear: Math.ceil(365 / 75)
+    };
+  }
+
+  if (hasNone) {
+    return {
+      intervalDays: 90,
+      scheduleLabel: "About every 90 days",
+      replacementsPerYear: Math.ceil(365 / 90)
+    };
+  }
+
+  return {
+    intervalDays: 90,
+    scheduleLabel: "About every 90 days",
+    replacementsPerYear: Math.ceil(365 / 90)
+  };
+}
+
+function getRecommendedFilterType() {
+  const conditions = finderState.conditions;
+  if (conditions.includes("Allergies")) {
+    return {
+      type: "MERV 13",
+      displayLabel: "Consider MERV 13",
+      copy: "Worth considering for allergy-sensitive homes and finer particle filtration.",
+      benefit: "MERV 13 filters are designed to capture finer airborne particles than lower-rated filters.",
+      caution: "Higher filtration can increase airflow resistance. Confirm your HVAC manufacturer's recommended maximum MERV rating before upgrading."
+    };
+  }
+  if (conditions.some((condition) => ["Pets", "Heavy dust"].includes(condition))) {
+    return {
+      type: "MERV 11",
+      displayLabel: "MERV 11",
+      copy: "Better fit for pets, dust, and higher everyday filtration needs.",
+      benefit: "Provides stronger particle capture than a basic household filter while remaining practical for many residential systems.",
+      caution: "Confirm that your HVAC equipment supports the filter rating recommended by its manufacturer."
+    };
+  }
+  return {
+    type: "MERV 8",
+    displayLabel: "MERV 8",
+    copy: "Good fit for standard homes with normal dust levels.",
+    benefit: "Captures common household dust, pollen, and larger airborne particles.",
+    caution: "A practical default when pets, heavy dust, or allergy concerns are not major factors."
+  };
+}
+
+function getFinderInsight(result) {
+  const conditions = result.homeConditions || [];
+  const sizeNeedsConfirmation = result.filterSize === "Check before ordering";
+  let insight = {
+    title: "You probably do not need to over-filter",
+    copy: "A standard pleated filter should provide practical everyday filtration without unnecessary restriction."
+  };
+
+  if (conditions.includes("Allergies")) {
+    insight = {
+      title: "Stronger filtration makes sense here",
+      copy: "Because allergies were selected, we recommend finer filtration than a basic household filter."
+    };
+  } else if (conditions.includes("Pets")) {
+    insight = {
+      title: "Pets can load filters faster",
+      copy: "Pet hair and dander can shorten filter life, which is why your replacement timing is more frequent."
+    };
+  } else if (conditions.includes("Heavy dust")) {
+    insight = {
+      title: "Your filter may fill faster than average",
+      copy: "Heavy dust increases particle load, so a shorter replacement interval is the safer recommendation."
+    };
+  } else if (conditions.length === 1 && conditions.includes("Kids at home")) {
+    insight = {
+      title: "A balanced filter is likely enough",
+      copy: "Your home may benefit from dependable everyday filtration without jumping to the highest MERV rating."
+    };
+  }
+
+  if (sizeNeedsConfirmation) {
+    insight.copy = `${insight.copy} Confirm the printed size before ordering.`;
+  }
+
+  return insight;
+}
+
+function getNextSuggestedChange(intervalDays) {
+  const date = new Date();
+  date.setDate(date.getDate() + intervalDays);
+  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+
+function hasConfirmedFilterSize(result) {
+  return Boolean(parseFilterSize(result?.filterSize));
+}
+
+function getSizeConfidence(result) {
+  const hasValidSize = result.filterSize
+    && result.filterSize !== "Check before ordering"
+    && Boolean(parseFilterSize(result.filterSize));
+
+  if (!hasValidSize) {
+    return {
+      label: "Confirm size before ordering",
+      level: "needs-confirmation"
+    };
+  }
+
+  if (result.sizeSelectedFromSuggestion) {
+    return {
+      label: "✓ High confidence",
+      level: "high"
+    };
+  }
+
+  return {
+    label: "✓ Size format confirmed",
+    level: "format-confirmed"
+  };
+}
+
+function formatCurrency(value) {
+  return `$${Math.round(value)}`;
+}
+
+function getEstimatedYearlyCost(merv, replacementsPerYear) {
+  const range = filterPriceRanges[merv] || filterPriceRanges["MERV 8"];
+  const low = range.min * replacementsPerYear;
+  const high = range.max * replacementsPerYear;
+  return `${formatCurrency(low)}-${formatCurrency(high)}/year`;
+}
+
+function getProductRecommendation(result) {
+  const merv = result.recommendedFilterType || "MERV 8";
+  const hasConfirmedSize = Boolean(parseFilterSize(result.filterSize));
+  const size = result.filterSize && result.filterSize !== "Check before ordering"
+    ? result.filterSize
+    : "Check before ordering";
+  const productDetails = {
+    "MERV 13": {
+      image: "assets/images/products/filter-product-merv-13.webp",
+      bestFor: "Allergies • Fine particles • Stronger filtration"
+    },
+    "MERV 11": {
+      image: "assets/images/products/filter-product-merv-11.webp",
+      bestFor: "Pets • Dust • Everyday filtration"
+    },
+    "MERV 8": {
+      image: "assets/images/products/filter-product-merv-8.webp",
+      bestFor: "Standard homes • Normal dust"
+    }
+  };
+  const details = productDetails[merv] || productDetails["MERV 8"];
+  const hasKnownMervImage = Boolean(productDetails[merv]);
+  const range = filterPriceRanges[merv] || filterPriceRanges["MERV 8"];
+  const image = hasConfirmedSize
+    ? hasKnownMervImage
+      ? details.image
+      : genericProductImage
+    : confirmSizeProductImage;
+  const imageAlt = hasConfirmedSize
+    ? merv === "MERV 13"
+      ? "Representative Filter Wizard MERV 13 pleated air filter"
+      : merv === "MERV 11"
+        ? "Representative Filter Wizard MERV 11 pleated air filter"
+        : "Representative Filter Wizard MERV 8 pleated air filter"
+    : "Filter Wizard illustration reminding the user to confirm their filter size";
+
+  return {
+    title: size === "Check before ordering"
+      ? `Confirm Size Before Ordering ${merv} Pleated Air Filter`
+      : `${size} ${merv} Pleated Air Filter`,
+    sizeTitle: size === "Check before ordering" ? "Check before ordering" : size,
+    typeTitle: `${merv} Pleated Filter`,
+    image,
+    imageAlt,
+    size,
+    merv,
+    bestFor: details.bestFor,
+    priceRange: `Estimated $${range.min}-$${range.max} each`,
+    yearlyCost: getEstimatedYearlyCost(merv, result.replacementsPerYear),
+    schedule: result.recommendedSchedule
+  };
+}
+
+function buildRetailerSearchQuery(result) {
+  const size = result.productSize && result.productSize !== "Check before ordering"
+    ? result.productSize
+    : "";
+  return [size, result.productMerv || result.recommendedFilterType, "air filter"]
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function hasAmazonAffiliateTag(url) {
+  try {
+    const parsedUrl = new URL(url);
+    return parsedUrl.searchParams.get("tag") === amazonAffiliateTag;
+  } catch {
+    return false;
+  }
+}
+
+function getRetailerLinks(result) {
+  const searchQuery = buildRetailerSearchQuery(result);
+  const encodedSearchQuery = encodeURIComponent(searchQuery);
+  const amazonUrl = amazonAffiliateTag
+    ? `https://www.amazon.com/s?k=${encodedSearchQuery}&tag=${encodeURIComponent(amazonAffiliateTag)}`
+    : `https://www.amazon.com/s?k=${encodedSearchQuery}`;
+  const amazonHasValidTag = hasAmazonAffiliateTag(amazonUrl);
+
+  if (!amazonHasValidTag) {
+    trackEvent("filter_wizard_amazon_tag_missing");
+  }
+
+  return [
+    {
+      name: "Amazon",
+      subtext: "Fast shipping and broad filter-size availability",
+      url: amazonUrl,
+      recommended: true,
+      badge: "Recommended Retailer"
+    },
+    {
+      name: "Home Depot",
+      subtext: "Good for local pickup and common sizes",
+      // TODO: Replace with a final affiliate/deep link if available.
+      url: `https://www.homedepot.com/s/${encodedSearchQuery}`,
+      recommended: false
+    },
+    {
+      name: "Lowe's",
+      subtext: "Useful for pickup or delivery",
+      // TODO: Replace with a final affiliate/deep link if available.
+      url: `https://www.lowes.com/search?searchTerm=${encodedSearchQuery}`,
+      recommended: false
+    },
+    {
+      name: "Filterbuy",
+      subtext: "Bulk packs and specialty sizes",
+      // TODO: Replace with a final affiliate/deep link if available.
+      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`,
+      recommended: false
+    }
+  ];
+}
+
+function setupRetailerViewedTracking(result) {
+  if (!finderRetailerBlock || typeof IntersectionObserver !== "function") return;
+  if (!hasConfirmedFilterSize(result)) return;
+
+  retailerViewedTracked = false;
+  retailerViewedObserver?.disconnect();
+  retailerViewedObserver = new IntersectionObserver((entries) => {
+    const isVisible = entries.some((entry) => entry.isIntersecting);
+    if (!isVisible || retailerViewedTracked) return;
+
+    retailerViewedTracked = true;
+    trackEvent("filter_finder_buying_options_viewed", {
+      product_size: result.productSize,
+      product_merv: result.productMerv,
+      recommended_schedule: result.recommendedSchedule,
+      replacement_interval_days: result.replacementIntervalDays,
+      replacements_per_year: result.replacementsPerYear,
+      size_confidence_level: result.sizeConfidenceLevel
+    });
+    retailerViewedObserver?.disconnect();
+  }, {
+    root: finderModalCard?.querySelector(".finder-modal-scroll") || null,
+    threshold: 0.35
+  });
+
+  retailerViewedObserver.observe(finderRetailerBlock);
+}
+
+function getReminderMonths(intervalDays, count) {
+  const formatter = new Intl.DateTimeFormat("en-US", { month: "short" });
+  const months = [];
+  const date = new Date();
+
+  for (let index = 1; index <= count; index += 1) {
+    const reminderDate = new Date(date);
+    reminderDate.setDate(reminderDate.getDate() + intervalDays * index);
+    const label = formatter.format(reminderDate);
+
+    if (months[months.length - 1] !== label) {
+      months.push(label);
+    }
+  }
+
+  return months;
+}
+
+function loadFinderProductImage(imageUrl, altText) {
+  if (!finderProductImage) return;
+
+  const fallbackUrl = genericProductImage;
+  finderProductImage.alt = altText || "Representative Filter Wizard pleated air filter";
+  finderProductImage.hidden = true;
+
+  if (finderProductPlaceholder) {
+    finderProductPlaceholder.hidden = false;
+  }
+
+  const showImage = (url, finalAltText = altText) => {
+    finderProductImage.src = url;
+    finderProductImage.alt = finalAltText || "Representative Filter Wizard pleated air filter";
+    finderProductImage.hidden = false;
+
+    if (finderProductPlaceholder) {
+      finderProductPlaceholder.hidden = true;
+    }
+  };
+
+  const primaryImage = new Image();
+
+  primaryImage.onload = () => {
+    showImage(imageUrl, altText);
+  };
+
+  primaryImage.onerror = () => {
+    const fallbackImage = new Image();
+
+    fallbackImage.onload = () => {
+      showImage(fallbackUrl, "Representative Filter Wizard pleated air filter");
+    };
+
+    fallbackImage.onerror = () => {
+      finderProductImage.hidden = true;
+
+      if (finderProductPlaceholder) {
+        finderProductPlaceholder.hidden = false;
+      }
+
+      trackEvent("filter_finder_product_image_failed", {
+        requested_image: imageUrl,
+        recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
+        has_confirmed_size: Boolean(parseFilterSize(latestFinderReport?.filterSize))
+      });
+    };
+
+    fallbackImage.src = fallbackUrl;
+  };
+
+  primaryImage.src = imageUrl;
+}
+
+function renderFinderReport(result) {
+  const hasValidSize = hasConfirmedFilterSize(result);
+  const confidence = getSizeConfidence(result);
+  const showRetailers = hasValidSize;
+
+  if (finderResultHeading) {
+    finderResultHeading.textContent = hasValidSize
+      ? "You're all set"
+      : "Your filter type is ready";
+  }
+  if (finderResultSubheading) {
+    finderResultSubheading.textContent = result.recommendedFilterType === "MERV 13"
+      ? "We found a filtration option worth considering."
+      : hasValidSize
+        ? "We found your best match."
+        : "Confirm the printed size before ordering.";
+  }
+  if (finderConfidencePill) {
+    finderConfidencePill.textContent = confidence.label;
+    finderConfidencePill.classList.remove("is-high-confidence", "is-format-confirmed", "needs-confirmation");
+    finderConfidencePill.classList.add(
+      confidence.level === "high"
+        ? "is-high-confidence"
+        : confidence.level === "format-confirmed"
+          ? "is-format-confirmed"
+          : "needs-confirmation"
+    );
+  }
+  finderResultSizeItems.forEach((item) => {
+    item.textContent = result.filterSize;
+  });
+  if (finderResultSchedule) finderResultSchedule.textContent = result.recommendedSchedule;
+  if (finderNextChange) finderNextChange.textContent = result.nextSuggestedChange;
+  if (finderYearlyCost) finderYearlyCost.textContent = result.productYearlyCost;
+  if (finderMerv) finderMerv.textContent = result.recommendedFilterDisplayLabel || result.recommendedFilterType;
+  if (finderMervCopy) finderMervCopy.textContent = result.recommendedFilterCopy;
+  if (finderMervBenefit) finderMervBenefit.textContent = result.recommendedFilterBenefit;
+  if (finderMervCaution) finderMervCaution.textContent = result.recommendedFilterCaution;
+  if (finderWhyTitle) {
+    finderWhyTitle.textContent = result.recommendedFilterType === "MERV 13"
+      ? "Why we suggest considering MERV 13"
+      : `Why we chose ${result.recommendedFilterType}`;
+  }
+  if (finderInsightTitle) finderInsightTitle.textContent = result.insightTitle;
+  if (finderInsightCopy) finderInsightCopy.textContent = result.insightCopy;
+  if (finderSizeGuidance) finderSizeGuidance.hidden = hasValidSize;
+  if (finderSizeGuidanceCopy) finderSizeGuidanceCopy.textContent = result.sizeGuidance || "";
+  if (finderConfirmSizeInput) finderConfirmSizeInput.value = "";
+  if (finderConfirmSizeError) {
+    finderConfirmSizeError.textContent = "";
+    finderConfirmSizeError.hidden = true;
+  }
+  if (finderAnswerPills) {
+    finderAnswerPills.innerHTML = "";
+    const answers = [
+      result.knowsSize,
+      result.location,
+      ...(result.homeConditions.length ? result.homeConditions : ["Standard home conditions"])
+    ].filter(Boolean).slice(0, 3);
+    answers.forEach((answer) => {
+      const pill = document.createElement("span");
+      pill.textContent = `✓ ${answer}`;
+      finderAnswerPills.appendChild(pill);
+    });
+  }
+  if (finderMonths) {
+    finderMonths.innerHTML = "";
+    result.reminderMonths.forEach((month) => {
+      const item = document.createElement("span");
+      item.textContent = month;
+      finderMonths.appendChild(item);
+    });
+  }
+  if (resultEmailInput && result.email) {
+    resultEmailInput.value = result.email;
+  }
+  if (finderProductSizeTitle) finderProductSizeTitle.textContent = result.productSizeTitle;
+  if (finderProductTypeTitle) finderProductTypeTitle.textContent = result.productTypeTitle;
+  if (finderProductBestFor) finderProductBestFor.textContent = result.productBestFor;
+  if (finderProductPrice) finderProductPrice.textContent = result.productPrice;
+  if (finderRetailerSummary) {
+    const sizeLabel = result.productSize && result.productSize !== "Check before ordering"
+      ? result.productSize
+      : "Confirm size";
+    finderRetailerSummary.textContent = `${sizeLabel} • ${result.productMerv}`;
+  }
+  if (finderProductCta) {
+    finderProductCta.textContent = showRetailers ? "View Buying Options" : "Help Me Confirm My Size";
+    finderProductCta.dataset.finderProductCtaMode = showRetailers ? "retailers" : "size-guidance";
+  }
+  if (finderSkipToRetailers) {
+    finderSkipToRetailers.textContent = showRetailers ? "Save this result instead" : "Save this recommendation";
+  }
+  if (finderContinueToRetailers) {
+    finderContinueToRetailers.hidden = !showRetailers;
+  }
+  loadFinderProductImage(result.productImage, result.productImageAlt);
+  if (finderRetailerBlock) {
+    finderRetailerBlock.hidden = !showRetailers;
+  }
+  if (finderRetailerOptions) {
+    finderRetailerOptions.innerHTML = "";
+    if (showRetailers) {
+      const searchQuery = buildRetailerSearchQuery(result);
+      getRetailerLinks(result).forEach((retailer) => {
+        const card = document.createElement("article");
+        card.className = "finder-retailer-card";
+
+        if (retailer.recommended) {
+          card.classList.add("is-recommended");
+
+          const badge = document.createElement("span");
+          badge.className = "finder-retailer-badge";
+          badge.textContent = retailer.badge || "Recommended Retailer";
+
+          card.appendChild(badge);
+        }
+
+        const title = document.createElement("strong");
+        title.textContent = retailer.name;
+
+        const copy = document.createElement("p");
+        copy.textContent = retailer.subtext;
+
+        const link = document.createElement("a");
+        link.className = "btn btn-secondary";
+        link.href = retailer.url;
+        link.target = "_blank";
+        link.rel = "noopener sponsored nofollow";
+        link.textContent = retailer.recommended ? "Shop on Amazon" : "View Options";
+        link.dataset.retailerName = retailer.name;
+        link.dataset.retailerUrl = retailer.url;
+        link.addEventListener("click", () => {
+          trackEvent("filter_finder_retailer_clicked", {
+            retailer: retailer.name,
+            product_size: result.productSize,
+            product_merv: result.productMerv,
+            search_query: searchQuery,
+            recommended_schedule: result.recommendedSchedule,
+            replacement_interval_days: result.replacementIntervalDays,
+            replacements_per_year: result.replacementsPerYear,
+            size_confidence_level: result.sizeConfidenceLevel,
+            is_recommended_retailer: Boolean(retailer.recommended),
+            affiliate_tag_present: retailer.name === "Amazon"
+              ? Boolean(amazonAffiliateTag)
+              : false
+          });
+        });
+
+        card.append(title, copy, link);
+        finderRetailerOptions.appendChild(card);
+      });
+    }
+  }
+  trackEvent("filter_finder_product_recommendation_viewed", {
+    product_merv: result.productMerv,
+    product_size: result.productSize,
+    product_price: result.productPrice,
+    recommended_schedule: result.recommendedSchedule,
+    replacement_interval_days: result.replacementIntervalDays,
+    replacements_per_year: result.replacementsPerYear,
+    recommended_filter_display_label: result.recommendedFilterDisplayLabel || result.recommendedFilterType,
+    normalized_filter_size: result.normalizedFilterSize,
+    size_confidence_level: result.sizeConfidenceLevel,
+    size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
+    has_confirmed_size: hasValidSize
+  });
+  trackEvent("filter_finder_result_summary_viewed", {
+    filter_size: result.filterSize,
+    recommended_filter_type: result.recommendedFilterType,
+    recommended_filter_display_label: result.recommendedFilterDisplayLabel || result.recommendedFilterType,
+    recommended_schedule: result.recommendedSchedule,
+    replacement_interval_days: result.replacementIntervalDays,
+    replacements_per_year: result.replacementsPerYear,
+    next_suggested_change: result.nextSuggestedChange,
+    estimated_yearly_cost: result.productYearlyCost,
+    confidence_status: confidence.label,
+    size_confidence_level: confidence.level,
+    has_confirmed_size: hasValidSize
+  });
+  if (showRetailers) {
+    setupRetailerViewedTracking(result);
+  } else {
+    retailerViewedObserver?.disconnect();
+    retailerViewedTracked = false;
+  }
+}
+
+function getFinderCopyText(result) {
+  return [
+    "Filter Wizard Recommendation",
+    `Recommended filter: ${result.productTitle}`,
+    `Filter size: ${result.filterSize}`,
+    `Size confidence: ${result.sizeConfidenceLabel}`,
+    result.sizeGuidance ? `Size confirmation guidance: ${result.sizeGuidance}` : "",
+    `Recommended rating: ${result.recommendedFilterDisplayLabel || result.recommendedFilterType}`,
+    `Actual filter rating: ${result.recommendedFilterType}`,
+    `Replacement interval: ${result.replacementIntervalDays} days`,
+    `Estimated replacements per year: ${result.replacementsPerYear}`,
+    `Schedule: ${result.recommendedSchedule}`,
+    `Estimated price range: ${result.productPrice}`,
+    `Estimated yearly cost: ${result.productYearlyCost}`,
+    `Next suggested change: ${result.nextSuggestedChange}`,
+    `Best for: ${result.productBestFor}`,
+    `Location: ${result.location}`,
+    `Filter type benefit: ${result.recommendedFilterBenefit}`,
+    `Filter type note: ${result.recommendedFilterCaution}`,
+    `Insight: ${result.insightTitle} - ${result.insightCopy}`,
+    `Reminder months: ${result.reminderMonths.join(", ")}`,
+    hasConfirmedFilterSize(result) ? `Buying search: ${buildRetailerSearchQuery(result)}` : ""
+  ].filter(Boolean).join("\n");
+}
+
+function setFinderCopyStatus(message) {
+  if (!finderCopyStatus) return;
+  finderCopyStatus.textContent = message;
+  finderCopyStatus.hidden = false;
+}
+
+async function postToFormspree(form, formData) {
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Formspree submission failed with status ${response.status}`);
+  }
+}
+
+function addResultFields(formData, result) {
+  if (!result) return;
+  formData.set("knownSizeStatus", result.knowsSize);
+  formData.set("enteredFilterSize", result.filterSize);
+  formData.set("sizeConfidenceLevel", result.sizeConfidenceLevel || "");
+  formData.set("sizeConfidenceLabel", result.sizeConfidenceLabel || "");
+  formData.set("sizeSelectedFromSuggestion", String(Boolean(result.sizeSelectedFromSuggestion)));
+  formData.set("sizeGuidance", result.sizeGuidance || "");
+  formData.set("filterLocation", result.location);
+  formData.set("homeConditions", result.homeConditions.join(", ") || "Not specified");
+  formData.set("recommendedSchedule", result.recommendedSchedule);
+  formData.set("replacementIntervalDays", String(result.replacementIntervalDays || ""));
+  formData.set("replacementsPerYear", String(result.replacementsPerYear || ""));
+  formData.set("recommendedFilterType", result.recommendedFilterType);
+  formData.set("recommendedFilterDisplayLabel", result.recommendedFilterDisplayLabel || result.recommendedFilterType || "");
+  formData.set("recommendedFilterBenefit", result.recommendedFilterBenefit || "");
+  formData.set("recommendedFilterCaution", result.recommendedFilterCaution || "");
+  formData.set("hasConfirmedSize", String(hasConfirmedFilterSize(result)));
+  formData.set("estimatedReminderMonths", result.reminderMonths.join(", "));
+  formData.set("nextSuggestedChange", result.nextSuggestedChange || "");
+  formData.set("filterInsightTitle", result.insightTitle || "");
+  formData.set("filterInsightCopy", result.insightCopy || "");
+  formData.set("recommendedFilterProduct", result.productTitle || "");
+  formData.set("recommendedFilterBestFor", result.productBestFor || "");
+  formData.set("estimatedFilterPrice", result.productPrice || "");
+  formData.set("estimatedYearlyCost", result.productYearlyCost || "");
+  formData.set("buyingSearchQuery", hasConfirmedFilterSize(result) ? buildRetailerSearchQuery(result) : "");
+  formData.set(
+    "buyingSearchLinks",
+    hasConfirmedFilterSize(result)
+      ? getRetailerLinks(result).map((retailer) => `${retailer.name}: ${retailer.url}`).join("\n")
+      : ""
+  );
+  formData.set("productImage", result.productImage || "");
+}
+
+async function completeFilterFinder() {
+  if (finderAnalyzingTimer) return;
+  if (!validateFinderStep(finderCurrentStep)) return;
+
+  trackFinderStepCompleted(finderCurrentStep);
+
+  const parsedSize = finderState.knowsSize === "Yes, I know it"
+    ? parseFilterSize(finderKnownSizeInput?.value)
+    : null;
+  const foundSize = parsedSize?.normalized || "";
+  const filterType = getRecommendedFilterType();
+  const replacementPlan = getReplacementPlan(finderState.conditions);
+  finderState.email = "";
+  finderState.recommendedSchedule = replacementPlan.scheduleLabel;
+  finderState.normalizedSize = foundSize;
+
+  if (finderEmailNote) finderEmailNote.hidden = true;
+  if (finderCopyStatus) finderCopyStatus.hidden = true;
+
+  const result = {
+    knowsSize: finderState.knowsSize || "Not answered",
+    location: finderState.location || "Not answered",
+    filterSize: foundSize || "Check before ordering",
+    homeConditions: [...finderState.conditions],
+    recommendedSchedule: finderState.recommendedSchedule,
+    replacementIntervalDays: replacementPlan.intervalDays,
+    replacementsPerYear: replacementPlan.replacementsPerYear,
+    recommendedFilterType: filterType.type,
+    recommendedFilterDisplayLabel: filterType.displayLabel,
+    recommendedFilterCopy: filterType.copy,
+    recommendedFilterBenefit: filterType.benefit,
+    recommendedFilterCaution: filterType.caution,
+    normalizedFilterSize: foundSize || "",
+    sizeSelectedFromSuggestion: finderState.sizeSelectedFromSuggestion,
+    sizeGuidance: foundSize ? "" : getLocationGuidance(finderState.location || "I'm not sure"),
+    email: finderState.email || "",
+    submittedAt: new Date().toISOString()
+  };
+  const confidence = getSizeConfidence(result);
+  const insight = getFinderInsight(result);
+  const reminderCount = Math.min(result.replacementsPerYear, 8);
+  const nextSuggestedChange = getNextSuggestedChange(result.replacementIntervalDays);
+  result.reminderMonths = getReminderMonths(result.replacementIntervalDays, reminderCount);
+  const product = getProductRecommendation(result);
+  Object.assign(result, {
+    sizeConfidenceLevel: confidence.level,
+    sizeConfidenceLabel: confidence.label,
+    insightTitle: insight.title,
+    insightCopy: insight.copy,
+    nextSuggestedChange,
+    productTitle: product.title,
+    productSizeTitle: product.sizeTitle,
+    productTypeTitle: product.typeTitle,
+    productImage: product.image,
+    productImageAlt: product.imageAlt,
+    productSize: product.size,
+    productMerv: product.merv,
+    productBestFor: product.bestFor,
+    productPrice: product.priceRange,
+    productYearlyCost: product.yearlyCost,
+    productSchedule: product.schedule
+  });
+
+  latestFinderReport = result;
+  if (finderQuiz) finderQuiz.hidden = true;
+  if (finderResult) finderResult.hidden = true;
+  finderResult?.classList.remove("report-visible");
+  if (finderAnalyzing) finderAnalyzing.hidden = false;
+  if (finderCompleteButton) finderCompleteButton.disabled = true;
+
+  let activeAnalysisStep = 0;
+  finderAnalyzingSteps.forEach((step, index) => {
+    step.classList.toggle("is-active", index === activeAnalysisStep);
+  });
+  window.clearInterval(finderAnalysisStepTimer);
+  finderAnalysisStepTimer = window.setInterval(() => {
+    activeAnalysisStep = (activeAnalysisStep + 1) % Math.max(finderAnalyzingSteps.length, 1);
+    finderAnalyzingSteps.forEach((step, index) => {
+      step.classList.toggle("is-active", index === activeAnalysisStep);
+    });
+  }, 430);
+
+  trackEvent("filter_finder_analysis_started", {
+    knows_size: result.knowsSize,
+    location: result.location,
+    home_conditions: result.homeConditions.join(", ") || "Not specified",
+    normalized_filter_size: result.normalizedFilterSize,
+    size_selected_from_suggestion: result.sizeSelectedFromSuggestion
+  });
+
+  finderAnalyzingTimer = window.setTimeout(() => {
+    window.clearInterval(finderAnalysisStepTimer);
+    finderAnalysisStepTimer = null;
+    if (finderAnalyzing) finderAnalyzing.hidden = true;
+    if (finderCompleteButton) finderCompleteButton.disabled = false;
+
+    renderFinderReport(result);
+    saveLatestToLocalStorage(finderStorageKey, result);
+    finderCompleted = true;
+
+    trackEvent("filter_finder_analysis_completed", {
+      recommended_filter_type: result.recommendedFilterType,
+      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
+      recommended_schedule: result.recommendedSchedule,
+      replacement_interval_days: result.replacementIntervalDays,
+      replacements_per_year: result.replacementsPerYear,
+      normalized_filter_size: result.normalizedFilterSize,
+      size_confidence_level: result.sizeConfidenceLevel,
+      has_confirmed_size: hasConfirmedFilterSize(result)
+    });
+    trackEvent("filter_finder_completed", {
+      knows_size: result.knowsSize,
+      normalized_filter_size: result.normalizedFilterSize,
+      location: result.location,
+      has_email: Boolean(result.email),
+      recommended_schedule: result.recommendedSchedule,
+      recommended_filter_type: result.recommendedFilterType,
+      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
+      replacement_interval_days: result.replacementIntervalDays,
+      replacements_per_year: result.replacementsPerYear,
+      size_confidence_level: result.sizeConfidenceLevel,
+      size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
+      has_valid_size: Boolean(parsedSize),
+      has_confirmed_size: hasConfirmedFilterSize(result)
+    });
+    trackEvent("filter_finder_result_viewed", {
+      knows_size: result.knowsSize,
+      normalized_filter_size: result.normalizedFilterSize,
+      location: result.location,
+      recommended_schedule: result.recommendedSchedule,
+      recommended_filter_type: result.recommendedFilterType,
+      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
+      replacement_interval_days: result.replacementIntervalDays,
+      replacements_per_year: result.replacementsPerYear,
+      has_email: false,
+      completed: true,
+      size_confidence_level: result.sizeConfidenceLevel,
+      size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
+      has_valid_size: Boolean(parsedSize),
+      has_confirmed_size: hasConfirmedFilterSize(result)
+    });
+    trackEvent("filter_finder_email_prompt_viewed", {
+      recommended_schedule: result.recommendedSchedule,
+      recommended_filter_type: result.recommendedFilterType,
+      recommended_filter_display_label: result.recommendedFilterDisplayLabel
+    });
+  
+    if (finderResult) {
+      finderResult.hidden = false;
+      window.requestAnimationFrame(() => finderResult.classList.add("report-visible"));
+    }
+    finderModalCard?.querySelector(".finder-modal-scroll")?.scrollTo({ top: 0, behavior: "smooth" });
+  }, 1500);
+}
+
+function setFormMessage(form, message = "") {
+  const errorMessage = form?.querySelector("[data-form-error]");
+  if (!errorMessage) return;
+  errorMessage.textContent = message || errorMessage.textContent;
+  errorMessage.hidden = !message;
+}
+
+async function handleEmailFormSubmit(event, eventName, successElement) {
+  event.preventDefault();
+  const form = event.currentTarget;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const submitButton = form.querySelector(".form-submit");
+  const originalText = submitButton?.textContent || "Submit";
+  const formData = new FormData(form);
+  const email = String(formData.get("email") || "").trim();
+  const submittedAt = new Date().toISOString();
+
+  formData.set("submittedAt", submittedAt);
+  addResultFields(formData, latestFinderReport);
+
+  setFormMessage(form);
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+  }
+
+  try {
+    await postToFormspree(form, formData);
+    const signup = {
+      email,
+      source: String(formData.get("source") || "Email Form"),
+      submittedAt
+    };
+    saveLatestToLocalStorage(emailStorageKey, signup);
+    trackEvent(eventName, {
+      form_location: String(formData.get("source") || "Email Form"),
+      has_finder_result: Boolean(latestFinderReport),
+      normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
+      recommended_schedule: latestFinderReport?.recommendedSchedule || "",
+      replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
+      replacements_per_year: latestFinderReport?.replacementsPerYear || "",
+      recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
+      recommended_filter_display_label: latestFinderReport?.recommendedFilterDisplayLabel || "",
+      recommended_filter_benefit: latestFinderReport?.recommendedFilterBenefit || "",
+      next_suggested_change: latestFinderReport?.nextSuggestedChange || "",
+      size_confidence_level: latestFinderReport?.sizeConfidenceLevel || "",
+      size_selected_from_suggestion: Boolean(latestFinderReport?.sizeSelectedFromSuggestion),
+      recommended_filter_product: latestFinderReport?.productTitle || "",
+      estimated_filter_price: latestFinderReport?.productPrice || "",
+      has_confirmed_size: latestFinderReport ? hasConfirmedFilterSize(latestFinderReport) : false,
+      has_email: Boolean(email)
+    });
+    trackEvent("generate_lead", {
+      form_location: String(formData.get("source") || "Email Form"),
+      normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
+      recommended_schedule: latestFinderReport?.recommendedSchedule || "",
+      replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
+      replacements_per_year: latestFinderReport?.replacementsPerYear || "",
+      recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
+      recommended_filter_display_label: latestFinderReport?.recommendedFilterDisplayLabel || "",
+      recommended_filter_benefit: latestFinderReport?.recommendedFilterBenefit || "",
+      next_suggested_change: latestFinderReport?.nextSuggestedChange || "",
+      size_confidence_level: latestFinderReport?.sizeConfidenceLevel || "",
+      size_selected_from_suggestion: Boolean(latestFinderReport?.sizeSelectedFromSuggestion),
+      recommended_filter_product: latestFinderReport?.productTitle || "",
+      estimated_filter_price: latestFinderReport?.productPrice || "",
+      has_confirmed_size: latestFinderReport ? hasConfirmedFilterSize(latestFinderReport) : false
+    });
+    form.reset();
+    form.hidden = true;
+    if (successElement) successElement.hidden = false;
+  } catch (error) {
+    console.error("Filter Wizard email submission error:", error);
+    const fallbackMessage = form === resultEmailForm
+      ? "We could not email your report, but your recommendation is shown above."
+      : "Something went wrong. Please try again in a moment.";
+    setFormMessage(form, fallbackMessage);
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  }
+}
+
+function hideSizeSuggestions(container) {
+  if (!container) return;
+  container.hidden = true;
+  container.innerHTML = "";
+}
+
+function renderSizeSuggestions(input) {
+  const container = input.parentElement?.querySelector("[data-size-suggestions]");
+  if (!container) return;
+
+  const query = normalizeFilterSize(input.value);
+  if (!query) {
+    hideSizeSuggestions(container);
+    return;
+  }
+
+  const matches = commonFilterSizes
+    .filter((size) => size.startsWith(query) || size.includes(query))
+    .slice(0, 6);
+
+  if (!matches.length) {
+    hideSizeSuggestions(container);
+    return;
+  }
+
+  container.innerHTML = "";
+  matches.forEach((size) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = size;
+    button.setAttribute("aria-label", `Use filter size ${size}`);
+    button.addEventListener("click", () => {
+      input.value = size;
+      finderState.sizeSelectedFromSuggestion = true;
+      hideSizeSuggestions(container);
+      input.focus();
+      clearFinderError(input.closest("[data-finder-step]"));
+    });
+    container.appendChild(button);
+  });
+  container.hidden = false;
+}
+
+function getSuggestionButtons(container) {
+  return Array.from(container?.querySelectorAll("button") || []);
+}
+
+function moveSuggestionFocus(container, direction) {
+  const buttons = getSuggestionButtons(container);
+  if (!buttons.length) return;
+
+  const currentIndex = buttons.indexOf(document.activeElement);
+  const nextIndex = currentIndex === -1
+    ? 0
+    : (currentIndex + direction + buttons.length) % buttons.length;
+  buttons[nextIndex].focus();
+}
+
+function setupSizeAutocomplete() {
+  sizeAutocompleteInputs.forEach((input) => {
+    const container = input.parentElement?.querySelector("[data-size-suggestions]");
+
+    input.addEventListener("input", () => renderSizeSuggestions(input));
+    input.addEventListener("focus", () => renderSizeSuggestions(input));
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        hideSizeSuggestions(container);
+        return;
+      }
+      if (event.key === "ArrowDown") {
+        renderSizeSuggestions(input);
+        if (!container?.hidden) {
+          event.preventDefault();
+          moveSuggestionFocus(container, 1);
+        }
+      }
+    });
+    input.addEventListener("blur", () => {
+      window.setTimeout(() => hideSizeSuggestions(container), 140);
+    });
+
+    container?.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        hideSizeSuggestions(container);
+        input.focus();
+        return;
+      }
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        moveSuggestionFocus(container, event.key === "ArrowDown" ? 1 : -1);
+      }
+    });
+  });
+}
+
+setHeaderState();
+setupRevealAnimations();
+setupSizeAutocomplete();
+updateReadingProgress();
+window.addEventListener("scroll", setHeaderState, { passive: true });
+window.addEventListener("scroll", updateReadingProgress, { passive: true });
+window.addEventListener("resize", updateReadingProgress);
+
+backToTopButton?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", toggleNav);
+  navLinks.forEach((link) => link.addEventListener("click", closeNav));
+}
+
+heroFinderCta?.addEventListener("click", (event) => {
+  event.preventDefault();
+  trackEvent("hero_filter_finder_clicked");
+  openFinderModal(event.currentTarget);
+});
+
+finderStartButton?.addEventListener("click", (event) => {
+  openFinderModal(event.currentTarget);
+});
+
+finderCloseButton?.addEventListener("click", () => closeFinderModal("close_button"));
+
+finderModal?.addEventListener("click", (event) => {
+  if (event.target === finderModal) {
+    closeFinderModal("overlay");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!finderModal || finderModal.hidden) return;
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeFinderModal("escape");
+    return;
+  }
+
+  if (event.key !== "Tab") return;
+  const focusable = getFocusableElements(finderModal);
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+
+document.querySelectorAll("[data-finder-option]").forEach((button) => {
+  button.setAttribute("aria-pressed", "false");
+  button.addEventListener("click", () => setFinderOption(button));
+});
+
+finderKnownSizeInput?.addEventListener("input", () => {
+  finderState.sizeSelectedFromSuggestion = false;
+  clearFinderError(document.querySelector('[data-finder-step="1"]'));
+});
+
+resultEmailInput?.addEventListener("input", () => {
+  if (!finderEmailEnteredTracked && resultEmailInput.value.trim()) {
+    finderEmailEnteredTracked = true;
+    trackEvent("filter_finder_email_entered");
+  }
+});
+
+finderConfirmSizeInput?.addEventListener("input", () => {
+  if (finderConfirmSizeError) {
+    finderConfirmSizeError.textContent = "";
+    finderConfirmSizeError.hidden = true;
+  }
+});
+
+finderNextButton?.addEventListener("click", () => {
+  if (!validateFinderStep(finderCurrentStep)) return;
+  trackFinderStepCompleted(finderCurrentStep);
+  showFinderStep(finderCurrentStep + 1);
+});
+
+finderBackButton?.addEventListener("click", () => {
+  showFinderStep(finderCurrentStep - 1);
+});
+
+finderCompleteButton?.addEventListener("click", completeFilterFinder);
+
+finderCopyButton?.addEventListener("click", async () => {
+  if (!latestFinderReport) return;
+
+  if (!navigator.clipboard?.writeText) {
+    setFinderCopyStatus("Copy not available on this browser.");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(getFinderCopyText(latestFinderReport));
+    setFinderCopyStatus("Recommendation copied.");
+    trackEvent("copy_recommendation_clicked", {
+      recommended_schedule: latestFinderReport.recommendedSchedule,
+      recommended_filter_type: latestFinderReport.recommendedFilterType
+    });
+  } catch (error) {
+    console.warn("Filter Wizard recommendation could not be copied.", error);
+    setFinderCopyStatus("Copy not available on this browser.");
+  }
+});
+
+finderProductCta?.addEventListener("click", () => {
+  if (finderProductCta.dataset.finderProductCtaMode === "size-guidance") {
+    trackEvent("filter_finder_confirm_size_help_clicked", {
+      recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
+      location: latestFinderReport?.location || ""
+    });
+    finderSizeGuidance?.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.setTimeout(() => finderConfirmSizeInput?.focus({ preventScroll: true }), 260);
+    return;
+  }
+
+  trackEvent("filter_finder_view_buying_options_clicked", {
+    product_merv: latestFinderReport?.productMerv || "",
+    product_size: latestFinderReport?.productSize || "",
+    product_price: latestFinderReport?.productPrice || "",
+    recommended_schedule: latestFinderReport?.recommendedSchedule || "",
+    replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
+    replacements_per_year: latestFinderReport?.replacementsPerYear || "",
+    normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
+    size_confidence_level: latestFinderReport?.sizeConfidenceLevel || ""
+  });
+  finderRetailerBlock?.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+finderSkipToRetailers?.addEventListener("click", () => {
+  trackEvent("filter_finder_save_result_link_clicked", {
+    product_merv: latestFinderReport?.productMerv || "",
+    product_size: latestFinderReport?.productSize || "",
+    recommended_schedule: latestFinderReport?.recommendedSchedule || "",
+    size_confidence_level: latestFinderReport?.sizeConfidenceLevel || ""
+  });
+  resultEmailForm?.scrollIntoView({ behavior: "smooth", block: "center" });
+  window.setTimeout(() => resultEmailInput?.focus({ preventScroll: true }), 260);
+});
+
+finderContinueToRetailers?.addEventListener("click", () => {
+  trackEvent("filter_finder_continue_to_retailers_clicked", {
+    product_merv: latestFinderReport?.productMerv || "",
+    product_size: latestFinderReport?.productSize || "",
+    recommended_schedule: latestFinderReport?.recommendedSchedule || ""
+  });
+  finderRetailerBlock?.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+finderConfirmSizeButton?.addEventListener("click", () => {
+  if (!latestFinderReport || !finderConfirmSizeInput) return;
+
+  const parsedSize = parseFilterSize(finderConfirmSizeInput.value);
+  if (!parsedSize) {
+    if (finderConfirmSizeError) {
+      finderConfirmSizeError.textContent = "Enter a size in width x height x depth format, such as 20x25x1.";
+      finderConfirmSizeError.hidden = false;
+    }
+    finderConfirmSizeInput.focus({ preventScroll: true });
+    return;
+  }
+
+  const normalized = parsedSize.normalized;
+  latestFinderReport.filterSize = normalized;
+  latestFinderReport.normalizedFilterSize = normalized;
+  latestFinderReport.productSize = normalized;
+  latestFinderReport.productSizeTitle = normalized;
+  latestFinderReport.productTitle = `${normalized} ${latestFinderReport.recommendedFilterType} Pleated Air Filter`;
+  latestFinderReport.sizeSelectedFromSuggestion = false;
+  latestFinderReport.sizeGuidance = "";
+  latestFinderReport.sizeConfidenceLevel = "format-confirmed";
+  latestFinderReport.sizeConfidenceLabel = "✓ Size format confirmed";
+
+  const product = getProductRecommendation(latestFinderReport);
+  Object.assign(latestFinderReport, {
+    productTitle: product.title,
+    productSizeTitle: product.sizeTitle,
+    productTypeTitle: product.typeTitle,
+    productImage: product.image,
+    productImageAlt: product.imageAlt,
+    productSize: product.size,
+    productMerv: product.merv,
+    productBestFor: product.bestFor,
+    productPrice: product.priceRange,
+    productYearlyCost: product.yearlyCost,
+    productSchedule: product.schedule
+  });
+
+  renderFinderReport(latestFinderReport);
+  saveLatestToLocalStorage(finderStorageKey, latestFinderReport);
+  trackEvent("filter_finder_size_confirmed_after_result", {
+    normalized_filter_size: normalized,
+    recommended_filter_type: latestFinderReport.recommendedFilterType,
+    location: latestFinderReport.location
+  });
+  finderRetailerBlock?.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+resultEmailForm?.addEventListener("submit", (event) => {
+  handleEmailFormSubmit(event, "filter_finder_email_submitted", resultEmailSuccess);
+});
+
+earlyAccessForm?.addEventListener("submit", (event) => {
+  handleEmailFormSubmit(event, "early_access_submitted", earlyAccessSuccess);
+});
+
+articleEmailForm?.addEventListener("submit", (event) => {
+  handleEmailFormSubmit(event, "blog_email_signup", articleEmailSuccess);
+});
+
