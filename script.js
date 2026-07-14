@@ -3,6 +3,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
 const heroFinderCta = document.querySelector("[data-hero-finder-cta]");
+const filterFinder = document.querySelector("[data-filter-finder]");
 const finderStartButton = document.querySelector("[data-finder-start]");
 const finderModal = document.querySelector("[data-finder-modal]");
 const finderModalCard = document.querySelector(".finder-modal");
@@ -15,6 +16,7 @@ const finderCompleteButton = document.querySelector("[data-finder-complete]");
 const finderProgressLabel = document.querySelector("[data-finder-progress-label]");
 const finderProgressBar = document.querySelector("[data-finder-progress-bar]");
 const knownSizeField = document.querySelector("[data-known-size-field]");
+const knownSizeOptions = document.querySelector("[data-known-size-options]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
 const finderAnalyzing = document.querySelector("[data-finder-analyzing]");
 const finderAnalyzingSteps = document.querySelectorAll("[data-analyzing-step]");
@@ -40,9 +42,6 @@ const finderInsightTitle = document.querySelector("[data-finder-insight-title]")
 const finderInsightCopy = document.querySelector("[data-finder-insight-copy]");
 const finderSizeGuidance = document.querySelector("[data-finder-size-guidance]");
 const finderSizeGuidanceCopy = document.querySelector("[data-finder-size-guidance-copy]");
-const finderConfirmSizeInput = document.querySelector("[data-finder-confirm-size-input]");
-const finderConfirmSizeButton = document.querySelector("[data-finder-confirm-size-button]");
-const finderConfirmSizeError = document.querySelector("[data-finder-confirm-size-error]");
 const finderProductImage = document.querySelector("[data-finder-product-image]");
 const finderProductPlaceholder = document.querySelector("[data-finder-product-placeholder]");
 const finderProductSizeTitle = document.querySelector("[data-finder-product-size-title]");
@@ -61,31 +60,10 @@ const resultEmailInput = document.querySelector("[data-result-email]");
 const resultEmailSuccess = document.querySelector("[data-result-email-success]");
 const earlyAccessForm = document.querySelector("[data-reservation-form]");
 const earlyAccessSuccess = document.querySelector("[data-reservation-success]");
-const articleEmailForm = document.querySelector("[data-article-email-form]");
-const articleEmailSuccess = document.querySelector("[data-article-email-success]");
-const readingProgress = document.querySelector("[data-reading-progress]");
-const articleContent = document.querySelector("[data-article-content]");
-const backToTopButton = document.querySelector("[data-back-to-top]");
 const finderStorageKey = "filterWizardFinderResults";
 const emailStorageKey = "filterWizardEmailSignups";
 const finderTotalSteps = 4;
-const amazonAffiliateTag = "filterwizard-20";
-const genericProductImage = "assets/images/filter-product-generic.webp";
-const confirmSizeProductImage = "assets/images/filter-product-confirm-size.webp";
-const filterPriceRanges = {
-  "MERV 8": {
-    min: 8,
-    max: 14
-  },
-  "MERV 11": {
-    min: 12,
-    max: 18
-  },
-  "MERV 13": {
-    min: 16,
-    max: 25
-  }
-};
+const amazonAffiliateTag = "";
 
 let finderCurrentStep = 1;
 let finderEmailEnteredTracked = false;
@@ -96,20 +74,6 @@ let finderAnalyzingTimer = null;
 let finderAnalysisStepTimer = null;
 let retailerViewedObserver = null;
 let retailerViewedTracked = false;
-let articlePageViewTracked = false;
-const articleScrollDepthTracked = new Set();
-
-const finderAnalyticsState = {
-  started: false,
-  completed: false,
-  abandoned: false,
-  lastCompletedStep: null,
-  completionSignature: null,
-  entryPoint: "unknown",
-  selectedSizePath: "",
-  enteredSizeSignature: "",
-  conditionsSignature: ""
-};
 
 const finderState = {
   knowsSize: "",
@@ -151,628 +115,6 @@ function trackEvent(eventName, parameters = {}) {
   if (typeof window.gtag === "function") {
     window.gtag("event", eventName, parameters);
   }
-}
-
-const consentManager = (() => {
-  const storageKey = "filterWizardConsent";
-  const consentVersion = 1;
-  const consentMaxAge = 1000 * 60 * 60 * 24 * 183;
-  let initialized = false;
-  let banner = null;
-  let dialog = null;
-  let lastSettingsTrigger = null;
-  let clarityRetryCount = 0;
-  let clarityRetryTimer = null;
-  let bannerShowTimer = null;
-  let bannerHideTimer = null;
-
-  function getStoredConsent() {
-    try {
-      const rawValue = localStorage.getItem(storageKey);
-      if (!rawValue) return null;
-      const parsedValue = JSON.parse(rawValue);
-      const isValid =
-        parsedValue &&
-        parsedValue.version === consentVersion &&
-        typeof parsedValue.timestamp === "number" &&
-        Date.now() - parsedValue.timestamp < consentMaxAge &&
-        (parsedValue.analytics === "granted" || parsedValue.analytics === "denied");
-
-      return isValid ? parsedValue : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function saveConsent(choice) {
-    const normalizedChoice = choice === "granted" ? "granted" : "denied";
-    const value = {
-      analytics: normalizedChoice,
-      timestamp: Date.now(),
-      version: consentVersion
-    };
-
-    try {
-      localStorage.setItem(storageKey, JSON.stringify(value));
-    } catch (error) {
-      console.warn("Filter Wizard could not save cookie consent.", error);
-    }
-
-    applyGoogleConsent(normalizedChoice);
-    applyClarityConsent(normalizedChoice);
-    return value;
-  }
-
-  function applyGoogleConsent(choice) {
-    if (typeof window.gtag !== "function") return;
-
-    window.gtag("consent", "update", {
-      analytics_storage: choice === "granted" ? "granted" : "denied",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied"
-    });
-  }
-
-  function applyClarityConsent(choice) {
-    const payload = {
-      ad_Storage: "denied",
-      analytics_Storage: choice === "granted" ? "granted" : "denied"
-    };
-
-    if (typeof window.clarity === "function") {
-      window.clarity("consentv2", payload);
-      clarityRetryCount = 0;
-      if (clarityRetryTimer) {
-        window.clearTimeout(clarityRetryTimer);
-        clarityRetryTimer = null;
-      }
-      return;
-    }
-
-    if (clarityRetryCount >= 8) return;
-    clarityRetryCount += 1;
-    clarityRetryTimer = window.setTimeout(() => applyClarityConsent(choice), 350);
-  }
-
-  function buildConsentMarkup() {
-    if (!banner) {
-      banner = document.createElement("section");
-      banner.className = "cookie-consent-banner";
-      banner.setAttribute("aria-label", "Cookie consent");
-      banner.setAttribute("role", "region");
-      banner.hidden = true;
-      banner.innerHTML = `
-        <div class="cookie-consent-copy">
-          <strong>Cookie choices</strong>
-          <p>We use optional analytics cookies to improve Filter Wizard and measure site performance. You can accept or decline them.</p>
-          <p class="cookie-consent-links">
-            <a href="/cookie-policy.html">Cookie Policy</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-          </p>
-        </div>
-        <div class="cookie-consent-actions">
-          <button class="btn btn-secondary" type="button" data-consent-settings>Settings</button>
-          <button class="btn btn-secondary" type="button" data-consent-decline>Decline</button>
-          <button class="btn btn-primary" type="button" data-consent-accept>Accept</button>
-        </div>
-      `;
-      document.body.appendChild(banner);
-    }
-
-    if (!dialog) {
-      dialog = document.createElement("div");
-      dialog.className = "cookie-settings-backdrop";
-      dialog.setAttribute("role", "dialog");
-      dialog.setAttribute("aria-modal", "true");
-      dialog.setAttribute("aria-labelledby", "cookie-settings-title");
-      dialog.hidden = true;
-      dialog.innerHTML = `
-        <div class="cookie-settings-panel" role="document">
-          <button class="modal-close cookie-settings-close" type="button" aria-label="Close cookie settings" data-consent-close>&times;</button>
-          <p class="eyebrow">Privacy controls</p>
-          <h2 id="cookie-settings-title">Cookie Settings</h2>
-          <p>Choose whether Filter Wizard can use non-essential analytics cookies. Essential preference storage keeps this choice in your browser.</p>
-          <fieldset class="cookie-choice-fieldset">
-            <legend>Analytics cookies</legend>
-            <label>
-              <input type="radio" name="filterWizardAnalyticsConsent" value="granted">
-              <span>Accept analytics</span>
-            </label>
-            <label>
-              <input type="radio" name="filterWizardAnalyticsConsent" value="denied">
-              <span>Decline analytics</span>
-            </label>
-          </fieldset>
-          <div class="cookie-settings-actions">
-            <button class="btn btn-secondary" type="button" data-consent-close>Cancel</button>
-            <button class="btn btn-primary" type="button" data-consent-save>Save Settings</button>
-          </div>
-          <p class="cookie-settings-note">Advertising storage remains denied. You can change this choice later from the footer.</p>
-        </div>
-      `;
-      document.body.appendChild(dialog);
-    }
-  }
-
-  function showConsentBanner() {
-    buildConsentMarkup();
-    if (!banner) return;
-
-    if (bannerHideTimer) {
-      window.clearTimeout(bannerHideTimer);
-      bannerHideTimer = null;
-    }
-
-    banner.hidden = false;
-    window.requestAnimationFrame(() => {
-      banner?.classList.add("is-visible");
-    });
-  }
-
-  function showConsentBannerAfterDelay() {
-    buildConsentMarkup();
-    if (!banner) return;
-    if (bannerShowTimer) window.clearTimeout(bannerShowTimer);
-    banner.classList.remove("is-visible");
-    banner.hidden = true;
-    bannerShowTimer = window.setTimeout(showConsentBanner, 900);
-  }
-
-  function hideConsentBanner() {
-    if (!banner) return;
-    if (bannerShowTimer) {
-      window.clearTimeout(bannerShowTimer);
-      bannerShowTimer = null;
-    }
-    banner.classList.remove("is-visible");
-    if (bannerHideTimer) window.clearTimeout(bannerHideTimer);
-    bannerHideTimer = window.setTimeout(() => {
-      if (!banner?.classList.contains("is-visible")) {
-        banner.hidden = true;
-      }
-    }, 260);
-  }
-
-  function setDialogChoice(choice) {
-    if (!dialog) return;
-    const input = dialog.querySelector(`input[name="filterWizardAnalyticsConsent"][value="${choice === "granted" ? "granted" : "denied"}"]`);
-    if (input) input.checked = true;
-  }
-
-  function getDialogChoice() {
-    const selected = dialog?.querySelector('input[name="filterWizardAnalyticsConsent"]:checked');
-    return selected?.value === "granted" ? "granted" : "denied";
-  }
-
-  function openCookieSettings(trigger = null) {
-    buildConsentMarkup();
-    lastSettingsTrigger = trigger;
-    const storedConsent = getStoredConsent();
-    setDialogChoice(storedConsent?.analytics || "denied");
-    hideConsentBanner();
-    if (dialog) {
-      dialog.hidden = false;
-      document.body.classList.add("cookie-settings-open");
-      window.setTimeout(() => {
-        dialog?.querySelector('input[name="filterWizardAnalyticsConsent"]:checked')?.focus();
-      }, 0);
-    }
-  }
-
-  function closeCookieSettings() {
-    if (dialog) dialog.hidden = true;
-    document.body.classList.remove("cookie-settings-open");
-    if (!getStoredConsent()) {
-      showConsentBanner();
-    }
-    if (lastSettingsTrigger && typeof lastSettingsTrigger.focus === "function") {
-      lastSettingsTrigger.focus();
-    }
-    lastSettingsTrigger = null;
-  }
-
-  function handleChoice(choice) {
-    saveConsent(choice);
-    hideConsentBanner();
-    closeCookieSettings();
-  }
-
-  function trapDialogFocus(event) {
-    if (dialog?.hidden || event.key !== "Tab") return;
-    const focusable = Array.from(dialog.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'))
-      .filter((item) => !item.disabled && item.offsetParent !== null);
-    if (!focusable.length) return;
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  }
-
-  function bindEvents() {
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-      const settingsButton = target.closest?.("[data-cookie-settings], [data-consent-settings]");
-      if (settingsButton) {
-        event.preventDefault();
-        openCookieSettings(settingsButton);
-        return;
-      }
-
-      if (target.closest?.("[data-consent-accept]")) {
-        handleChoice("granted");
-        return;
-      }
-
-      if (target.closest?.("[data-consent-decline]")) {
-        handleChoice("denied");
-        return;
-      }
-
-      if (target.closest?.("[data-consent-save]")) {
-        handleChoice(getDialogChoice());
-        return;
-      }
-
-      if (target.closest?.("[data-consent-close]") || target === dialog) {
-        closeCookieSettings();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && dialog && !dialog.hidden) {
-        closeCookieSettings();
-        return;
-      }
-      trapDialogFocus(event);
-    });
-  }
-
-  function initialize() {
-    if (initialized) return;
-    initialized = true;
-    buildConsentMarkup();
-    bindEvents();
-
-    const storedConsent = getStoredConsent();
-    if (storedConsent) {
-      applyGoogleConsent(storedConsent.analytics);
-      applyClarityConsent(storedConsent.analytics);
-      hideConsentBanner();
-    } else {
-      applyGoogleConsent("denied");
-      applyClarityConsent("denied");
-      showConsentBannerAfterDelay();
-    }
-  }
-
-  return {
-    initialize,
-    openCookieSettings
-  };
-})();
-
-function getFinderEntryPoint(opener) {
-  return opener?.dataset?.entryPoint || "unknown";
-}
-
-function resetFinderAnalytics(entryPoint = "unknown") {
-  finderAnalyticsState.started = false;
-  finderAnalyticsState.completed = false;
-  finderAnalyticsState.abandoned = false;
-  finderAnalyticsState.lastCompletedStep = null;
-  finderAnalyticsState.completionSignature = null;
-  finderAnalyticsState.entryPoint = entryPoint;
-  finderAnalyticsState.selectedSizePath = "";
-  finderAnalyticsState.enteredSizeSignature = "";
-  finderAnalyticsState.conditionsSignature = "";
-}
-
-function normalizeYesNo(value) {
-  return value ? "yes" : "no";
-}
-
-function getRecommendedMervSlug(result) {
-  return String(result?.recommendedFilterType || "")
-    .toLowerCase()
-    .replace(/\s+/g, "_") || "unknown";
-}
-
-function getReplacementIntervalMonths(intervalDays) {
-  const days = Number(intervalDays);
-  if (!Number.isFinite(days) || days <= 0) return "";
-  return Number((days / 30).toFixed(1));
-}
-
-function getResultType(result) {
-  if (!result) return "partial_recommendation";
-  return hasConfirmedFilterSize(result)
-    ? "complete_recommendation"
-    : "size_help_required";
-}
-
-function getConditionsSummary(conditions = []) {
-  if (!conditions.length) return "not_selected";
-  if (conditions.includes("None of these")) return "none";
-
-  const summaryParts = [];
-  if (conditions.includes("Pets")) summaryParts.push("pets");
-  if (conditions.includes("Allergies")) summaryParts.push("allergies");
-  if (conditions.includes("Heavy dust")) summaryParts.push("heavy_dust");
-  if (conditions.includes("Kids at home")) summaryParts.push("kids_at_home");
-
-  if (summaryParts.length === 0) return "not_selected";
-  if (summaryParts.length === 1) return summaryParts[0];
-  if (summaryParts.length === 2 && summaryParts.includes("pets") && summaryParts.includes("allergies")) {
-    return "pets_allergies";
-  }
-  return "multiple";
-}
-
-function trackFinderStarted(entryPoint = finderAnalyticsState.entryPoint) {
-  if (finderAnalyticsState.started) return;
-
-  finderAnalyticsState.started = true;
-  finderAnalyticsState.entryPoint = entryPoint || "unknown";
-  finderAnalyticsState.lastCompletedStep = "started";
-  trackEvent("filter_finder_started", {
-    entry_point: finderAnalyticsState.entryPoint,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterSizePathSelected(value) {
-  const sizeKnown = value === "Yes, I know it" ? "yes" : "no";
-  if (finderAnalyticsState.selectedSizePath === sizeKnown) return;
-
-  finderAnalyticsState.selectedSizePath = sizeKnown;
-  finderAnalyticsState.lastCompletedStep = "size_known_question";
-  trackEvent("filter_size_path_selected", {
-    size_known: sizeKnown,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterSizeEntered(normalizedFilterSize, inputMethod = "manual_entry") {
-  if (!normalizedFilterSize) return;
-  const signature = `${normalizedFilterSize}|${inputMethod}`;
-  if (finderAnalyticsState.enteredSizeSignature === signature) return;
-
-  finderAnalyticsState.enteredSizeSignature = signature;
-  finderAnalyticsState.lastCompletedStep = "size_entered";
-  trackEvent("filter_size_entered", {
-    filter_size: normalizedFilterSize,
-    input_method: inputMethod,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFilterConditionsSelected(conditions = finderState.conditions) {
-  const signature = [...conditions].sort().join("|") || "none";
-  if (finderAnalyticsState.conditionsSignature === signature) return;
-
-  finderAnalyticsState.conditionsSignature = signature;
-  finderAnalyticsState.lastCompletedStep = "conditions_selected";
-  trackEvent("filter_conditions_selected", {
-    pets: normalizeYesNo(conditions.includes("Pets")),
-    allergies: normalizeYesNo(conditions.includes("Allergies")),
-    smokers: "not_selected",
-    heavy_dust: normalizeYesNo(conditions.includes("Heavy dust")),
-    kids_at_home: normalizeYesNo(conditions.includes("Kids at home")),
-    household_conditions: getConditionsSummary(conditions),
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderCompletedResult(result) {
-  if (!result) return;
-
-  const filterSize = hasConfirmedFilterSize(result) ? result.filterSize : "unknown";
-  const signature = [
-    filterSize,
-    result.recommendedFilterType || "unknown",
-    result.replacementIntervalDays || "unknown",
-    getConditionsSummary(result.homeConditions)
-  ].join("|");
-
-  if (finderAnalyticsState.completed && finderAnalyticsState.completionSignature === signature) return;
-
-  finderAnalyticsState.completed = true;
-  finderAnalyticsState.abandoned = false;
-  finderAnalyticsState.lastCompletedStep = "recommendation_review";
-  finderAnalyticsState.completionSignature = signature;
-
-  trackEvent("filter_finder_completed", {
-    filter_size: filterSize,
-    recommended_merv: getRecommendedMervSlug(result),
-    replacement_interval_months: getReplacementIntervalMonths(result.replacementIntervalDays),
-    result_type: getResultType(result),
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderRestarted(previousStep = finderCurrentStep) {
-  trackEvent("filter_finder_restarted", {
-    previous_step: previousStep,
-    page_path: window.location.pathname
-  });
-}
-
-function trackFinderAbandoned() {
-  if (!finderAnalyticsState.started || finderAnalyticsState.completed || finderAnalyticsState.abandoned) return;
-
-  finderAnalyticsState.abandoned = true;
-  trackEvent("filter_finder_abandoned", {
-    last_completed_step: finderAnalyticsState.lastCompletedStep || "started",
-    page_path: window.location.pathname
-  });
-}
-
-function getAmazonAffiliateTag(url) {
-  try {
-    return new URL(url, window.location.href).searchParams.get("tag") || "unknown";
-  } catch {
-    return "unknown";
-  }
-}
-
-function isAmazonLink(url) {
-  try {
-    const hostname = new URL(url, window.location.href).hostname.toLowerCase();
-    return hostname === "amazon.com" ||
-      hostname.endsWith(".amazon.com") ||
-      hostname === "amzn.to" ||
-      hostname.endsWith(".amzn.to") ||
-      hostname === "a.co" ||
-      hostname.endsWith(".a.co");
-  } catch {
-    return false;
-  }
-}
-
-function trackAmazonClick(event) {
-  if (typeof window.gtag !== "function") return;
-
-  const link = event.target.closest?.("a[href]");
-  if (!link || !isAmazonLink(link.href)) return;
-
-  window.gtag("event", "amazon_click", {
-    link_url: link.href,
-    link_text: (link.textContent || "").trim().slice(0, 100),
-    affiliate_tag: getAmazonAffiliateTag(link.href),
-    filter_size: link.dataset.filterSize || "unknown",
-    link_location: link.dataset.linkLocation || "unknown",
-    page_path: window.location.pathname
-  });
-}
-
-function trackArticleFilterFinderClick(event) {
-  const link = event.target.closest?.("[data-article-filter-finder-cta]");
-  if (!link) return;
-
-  trackEvent("article_filter_finder_click", {
-    article_slug: link.dataset.articleSlug || "unknown",
-    cta_location: "article_body"
-  });
-}
-
-function showShareStatus(component, message) {
-  const status = component?.querySelector("[data-share-status]");
-  if (!status) return;
-
-  window.clearTimeout(status.shareStatusTimer);
-  status.textContent = message;
-  status.shareStatusTimer = window.setTimeout(() => {
-    status.textContent = "";
-  }, 2000);
-}
-
-function copyTextToClipboard(text) {
-  if (navigator.clipboard?.writeText) {
-    return navigator.clipboard.writeText(text);
-  }
-
-  return new Promise((resolve, reject) => {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.setAttribute("readonly", "");
-    textarea.style.position = "fixed";
-    textarea.style.top = "-9999px";
-    textarea.style.left = "-9999px";
-    document.body.appendChild(textarea);
-    textarea.select();
-
-    try {
-      const copied = document.execCommand("copy");
-      document.body.removeChild(textarea);
-      copied ? resolve() : reject(new Error("Copy command failed."));
-    } catch (error) {
-      document.body.removeChild(textarea);
-      reject(error);
-    }
-  });
-}
-
-function trackArticleShare(component, method) {
-  trackEvent("article_share_click", {
-    article_slug: component?.dataset.articleSlug || getArticleSlug() || "unknown",
-    share_method: method,
-    share_location: component?.dataset.shareLocation || "unknown"
-  });
-}
-
-function setupArticleShare() {
-  const shareComponents = document.querySelectorAll("[data-article-share]");
-  if (!shareComponents.length) return;
-
-  shareComponents.forEach((component) => {
-    const title = component.dataset.shareTitle || document.title;
-    const url = component.dataset.shareUrl || window.location.href;
-    const description = component.dataset.shareDescription || "";
-    const image = component.dataset.shareImage || "";
-    const encodedUrl = encodeURIComponent(url);
-    const encodedTitle = encodeURIComponent(title);
-    const encodedDescription = encodeURIComponent(description);
-    const encodedImage = encodeURIComponent(image);
-    const nativeButton = component.querySelector("[data-native-share]");
-    const facebookLink = component.querySelector("[data-facebook-share]");
-    const pinterestLink = component.querySelector("[data-pinterest-share]");
-    const emailLink = component.querySelector("[data-email-share]");
-    const copyButton = component.querySelector("[data-copy-share]");
-
-    if (facebookLink) {
-      facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-      facebookLink.addEventListener("click", () => trackArticleShare(component, "facebook"));
-    }
-
-    if (pinterestLink) {
-      pinterestLink.href = `https://www.pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodedImage}&description=${encodedDescription}`;
-      pinterestLink.addEventListener("click", () => trackArticleShare(component, "pinterest"));
-    }
-
-    if (emailLink) {
-      emailLink.href = `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`;
-      emailLink.addEventListener("click", () => trackArticleShare(component, "email"));
-    }
-
-    if (nativeButton) {
-      const canShare = typeof navigator.share === "function";
-      nativeButton.hidden = !canShare;
-      if (canShare) {
-        nativeButton.addEventListener("click", async () => {
-          trackArticleShare(component, "native");
-          try {
-            await navigator.share({
-              title,
-              text: description,
-              url
-            });
-          } catch (error) {
-            if (error?.name !== "AbortError") {
-              console.warn("Filter Wizard share failed.", error);
-            }
-          }
-        });
-      }
-    }
-
-    copyButton?.addEventListener("click", async () => {
-      trackArticleShare(component, "copy_link");
-      try {
-        await copyTextToClipboard(url);
-        showShareStatus(component, "Link copied");
-      } catch {
-        showShareStatus(component, "Unable to copy. Please copy the URL from your browser.");
-      }
-    });
-  });
 }
 
 function setHeaderState() {
@@ -817,54 +159,10 @@ function setupRevealAnimations() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-function updateReadingProgress() {
-  if (!readingProgress || !articleContent) return;
-
-  const rect = articleContent.getBoundingClientRect();
-  const articleTop = window.scrollY + rect.top;
-  const articleHeight = articleContent.offsetHeight - window.innerHeight;
-  const distance = window.scrollY - articleTop;
-  const progress = articleHeight > 0
-    ? Math.min(1, Math.max(0, distance / articleHeight))
-    : 0;
-
-  readingProgress.style.width = `${progress * 100}%`;
-  backToTopButton?.classList.toggle("visible", window.scrollY > 520);
-  trackArticleScrollDepth(progress);
-}
-
-function getArticleSlug() {
-  if (!articleContent) return "";
-
-  return window.location.pathname
-    .split("/")
-    .filter(Boolean)
-    .pop()
-    ?.replace(/\.html$/, "") || "blog";
-}
-
-function trackArticlePageView() {
-  if (!articleContent || articlePageViewTracked) return;
-
-  articlePageViewTracked = true;
-  trackEvent("article_page_view", {
-    article_slug: getArticleSlug(),
-    page_path: window.location.pathname
-  });
-}
-
-function trackArticleScrollDepth(progress) {
-  if (!articleContent) return;
-
-  [25, 50, 75, 100].forEach((threshold) => {
-    if (progress * 100 < threshold || articleScrollDepthTracked.has(threshold)) return;
-
-    articleScrollDepthTracked.add(threshold);
-    trackEvent("article_scroll_depth", {
-      article_slug: getArticleSlug(),
-      scroll_depth: threshold,
-      page_path: window.location.pathname
-    });
+function scrollToElement(element) {
+  element?.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
 }
 
@@ -899,7 +197,11 @@ function closeFinderModal(reason = "closed") {
   });
 
   if (!wasCompleted) {
-    trackFinderAbandoned();
+    trackEvent("finder_abandoned", {
+      current_step: finderCurrentStep,
+      knows_size: finderState.knowsSize || "Not answered",
+      completed: false
+    });
   }
 
   finderModalOpener?.focus?.();
@@ -910,14 +212,13 @@ function openFinderModal(opener = finderStartButton) {
 
   finderModalOpener = opener;
   finderCompleted = false;
-  resetFinderAnalytics(getFinderEntryPoint(opener));
   finderModal.hidden = false;
   finderModal.style.display = "grid";
   document.body.classList.add("modal-open");
   document.documentElement.classList.add("modal-open");
   trackEvent("filter_finder_modal_opened");
   resetFinderForModal();
-  startFilterFinder(finderAnalyticsState.entryPoint);
+  startFilterFinder();
 
   window.setTimeout(() => {
     const firstInteractive = finderModal.querySelector("[data-finder-option]") || finderModal.querySelector("button, input");
@@ -946,11 +247,6 @@ function resetFinderForModal() {
   });
   if (knownSizeField) knownSizeField.hidden = true;
   if (finderKnownSizeInput) finderKnownSizeInput.value = "";
-  if (finderConfirmSizeInput) finderConfirmSizeInput.value = "";
-  if (finderConfirmSizeError) {
-    finderConfirmSizeError.textContent = "";
-    finderConfirmSizeError.hidden = true;
-  }
   if (resultEmailInput) resultEmailInput.value = "";
   if (resultEmailForm) resultEmailForm.hidden = false;
   if (resultEmailSuccess) resultEmailSuccess.hidden = true;
@@ -959,13 +255,13 @@ function resetFinderForModal() {
   if (finderAnalyzing) finderAnalyzing.hidden = true;
   finderAnalyzingSteps.forEach((step) => step.classList.remove("is-active"));
   if (finderCompleteButton) finderCompleteButton.disabled = false;
-  retailerViewedObserver?.disconnect();
-  retailerViewedTracked = false;
 }
 
-function saveLatestToLocalStorage(key, value) {
+function saveToLocalStorage(key, value) {
   try {
-    localStorage.setItem(key, JSON.stringify(value));
+    const current = JSON.parse(localStorage.getItem(key)) || [];
+    current.push(value);
+    localStorage.setItem(key, JSON.stringify(current));
   } catch (error) {
     console.warn("Filter Wizard could not save to localStorage.", error);
   }
@@ -1016,6 +312,12 @@ function parseFilterSize(value) {
 
 function isValidFilterSize(value) {
   return Boolean(parseFilterSize(value));
+}
+
+function getFinderSize() {
+  if (finderState.knowsSize !== "Yes, I know it") return "";
+  finderState.knownSize = finderKnownSizeInput?.value.trim() || "";
+  return parseFilterSize(finderState.knownSize)?.normalized || "";
 }
 
 function getFinderStepLabel(step) {
@@ -1086,7 +388,7 @@ function showFinderStep(step) {
   updateFinderActionLabels();
 }
 
-function startFilterFinder(entryPoint = finderAnalyticsState.entryPoint) {
+function startFilterFinder() {
   if (!finderQuiz) return;
 
   finderQuiz.hidden = false;
@@ -1094,7 +396,7 @@ function startFilterFinder(entryPoint = finderAnalyticsState.entryPoint) {
   if (finderResult) finderResult.hidden = true;
   finderResult?.classList.remove("report-visible");
   showFinderStep(1);
-  trackFinderStarted(entryPoint);
+  trackEvent("filter_finder_started");
 }
 
 function updateFinderConditions(button, value) {
@@ -1126,7 +428,6 @@ function setFinderOption(button) {
     return;
   }
 
-  const previousValue = finderState[group];
   finderState[group] = value;
   document.querySelectorAll(`[data-finder-option="${group}"]`).forEach((option) => {
     const selected = option === button;
@@ -1135,9 +436,6 @@ function setFinderOption(button) {
   });
 
   if (group === "knowsSize" && knownSizeField) {
-    if (previousValue !== value) {
-      trackFilterSizePathSelected(value);
-    }
     knownSizeField.hidden = value !== "Yes, I know it";
     if (value === "Yes, I know it") {
       setTimeout(() => {
@@ -1186,16 +484,6 @@ function validateFinderStep(step = finderCurrentStep) {
     return false;
   }
 
-  if (step === 3 && finderState.conditions.length === 0) {
-    setFinderError(stepEl, "Select anything that applies, or choose \"None of these.\"");
-    trackEvent("filter_finder_conditions_required", {
-      current_step: step,
-      knows_size: finderState.knowsSize || "Not answered",
-      location: finderState.location || "Not answered"
-    });
-    return false;
-  }
-
   return true;
 }
 
@@ -1204,28 +492,6 @@ function trackFinderStepCompleted(step) {
     step_number: step,
     step_name: getFinderStepName(step)
   });
-
-  if (step === 1 && finderState.knowsSize === "Yes, I know it") {
-    const parsedSize = parseFilterSize(finderKnownSizeInput?.value);
-    if (parsedSize) {
-      trackFilterSizeEntered(
-        parsedSize.normalized,
-        finderState.sizeSelectedFromSuggestion ? "dropdown" : "manual_entry"
-      );
-    }
-  }
-
-  if (step === 2) {
-    finderAnalyticsState.lastCompletedStep = "filter_location";
-  }
-
-  if (step === 3) {
-    trackFilterConditionsSelected(finderState.conditions);
-  }
-
-  if (step === 4) {
-    finderAnalyticsState.lastCompletedStep = "recommendation_review";
-  }
 }
 
 function getLocationGuidance(location) {
@@ -1238,52 +504,18 @@ function getLocationGuidance(location) {
   return guidance[location] || guidance["I'm not sure"];
 }
 
-function getReplacementPlan(conditions = []) {
-  const selected = new Set(conditions);
-  const hasPets = selected.has("Pets");
-  const hasAllergies = selected.has("Allergies");
-  const hasHeavyDust = selected.has("Heavy dust");
-  const hasKids = selected.has("Kids at home");
-  const hasNone = selected.has("None of these");
-  const demandingConditionCount = [hasPets, hasAllergies, hasHeavyDust].filter(Boolean).length;
-
-  if (demandingConditionCount >= 2) {
-    return {
-      intervalDays: 45,
-      scheduleLabel: "About every 45 days",
-      replacementsPerYear: Math.ceil(365 / 45)
-    };
+function getRecommendedSchedule() {
+  const conditions = finderState.conditions;
+  if (conditions.some((condition) => ["Pets", "Allergies", "Heavy dust"].includes(condition))) {
+    return "Every 30-60 days";
   }
-
-  if (hasPets || hasAllergies || hasHeavyDust) {
-    return {
-      intervalDays: 60,
-      scheduleLabel: "About every 60 days",
-      replacementsPerYear: Math.ceil(365 / 60)
-    };
+  if (conditions.length === 1 && conditions.includes("Kids at home")) {
+    return "Every 60-90 days";
   }
-
-  if (hasKids) {
-    return {
-      intervalDays: 75,
-      scheduleLabel: "About every 75 days",
-      replacementsPerYear: Math.ceil(365 / 75)
-    };
+  if (conditions.includes("None of these")) {
+    return "Every 90 days";
   }
-
-  if (hasNone) {
-    return {
-      intervalDays: 90,
-      scheduleLabel: "About every 90 days",
-      replacementsPerYear: Math.ceil(365 / 90)
-    };
-  }
-
-  return {
-    intervalDays: 90,
-    scheduleLabel: "About every 90 days",
-    replacementsPerYear: Math.ceil(365 / 90)
-  };
+  return "Every 60-90 days";
 }
 
 function getRecommendedFilterType() {
@@ -1291,16 +523,14 @@ function getRecommendedFilterType() {
   if (conditions.includes("Allergies")) {
     return {
       type: "MERV 13",
-      displayLabel: "Consider MERV 13",
-      copy: "Worth considering for allergy-sensitive homes and finer particle filtration.",
-      benefit: "MERV 13 filters are designed to capture finer airborne particles than lower-rated filters.",
-      caution: "Higher filtration can increase airflow resistance. Confirm your HVAC manufacturer's recommended maximum MERV rating before upgrading."
+      copy: "Best fit for allergy-sensitive homes and finer particle filtration.",
+      benefit: "Designed to capture finer airborne particles than lower-rated filters.",
+      caution: "Higher filtration can create more airflow resistance, so check your HVAC manufacturer's guidance before upgrading."
     };
   }
   if (conditions.some((condition) => ["Pets", "Heavy dust"].includes(condition))) {
     return {
       type: "MERV 11",
-      displayLabel: "MERV 11",
       copy: "Better fit for pets, dust, and higher everyday filtration needs.",
       benefit: "Provides stronger particle capture than a basic household filter while remaining practical for many residential systems.",
       caution: "Confirm that your HVAC equipment supports the filter rating recommended by its manufacturer."
@@ -1308,7 +538,6 @@ function getRecommendedFilterType() {
   }
   return {
     type: "MERV 8",
-    displayLabel: "MERV 8",
     copy: "Good fit for standard homes with normal dust levels.",
     benefit: "Captures common household dust, pollen, and larger airborne particles.",
     caution: "A practical default when pets, heavy dust, or allergy concerns are not major factors."
@@ -1352,14 +581,15 @@ function getFinderInsight(result) {
   return insight;
 }
 
-function getNextSuggestedChange(intervalDays) {
+function getNextSuggestedChange(schedule) {
+  const daysToAdd = schedule === "Every 30-60 days"
+    ? 45
+    : schedule === "Every 60-90 days"
+      ? 75
+      : 90;
   const date = new Date();
-  date.setDate(date.getDate() + intervalDays);
+  date.setDate(date.getDate() + daysToAdd);
   return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
-}
-
-function hasConfirmedFilterSize(result) {
-  return Boolean(parseFilterSize(result?.filterSize));
 }
 
 function getSizeConfidence(result) {
@@ -1387,52 +617,39 @@ function getSizeConfidence(result) {
   };
 }
 
-function formatCurrency(value) {
-  return `$${Math.round(value)}`;
-}
-
-function getEstimatedYearlyCost(merv, replacementsPerYear) {
-  const range = filterPriceRanges[merv] || filterPriceRanges["MERV 8"];
-  const low = range.min * replacementsPerYear;
-  const high = range.max * replacementsPerYear;
-  return `${formatCurrency(low)}-${formatCurrency(high)}/year`;
+function getEstimatedYearlyCost(schedule, merv) {
+  if (merv === "MERV 13") {
+    return schedule === "Every 30-60 days" ? "$96-$150/year" : "$64-$100/year";
+  }
+  if (merv === "MERV 11") {
+    return schedule === "Every 30-60 days" ? "$72-$108/year" : "$48-$72/year";
+  }
+  return schedule === "Every 30-60 days" ? "$48-$84/year" : "$32-$56/year";
 }
 
 function getProductRecommendation(result) {
   const merv = result.recommendedFilterType || "MERV 8";
-  const hasConfirmedSize = Boolean(parseFilterSize(result.filterSize));
   const size = result.filterSize && result.filterSize !== "Check before ordering"
     ? result.filterSize
     : "Check before ordering";
   const productDetails = {
     "MERV 13": {
       image: "assets/images/filter-product-merv-13.webp",
-      bestFor: "Allergies • Fine particles • Stronger filtration"
+      bestFor: "Allergies • Fine particles • Stronger filtration",
+      priceRange: "Estimated $16-$25 each"
     },
     "MERV 11": {
       image: "assets/images/filter-product-merv-11.webp",
-      bestFor: "Pets • Dust • Everyday filtration"
+      bestFor: "Pets • Dust • Everyday filtration",
+      priceRange: "Estimated $12-$18 each"
     },
     "MERV 8": {
       image: "assets/images/filter-product-merv-8.webp",
-      bestFor: "Standard homes • Normal dust"
+      bestFor: "Standard homes • Normal dust",
+      priceRange: "Estimated $8-$14 each"
     }
   };
   const details = productDetails[merv] || productDetails["MERV 8"];
-  const hasKnownMervImage = Boolean(productDetails[merv]);
-  const range = filterPriceRanges[merv] || filterPriceRanges["MERV 8"];
-  const image = hasConfirmedSize
-    ? hasKnownMervImage
-      ? details.image
-      : genericProductImage
-    : confirmSizeProductImage;
-  const imageAlt = hasConfirmedSize
-    ? merv === "MERV 13"
-      ? "Representative Filter Wizard MERV 13 pleated air filter"
-      : merv === "MERV 11"
-        ? "Representative Filter Wizard MERV 11 pleated air filter"
-        : "Representative Filter Wizard MERV 8 pleated air filter"
-    : "Filter Wizard illustration reminding the user to confirm their filter size";
 
   return {
     title: size === "Check before ordering"
@@ -1440,13 +657,12 @@ function getProductRecommendation(result) {
       : `${size} ${merv} Pleated Air Filter`,
     sizeTitle: size === "Check before ordering" ? "Check before ordering" : size,
     typeTitle: `${merv} Pleated Filter`,
-    image,
-    imageAlt,
+    image: details.image,
     size,
     merv,
     bestFor: details.bestFor,
-    priceRange: `Estimated $${range.min}-$${range.max} each`,
-    yearlyCost: getEstimatedYearlyCost(merv, result.replacementsPerYear),
+    priceRange: details.priceRange,
+    yearlyCost: getEstimatedYearlyCost(result.recommendedSchedule, merv),
     schedule: result.recommendedSchedule
   };
 }
@@ -1462,62 +678,43 @@ function buildRetailerSearchQuery(result) {
     .trim();
 }
 
-function hasAmazonAffiliateTag(url) {
-  try {
-    const parsedUrl = new URL(url);
-    return parsedUrl.searchParams.get("tag") === amazonAffiliateTag;
-  } catch {
-    return false;
-  }
-}
-
 function getRetailerLinks(result) {
   const searchQuery = buildRetailerSearchQuery(result);
   const encodedSearchQuery = encodeURIComponent(searchQuery);
   const amazonUrl = amazonAffiliateTag
     ? `https://www.amazon.com/s?k=${encodedSearchQuery}&tag=${encodeURIComponent(amazonAffiliateTag)}`
     : `https://www.amazon.com/s?k=${encodedSearchQuery}`;
-  const amazonHasValidTag = hasAmazonAffiliateTag(amazonUrl);
-
-  if (!amazonHasValidTag) {
-    trackEvent("filter_wizard_amazon_tag_missing");
-  }
 
   return [
     {
       name: "Amazon",
-      subtext: "Fast shipping and broad filter-size availability",
-      url: amazonUrl,
-      recommended: true,
-      badge: "Recommended Retailer"
+      subtext: "Fast shipping and multi-pack options",
+      // TODO: Add real Amazon Associates tag before monetized launch.
+      url: amazonUrl
     },
     {
       name: "Home Depot",
       subtext: "Good for local pickup and common sizes",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://www.homedepot.com/s/${encodedSearchQuery}`,
-      recommended: false
+      url: `https://www.homedepot.com/s/${encodedSearchQuery}`
     },
     {
       name: "Lowe's",
       subtext: "Useful for pickup or delivery",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://www.lowes.com/search?searchTerm=${encodedSearchQuery}`,
-      recommended: false
+      url: `https://www.lowes.com/search?searchTerm=${encodedSearchQuery}`
     },
     {
       name: "Filterbuy",
       subtext: "Bulk packs and specialty sizes",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`,
-      recommended: false
+      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`
     }
   ];
 }
 
 function setupRetailerViewedTracking(result) {
   if (!finderRetailerBlock || typeof IntersectionObserver !== "function") return;
-  if (!hasConfirmedFilterSize(result)) return;
 
   retailerViewedTracked = false;
   retailerViewedObserver?.disconnect();
@@ -1530,8 +727,6 @@ function setupRetailerViewedTracking(result) {
       product_size: result.productSize,
       product_merv: result.productMerv,
       recommended_schedule: result.recommendedSchedule,
-      replacement_interval_days: result.replacementIntervalDays,
-      replacements_per_year: result.replacementsPerYear,
       size_confidence_level: result.sizeConfidenceLevel
     });
     retailerViewedObserver?.disconnect();
@@ -1543,82 +738,18 @@ function setupRetailerViewedTracking(result) {
   retailerViewedObserver.observe(finderRetailerBlock);
 }
 
-function getReminderMonths(intervalDays, count) {
-  const formatter = new Intl.DateTimeFormat("en-US", { month: "short" });
-  const months = [];
-  const date = new Date();
+function getReminderMonths(schedule) {
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const count = schedule === "Every 30-60 days" ? 6 : 4;
+  const interval = schedule === "Every 30-60 days" ? 2 : 3;
+  const startMonth = new Date().getMonth();
 
-  for (let index = 1; index <= count; index += 1) {
-    const reminderDate = new Date(date);
-    reminderDate.setDate(reminderDate.getDate() + intervalDays * index);
-    const label = formatter.format(reminderDate);
-
-    if (months[months.length - 1] !== label) {
-      months.push(label);
-    }
-  }
-
-  return months;
-}
-
-function loadFinderProductImage(imageUrl, altText) {
-  if (!finderProductImage) return;
-
-  const fallbackUrl = genericProductImage;
-  finderProductImage.alt = altText || "Representative Filter Wizard pleated air filter";
-  finderProductImage.hidden = true;
-
-  if (finderProductPlaceholder) {
-    finderProductPlaceholder.hidden = false;
-  }
-
-  const showImage = (url, finalAltText = altText) => {
-    finderProductImage.src = url;
-    finderProductImage.alt = finalAltText || "Representative Filter Wizard pleated air filter";
-    finderProductImage.hidden = false;
-
-    if (finderProductPlaceholder) {
-      finderProductPlaceholder.hidden = true;
-    }
-  };
-
-  const primaryImage = new Image();
-
-  primaryImage.onload = () => {
-    showImage(imageUrl, altText);
-  };
-
-  primaryImage.onerror = () => {
-    const fallbackImage = new Image();
-
-    fallbackImage.onload = () => {
-      showImage(fallbackUrl, "Representative Filter Wizard pleated air filter");
-    };
-
-    fallbackImage.onerror = () => {
-      finderProductImage.hidden = true;
-
-      if (finderProductPlaceholder) {
-        finderProductPlaceholder.hidden = false;
-      }
-
-      trackEvent("filter_finder_product_image_failed", {
-        requested_image: imageUrl,
-        recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
-        has_confirmed_size: Boolean(parseFilterSize(latestFinderReport?.filterSize))
-      });
-    };
-
-    fallbackImage.src = fallbackUrl;
-  };
-
-  primaryImage.src = imageUrl;
+  return Array.from({ length: count }, (_, index) => monthNames[(startMonth + index * interval) % 12]);
 }
 
 function renderFinderReport(result) {
-  const hasValidSize = hasConfirmedFilterSize(result);
+  const hasValidSize = Boolean(parseFilterSize(result.filterSize));
   const confidence = getSizeConfidence(result);
-  const showRetailers = hasValidSize;
 
   if (finderResultHeading) {
     finderResultHeading.textContent = hasValidSize
@@ -1626,11 +757,9 @@ function renderFinderReport(result) {
       : "Your filter type is ready";
   }
   if (finderResultSubheading) {
-    finderResultSubheading.textContent = result.recommendedFilterType === "MERV 13"
-      ? "We found a filtration option worth considering."
-      : hasValidSize
-        ? "We found your best match."
-        : "Confirm the printed size before ordering.";
+    finderResultSubheading.textContent = hasValidSize
+      ? "We found your best match."
+      : "Confirm the printed size before ordering.";
   }
   if (finderConfidencePill) {
     finderConfidencePill.textContent = confidence.label;
@@ -1649,24 +778,15 @@ function renderFinderReport(result) {
   if (finderResultSchedule) finderResultSchedule.textContent = result.recommendedSchedule;
   if (finderNextChange) finderNextChange.textContent = result.nextSuggestedChange;
   if (finderYearlyCost) finderYearlyCost.textContent = result.productYearlyCost;
-  if (finderMerv) finderMerv.textContent = result.recommendedFilterDisplayLabel || result.recommendedFilterType;
+  if (finderMerv) finderMerv.textContent = result.recommendedFilterType;
   if (finderMervCopy) finderMervCopy.textContent = result.recommendedFilterCopy;
   if (finderMervBenefit) finderMervBenefit.textContent = result.recommendedFilterBenefit;
   if (finderMervCaution) finderMervCaution.textContent = result.recommendedFilterCaution;
-  if (finderWhyTitle) {
-    finderWhyTitle.textContent = result.recommendedFilterType === "MERV 13"
-      ? "Why we suggest considering MERV 13"
-      : `Why we chose ${result.recommendedFilterType}`;
-  }
+  if (finderWhyTitle) finderWhyTitle.textContent = `Why we chose ${result.recommendedFilterType}`;
   if (finderInsightTitle) finderInsightTitle.textContent = result.insightTitle;
   if (finderInsightCopy) finderInsightCopy.textContent = result.insightCopy;
   if (finderSizeGuidance) finderSizeGuidance.hidden = hasValidSize;
   if (finderSizeGuidanceCopy) finderSizeGuidanceCopy.textContent = result.sizeGuidance || "";
-  if (finderConfirmSizeInput) finderConfirmSizeInput.value = "";
-  if (finderConfirmSizeError) {
-    finderConfirmSizeError.textContent = "";
-    finderConfirmSizeError.hidden = true;
-  }
   if (finderAnswerPills) {
     finderAnswerPills.innerHTML = "";
     const answers = [
@@ -1701,110 +821,82 @@ function renderFinderReport(result) {
       : "Confirm size";
     finderRetailerSummary.textContent = `${sizeLabel} • ${result.productMerv}`;
   }
-  if (finderProductCta) {
-    finderProductCta.textContent = showRetailers ? "View Buying Options" : "Help Me Confirm My Size";
-    finderProductCta.dataset.finderProductCtaMode = showRetailers ? "retailers" : "size-guidance";
-  }
-  if (finderSkipToRetailers) {
-    finderSkipToRetailers.textContent = showRetailers ? "Save this result instead" : "Save this recommendation";
-  }
-  if (finderContinueToRetailers) {
-    finderContinueToRetailers.hidden = !showRetailers;
-  }
-  loadFinderProductImage(result.productImage, result.productImageAlt);
-  if (finderRetailerBlock) {
-    finderRetailerBlock.hidden = !showRetailers;
+  if (finderProductImage) {
+    const imageUrl = result.productImage;
+
+    finderProductImage.alt = result.productTitle || "Recommended air filter";
+    finderProductImage.hidden = true;
+    if (finderProductPlaceholder) finderProductPlaceholder.hidden = false;
+
+    const testImage = new Image();
+
+    testImage.onload = () => {
+      finderProductImage.src = imageUrl;
+      finderProductImage.hidden = false;
+      if (finderProductPlaceholder) finderProductPlaceholder.hidden = true;
+    };
+
+    testImage.onerror = () => {
+      finderProductImage.hidden = true;
+      if (finderProductPlaceholder) finderProductPlaceholder.hidden = false;
+    };
+
+    testImage.src = imageUrl;
   }
   if (finderRetailerOptions) {
     finderRetailerOptions.innerHTML = "";
-    if (showRetailers) {
-      const searchQuery = buildRetailerSearchQuery(result);
-      getRetailerLinks(result).forEach((retailer) => {
-        const card = document.createElement("article");
-        card.className = "finder-retailer-card";
+    const searchQuery = buildRetailerSearchQuery(result);
+    getRetailerLinks(result).forEach((retailer) => {
+      const card = document.createElement("article");
+      card.className = "finder-retailer-card";
 
-        if (retailer.recommended) {
-          card.classList.add("is-recommended");
+      const title = document.createElement("strong");
+      title.textContent = retailer.name;
 
-          const badge = document.createElement("span");
-          badge.className = "finder-retailer-badge";
-          badge.textContent = retailer.badge || "Recommended Retailer";
+      const copy = document.createElement("p");
+      copy.textContent = retailer.subtext;
 
-          card.appendChild(badge);
-        }
-
-        const title = document.createElement("strong");
-        title.textContent = retailer.name;
-
-        const copy = document.createElement("p");
-        copy.textContent = retailer.subtext;
-
-        const link = document.createElement("a");
-        link.className = "btn btn-secondary";
-        link.href = retailer.url;
-        link.target = "_blank";
-        link.rel = "nofollow sponsored noopener";
-        link.textContent = retailer.recommended ? "Shop on Amazon" : "View Options";
-        link.dataset.retailerName = retailer.name;
-        link.dataset.retailerUrl = retailer.url;
-        link.dataset.linkLocation = "filter-finder-results";
-        if (retailer.name === "Amazon") {
-          link.dataset.filterSize = result.productSize || "unknown";
-        }
-        link.addEventListener("click", () => {
-          trackEvent("filter_finder_retailer_clicked", {
-            retailer: retailer.name,
-            product_size: result.productSize,
-            product_merv: result.productMerv,
-            search_query: searchQuery,
-            recommended_schedule: result.recommendedSchedule,
-            replacement_interval_days: result.replacementIntervalDays,
-            replacements_per_year: result.replacementsPerYear,
-            size_confidence_level: result.sizeConfidenceLevel,
-            is_recommended_retailer: Boolean(retailer.recommended),
-            affiliate_tag_present: retailer.name === "Amazon"
-              ? Boolean(amazonAffiliateTag)
-              : false
-          });
+      const link = document.createElement("a");
+      link.className = "btn btn-secondary";
+      link.href = retailer.url;
+      link.target = "_blank";
+      link.rel = "noopener sponsored nofollow";
+      link.textContent = "View Options";
+      link.dataset.retailerName = retailer.name;
+      link.dataset.retailerUrl = retailer.url;
+      link.addEventListener("click", () => {
+        trackEvent("filter_finder_retailer_clicked", {
+          retailer: retailer.name,
+          product_size: result.productSize,
+          product_merv: result.productMerv,
+          search_query: searchQuery,
+          recommended_schedule: result.recommendedSchedule
         });
-
-        card.append(title, copy, link);
-        finderRetailerOptions.appendChild(card);
       });
-    }
+
+      card.append(title, copy, link);
+      finderRetailerOptions.appendChild(card);
+    });
   }
   trackEvent("filter_finder_product_recommendation_viewed", {
     product_merv: result.productMerv,
     product_size: result.productSize,
     product_price: result.productPrice,
     recommended_schedule: result.recommendedSchedule,
-    replacement_interval_days: result.replacementIntervalDays,
-    replacements_per_year: result.replacementsPerYear,
-    recommended_filter_display_label: result.recommendedFilterDisplayLabel || result.recommendedFilterType,
     normalized_filter_size: result.normalizedFilterSize,
     size_confidence_level: result.sizeConfidenceLevel,
-    size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
-    has_confirmed_size: hasValidSize
+    size_selected_from_suggestion: result.sizeSelectedFromSuggestion
   });
   trackEvent("filter_finder_result_summary_viewed", {
     filter_size: result.filterSize,
     recommended_filter_type: result.recommendedFilterType,
-    recommended_filter_display_label: result.recommendedFilterDisplayLabel || result.recommendedFilterType,
     recommended_schedule: result.recommendedSchedule,
-    replacement_interval_days: result.replacementIntervalDays,
-    replacements_per_year: result.replacementsPerYear,
     next_suggested_change: result.nextSuggestedChange,
     estimated_yearly_cost: result.productYearlyCost,
     confidence_status: confidence.label,
-    size_confidence_level: confidence.level,
-    has_confirmed_size: hasValidSize
+    size_confidence_level: confidence.level
   });
-  if (showRetailers) {
-    setupRetailerViewedTracking(result);
-  } else {
-    retailerViewedObserver?.disconnect();
-    retailerViewedTracked = false;
-  }
+  setupRetailerViewedTracking(result);
 }
 
 function getFinderCopyText(result) {
@@ -1814,10 +906,7 @@ function getFinderCopyText(result) {
     `Filter size: ${result.filterSize}`,
     `Size confidence: ${result.sizeConfidenceLabel}`,
     result.sizeGuidance ? `Size confirmation guidance: ${result.sizeGuidance}` : "",
-    `Recommended rating: ${result.recommendedFilterDisplayLabel || result.recommendedFilterType}`,
-    `Actual filter rating: ${result.recommendedFilterType}`,
-    `Replacement interval: ${result.replacementIntervalDays} days`,
-    `Estimated replacements per year: ${result.replacementsPerYear}`,
+    `MERV: ${result.recommendedFilterType}`,
     `Schedule: ${result.recommendedSchedule}`,
     `Estimated price range: ${result.productPrice}`,
     `Estimated yearly cost: ${result.productYearlyCost}`,
@@ -1828,7 +917,7 @@ function getFinderCopyText(result) {
     `Filter type note: ${result.recommendedFilterCaution}`,
     `Insight: ${result.insightTitle} - ${result.insightCopy}`,
     `Reminder months: ${result.reminderMonths.join(", ")}`,
-    hasConfirmedFilterSize(result) ? `Buying search: ${buildRetailerSearchQuery(result)}` : ""
+    `Buying search: ${buildRetailerSearchQuery(result)}`
   ].filter(Boolean).join("\n");
 }
 
@@ -1863,13 +952,9 @@ function addResultFields(formData, result) {
   formData.set("filterLocation", result.location);
   formData.set("homeConditions", result.homeConditions.join(", ") || "Not specified");
   formData.set("recommendedSchedule", result.recommendedSchedule);
-  formData.set("replacementIntervalDays", String(result.replacementIntervalDays || ""));
-  formData.set("replacementsPerYear", String(result.replacementsPerYear || ""));
   formData.set("recommendedFilterType", result.recommendedFilterType);
-  formData.set("recommendedFilterDisplayLabel", result.recommendedFilterDisplayLabel || result.recommendedFilterType || "");
   formData.set("recommendedFilterBenefit", result.recommendedFilterBenefit || "");
   formData.set("recommendedFilterCaution", result.recommendedFilterCaution || "");
-  formData.set("hasConfirmedSize", String(hasConfirmedFilterSize(result)));
   formData.set("estimatedReminderMonths", result.reminderMonths.join(", "));
   formData.set("nextSuggestedChange", result.nextSuggestedChange || "");
   formData.set("filterInsightTitle", result.insightTitle || "");
@@ -1878,13 +963,8 @@ function addResultFields(formData, result) {
   formData.set("recommendedFilterBestFor", result.productBestFor || "");
   formData.set("estimatedFilterPrice", result.productPrice || "");
   formData.set("estimatedYearlyCost", result.productYearlyCost || "");
-  formData.set("buyingSearchQuery", hasConfirmedFilterSize(result) ? buildRetailerSearchQuery(result) : "");
-  formData.set(
-    "buyingSearchLinks",
-    hasConfirmedFilterSize(result)
-      ? getRetailerLinks(result).map((retailer) => `${retailer.name}: ${retailer.url}`).join("\n")
-      : ""
-  );
+  formData.set("buyingSearchQuery", buildRetailerSearchQuery(result));
+  formData.set("buyingSearchLinks", getRetailerLinks(result).map((retailer) => `${retailer.name}: ${retailer.url}`).join("\n"));
   formData.set("productImage", result.productImage || "");
 }
 
@@ -1899,9 +979,8 @@ async function completeFilterFinder() {
     : null;
   const foundSize = parsedSize?.normalized || "";
   const filterType = getRecommendedFilterType();
-  const replacementPlan = getReplacementPlan(finderState.conditions);
   finderState.email = "";
-  finderState.recommendedSchedule = replacementPlan.scheduleLabel;
+  finderState.recommendedSchedule = getRecommendedSchedule();
   finderState.normalizedSize = foundSize;
 
   if (finderEmailNote) finderEmailNote.hidden = true;
@@ -1913,13 +992,11 @@ async function completeFilterFinder() {
     filterSize: foundSize || "Check before ordering",
     homeConditions: [...finderState.conditions],
     recommendedSchedule: finderState.recommendedSchedule,
-    replacementIntervalDays: replacementPlan.intervalDays,
-    replacementsPerYear: replacementPlan.replacementsPerYear,
     recommendedFilterType: filterType.type,
-    recommendedFilterDisplayLabel: filterType.displayLabel,
     recommendedFilterCopy: filterType.copy,
     recommendedFilterBenefit: filterType.benefit,
     recommendedFilterCaution: filterType.caution,
+    reminderMonths: getReminderMonths(finderState.recommendedSchedule),
     normalizedFilterSize: foundSize || "",
     sizeSelectedFromSuggestion: finderState.sizeSelectedFromSuggestion,
     sizeGuidance: foundSize ? "" : getLocationGuidance(finderState.location || "I'm not sure"),
@@ -1928,9 +1005,7 @@ async function completeFilterFinder() {
   };
   const confidence = getSizeConfidence(result);
   const insight = getFinderInsight(result);
-  const reminderCount = Math.min(result.replacementsPerYear, 8);
-  const nextSuggestedChange = getNextSuggestedChange(result.replacementIntervalDays);
-  result.reminderMonths = getReminderMonths(result.replacementIntervalDays, reminderCount);
+  const nextSuggestedChange = getNextSuggestedChange(result.recommendedSchedule);
   const product = getProductRecommendation(result);
   Object.assign(result, {
     sizeConfidenceLevel: confidence.level,
@@ -1942,7 +1017,6 @@ async function completeFilterFinder() {
     productSizeTitle: product.sizeTitle,
     productTypeTitle: product.typeTitle,
     productImage: product.image,
-    productImageAlt: product.imageAlt,
     productSize: product.size,
     productMerv: product.merv,
     productBestFor: product.bestFor,
@@ -1985,40 +1059,41 @@ async function completeFilterFinder() {
     if (finderCompleteButton) finderCompleteButton.disabled = false;
 
     renderFinderReport(result);
-    saveLatestToLocalStorage(finderStorageKey, result);
+    saveToLocalStorage(finderStorageKey, result);
     finderCompleted = true;
 
     trackEvent("filter_finder_analysis_completed", {
       recommended_filter_type: result.recommendedFilterType,
-      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
       recommended_schedule: result.recommendedSchedule,
-      replacement_interval_days: result.replacementIntervalDays,
-      replacements_per_year: result.replacementsPerYear,
       normalized_filter_size: result.normalizedFilterSize,
-      size_confidence_level: result.sizeConfidenceLevel,
-      has_confirmed_size: hasConfirmedFilterSize(result)
+      size_confidence_level: result.sizeConfidenceLevel
     });
-    trackFinderCompletedResult(result);
+    trackEvent("filter_finder_completed", {
+      knows_size: result.knowsSize,
+      normalized_filter_size: result.normalizedFilterSize,
+      location: result.location,
+      has_email: Boolean(result.email),
+      recommended_schedule: result.recommendedSchedule,
+      recommended_filter_type: result.recommendedFilterType,
+      size_confidence_level: result.sizeConfidenceLevel,
+      size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
+      has_valid_size: Boolean(parsedSize)
+    });
     trackEvent("filter_finder_result_viewed", {
       knows_size: result.knowsSize,
       normalized_filter_size: result.normalizedFilterSize,
       location: result.location,
       recommended_schedule: result.recommendedSchedule,
       recommended_filter_type: result.recommendedFilterType,
-      recommended_filter_display_label: result.recommendedFilterDisplayLabel,
-      replacement_interval_days: result.replacementIntervalDays,
-      replacements_per_year: result.replacementsPerYear,
       has_email: false,
       completed: true,
       size_confidence_level: result.sizeConfidenceLevel,
       size_selected_from_suggestion: result.sizeSelectedFromSuggestion,
-      has_valid_size: Boolean(parsedSize),
-      has_confirmed_size: hasConfirmedFilterSize(result)
+      has_valid_size: Boolean(parsedSize)
     });
     trackEvent("filter_finder_email_prompt_viewed", {
       recommended_schedule: result.recommendedSchedule,
-      recommended_filter_type: result.recommendedFilterType,
-      recommended_filter_display_label: result.recommendedFilterDisplayLabel
+      recommended_filter_type: result.recommendedFilterType
     });
   
     if (finderResult) {
@@ -2067,40 +1142,32 @@ async function handleEmailFormSubmit(event, eventName, successElement) {
       source: String(formData.get("source") || "Email Form"),
       submittedAt
     };
-    saveLatestToLocalStorage(emailStorageKey, signup);
+    saveToLocalStorage(emailStorageKey, signup);
     trackEvent(eventName, {
       form_location: String(formData.get("source") || "Email Form"),
       has_finder_result: Boolean(latestFinderReport),
       normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
       recommended_schedule: latestFinderReport?.recommendedSchedule || "",
-      replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
-      replacements_per_year: latestFinderReport?.replacementsPerYear || "",
       recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
-      recommended_filter_display_label: latestFinderReport?.recommendedFilterDisplayLabel || "",
       recommended_filter_benefit: latestFinderReport?.recommendedFilterBenefit || "",
       next_suggested_change: latestFinderReport?.nextSuggestedChange || "",
       size_confidence_level: latestFinderReport?.sizeConfidenceLevel || "",
       size_selected_from_suggestion: Boolean(latestFinderReport?.sizeSelectedFromSuggestion),
       recommended_filter_product: latestFinderReport?.productTitle || "",
       estimated_filter_price: latestFinderReport?.productPrice || "",
-      has_confirmed_size: latestFinderReport ? hasConfirmedFilterSize(latestFinderReport) : false,
       has_email: Boolean(email)
     });
     trackEvent("generate_lead", {
       form_location: String(formData.get("source") || "Email Form"),
       normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
       recommended_schedule: latestFinderReport?.recommendedSchedule || "",
-      replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
-      replacements_per_year: latestFinderReport?.replacementsPerYear || "",
       recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
-      recommended_filter_display_label: latestFinderReport?.recommendedFilterDisplayLabel || "",
       recommended_filter_benefit: latestFinderReport?.recommendedFilterBenefit || "",
       next_suggested_change: latestFinderReport?.nextSuggestedChange || "",
       size_confidence_level: latestFinderReport?.sizeConfidenceLevel || "",
       size_selected_from_suggestion: Boolean(latestFinderReport?.sizeSelectedFromSuggestion),
       recommended_filter_product: latestFinderReport?.productTitle || "",
-      estimated_filter_price: latestFinderReport?.productPrice || "",
-      has_confirmed_size: latestFinderReport ? hasConfirmedFilterSize(latestFinderReport) : false
+      estimated_filter_price: latestFinderReport?.productPrice || ""
     });
     form.reset();
     form.hidden = true;
@@ -2218,32 +1285,7 @@ function setupSizeAutocomplete() {
 setHeaderState();
 setupRevealAnimations();
 setupSizeAutocomplete();
-setupArticleShare();
-updateReadingProgress();
-trackArticlePageView();
 window.addEventListener("scroll", setHeaderState, { passive: true });
-window.addEventListener("scroll", updateReadingProgress, { passive: true });
-window.addEventListener("resize", updateReadingProgress);
-consentManager.initialize();
-
-document.addEventListener("click", trackAmazonClick);
-document.addEventListener("click", trackArticleFilterFinderClick);
-document.addEventListener("click", (event) => {
-  const restartControl = event.target.closest?.('[data-filter-action="restart"]');
-  if (!restartControl) return;
-
-  const previousStep = finderCurrentStep;
-  trackFinderRestarted(previousStep);
-  finderCompleted = false;
-  resetFinderAnalytics(getFinderEntryPoint(restartControl));
-  resetFinderForModal();
-  startFilterFinder(finderAnalyticsState.entryPoint);
-});
-window.addEventListener("pagehide", trackFinderAbandoned);
-
-backToTopButton?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", toggleNav);
@@ -2310,13 +1352,6 @@ resultEmailInput?.addEventListener("input", () => {
   }
 });
 
-finderConfirmSizeInput?.addEventListener("input", () => {
-  if (finderConfirmSizeError) {
-    finderConfirmSizeError.textContent = "";
-    finderConfirmSizeError.hidden = true;
-  }
-});
-
 finderNextButton?.addEventListener("click", () => {
   if (!validateFinderStep(finderCurrentStep)) return;
   trackFinderStepCompleted(finderCurrentStep);
@@ -2351,23 +1386,11 @@ finderCopyButton?.addEventListener("click", async () => {
 });
 
 finderProductCta?.addEventListener("click", () => {
-  if (finderProductCta.dataset.finderProductCtaMode === "size-guidance") {
-    trackEvent("filter_finder_confirm_size_help_clicked", {
-      recommended_filter_type: latestFinderReport?.recommendedFilterType || "",
-      location: latestFinderReport?.location || ""
-    });
-    finderSizeGuidance?.scrollIntoView({ behavior: "smooth", block: "center" });
-    window.setTimeout(() => finderConfirmSizeInput?.focus({ preventScroll: true }), 260);
-    return;
-  }
-
   trackEvent("filter_finder_view_buying_options_clicked", {
     product_merv: latestFinderReport?.productMerv || "",
     product_size: latestFinderReport?.productSize || "",
     product_price: latestFinderReport?.productPrice || "",
     recommended_schedule: latestFinderReport?.recommendedSchedule || "",
-    replacement_interval_days: latestFinderReport?.replacementIntervalDays || "",
-    replacements_per_year: latestFinderReport?.replacementsPerYear || "",
     normalized_filter_size: latestFinderReport?.normalizedFilterSize || "",
     size_confidence_level: latestFinderReport?.sizeConfidenceLevel || ""
   });
@@ -2394,65 +1417,11 @@ finderContinueToRetailers?.addEventListener("click", () => {
   finderRetailerBlock?.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
-finderConfirmSizeButton?.addEventListener("click", () => {
-  if (!latestFinderReport || !finderConfirmSizeInput) return;
-
-  const parsedSize = parseFilterSize(finderConfirmSizeInput.value);
-  if (!parsedSize) {
-    if (finderConfirmSizeError) {
-      finderConfirmSizeError.textContent = "Enter a size in width x height x depth format, such as 20x25x1.";
-      finderConfirmSizeError.hidden = false;
-    }
-    finderConfirmSizeInput.focus({ preventScroll: true });
-    return;
-  }
-
-  const normalized = parsedSize.normalized;
-  trackFilterSizeEntered(normalized, "manual_entry");
-  latestFinderReport.filterSize = normalized;
-  latestFinderReport.normalizedFilterSize = normalized;
-  latestFinderReport.productSize = normalized;
-  latestFinderReport.productSizeTitle = normalized;
-  latestFinderReport.productTitle = `${normalized} ${latestFinderReport.recommendedFilterType} Pleated Air Filter`;
-  latestFinderReport.sizeSelectedFromSuggestion = false;
-  latestFinderReport.sizeGuidance = "";
-  latestFinderReport.sizeConfidenceLevel = "format-confirmed";
-  latestFinderReport.sizeConfidenceLabel = "✓ Size format confirmed";
-
-  const product = getProductRecommendation(latestFinderReport);
-  Object.assign(latestFinderReport, {
-    productTitle: product.title,
-    productSizeTitle: product.sizeTitle,
-    productTypeTitle: product.typeTitle,
-    productImage: product.image,
-    productImageAlt: product.imageAlt,
-    productSize: product.size,
-    productMerv: product.merv,
-    productBestFor: product.bestFor,
-    productPrice: product.priceRange,
-    productYearlyCost: product.yearlyCost,
-    productSchedule: product.schedule
-  });
-
-  renderFinderReport(latestFinderReport);
-  saveLatestToLocalStorage(finderStorageKey, latestFinderReport);
-  trackEvent("filter_finder_size_confirmed_after_result", {
-    normalized_filter_size: normalized,
-    recommended_filter_type: latestFinderReport.recommendedFilterType,
-    location: latestFinderReport.location
-  });
-  finderRetailerBlock?.scrollIntoView({ behavior: "smooth", block: "center" });
-});
-
 resultEmailForm?.addEventListener("submit", (event) => {
   handleEmailFormSubmit(event, "filter_finder_email_submitted", resultEmailSuccess);
 });
 
 earlyAccessForm?.addEventListener("submit", (event) => {
   handleEmailFormSubmit(event, "early_access_submitted", earlyAccessSuccess);
-});
-
-articleEmailForm?.addEventListener("submit", (event) => {
-  handleEmailFormSubmit(event, "blog_email_signup", articleEmailSuccess);
 });
 
