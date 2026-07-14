@@ -1,0 +1,20 @@
+Deployment Checklist
+
+✓ Images optimized to WebP
+✓ Alt text added
+✓ Lazy loading enabled
+✓ Open Graph tags
+✓ Twitter cards
+✓ FAQ schema
+✓ Breadcrumb schema
+✓ Article schema
+✓ Share buttons
+✓ Canonical URL
+✓ Sitemap updated
+✓ Internal links added
+✓ Amazon affiliate links verified
+✓ Related articles section
+✓ Reading time
+✓ Table of contents
+✓ Mobile responsive
+✓ Lighthouse target >90
