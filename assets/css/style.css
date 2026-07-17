@@ -2567,6 +2567,24 @@ input:focus-visible {
   box-shadow: var(--shadow-soft);
 }
 
+.article-image-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  padding: clamp(20px, 5vw, 44px);
+  border: 1px solid rgba(36, 119, 212, 0.24);
+  border-radius: 16px;
+  background: radial-gradient(circle at 85% 15%, rgba(47, 179, 109, 0.12), transparent 34%), linear-gradient(145deg, #f4f9ff, #ffffff);
+  color: var(--text);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.article-image-placeholder > div { display: grid; gap: 10px; max-width: 34rem; }
+.article-image-placeholder strong { color: var(--blue-dark); font-size: clamp(1.05rem, 3vw, 1.35rem); }
+.article-image-placeholder span { color: var(--muted); line-height: 1.6; }
+
 .responsive-table {
   max-width: 100%;
   overflow-x: auto;
