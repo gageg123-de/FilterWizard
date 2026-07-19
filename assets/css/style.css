@@ -2561,6 +2561,30 @@ input:focus-visible {
   color: var(--blue-dark);
 }
 
+.guide-link {
+  color: var(--blue);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.guide-link::after {
+  content: "\00a0→";
+  display: inline;
+  text-decoration: none;
+}
+
+.guide-link:hover {
+  color: var(--blue-dark);
+  text-decoration-thickness: 2px;
+}
+
+.guide-link:focus-visible {
+  color: var(--blue-dark);
+  text-decoration-thickness: 2px;
+}
+
 .article-section {
   padding: 30px 0;
   border-bottom: 1px solid rgba(217, 231, 238, 0.82);

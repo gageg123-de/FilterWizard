@@ -17,6 +17,7 @@ Typography uses system UI/Inter fallbacks, responsive `clamp()` sizes, strong na
 - Header/nav, footer, content cards, quick-answer/CTA cards, article figures, forms, cookie banner/settings dialog, Finder modal/options/results, retailer cards, and native `details` disclosures share the same palette and radii.
 - Article figures use 3:2 images, `width:100%`, `height:auto`, rounded corners, and captions.
 - `.page-breadcrumb` provides the reusable visible breadcrumb treatment; the 20x25x1 pilot also reuses article, table, MERV, FAQ, related-link and retailer-card components.
+- `.guide-link` marks an inline link to a deeper guide with primary blue, a default underline, medium emphasis and a trailing arrow while retaining the global focus outline.
 
 Breakpoints: 980px, 820px, and 640px; reduced motion is handled with `prefers-reduced-motion: reduce`. Mobile patterns collapse grids, simplify padding, keep touch controls large, and constrain modal height/scrolling.
 
