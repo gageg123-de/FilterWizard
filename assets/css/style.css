@@ -2581,6 +2581,12 @@ input:focus-visible {
   overflow-wrap: anywhere;
 }
 
+.blog-card-media img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
 .article-image-placeholder > div { display: grid; gap: 10px; max-width: 34rem; }
 .article-image-placeholder strong { color: var(--blue-dark); font-size: clamp(1.05rem, 3vw, 1.35rem); }
 .article-image-placeholder span { color: var(--muted); line-height: 1.6; }
