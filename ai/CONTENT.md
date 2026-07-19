@@ -1,0 +1,44 @@
+# Content and Articles
+
+Last verified: 2026-07-19
+
+[`../blog/index.html`](../blog/index.html) lists five static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
+
+Filter-size landing pages are not blog articles or product offers. The 20x25x1 pilot reuses article presentation patterns but uses WebPage schema, no blog preview card, no invented author, and size-specific fit, dimension, MERV, timing and retailer-warning content. Its future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+
+## Article pattern
+
+Typical pages include canonical/social metadata, consent and analytics bootstrap, shared header, one H1, intro and reading metadata, top/bottom share controls, table of contents, `data-article-content`, quick answer, semantic figures, responsive tables where needed, Finder CTA, Formspree email capture, visible FAQ `details`, related links, back-to-top, footer, Article schema, and FAQ schema when visible. Breadcrumb schema exists on some articles. Shared JS supplies progress, shares, scroll events, forms, navigation, and cookie UI.
+
+Image convention is three 3:2 WebPs when useful: eager/high-priority hero and lazy supporting images. Captions add context. Length follows search intent and usefulness; there is no mandatory word count.
+
+## Deployment-ready article checklist
+
+1. Define intent, unique title, slug, canonical, description, and honest date.
+2. Reuse a current article template; one H1 and logical H2/H3 hierarchy.
+3. Write complete, cautious homeowner guidance with no unsupported guarantees.
+4. Add only verified images; dimensions, alt, caption, loading, social/schema image.
+5. Add matching Article/FAQ/Breadcrumb schema as appropriate and validate JSON.
+6. Add top/bottom share, TOC, Finder CTA with analytics attribute, email capture, related links, and footer.
+7. Add identical text-only cards to blog index and homepage rules; update sitemap.
+8. Add minimal reciprocal links.
+9. Test mobile, keyboard, links, images, metadata, schema, events, and local HTTP paths.
+
+Do not use placeholders that reference missing assets, invent dates/authors, or silently change older content while adding an article.
+
+## Editorial decision rules
+
+- Begin with a specific homeowner question and the safest useful answer; commercial CTAs follow usefulness.
+- Separate facts supported by system/manufacturer guidance from project heuristics and general maintenance advice.
+- Avoid diagnosis, medical claims, universal HVAC arrangements, fabricated statistics, fake urgency, and compatibility promises.
+- Publication/modified dates must represent real editorial events; do not refresh dates only to look current.
+- Review cannibalization, reciprocal links, preview ordering, and whether older guidance needs a factual correction.
+- A generated image is evidence only of visual communication, never evidence that depicted equipment or dimensions are universally correct.
+
+Content maintenance has no verified owner or review cadence. Until one is established, record consequential factual sources/assumptions in the task report and treat time-sensitive claims as requiring fresh verification.
+
+Reminder-oriented CTAs require special care: the repository verifies lead capture, not scheduled delivery. Copy must not become more specific about timing, frequency, or service guarantees without an externally verified operating process and aligned privacy/legal documentation.
+
+Update this file when: article/template components, preview behavior, publishing checklist, or current article inventory changes.

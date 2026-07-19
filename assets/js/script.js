@@ -65,6 +65,7 @@ const articleEmailForm = document.querySelector("[data-article-email-form]");
 const articleEmailSuccess = document.querySelector("[data-article-email-success]");
 const readingProgress = document.querySelector("[data-reading-progress]");
 const articleContent = document.querySelector("[data-article-content]");
+const filterSizePage = document.querySelector("[data-filter-size-page]");
 const backToTopButton = document.querySelector("[data-back-to-top]");
 const finderStorageKey = "filterWizardFinderResults";
 const emailStorageKey = "filterWizardEmailSignups";
@@ -660,6 +661,46 @@ function trackArticleFilterFinderClick(event) {
   trackEvent("article_filter_finder_click", {
     article_slug: link.dataset.articleSlug || "unknown",
     cta_location: "article_body"
+  });
+}
+
+function trackFilterSizePageView() {
+  if (!filterSizePage) return;
+
+  trackEvent("filter_size_page_view", {
+    filter_size: filterSizePage.dataset.filterSize || "unknown",
+    page_path: window.location.pathname
+  });
+}
+
+function trackFilterSizePageClick(event) {
+  if (!filterSizePage) return;
+
+  const finderLink = event.target.closest?.("[data-filter-size-finder-cta]");
+  if (finderLink) {
+    trackEvent("filter_size_page_filter_finder_click", {
+      filter_size: filterSizePage.dataset.filterSize || "unknown",
+      cta_location: finderLink.dataset.ctaLocation || "unknown"
+    });
+    return;
+  }
+
+  const retailerLink = event.target.closest?.("[data-filter-size-retailer-link]");
+  if (retailerLink) {
+    trackEvent("filter_size_page_retailer_click", {
+      filter_size: filterSizePage.dataset.filterSize || "unknown",
+      retailer: retailerLink.dataset.retailer || "unknown",
+      link_location: retailerLink.dataset.linkLocation || "unknown"
+    });
+    return;
+  }
+
+  const relatedLink = event.target.closest?.("[data-filter-size-related-link]");
+  if (!relatedLink) return;
+
+  trackEvent("filter_size_page_related_article_click", {
+    filter_size: filterSizePage.dataset.filterSize || "unknown",
+    article_slug: relatedLink.pathname.split("/").filter(Boolean).pop()?.replace(/\.html$/, "") || "unknown"
   });
 }
 
@@ -2221,6 +2262,7 @@ setupSizeAutocomplete();
 setupArticleShare();
 updateReadingProgress();
 trackArticlePageView();
+trackFilterSizePageView();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
 window.addEventListener("resize", updateReadingProgress);
@@ -2228,6 +2270,7 @@ consentManager.initialize();
 
 document.addEventListener("click", trackAmazonClick);
 document.addEventListener("click", trackArticleFilterFinderClick);
+document.addEventListener("click", trackFilterSizePageClick);
 document.addEventListener("click", (event) => {
   const restartControl = event.target.closest?.('[data-filter-action="restart"]');
   if (!restartControl) return;
