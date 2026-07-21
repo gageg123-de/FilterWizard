@@ -6,7 +6,7 @@ Last verified: 2026-07-19
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
-Filter-size landing pages are not blog articles or product offers. The 20x25x1 pilot reuses article presentation patterns but uses WebPage schema, no blog preview card, no invented author, and size-specific fit, dimension, MERV, timing and retailer-warning content. Its future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+Filter-size landing pages are not blog articles or product offers. The 20x25x1 and 16x25x1 pilots reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. The 16x25x1 page adds a unique nearby-size confusion table and airflow-arrow section. Future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 
 ## Article pattern
 

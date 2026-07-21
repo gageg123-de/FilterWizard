@@ -10,7 +10,7 @@ This file owns commercial link eligibility, disclosure, and attribution safeguar
 
 Retailer cards appear only for confirmed sizes. Links open a new tab and use `rel="nofollow sponsored noopener"`, `data-link-location="filter-finder-results"`, retailer data attributes, and filter size for Amazon. A delegated document click listener emits `amazon_click`; card listeners emit `filter_finder_retailer_clicked`. Page/footer and result disclosures state the Amazon relationship.
 
-The static 20x25x1 pilot is a separate, explicit size-intent context. It shows a prominent fit warning before four retailer searches, uses `20x25x1 air filter` queries, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
+The static 20x25x1 and 16x25x1 pilots are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
 
 ## Rules and testing
 

@@ -24,7 +24,7 @@ This file documents instrumentation, not legal compliance or confirmed dashboard
 
 Parameters include normalized size, MERV, interval, replacements/year, confidence, conditions, location, source, link URL/location, and article slug. Invalid inputs send length, not raw text. Email events send `has_email`, not the address.
 
-Size-page events use only the static page size (`20x25x1`), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
+Size-page events use only the static page size (`20x25x1` or `16x25x1`), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
 
 ## Testing and risks
 

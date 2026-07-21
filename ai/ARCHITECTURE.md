@@ -14,7 +14,7 @@ Architecture constraints are current facts, not permanent preferences. Adding a 
 - [`../assets/css/style.css`](../assets/css/style.css): all shared styles and responsive rules.
 - [`../assets/js/script.js`](../assets/js/script.js): navigation, reveal effects, consent, Finder, forms, shares, article tracking, retailer links.
 - [`../blog/`](../blog/): index plus five hand-authored articles.
-- [`../filter-sizes/`](../filter-sizes/): one hand-authored 20x25x1 pilot page; no index, generator or bulk system.
+- [`../filter-sizes/`](../filter-sizes/): hand-authored 20x25x1 and 16x25x1 pilot pages; no index, generator or bulk system.
 - [`../legal/`](../legal/): canonical privacy, cookie, terms, and affiliate pages.
 - Root legal HTML files: `noindex, follow` meta-refresh compatibility URLs pointing to `/legal/`.
 - [`../assets/images/`](../assets/images/): `blog`, `brand`, `homepage`, `products`, and `social` assets.
@@ -34,7 +34,7 @@ Runtime integrations are GA4, Microsoft Clarity, Formspree, Amazon, Home Depot, 
 |---|---|
 | Navigation/footer | Every production HTML page; verify duplication |
 | Add article | New `blog/*.html`, `blog/index.html`, homepage previews, `sitemap.xml`, reciprocal links |
-| Add filter-size page | Pilot pattern in `filter-sizes/20x25x1.html`; follow `FILTER_SIZE_PAGES.md` and require explicit authorization before another |
+| Add filter-size page | Pilot patterns in `filter-sizes/20x25x1.html` and `filter-sizes/16x25x1.html`; follow `FILTER_SIZE_PAGES.md` and require explicit authorization before another |
 | Finder questions/UI | `index.html`, `style.css`, `script.js` |
 | Size/MERV/schedule/cost logic | `script.js` functions documented in `FILTER_LOGIC.md` |
 | Amazon behavior | `amazonAffiliateTag`, `buildRetailerSearchQuery`, `getRetailerLinks`, click tracking in `script.js` |
@@ -45,7 +45,7 @@ Runtime integrations are GA4, Microsoft Clarity, Formspree, Amazon, Home Depot, 
 
 Technical debt: duplicated HTML and analytics bootstrap, inconsistent schema coverage between older articles, static content-card duplication, and no automated regression suite.
 
-The size-page pilot reuses the article shell, quick-answer card, responsive table, MERV cards, FAQ details, related grid, retailer cards, header/footer and consent bootstrap. Page-specific content, WebPage/FAQ/Breadcrumb schema, retailer URLs and `data-filter-size-*` attributes remain in the HTML. Shared JS owns scoped size-page events; there is no templating layer.
+The size-page pilots reuse the article shell, quick-answer card, responsive table, MERV cards, FAQ details, related grid, retailer cards, header/footer and consent bootstrap. Page-specific content, WebPage/FAQ/Breadcrumb schema, retailer URLs and `data-filter-size-*` attributes remain in each HTML file. Shared JS reads the static `data-filter-size` value for scoped events; there is no templating layer.
 
 ## Architectural invariants and risks
 

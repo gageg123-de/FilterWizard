@@ -34,7 +34,7 @@ The visible forms use reminder-oriented language, but repository code only prove
 Invest when a proposal improves a core user job, has an observable outcome, preserves size/compatibility uncertainty, and can be maintained with current capacity. Require stronger evidence as operational complexity, privacy exposure, or irreversible SEO footprint rises.
 
 - Content: require distinct search intent, homeowner value, internal-link role, and an update owner.
-- Filter-size pages: the 20x25x1 pilot establishes a production pattern, but validate its indexation, engagement, fit-safety behavior and maintenance burden before any templated expansion; follow [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+- Filter-size pages: 20x25x1 and 16x25x1 form a controlled two-page pilot set. Validate indexation, engagement, fit-safety behavior, cannibalization and maintenance burden before a small batch or templated expansion; follow [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 - Reminders/accounts: require demonstrated opt-in demand, provider/retention decisions, legal review, and operating ownership.
 - Photo/model identification: require reliable data, explicit confidence/failure UX, privacy design, and no compatibility guarantee.
 - Monetization: prefer relevant retailer choice and disclosure; never optimize commission at the expense of fit or trust.
@@ -43,6 +43,6 @@ Invest when a proposal improves a core user job, has an observable outcome, pres
 
 Use [`ANALYTICS.md`](ANALYTICS.md) for observable events and [`DECISION_FRAMEWORK.md`](DECISION_FRAMEWORK.md) for evidence labels. Review roadmap candidates against user value, expected business value, evidence strength, complexity, risk, and maintenance burden. A dashboard result can inform a decision but does not silently become repository truth; record material decisions and assumptions in the relevant documentation or changelog.
 
-Pilot decision, 2026-07-19: one size-specific page is accepted as an acquisition-to-Finder-to-retailer experiment. Success is not established by publication. Before a second page, review search/index evidence, size-page CTA and retailer events, user usefulness, wrong-size risk, and whether the hand-authored pattern can be maintained without thin duplication.
+Pilot decision, 2026-07-19: two explicitly authorized, hand-authored size pages are accepted as an acquisition-to-Finder-to-retailer experiment. The second page tests whether the structure can support materially unique nearby-size and airflow guidance. Success is not established by publication. Before any next page or batch, review search/index evidence, CTA and retailer events, cannibalization, wrong-size risk, content differentiation and maintenance burden.
 
 Update this file when: audience, value proposition, monetization, funnel stages, success measures, prioritization gates, or strategic boundaries change.

@@ -28,6 +28,8 @@ This is the authoritative validation checklist. Domain documents define expected
 | Consent/analytics | default denied, accept/decline/settings/persistence, DebugView/Realtime, Clarity consent |
 | SEO | title/canonical/schema/social/sitemap/internal links, visible FAQ match |
 | Filter-size pages | direct static route, uniqueness, nominal/actual and thickness caveats, CTA/events, retailer warning/tag/query/rel, WebPage/FAQ/Breadcrumb schema, sitemap/internal links, no nonexistent index |
+
+For another size page, compare metadata, headings, paragraphs, FAQs and confusion guidance against both existing pilots. Shared structure and required disclosures may repeat; substantive exact-copy overlap should be limited and explained.
 | Accessibility | keyboard, focus trap/return, names, errors/live regions, contrast, reduced motion |
 
 ## Full pre-deployment regression
