@@ -1,12 +1,12 @@
 # Content and Articles
 
-Last verified: 2026-07-19
+Last verified: 2026-07-22
 
 [`../blog/index.html`](../blog/index.html) lists five static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
-Filter-size landing pages are not blog articles or product offers. The 20x25x1 and 16x25x1 pilots reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. The 16x25x1 page adds a unique nearby-size confusion table and airflow-arrow section. Future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+Filter-size landing pages are not blog articles or product offers. The 20x25x1, 16x25x1, and 20x20x1 pilots reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. The newer pages add size-specific nearby-size tables and airflow guidance; 20x20x1 also explains the limits of rotating a square nominal frame. Future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 
 ## Article pattern
 

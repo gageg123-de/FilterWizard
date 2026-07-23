@@ -852,7 +852,7 @@ function getRetailerLinks(result) {
       name: "Filterbuy",
       subtext: "Bulk packs and specialty sizes",
       // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`,
+      url: `https://filterbuy.com/air-filters/${encodeURIComponent(normalizeFilterSize(result.productSize))}/`,
       recommended: false
     }
   ];

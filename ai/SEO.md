@@ -1,16 +1,16 @@
 # SEO
 
-Last verified: 2026-07-19
+Last verified: 2026-07-22
 
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, five articles, the 20x25x1 and 16x25x1 filter-size pilots, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, five articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.
 - Blog pages link to the Finder and related articles; homepage and blog index use text-only previews.
-- Both size-page pilots use self-canonical WebPage, matching FAQPage and two-level BreadcrumbList schema. No `/filter-sizes/` index URL exists.
+- All three size-page pilots use self-canonical WebPage, matching FAQPage and two-level BreadcrumbList schema. No `/filter-sizes/` index URL exists.
 
 ## Rules
 

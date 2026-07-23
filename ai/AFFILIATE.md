@@ -1,16 +1,16 @@
 # Affiliate Integration
 
-Last verified: 2026-07-19
+Last verified: 2026-07-22
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.
 
 This file owns commercial link eligibility, disclosure, and attribution safeguards. Recommendation eligibility remains governed by [`FILTER_LOGIC.md`](FILTER_LOGIC.md); event names/parameters belong to [`ANALYTICS.md`](ANALYTICS.md); business trade-offs belong to [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md).
 
-`buildRetailerSearchQuery` combines confirmed size, MERV, and `air filter`. `getRetailerLinks` builds `https://www.amazon.com/s?k=...&tag=filterwizard-20` dynamically and checks the tag. Missing tags emit `filter_wizard_amazon_tag_missing`. Home Depot, Lowe's, and Filterbuy links are dynamic comparison searches with TODOs for possible future deep/affiliate links; do not represent them as active affiliate programs.
+`buildRetailerSearchQuery` combines confirmed size, MERV, and `air filter`. `getRetailerLinks` builds `https://www.amazon.com/s?k=...&tag=filterwizard-20` dynamically and checks the tag. Missing tags emit `filter_wizard_amazon_tag_missing`. Home Depot and Lowe's use dynamic comparison searches. Filterbuy uses its nominal-size category convention, `https://filterbuy.com/air-filters/{normalized-size}/`, rather than a search phrase in the path. These comparison retailers must not be represented as active affiliate programs.
 
 Retailer cards appear only for confirmed sizes. Links open a new tab and use `rel="nofollow sponsored noopener"`, `data-link-location="filter-finder-results"`, retailer data attributes, and filter size for Amazon. A delegated document click listener emits `amazon_click`; card listeners emit `filter_finder_retailer_clicked`. Page/footer and result disclosures state the Amazon relationship.
 
-The static 20x25x1 and 16x25x1 pilots are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
+The static 20x25x1, 16x25x1, and 20x20x1 pilots are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
 
 ## Rules and testing
 

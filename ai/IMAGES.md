@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-19
+Last verified: 2026-07-22
 
 ## Directories and usage
 
@@ -29,5 +29,7 @@ Image removal is a dependency decision: search HTML, CSS, JS, metadata, schema, 
 The existing 1200×800, 53,626-byte `how-to-find-air-filter-size-hero.webp` is intentionally reused by the 20x25x1 pilot as an instructional figure and social/WebPage image. It visibly shows the printed nominal size and requires no duplicate derivative. Its reuse means the asset now has both blog and filter-size-page dependencies.
 
 The 16x25x1 page reuses the approved generic `how-to-measure-air-filter.webp` for its figure and social/WebPage image because it teaches length, width and thickness without asserting a universal actual dimension. A supplied 16x25x1 graphic was not published because its embedded savings, equipment-protection and cleaner-air claims were not qualified by repository evidence.
+
+The 20x20x1 page also reuses `how-to-measure-air-filter.webp` for its visible figure and social/WebPage image. No derivative is needed because the graphic is size-neutral and the page copy carries the square-size-specific guidance.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

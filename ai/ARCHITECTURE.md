@@ -1,6 +1,6 @@
 # Architecture
 
-Last verified: 2026-07-19
+Last verified: 2026-07-22
 
 ## Actual stack
 
@@ -14,7 +14,7 @@ Architecture constraints are current facts, not permanent preferences. Adding a 
 - [`../assets/css/style.css`](../assets/css/style.css): all shared styles and responsive rules.
 - [`../assets/js/script.js`](../assets/js/script.js): navigation, reveal effects, consent, Finder, forms, shares, article tracking, retailer links.
 - [`../blog/`](../blog/): index plus five hand-authored articles.
-- [`../filter-sizes/`](../filter-sizes/): hand-authored 20x25x1 and 16x25x1 pilot pages; no index, generator or bulk system.
+- [`../filter-sizes/`](../filter-sizes/): hand-authored 20x25x1, 16x25x1, and 20x20x1 pilot pages; no index, generator or bulk system.
 - [`../legal/`](../legal/): canonical privacy, cookie, terms, and affiliate pages.
 - Root legal HTML files: `noindex, follow` meta-refresh compatibility URLs pointing to `/legal/`.
 - [`../assets/images/`](../assets/images/): `blog`, `brand`, `homepage`, `products`, and `social` assets.

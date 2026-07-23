@@ -1515,6 +1515,7 @@ function hasAmazonAffiliateTag(url) {
 function getRetailerLinks(result) {
   const searchQuery = buildRetailerSearchQuery(result);
   const encodedSearchQuery = encodeURIComponent(searchQuery);
+  const filterbuySize = normalizeFilterSize(result.productSize);
   const amazonUrl = amazonAffiliateTag
     ? `https://www.amazon.com/s?k=${encodedSearchQuery}&tag=${encodeURIComponent(amazonAffiliateTag)}`
     : `https://www.amazon.com/s?k=${encodedSearchQuery}`;
@@ -1549,8 +1550,9 @@ function getRetailerLinks(result) {
     {
       name: "Filterbuy",
       subtext: "Bulk packs and specialty sizes",
-      // TODO: Replace with a final affiliate/deep link if available.
-      url: `https://filterbuy.com/air-filters/${encodedSearchQuery}`,
+      url: filterbuySize
+        ? `https://filterbuy.com/air-filters/${encodeURIComponent(filterbuySize)}/`
+        : "https://filterbuy.com/air-filters/",
       recommended: false
     }
   ];

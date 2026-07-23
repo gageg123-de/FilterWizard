@@ -55,6 +55,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://filter-wizard.com/filter-sizes/20x20x1.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://filter-wizard.com/legal/privacy-policy.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
