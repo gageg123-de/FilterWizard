@@ -1,8 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-07-22
+Last verified: 2026-07-23
 
-[`../blog/index.html`](../blog/index.html) lists five static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists six static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
@@ -12,7 +12,7 @@ Filter-size landing pages are not blog articles or product offers. The 20x25x1, 
 
 Typical pages include canonical/social metadata, consent and analytics bootstrap, shared header, one H1, intro and reading metadata, top/bottom share controls, table of contents, `data-article-content`, quick answer, semantic figures, responsive tables where needed, Finder CTA, Formspree email capture, visible FAQ `details`, related links, back-to-top, footer, Article schema, and FAQ schema when visible. Breadcrumb schema exists on some articles. Shared JS supplies progress, shares, scroll events, forms, navigation, and cookie UI.
 
-Image convention is three 3:2 WebPs when useful: eager/high-priority hero and lazy supporting images. Captions add context. Length follows search intent and usefulness; there is no mandatory word count.
+Article images use as many verified 3:2 WebPs as the subject needs. The first visible article image is eager/high-priority; supporting images are lazy. Captions add context. Length follows search intent and usefulness; there is no mandatory word count.
 
 ## Deployment-ready article checklist
 

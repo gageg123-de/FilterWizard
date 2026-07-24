@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-22
+Last verified: 2026-07-23
 
 ## Directories and usage
 
@@ -31,5 +31,7 @@ The existing 1200×800, 53,626-byte `how-to-find-air-filter-size-hero.webp` is i
 The 16x25x1 page reuses the approved generic `how-to-measure-air-filter.webp` for its figure and social/WebPage image because it teaches length, width and thickness without asserting a universal actual dimension. A supplied 16x25x1 graphic was not published because its embedded savings, equipment-protection and cleaner-air claims were not qualified by repository evidence.
 
 The 20x20x1 page also reuses `how-to-measure-air-filter.webp` for its visible figure and social/WebPage image. No derivative is needed because the graphic is size-neutral and the page copy carries the square-size-specific guidance.
+
+The airflow-direction article uses two 1200×800 WebPs. `air-filter-arrow-hero.webp` is an optimized crop of the supplied homeowner-installation photograph (83,222 bytes). `airflow-direction-diagram.webp` is an optimized correction of the supplied diagram (42,918 bytes): the source had a printed edge arrow that conflicted with its left-to-right airflow arrows, so the production graphic was regenerated from that reference with all arrows pointing consistently from the return-air side toward the furnace/blower. Both final assets were visually checked for readable, non-conflicting labels.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.
