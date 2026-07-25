@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-23
+Last verified: 2026-07-24
 
 ## Directories and usage
 
@@ -33,5 +33,7 @@ The 16x25x1 page reuses the approved generic `how-to-measure-air-filter.webp` fo
 The 20x20x1 page also reuses `how-to-measure-air-filter.webp` for its visible figure and social/WebPage image. No derivative is needed because the graphic is size-neutral and the page copy carries the square-size-specific guidance.
 
 The airflow-direction article uses two 1200×800 WebPs. `air-filter-arrow-hero.webp` is an optimized crop of the supplied homeowner-installation photograph (83,222 bytes). `airflow-direction-diagram.webp` is an optimized correction of the supplied diagram (42,918 bytes): the source had a printed edge arrow that conflicted with its left-to-right airflow arrows, so the production graphic was regenerated from that reference with all arrows pointing consistently from the return-air side toward the furnace/blower. Both final assets were visually checked for readable, non-conflicting labels.
+
+The MERV comparison article uses three corrected 1200×800 WebPs: `merv-8-vs-11-vs-13-hero.webp` (48,632 bytes), `merv-particle-comparison.webp` (66,702 bytes), and `merv-filter-choice-guide.webp` (57,642 bytes). The supplied hero’s malformed labels were replaced with exact MERV 8, MERV 11, and MERV 13 labels. The supplied comparison graphic’s duplicated panel and overstated capture claims were replaced with a single relative-particle explanation. The supplied decision graphic’s virus, gas, medical, and universal-performance claims were replaced with conditional household guidance and an explicit equipment-compatibility check.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

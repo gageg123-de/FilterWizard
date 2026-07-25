@@ -1,8 +1,10 @@
 # Content and Articles
 
-Last verified: 2026-07-23
+Last verified: 2026-07-24
 
-[`../blog/index.html`](../blog/index.html) lists six static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists seven static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+The MERV comparison hub at [`../blog/merv-8-vs-merv-11-vs-merv-13.html`](../blog/merv-8-vs-merv-11-vs-merv-13.html) targets “MERV 8 vs MERV 11 vs MERV 13.” It links filtration decisions to size confirmation, replacement timing, airflow guidance, clogged-filter symptoms, energy use, frozen-coil cautions, the Filter Finder, and the three current size-page pilots. Existing articles and size pages link back with context-specific anchor text.
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
