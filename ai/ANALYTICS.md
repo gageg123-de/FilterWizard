@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-07-24
+Last verified: 2026-07-26
 
 ## Active integrations
 
@@ -43,5 +43,7 @@ Recommended future taxonomy: keep `object_action_state` names, one documented pa
 Missing operational documentation: no repository-owned event dictionary with exact parameter types, dashboard definitions, baseline window, owner, or alert thresholds exists. Until externally verified, report these as unknown rather than inventing KPI targets.
 
 The MERV comparison article uses the shared article attributes and global listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listeners or retailer links, so it does not create duplicate article events or a new affiliate-click path.
+
+The rapid-loading troubleshooting article uses the same shared attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listener or retailer link.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.

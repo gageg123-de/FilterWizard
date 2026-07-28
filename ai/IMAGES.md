@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-25
+Last verified: 2026-07-26
 
 ## Directories and usage
 
@@ -37,5 +37,7 @@ The airflow-direction article uses two 1200×800 WebPs. `air-filter-arrow-hero.w
 The MERV comparison article uses three corrected 1200×800 WebPs: `merv-8-vs-11-vs-13-hero.webp` (48,632 bytes), `merv-particle-comparison.webp` (66,702 bytes), and `merv-filter-choice-guide.webp` (57,642 bytes). The supplied hero’s malformed labels were replaced with exact MERV 8, MERV 11, and MERV 13 labels. The supplied comparison graphic’s duplicated panel and overstated capture claims were replaced with a single relative-particle explanation. The supplied decision graphic’s virus, gas, medical, and universal-performance claims were replaced with conditional household guidance and an explicit equipment-compatibility check.
 
 The vacuum-and-reuse article uses three corrected 1200×800 WebPs: `can-you-vacuum-air-filter-hero.webp` (71,652 bytes), `disposable-vs-washable-filter-guide.webp` (78,206 bytes), and `clean-or-replace-air-filter.webp` (60,994 bytes). Brand-like marks were removed from the supplied hero and the vacuum is shown idle. The supporting graphics replace duplicated wording, “100% dry,” universal material assumptions, and lengthy small print with readable conditional guidance: replace disposable filters, clean only verified washable filters as directed, and reinstall only when completely dry.
+
+The rapid-loading troubleshooting article uses three visually verified 1200×800 WebPs: `why-air-filter-gets-dirty-fast-hero.webp` (53,824 bytes), `air-filter-dirty-fast-causes.webp` (67,238 bytes), and `normal-vs-abnormal-filter-loading.webp` (56,272 bytes). The hero shows moderate gray loading and a readable installation date without brands or hazardous behavior. Both infographics use exact reviewed labels and avoid mold diagnoses, equipment-failure claims, alarmist warnings, and duct-cleaning claims.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.
