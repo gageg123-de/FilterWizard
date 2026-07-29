@@ -1,6 +1,6 @@
 # Affiliate Integration
 
-Last verified: 2026-07-22
+Last verified: 2026-07-28
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.
 
@@ -28,5 +28,7 @@ The static 20x25x1, 16x25x1, and 20x20x1 pilots are explicit size-intent context
 Adding a retailer or affiliate program requires owner authorization, verified program terms, disclosure placement, destination/query QA, privacy/security review, analytics semantics, and an exit plan. Never label comparison retailers as affiliates without evidence. Never hard-code a specific product recommendation unless fit assumptions, freshness, availability behavior, and maintenance ownership are defined.
 
 Commercial health should eventually be evaluated from qualified, size-confirmed journeys through attributed outcomes. Raw click growth is not sufficient evidence if wrong-size risk, abandonment, or user trust worsens.
+
+The black-filter troubleshooting article has moderate commercial intent but does not hard-code retailer destinations. Its replacement and conclusion CTAs lead to the existing Filter Finder, where retailer choices remain gated behind a valid confirmed three-dimensional size. The shared footer disclosure, Store ID, link attributes, and delegated click tracking remain unchanged.
 
 Update this file when: Store ID, retailers, URL generation, disclosures, link attributes, product rules, or tracking changes.

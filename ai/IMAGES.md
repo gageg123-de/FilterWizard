@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-26
+Last verified: 2026-07-28
 
 ## Directories and usage
 
@@ -39,5 +39,7 @@ The MERV comparison article uses three corrected 1200×800 WebPs: `merv-8-vs-11-
 The vacuum-and-reuse article uses three corrected 1200×800 WebPs: `can-you-vacuum-air-filter-hero.webp` (71,652 bytes), `disposable-vs-washable-filter-guide.webp` (78,206 bytes), and `clean-or-replace-air-filter.webp` (60,994 bytes). Brand-like marks were removed from the supplied hero and the vacuum is shown idle. The supporting graphics replace duplicated wording, “100% dry,” universal material assumptions, and lengthy small print with readable conditional guidance: replace disposable filters, clean only verified washable filters as directed, and reinstall only when completely dry.
 
 The rapid-loading troubleshooting article uses three visually verified 1200×800 WebPs: `why-air-filter-gets-dirty-fast-hero.webp` (53,824 bytes), `air-filter-dirty-fast-causes.webp` (67,238 bytes), and `normal-vs-abnormal-filter-loading.webp` (56,272 bytes). The hero shows moderate gray loading and a readable installation date without brands or hazardous behavior. Both infographics use exact reviewed labels and avoid mold diagnoses, equipment-failure claims, alarmist warnings, and duct-cleaning claims.
+
+The black-filter troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-black-hero.webp` (87,670 bytes), `black-air-filter-causes.webp` (67,064 bytes), and `black-filter-normal-vs-investigate.webp` (55,122 bytes). The hero shows realistic even dark-gray loading without brands, mold, smoke clouds, or dramatic contamination. The cause graphic contains the six reviewed particle-source labels, and the decision graphic contains the exact five-item “Often Normal” and “Investigate Further” lists without alarmist symbols or diagnostic claims.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

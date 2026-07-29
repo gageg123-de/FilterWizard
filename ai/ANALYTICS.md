@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-07-26
+Last verified: 2026-07-28
 
 ## Active integrations
 
@@ -45,5 +45,7 @@ Missing operational documentation: no repository-owned event dictionary with exa
 The MERV comparison article uses the shared article attributes and global listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listeners or retailer links, so it does not create duplicate article events or a new affiliate-click path.
 
 The rapid-loading troubleshooting article uses the same shared attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listener or retailer link.
+
+The black-filter troubleshooting article uses the shared article attributes and listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, and Formspree lead handling with source `blog-why-is-my-air-filter-black`. It adds no page-specific listeners.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.
