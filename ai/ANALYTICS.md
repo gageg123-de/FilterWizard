@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-07-28
+Last verified: 2026-07-30
 
 ## Active integrations
 
@@ -47,5 +47,7 @@ The MERV comparison article uses the shared article attributes and global listen
 The rapid-loading troubleshooting article uses the same shared attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listener or retailer link.
 
 The black-filter troubleshooting article uses the shared article attributes and listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, and Formspree lead handling with source `blog-why-is-my-air-filter-black`. It adds no page-specific listeners.
+
+The wet-filter troubleshooting article uses the shared article attributes and listeners for page view, scroll depth, top/bottom sharing, three Filter Finder CTA clicks, and Formspree lead handling with source `blog-why-is-my-air-filter-wet`. It adds no page-specific listeners or direct retailer links, so the existing confirmed-size retailer gate remains the only shopping path.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.

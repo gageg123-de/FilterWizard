@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-28
+Last verified: 2026-07-30
 
 ## Directories and usage
 
@@ -41,5 +41,7 @@ The vacuum-and-reuse article uses three corrected 1200×800 WebPs: `can-you-vacu
 The rapid-loading troubleshooting article uses three visually verified 1200×800 WebPs: `why-air-filter-gets-dirty-fast-hero.webp` (53,824 bytes), `air-filter-dirty-fast-causes.webp` (67,238 bytes), and `normal-vs-abnormal-filter-loading.webp` (56,272 bytes). The hero shows moderate gray loading and a readable installation date without brands or hazardous behavior. Both infographics use exact reviewed labels and avoid mold diagnoses, equipment-failure claims, alarmist warnings, and duct-cleaning claims.
 
 The black-filter troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-black-hero.webp` (87,670 bytes), `black-air-filter-causes.webp` (67,064 bytes), and `black-filter-normal-vs-investigate.webp` (55,122 bytes). The hero shows realistic even dark-gray loading without brands, mold, smoke clouds, or dramatic contamination. The cause graphic contains the six reviewed particle-source labels, and the decision graphic contains the exact five-item “Often Normal” and “Investigate Further” lists without alarmist symbols or diagnostic claims.
+
+The wet-filter troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-wet-hero.webp` (72,864 bytes), `wet-air-filter-causes.webp` (69,330 bytes), and `wet-filter-replace-or-call.webp` (83,762 bytes). The hero shows one subtly damp filter without dripping water, flooding, brands, or hazardous access. The cause graphic contains six correctly spelled drainage, icing, condensation, and nearby-leak labels. The decision graphic reproduces the reviewed “Replace and Monitor” and “Call for HVAC Service” conditions without diagnostic or emergency claims. All three sources remain in the generated-image workspace; production derivatives were resized with a high-quality 3:2 crop-free conversion and visually rechecked.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

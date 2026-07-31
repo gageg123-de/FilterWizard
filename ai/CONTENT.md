@@ -1,8 +1,10 @@
 # Content and Articles
 
-Last verified: 2026-07-28
+Last verified: 2026-07-30
 
-[`../blog/index.html`](../blog/index.html) lists ten static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists eleven static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+The troubleshooting guide at [`../blog/why-is-my-air-filter-wet.html`](../blog/why-is-my-air-filter-wet.html) targets “why is my air filter wet” and related wet-furnace-filter searches. Published 2026-07-30, its 3,181-word editorial body separates common condensate, drain-pan, thawing-coil, condensation, and nearby-leak causes without diagnosing from appearance. It uses three verified images, 18 visible/schema-matched FAQs, three safely gated Finder CTAs, links to the nine-article support cluster and two confirmed-size pilots, and receives reciprocal links from nine relevant articles. Future adjacent topics should distinguish bent or bowing filters and one-sided dirt patterns rather than restating this moisture intent.
 
 The maintenance guide at [`../blog/can-you-vacuum-and-reuse-an-air-filter.html`](../blog/can-you-vacuum-and-reuse-an-air-filter.html) distinguishes disposable filters, which should be replaced, from filters explicitly labeled washable or reusable, which should be cleaned and dried only as directed. It must not imply that vacuuming restores disposable filter media.
 
