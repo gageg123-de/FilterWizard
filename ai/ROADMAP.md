@@ -1,12 +1,12 @@
 # Roadmap
 
-Last verified: 2026-07-30
+Last verified: 2026-07-31
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; eleven articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twelve articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -29,6 +29,9 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Local air-quality adjustments | 3 | 2 | 3 | 4 | 4 | Reliable API and location consent |
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
+| Why Is My Air Filter Dirty on Only One Side? | 4 | 3 | 4 | 2 | 2 | Distinct one-sided loading intent and image QA |
+| Why Does My Air Filter Whistle? | 4 | 3 | 4 | 2 | 2 | Distinguish filter, grille, gap, and return-noise intent |
+| Should I Put Filters in Every Return Vent? | 4 | 3 | 4 | 2 | 3 | Installation variability and equipment-guidance review |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
 | White-label tools | 3 | 5 | 1 | 5 | 5 | Multitenancy, branding, support ownership |
