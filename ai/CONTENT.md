@@ -1,10 +1,12 @@
 # Content and Articles
 
-Last verified: 2026-07-31
+Last verified: 2026-08-02
 
-[`../blog/index.html`](../blog/index.html) lists twelve static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The troubleshooting guide at [`../blog/why-is-my-air-filter-bending.html`](../blog/why-is-my-air-filter-bending.html) targets “why is my air filter bending” and related bowing, collapsing, suction, and whistling searches. Published 2026-07-31, its 3,493 visible words treat deformation as a symptom rather than a blower or static-pressure diagnosis. It links to nine supporting articles, three confirmed-size pilots, and the gated Filter Finder; six relevant articles link back with varied anchors. It uses three verified images, 15 visible/schema-matched FAQs, Article/FAQ/Breadcrumb schema, shared article analytics, Formspree source `blog-why-is-my-air-filter-bending`, and no direct retailer links.
+
+The troubleshooting guide at [`../blog/why-is-my-air-filter-dirty-on-one-side.html`](../blog/why-is-my-air-filter-dirty-on-one-side.html) targets “why is my air filter dirty on one side” and uneven-loading, bypass, fit, localized-source, center, edge, and corner patterns. Published 2026-08-02, its 2,960-word editorial body treats uneven dirt as a clue rather than a duct, cleaning, or equipment diagnosis. It links to ten supporting articles, all three confirmed-size pilots, and two gated Filter Finder CTAs; seven relevant articles link back with varied anchors. It uses three verified 1200×800 WebPs, 16 visible/schema-matched FAQs, Article/FAQ/Breadcrumb schema, shared article analytics, Formspree source `blog-why-is-my-air-filter-dirty-on-one-side`, and no direct retailer links.
 
 The troubleshooting guide at [`../blog/why-is-my-air-filter-wet.html`](../blog/why-is-my-air-filter-wet.html) targets “why is my air filter wet” and related wet-furnace-filter searches. Published 2026-07-30, its 3,181-word editorial body separates common condensate, drain-pan, thawing-coil, condensation, and nearby-leak causes without diagnosing from appearance. It uses three verified images, 18 visible/schema-matched FAQs, three safely gated Finder CTAs, links to the nine-article support cluster and two confirmed-size pilots, and receives reciprocal links from nine relevant articles. Future adjacent topics should distinguish bent or bowing filters and one-sided dirt patterns rather than restating this moisture intent.
 

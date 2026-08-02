@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-07-31
+Last verified: 2026-08-02
 
 ## Directories and usage
 
@@ -45,5 +45,7 @@ The black-filter troubleshooting article uses three generated and visually verif
 The wet-filter troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-wet-hero.webp` (72,864 bytes), `wet-air-filter-causes.webp` (69,330 bytes), and `wet-filter-replace-or-call.webp` (83,762 bytes). The hero shows one subtly damp filter without dripping water, flooding, brands, or hazardous access. The cause graphic contains six correctly spelled drainage, icing, condensation, and nearby-leak labels. The decision graphic reproduces the reviewed “Replace and Monitor” and “Call for HVAC Service” conditions without diagnostic or emergency claims. All three sources remain in the generated-image workspace; production derivatives were resized with a high-quality 3:2 crop-free conversion and visually rechecked.
 
 The bent-filter troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-bending-hero.webp` (69,070 bytes), `air-filter-bending-causes.webp` (106,650 bytes), and `replace-or-investigate-bent-filter.webp` (79,512 bytes). The hero shows moderate realistic bowing without a torn frame, brands, exposed equipment hazards, or dramatic damage. The causes infographic contains the six reviewed labels for dirt, size, restriction, support, installation, and bypass. The decision graphic contains the exact “Replace and Monitor” and “Investigate Further” lists without diagnostic or alarmist claims. Original generated PNGs remain outside production paths.
+
+The one-sided-loading troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-dirty-one-side-hero.webp` (68,460 bytes), `uneven-air-filter-dirt-patterns.webp` (76,938 bytes), and `uneven-filter-loading-monitor-or-investigate.webp` (75,424 bytes). The dry hero shows moderate gray loading on one half without brands or extreme contamination. The pattern graphic contains the reviewed center, one-side, corner, and bypass labels; the decision graphic contains the exact “Usually Monitor” and “Investigate Further” conditions without diagnostic or alarmist claims. Original generated PNGs remain outside production paths.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.
