@@ -35,4 +35,6 @@ The bent-filter troubleshooting article has moderate commercial intent but conta
 
 The one-sided-loading troubleshooting article has moderate commercial intent and no direct retailer destinations. Its two CTAs lead to the existing Filter Finder after size and fit guidance; retailer choices remain gated behind a valid confirmed three-dimensional size. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
+The filter-whistling troubleshooting article has moderate commercial intent and no direct retailer destinations. Its two CTAs follow size, fit, loading, and MERV guidance and lead to the existing Filter Finder, where retailer choices remain gated behind a valid confirmed three-dimensional size. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
+
 Update this file when: Store ID, retailers, URL generation, disclosures, link attributes, product rules, or tracking changes.

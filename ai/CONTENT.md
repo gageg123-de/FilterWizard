@@ -2,7 +2,9 @@
 
 Last verified: 2026-08-02
 
-[`../blog/index.html`](../blog/index.html) lists thirteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists fourteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+The noise-troubleshooting guide at [`../blog/why-does-my-air-filter-whistle.html`](../blog/why-does-my-air-filter-whistle.html) targets “why does my air filter whistle” plus filter-slot, return-vent, MERV, vibration, bypass, and post-replacement noise intent. Published 2026-08-02, it separates actual causes from its safe inspection checklist and monitor-versus-service guidance. It uses three verified 1200×800 WebPs, 14 visible/schema-matched FAQs, two gated Filter Finder CTAs placed after diagnostic content, Article/FAQ/Breadcrumb schema, shared analytics, Formspree source `blog-why-does-my-air-filter-whistle`, six visible Related Articles, and no direct retailer links. It links naturally to ten supporting articles and all three confirmed-size pilots; four closely related guides link back.
 
 The troubleshooting guide at [`../blog/why-is-my-air-filter-bending.html`](../blog/why-is-my-air-filter-bending.html) targets “why is my air filter bending” and related bowing, collapsing, suction, and whistling searches. Published 2026-07-31, its 3,493 visible words treat deformation as a symptom rather than a blower or static-pressure diagnosis. It links to nine supporting articles, three confirmed-size pilots, and the gated Filter Finder; six relevant articles link back with varied anchors. It uses three verified images, 15 visible/schema-matched FAQs, Article/FAQ/Breadcrumb schema, shared article analytics, Formspree source `blog-why-is-my-air-filter-bending`, and no direct retailer links.
 
