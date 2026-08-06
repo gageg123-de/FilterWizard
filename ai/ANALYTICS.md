@@ -56,4 +56,6 @@ The one-sided-loading troubleshooting article uses shared article attributes and
 
 The filter-whistling troubleshooting article uses shared article attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-why-does-my-air-filter-whistle`. It adds no page-specific listeners or direct retailer links.
 
+The return-filter-configuration article uses shared article attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-filters-in-every-return-vent`. It adds no page-specific listeners or direct retailer links.
+
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.
