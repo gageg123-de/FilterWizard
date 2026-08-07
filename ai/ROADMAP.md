@@ -1,6 +1,6 @@
 # Roadmap
 
-Last verified: 2026-08-02
+Last verified: 2026-08-06
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
@@ -29,9 +29,10 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Local air-quality adjustments | 3 | 2 | 3 | 4 | 4 | Reliable API and location consent |
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
-| Should I Use a Filter at Both the Return and Furnace? | 4 | 3 | 4 | 2 | 3 | Prevent double-filter assumptions; require system-specific guidance |
 | Can an Air Filter Be Too Restrictive? | 4 | 3 | 4 | 2 | 3 | Separate MERV, construction, loading, pressure drop, and system support |
+| 1-Inch vs. 2-Inch vs. 4-Inch Air Filters | 4 | 3 | 4 | 2 | 3 | Separate cabinet fit, media area, replacement timing, and system support |
 | Why Does My Air Filter Move When the HVAC Turns On? | 4 | 3 | 4 | 2 | 2 | Distinguish loose fit, rack support, vibration, and normal startup movement |
+| Fiberglass vs. Pleated Air Filters | 4 | 3 | 3 | 2 | 3 | Compare intended use, filtration, resistance, cost, and replacement behavior |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
 | White-label tools | 3 | 5 | 1 | 5 | 5 | Multitenancy, branding, support ownership |

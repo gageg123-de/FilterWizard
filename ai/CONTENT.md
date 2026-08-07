@@ -1,8 +1,12 @@
 # Content and Articles
 
-Last verified: 2026-08-02
+Last verified: 2026-08-06
 
-[`../blog/index.html`](../blog/index.html) lists fifteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists sixteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+The newest return-plus-furnace configuration guide has 2,475 visible words and a 15-minute reading-time estimate.
+
+The configuration guide at [`../blog/filter-at-return-and-furnace.html`](../blog/filter-at-return-and-furnace.html) targets “should I use a filter at the return vent and furnace” plus return-filter, furnace-filter, two-filter, series-filtering, and airflow-resistance intent. Published 2026-08-06, it distinguishes filters in series from filters on separate return paths. It uses one configuration table, one safe inspection checklist, 14 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two Filter Finder CTAs after diagnostic guidance, Formspree source `blog-filter-at-return-and-furnace`, six Related Articles, and no direct retailer links. It is intentionally distinct from the every-return article: the older page asks which return grilles need filters, while this page asks whether the same air should cross a return filter and a central filter. Reciprocal links were added from the every-return, MERV comparison, whistling, and arrow-direction guides.
 
 The installation guide at [`../blog/filters-in-every-return-vent.html`](../blog/filters-in-every-return-vent.html) targets “should you put filters in every return vent” and one-filter, multiple-return-filter, return-grille, central-filter, and double-filtering intent. Published 2026-08-05, its 2,247-word visible body emphasizes that filter location depends on system design. It uses one focused configuration table, a separate safe inspection checklist, 12 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two gated Filter Finder CTAs after configuration guidance, Formspree source `blog-filters-in-every-return-vent`, six visible Related Articles, and no direct retailer links. It links to eight supporting articles, all three confirmed-size pilots, and the Finder; the size, MERV, arrow-direction, and whistling guides link back contextually.
 

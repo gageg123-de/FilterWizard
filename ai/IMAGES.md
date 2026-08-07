@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-08-02
+Last verified: 2026-08-06
 
 ## Directories and usage
 
@@ -51,5 +51,7 @@ The one-sided-loading troubleshooting article uses three generated and visually 
 The filter-whistling troubleshooting article uses three generated and visually verified 1200×800 WebPs: `why-air-filter-whistles-hero.webp` (40,968 bytes), `air-filter-whistling-causes.webp` (98,574 bytes), and `whistling-filter-replace-or-service.webp` (76,204 bytes). The hero shows safe listening near an accessible rack without brands, exposed wiring, or alarmist sound effects. The causes graphic contains the exact six reviewed cause labels; the decision graphic contains the exact “Replace and Monitor” and “Consider HVAC Service” conditions without repair instructions or equipment-failure claims. Original generated PNGs remain outside production paths.
 
 The return-filter-configuration article uses three generated and visually verified 1200×800 WebPs: `filters-in-every-return-hero.webp` (75,288 bytes), `return-filter-configurations.webp` (89,360 bytes), and `double-filtering-guide.webp` (77,640 bytes). The hero contrasts a designated filtered grille with an ordinary unfiltered return without brands or unsafe access. The location graphic contains exact central, return-grille, and air-handler labels. Two draft decision graphics were rejected because their return-air arrows pointed the wrong way; the final production graphic removes directional arrows and retains accurate, readable configuration labels and filter placement. Original generated PNGs remain outside production paths.
+
+The return-plus-furnace-filter article uses three generated and visually verified 1200×800 WebPs: `filter-at-return-and-furnace-hero.webp` (66,640 bytes), `one-filter-vs-two-filter-configurations.webp` (45,180 bytes), and `double-filtering-keep-or-check.webp` (66,524 bytes). The configuration diagram uses consistent arrows toward the equipment and visibly distinguishes separate filtered return branches from two filters in series. Embedded labels were checked after WebP conversion; the decision guide uses conditional “Likely Intentional” and “Verify the Setup” language rather than presenting two filters as automatically wrong. Original generated PNGs remain outside production paths.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.
