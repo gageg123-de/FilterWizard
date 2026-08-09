@@ -1,6 +1,6 @@
 # Roadmap
 
-Last verified: 2026-08-06
+Last verified: 2026-08-08
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
@@ -33,6 +33,8 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | 1-Inch vs. 2-Inch vs. 4-Inch Air Filters | 4 | 3 | 4 | 2 | 3 | Separate cabinet fit, media area, replacement timing, and system support |
 | Why Does My Air Filter Move When the HVAC Turns On? | 4 | 3 | 4 | 2 | 2 | Distinguish loose fit, rack support, vibration, and normal startup movement |
 | Fiberglass vs. Pleated Air Filters | 4 | 3 | 3 | 2 | 3 | Compare intended use, filtration, resistance, cost, and replacement behavior |
+| Washable vs. Disposable Air Filters | 4 | 3 | 3 | 2 | 3 | Compare maintenance, drying, filtration, fit, and replacement behavior |
+| Best Air Filter for Homes With Pets | 4 | 4 | 3 | 2 | 3 | Balance pet debris, dander goals, MERV support, loading, and replacement timing |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
 | White-label tools | 3 | 5 | 1 | 5 | 5 | Multitenancy, branding, support ownership |

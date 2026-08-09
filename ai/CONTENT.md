@@ -1,8 +1,12 @@
 # Content and Articles
 
-Last verified: 2026-08-06
+Last verified: 2026-08-08
 
-[`../blog/index.html`](../blog/index.html) lists sixteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists seventeen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+
+The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
+
+The pillar guide at [`../blog/can-air-filter-be-too-restrictive.html`](../blog/can-air-filter-be-too-restrictive.html) targets “can an air filter be too restrictive” plus higher-MERV, MERV 13, filter-depth, loading, weak-airflow, whistling, bowing, icing, pressure-drop, and double-filtering intent. Published 2026-08-08, it uses one restriction-factors table, one symptom list, one inspection checklist, 14 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two Finder CTAs after diagnostic guidance, Formspree source `blog-can-air-filter-be-too-restrictive`, six Related Articles, and no direct retailer links. It acts as the airflow-restriction pillar linking the MERV, whistling, bending, frozen-coil, clogged-filter, sizing, and double-filtering guides while keeping each long-tail page focused.
 
 The newest return-plus-furnace configuration guide has 2,475 visible words and a 15-minute reading-time estimate.
 

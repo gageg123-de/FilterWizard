@@ -1,6 +1,6 @@
 # Affiliate Integration
 
-Last verified: 2026-08-06
+Last verified: 2026-08-08
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.
 
@@ -40,5 +40,7 @@ The filter-whistling troubleshooting article has moderate commercial intent and 
 The return-filter-configuration article has moderate commercial intent and no direct retailer destinations. Its two CTAs appear only after readers identify the intended filter locations and confirm physical size; retailer choices remain gated behind a valid three-dimensional size in the existing Filter Finder. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
 The return-plus-furnace-filter article has moderate commercial intent and no direct retailer destinations. Its two CTAs follow configuration identification and safe inspection guidance; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
+
+The filter-restriction pillar has moderately high commercial intent and no direct retailer destinations. Its two CTAs follow restriction education and safe inspection guidance; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
 Update this file when: Store ID, retailers, URL generation, disclosures, link attributes, product rules, or tracking changes.

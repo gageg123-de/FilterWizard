@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-08-06
+Last verified: 2026-08-08
 
 ## Active integrations
 
@@ -59,5 +59,7 @@ The filter-whistling troubleshooting article uses shared article attributes and 
 The return-filter-configuration article uses shared article attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-filters-in-every-return-vent`. It adds no page-specific listeners or direct retailer links.
 
 The return-plus-furnace-filter article uses those same delegated listeners for article page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-filter-at-return-and-furnace`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
+
+The filter-restriction pillar uses the shared delegated article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-can-air-filter-be-too-restrictive`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.
