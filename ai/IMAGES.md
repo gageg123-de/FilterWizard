@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-08-08
+Last verified: 2026-08-09
 
 ## Directories and usage
 
@@ -55,5 +55,7 @@ The return-filter-configuration article uses three generated and visually verifi
 The return-plus-furnace-filter article uses three generated and visually verified 1200×800 WebPs: `filter-at-return-and-furnace-hero.webp` (66,640 bytes), `one-filter-vs-two-filter-configurations.webp` (45,180 bytes), and `double-filtering-keep-or-check.webp` (66,524 bytes). The configuration diagram uses consistent arrows toward the equipment and visibly distinguishes separate filtered return branches from two filters in series. Embedded labels were checked after WebP conversion; the decision guide uses conditional “Likely Intentional” and “Verify the Setup” language rather than presenting two filters as automatically wrong. Original generated PNGs remain outside production paths.
 
 The filter-restriction pillar uses three generated and visually verified 1200×800 WebPs: `air-filter-too-restrictive-hero.webp` (101,834 bytes), `air-filter-restriction-factors.webp` (73,154 bytes), and `filter-restriction-monitor-or-service.webp` (57,148 bytes). The factors graphic gives equal emphasis to MERV, thickness, media area, pleat design, loading, and airflow rate and explicitly says no single factor determines restriction. The decision graphic uses conditional replace-and-monitor versus evaluation guidance without equipment-damage claims. Embedded labels were checked after conversion; original PNGs remain outside production paths.
+
+The filter-thickness buyer guide uses three generated and visually verified 1200×800 WebPs: `1-inch-vs-4-inch-filter-hero.webp` (58,482 bytes), `air-filter-thickness-comparison.webp` (51,606 bytes), and `choose-air-filter-thickness.webp` (60,096 bytes). The hero shows 1-inch, 2-inch, and 4-inch depths without branding. The comparison graphic contains the exact requested depth and descriptor labels; the decision guide directs readers to their existing rack or media cabinet and explicitly warns against forcing or stacking filters. Embedded text was rechecked after WebP conversion, and no image presents deeper media as universally better.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

@@ -2671,7 +2671,8 @@ input:focus-visible {
 .article-image-placeholder strong { color: var(--blue-dark); font-size: clamp(1.05rem, 3vw, 1.35rem); }
 .article-image-placeholder span { color: var(--muted); line-height: 1.6; }
 
-.responsive-table {
+.responsive-table,
+.table-responsive {
   max-width: 100%;
   overflow-x: auto;
   margin-top: 16px;
@@ -2679,7 +2680,8 @@ input:focus-visible {
   border-radius: 14px;
 }
 
-.responsive-table table {
+.responsive-table table,
+.table-responsive table {
   width: 100%;
   min-width: 520px;
   border-collapse: collapse;
