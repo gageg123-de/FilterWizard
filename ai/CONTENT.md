@@ -1,14 +1,16 @@
 # Content and Articles
 
-Last verified: 2026-08-09
+Last verified: 2026-08-10
 
-[`../blog/index.html`](../blog/index.html) lists eighteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists nineteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
 The pillar guide at [`../blog/can-air-filter-be-too-restrictive.html`](../blog/can-air-filter-be-too-restrictive.html) targets “can an air filter be too restrictive” plus higher-MERV, MERV 13, filter-depth, loading, weak-airflow, whistling, bowing, icing, pressure-drop, and double-filtering intent. Published 2026-08-08, it uses one restriction-factors table, one symptom list, one inspection checklist, 14 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two Finder CTAs after diagnostic guidance, Formspree source `blog-can-air-filter-be-too-restrictive`, six Related Articles, and no direct retailer links. It acts as the airflow-restriction pillar linking the MERV, whistling, bending, frozen-coil, clogged-filter, sizing, and double-filtering guides while keeping each long-tail page focused.
 
 The buyer-education pillar at [`../blog/1-inch-vs-2-inch-vs-4-inch-air-filters.html`](../blog/1-inch-vs-2-inch-vs-4-inch-air-filters.html) targets “1 inch vs 4 inch air filter” and the filter-depth, media-area, airflow, lifespan, cost, MERV, and compatibility cluster. Published 2026-08-09, its 2,684 visible words and 17-minute estimate use one comparison table, one safe thickness checklist, 14 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two Finder CTAs after compatibility guidance, Formspree source `blog-1-inch-vs-2-inch-vs-4-inch-air-filters`, six Related Articles, and no direct retailer links. It extends the restriction and MERV pillars into commercial investigation without treating thicker filters as universally better or interchangeable.
+
+The commercial-comparison guide at [`../blog/fiberglass-vs-pleated-air-filters.html`](../blog/fiberglass-vs-pleated-air-filters.html) targets “fiberglass vs pleated air filter” plus construction, particle-capture, airflow, MERV, cost, service-life, dust, pet, and compatibility intent. Published 2026-08-10, its 2,726 visible words and 17-minute estimate use one comparison table, one replacement checklist, 14 visible/schema-matched FAQs, three verified 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two Finder CTAs after tradeoff guidance, Formspree source `blog-fiberglass-vs-pleated-air-filters`, six Related Articles, and no direct retailer links. It connects the MERV, restriction, and thickness pillars while keeping media type separate from rating and depth; reciprocal links were added from the restriction and thickness guides.
 
 The newest return-plus-furnace configuration guide has 2,475 visible words and a 15-minute reading-time estimate.
 

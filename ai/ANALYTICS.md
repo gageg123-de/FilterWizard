@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-08-09
+Last verified: 2026-08-10
 
 ## Active integrations
 
@@ -63,5 +63,7 @@ The return-plus-furnace-filter article uses those same delegated listeners for a
 The filter-restriction pillar uses the shared delegated article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-can-air-filter-be-too-restrictive`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
 The filter-thickness buyer guide uses the same shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-1-inch-vs-2-inch-vs-4-inch-air-filters`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
+
+The fiberglass-versus-pleated guide uses the same shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-fiberglass-vs-pleated-air-filters`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.

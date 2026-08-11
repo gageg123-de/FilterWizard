@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-08-09
+Last verified: 2026-08-10
 
 ## Directories and usage
 
@@ -57,5 +57,7 @@ The return-plus-furnace-filter article uses three generated and visually verifie
 The filter-restriction pillar uses three generated and visually verified 1200×800 WebPs: `air-filter-too-restrictive-hero.webp` (101,834 bytes), `air-filter-restriction-factors.webp` (73,154 bytes), and `filter-restriction-monitor-or-service.webp` (57,148 bytes). The factors graphic gives equal emphasis to MERV, thickness, media area, pleat design, loading, and airflow rate and explicitly says no single factor determines restriction. The decision graphic uses conditional replace-and-monitor versus evaluation guidance without equipment-damage claims. Embedded labels were checked after conversion; original PNGs remain outside production paths.
 
 The filter-thickness buyer guide uses three generated and visually verified 1200×800 WebPs: `1-inch-vs-4-inch-filter-hero.webp` (58,482 bytes), `air-filter-thickness-comparison.webp` (51,606 bytes), and `choose-air-filter-thickness.webp` (60,096 bytes). The hero shows 1-inch, 2-inch, and 4-inch depths without branding. The comparison graphic contains the exact requested depth and descriptor labels; the decision guide directs readers to their existing rack or media cabinet and explicitly warns against forcing or stacking filters. Embedded text was rechecked after WebP conversion, and no image presents deeper media as universally better.
+
+The fiberglass-versus-pleated guide uses three generated and visually verified 1200×800 WebPs: `fiberglass-vs-pleated-filter-hero.webp` (79,638 bytes), `fiberglass-vs-pleated-comparison.webp` (70,050 bytes), and `choose-fiberglass-or-pleated-filter.webp` (78,572 bytes). The hero clearly distinguishes flat blue-gray fiberglass media from folded white pleated media without branding. Both infographics reproduce the reviewed conditional labels and system-compatibility notes; embedded text was checked after conversion. No image presents pleated media as universally best or fiberglass as useless.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.
