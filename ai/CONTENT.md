@@ -71,4 +71,6 @@ Content maintenance has no verified owner or review cadence. Until one is establ
 
 Reminder-oriented CTAs require special care: the repository verifies lead capture, not scheduled delivery. Copy must not become more specific about timing, frequency, or service guarantees without an externally verified operating process and aligned privacy/legal documentation.
 
+The buyer guide at [`../blog/washable-vs-disposable-air-filters.html`](../blog/washable-vs-disposable-air-filters.html) targets “washable vs disposable air filters” and related reusable-filter comparison searches. Published 2026-08-12, the 2,400–2,900-word guide separates reuse from MERV, filtration, resistance, depth, service life, cost, and environmental claims. It uses fourteen matching FAQs, two delayed Finder CTAs, one comparison table, one cleaning checklist, three reviewed images, and contextual links across reuse, media, MERV, restriction, thickness, sizing, and loading content. The reuse article links back contextually.
+
 Update this file when: article/template components, preview behavior, publishing checklist, or current article inventory changes.
