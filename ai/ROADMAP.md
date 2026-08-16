@@ -1,12 +1,12 @@
 # Roadmap
 
-Last verified: 2026-08-10
+Last verified: 2026-08-15
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty-one articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty-two articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -29,11 +29,11 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Local air-quality adjustments | 3 | 2 | 3 | 4 | 4 | Reliable API and location consent |
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
-| Best Air Filter for Homes With Pets | 4 | 4 | 3 | 2 | 3 | Balance pet debris, dander goals, MERV support, loading, and replacement timing |
 | Best Air Filter for Dust | 4 | 4 | 4 | 2 | 3 | Separate dust sources, filtration goals, MERV support, loading, fit, and source control |
 | Best Air Filter for Allergies | 4 | 4 | 4 | 2 | 4 | Avoid medical promises; balance particle goals, MERV support, fit, source control, and replacement timing |
 | Best Air Filter for Smoke | 4 | 4 | 4 | 2 | 4 | Separate particle filtration from gases and odors; avoid health or universal compatibility claims |
 | MERV 8 vs MERV 11 for Pets | 4 | 4 | 4 | 2 | 3 | Compare pet-household loading and particle goals without medical or universal compatibility claims |
+| Best Air Filter for Bedrooms | 3 | 3 | 3 | 2 | 2 | Address room use, noise, central-system limits, and supported filtration without implying room-level HVAC control |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
 | White-label tools | 3 | 5 | 1 | 5 | 5 | Multitenancy, branding, support ownership |

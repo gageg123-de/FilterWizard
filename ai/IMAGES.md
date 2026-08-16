@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-08-10
+Last verified: 2026-08-15
+
+The pets pillar uses three inspected 1200 × 800 WebP assets: `best-air-filter-for-pets-hero.webp`, `merv-for-pet-homes.webp`, and `choose-air-filter-for-pets.webp`.
 
 ## Directories and usage
 

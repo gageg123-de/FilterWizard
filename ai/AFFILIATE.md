@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-08-10
+Last verified: 2026-08-15
+
+The pets pillar is a high-commercial-intent guide but uses no direct retailer block. Two delayed Filter Finder CTAs preserve existing eligibility, sponsored attributes, `filterwizard-20`, and delegated click tracking.
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.
 

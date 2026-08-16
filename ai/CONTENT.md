@@ -1,8 +1,10 @@
 # Content and Articles
 
-Last verified: 2026-08-10
+Last verified: 2026-08-15
 
-[`../blog/index.html`](../blog/index.html) lists nineteen static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
+
+[`../blog/index.html`](../blog/index.html) lists twenty-two static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
