@@ -62,4 +62,6 @@ The fiberglass-versus-pleated guide uses three generated and visually verified 1
 
 The washable-versus-disposable buyer guide uses three generated and visually verified 1200×800 WebPs: `washable-vs-disposable-filter-hero.webp` (102,504 bytes), `washable-vs-disposable-comparison.webp` (104,036 bytes), and `choose-washable-or-disposable-filter.webp` (81,084 bytes). The hero presents equally sized reusable mesh and disposable pleated filters without branding. Both infographics reproduce the reviewed conditional labels and system-compatibility notes; embedded text was checked after conversion. No image presents either category as universally superior.
 
+The moving-filter troubleshooting guide uses three generated and visually verified 1200×800 WebPs: `why-air-filter-moves-hero.webp` (76,682 bytes), `air-filter-movement-causes.webp` (70,070 bytes), and `moving-filter-monitor-or-service.webp` (68,764 bytes). The hero shows a plausible slightly displaced clean filter without branding or exaggerated airflow. Both infographics reproduce the reviewed cause and conditional decision labels; embedded text was checked after conversion. No image implies automatic blower failure.
+
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

@@ -33,4 +33,6 @@ Risks: hand-authored metadata can drift; schema combinations differ across older
 
 The 2026-08-12 buyer guide at `/blog/washable-vs-disposable-air-filters.html` targets the commercial-investigation intent around washable versus disposable HVAC filters. Its unique information gain is the separation of reuse from MERV, resistance, media construction, maintenance, service life, cost, and environmental tradeoffs. It links into the reuse, media, MERV, restriction, thickness, sizing, and loading clusters and uses the existing Finder conversion path after comparison content.
 
+The 2026-08-14 troubleshooting guide at `/blog/why-does-my-air-filter-move.html` targets filter movement at blower startup, shutdown, and steady operation. Its unique information gain is separating slight motion from repeated displacement and distinguishing size, fit, support, loading, restriction, bowing, vibration, and bypass before the content roadmap shifts toward commercial-intent household-use guides.
+
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

@@ -6,7 +6,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty-one articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -29,10 +29,10 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Local air-quality adjustments | 3 | 2 | 3 | 4 | 4 | Reliable API and location consent |
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
-| Why Does My Air Filter Move When the HVAC Turns On? | 4 | 3 | 4 | 2 | 2 | Distinguish loose fit, rack support, vibration, and normal startup movement |
 | Best Air Filter for Homes With Pets | 4 | 4 | 3 | 2 | 3 | Balance pet debris, dander goals, MERV support, loading, and replacement timing |
 | Best Air Filter for Dust | 4 | 4 | 4 | 2 | 3 | Separate dust sources, filtration goals, MERV support, loading, fit, and source control |
 | Best Air Filter for Allergies | 4 | 4 | 4 | 2 | 4 | Avoid medical promises; balance particle goals, MERV support, fit, source control, and replacement timing |
+| Best Air Filter for Smoke | 4 | 4 | 4 | 2 | 4 | Separate particle filtration from gases and odors; avoid health or universal compatibility claims |
 | MERV 8 vs MERV 11 for Pets | 4 | 4 | 4 | 2 | 3 | Compare pet-household loading and particle goals without medical or universal compatibility claims |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
