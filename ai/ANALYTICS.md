@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-08-10
+Last verified: 2026-08-20
+
+The dust buying pillar reuses the shared article event path for page view, scroll depth, share clicks, two Filter Finder CTA clicks, Formspree interaction, and downstream size-gated retailer clicks. It adds no analytics scripts or listeners and sends no new parameters.
 
 ## Active integrations
 

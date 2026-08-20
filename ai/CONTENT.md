@@ -1,10 +1,12 @@
 # Content and Articles
 
-Last verified: 2026-08-15
+Last verified: 2026-08-20
+
+The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../blog/best-air-filter-for-dust.html) targets “best air filter for dust” plus MERV 8/11/13, pleated/fiberglass, washable/disposable, depth, loading, surface-dust, and household-source intent. Published 2026-08-20, its 2,753 visible words and 17-minute estimate use one ten-row comparison table, one thirteen-step checklist, fourteen visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-best-air-filter-for-dust`, six Related Articles, and no direct retailer block. Reciprocal links from the pets, MERV, and fiberglass-versus-pleated guides connect it to the established household and technical cluster without presenting filtration as a complete dust solution.
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists twenty-two static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists twenty-three static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

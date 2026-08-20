@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-08-15
+Last verified: 2026-08-20
+
+The dust buying pillar uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-dust-hero.webp` (71,784 bytes), `merv-for-dusty-homes.webp` (63,526 bytes), and `choose-air-filter-for-dust.webp` (71,352 bytes). The hero shows light realistic shelf dust without brands or an exaggerated cloud. The MERV graphic uses the reviewed 8/11/13 conditional labels. An initial decision graphic was rejected because it added an unrequested MERV 14–16 range; the final asset contains only size, compatible-MERV, dusty-condition inspection, and the explicit filtration-limit note.
 
 The pets pillar uses three inspected 1200 × 800 WebP assets: `best-air-filter-for-pets-hero.webp`, `merv-for-pet-homes.webp`, and `choose-air-filter-for-pets.webp`.
 

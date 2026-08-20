@@ -1,13 +1,15 @@
 # SEO
 
-Last verified: 2026-08-15
+Last verified: 2026-08-20
+
+The production dust pillar `/blog/best-air-filter-for-dust.html` targets “best air filter for dust” and the related HVAC/furnace-filter, dusty-house, MERV 8/11/13, media-type, depth, airflow, and replacement cluster. It links to the pets pillar and technical hubs; future dust comparisons should serve narrower intent instead of repeating its broad buying guide.
 
 Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Future guides for dust, allergies, smoke, bedrooms, and MERV 8 versus MERV 11 for pets must serve narrower intent and link back without duplicating the pillar.
 
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, twenty-two articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, twenty-three articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.
