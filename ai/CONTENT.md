@@ -46,12 +46,30 @@ Filter-size landing pages are not blog articles or product offers. The 20x25x1, 
 
 Typical pages include canonical/social metadata, consent and analytics bootstrap, shared header, one H1, intro and reading metadata, top/bottom share controls, table of contents, `data-article-content`, quick answer, semantic figures, responsive tables where needed, Finder CTA, Formspree email capture, visible FAQ `details`, related links, back-to-top, footer, Article schema, and FAQ schema when visible. Breadcrumb schema exists on some articles. Shared JS supplies progress, shares, scroll events, forms, navigation, and cookie UI.
 
+### Production header contract
+
+Treat the production header as a shared component contract, not as markup that may be independently recreated. When creating or modifying an article, select at least one currently verified known-good production article as the structural reference. Reuse its exact header markup and change only article-specific content outside the shared header. Do not reconstruct, simplify, rename, or approximate the header, and do not invent alternate navigation wrapper classes.
+
+The required navigation hierarchy includes `.nav`, `.nav-links`, `data-header`, `data-nav-toggle`, and `data-nav-menu`. Six newer articles previously substituted unsupported `.nav-wrap` and `.site-nav` wrappers. Because the shared CSS and JavaScript did not recognize that altered hierarchy, navigation labels rendered concatenated underneath the Filter Wizard logo.
+
+Before completion, compare the new or modified article with the selected current reference for header DOM hierarchy, required classes and `data-*` attributes, navigation links, mobile navigation toggle behavior, and `aria-expanded` updates. Select a current verified reference rather than treating any one article as a permanent template snapshot.
+
 Article images use as many verified 3:2 WebPs as the subject needs. The first visible article image is eager/high-priority; supporting images are lazy. Captions add context. Length follows search intent and usefulness; there is no mandatory word count.
 
 ## Deployment-ready article checklist
 
 1. Define intent, unique title, slug, canonical, description, and honest date.
 2. Reuse a current article template; one H1 and logical H2/H3 hierarchy.
+   - [ ] Header DOM matches a currently verified known-good production article.
+   - [ ] `.nav` is preserved.
+   - [ ] `.nav-links` is preserved.
+   - [ ] `data-header` is present.
+   - [ ] `data-nav-toggle` is present.
+   - [ ] `data-nav-menu` is present.
+   - [ ] No unsupported or invented replacement navigation wrappers were introduced.
+   - [ ] Desktop navigation renders correctly.
+   - [ ] Mobile navigation opens and closes correctly.
+   - [ ] `aria-expanded` updates correctly when the mobile menu is toggled.
 3. Write complete, cautious homeowner guidance with no unsupported guarantees.
 4. Add only verified images; dimensions, alt, caption, loading, social/schema image.
 5. Add matching Article/FAQ/Breadcrumb schema as appropriate and validate JSON.

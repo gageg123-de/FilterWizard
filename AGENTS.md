@@ -22,6 +22,7 @@ Filter Wizard is a static homeowner utility that helps people confirm HVAC filte
 - Do not add frameworks, dependencies, backends, Cloudflare products, build systems, fake reviews, fabricated dates, ratings, urgency, statistics, or product claims without explicit authority.
 - Do not create ZIP replacements, `changed-files-*` folders, or duplicate project copies. Do not edit archives as production code.
 - Avoid unrelated cleanup. Preserve user changes in a dirty worktree.
+- Treat the production header as a shared DOM contract. For every new or modified blog article, reuse the exact header markup from a currently verified known-good production article; do not reconstruct, simplify, rename, approximate, or replace its navigation wrappers. Preserve `.nav`, `.nav-links`, `data-header`, `data-nav-toggle`, and `data-nav-menu`. Before completion, compare the header DOM and navigation links with the selected reference, verify desktop and mobile navigation, and confirm the mobile toggle updates `aria-expanded`.
 
 When documentation and implementation disagree, stop treating the document as authority: verify the code path, report the contradiction, correct the documentation in the same change when authorized, and avoid changing behavior merely to make an old document true.
 
