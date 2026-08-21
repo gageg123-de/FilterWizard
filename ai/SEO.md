@@ -39,4 +39,6 @@ The 2026-08-12 buyer guide at `/blog/washable-vs-disposable-air-filters.html` ta
 
 The 2026-08-14 troubleshooting guide at `/blog/why-does-my-air-filter-move.html` targets filter movement at blower startup, shutdown, and steady operation. Its unique information gain is separating slight motion from repeated displacement and distinguishing size, fit, support, loading, restriction, bowing, vibration, and bypass before the content roadmap shifts toward commercial-intent household-use guides.
 
+The 2026-08-21 guide at `/blog/best-air-filter-for-allergies.html` targets allergy-focused particle-filtration buying intent. Its distinct information gain is pollen and airborne duration, MERV 11 vs. 13, bypass, HVAC runtime, seasonal loading, and the filtration-versus-health-outcome boundary; it should not duplicate the general MERV, dust, or pets pages.
+
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

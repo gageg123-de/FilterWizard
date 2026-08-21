@@ -58,8 +58,11 @@ Article images use as many verified 3:2 WebPs as the subject needs. The first vi
 
 ## Deployment-ready article checklist
 
-1. Define intent, unique title, slug, canonical, description, and honest date.
-2. Reuse a current article template; one H1 and logical H2/H3 hierarchy.
+1. Inventory published articles in `blog/`, `blog/index.html`, `sitemap.xml`, and relevant content/SEO/roadmap documentation before selecting the topic. Compare titles, URLs, primary keywords, search intent, and substantive coverage rather than relying on an unused title or slug.
+   - [ ] Duplicate-topic preflight passed before implementation; no existing page substantially satisfies the proposed search intent.
+   - [ ] Finished draft remains substantively distinct; improve an overlapping page or choose a narrower topic instead of publishing a competing URL.
+2. Define intent, unique title, slug, canonical, description, and honest date.
+3. Reuse a current article template; one H1 and logical H2/H3 hierarchy.
    - [ ] Header DOM matches a currently verified known-good production article.
    - [ ] `.nav` is preserved.
    - [ ] `.nav-links` is preserved.
@@ -70,13 +73,13 @@ Article images use as many verified 3:2 WebPs as the subject needs. The first vi
    - [ ] Desktop navigation renders correctly.
    - [ ] Mobile navigation opens and closes correctly.
    - [ ] `aria-expanded` updates correctly when the mobile menu is toggled.
-3. Write complete, cautious homeowner guidance with no unsupported guarantees.
-4. Add only verified images; dimensions, alt, caption, loading, social/schema image.
-5. Add matching Article/FAQ/Breadcrumb schema as appropriate and validate JSON.
-6. Add top/bottom share, TOC, Finder CTA with analytics attribute, email capture, related links, and footer.
-7. Add identical text-only cards to blog index and homepage rules; update sitemap.
-8. Add minimal reciprocal links.
-9. Test mobile, keyboard, links, images, metadata, schema, events, and local HTTP paths.
+4. Write complete, cautious homeowner guidance with no unsupported guarantees.
+5. Add only verified images; dimensions, alt, caption, loading, social/schema image.
+6. Add matching Article/FAQ/Breadcrumb schema as appropriate and validate JSON.
+7. Add top/bottom share, TOC, Finder CTA with analytics attribute, email capture, related links, and footer.
+8. Add identical text-only cards to blog index and homepage rules; update sitemap.
+9. Add minimal reciprocal links.
+10. Test mobile, keyboard, links, images, metadata, schema, events, and local HTTP paths.
 
 Do not use placeholders that reference missing assets, invent dates/authors, or silently change older content while adding an article.
 
@@ -96,5 +99,7 @@ Reminder-oriented CTAs require special care: the repository verifies lead captur
 The buyer guide at [`../blog/washable-vs-disposable-air-filters.html`](../blog/washable-vs-disposable-air-filters.html) targets “washable vs disposable air filters” and related reusable-filter comparison searches. Published 2026-08-12, the 2,400–2,900-word guide separates reuse from MERV, filtration, resistance, depth, service life, cost, and environmental claims. It uses fourteen matching FAQs, two delayed Finder CTAs, one comparison table, one cleaning checklist, three reviewed images, and contextual links across reuse, media, MERV, restriction, thickness, sizing, and loading content. The reuse article links back contextually.
 
 The focused troubleshooting guide at [`../blog/why-does-my-air-filter-move.html`](../blog/why-does-my-air-filter-move.html) targets “why does my air filter move when HVAC turns on” and related lifting, shifting, rattling, and shutdown-drop searches. Published 2026-08-14, it separates size, fit, support, loading, resistance, bending, vibration, and return-pressure effects without diagnosing blower failure. It uses fourteen matching FAQs, two delayed Finder CTAs, one causes table, one safe checklist, three reviewed images, and links into the bending, whistling, uneven-loading, restriction, MERV, sizing, replacement, arrow, and clogged-filter cluster.
+
+The allergy-focused buyer guide at [`../blog/best-air-filter-for-allergies.html`](../blog/best-air-filter-for-allergies.html) targets “best air filter for allergies.” Published 2026-08-21, it distinguishes particle filtration from medical outcomes and adds pollen, MERV 11 vs. 13, fit/bypass, runtime, and seasonal-loading depth. It uses fourteen matching FAQs, two delayed Finder CTAs, no direct retailer block, three reviewed images, and reciprocal links from the five strongest related guides.
 
 Update this file when: article/template components, preview behavior, publishing checklist, or current article inventory changes.

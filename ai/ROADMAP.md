@@ -49,4 +49,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Re-score when evidence, business model, dependencies, operating capacity, or risk changes.
 - A roadmap item does not authorize implementation; current user/owner scope still controls changes.
 
+- Published 2026-08-21: Best Air Filter for Allergies, covering allergy-focused MERV 11/13 selection, pollen and pet-particle context, fit/bypass, runtime, maintenance, and an explicit non-medical boundary.
+
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.
