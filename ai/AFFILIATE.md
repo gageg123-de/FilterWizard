@@ -4,6 +4,8 @@ Last verified: 2026-08-20
 
 The dust pillar has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs appear after MERV, media, depth, source, and compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size. The existing `filterwizard-20` tag, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
+The smoke buyer guide has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs follow particle-versus-gas/odor, MERV, size, fit, loading, and compatibility guidance; correctly sized retailer choices remain gated in the existing Finder. It makes no product-ranking, odor-elimination, or exposure-safety claim.
+
 The pets pillar is a high-commercial-intent guide but uses no direct retailer block. Two delayed Filter Finder CTAs preserve existing eligibility, sponsored attributes, `filterwizard-20`, and delegated click tracking.
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.

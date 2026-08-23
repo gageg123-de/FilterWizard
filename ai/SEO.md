@@ -41,4 +41,6 @@ The 2026-08-14 troubleshooting guide at `/blog/why-does-my-air-filter-move.html`
 
 The 2026-08-21 guide at `/blog/best-air-filter-for-allergies.html` targets allergy-focused particle-filtration buying intent. Its distinct information gain is pollen and airborne duration, MERV 11 vs. 13, bypass, HVAC runtime, seasonal loading, and the filtration-versus-health-outcome boundary; it should not duplicate the general MERV, dust, or pets pages.
 
+The 2026-08-23 guide at `/blog/best-air-filter-for-smoke.html` targets smoke-filter buying intent. It is distinct from the black-filter troubleshooting page and the Allergies/Dust/MERV pillars through its particle-versus-gas/odor framework, smoke-source sections, activated-carbon mechanism, wildfire infiltration, and smoke-event loading guidance.
+
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

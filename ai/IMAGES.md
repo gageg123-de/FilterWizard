@@ -70,4 +70,6 @@ The moving-filter troubleshooting guide uses three generated and visually verifi
 
 The allergy-focused buying guide uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-allergies-hero.webp`, `merv-allergy-particle-comparison.webp`, and `allergy-filter-selection-guide.webp`. The hero has no embedded text. Supporting labels, MERV numbers, workflow text, and the no-treatment boundary were checked after conversion; no graphic makes cure, perfect-capture, or universal-best claims.
 
+The smoke-focused buying guide uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-smoke-hero.webp`, `merv-smoke-particle-comparison.webp`, and `smoke-filter-selection-guide.webp`. The hero shows faint outdoor haze without indoor smoke or fire. Supporting text was checked after conversion; both graphics explicitly separate particle filtration from smoke-gas and odor control and make no safety, health, or perfect-capture claim.
+
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

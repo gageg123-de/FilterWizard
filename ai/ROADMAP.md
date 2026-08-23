@@ -30,7 +30,6 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
 | Best Air Filter for Allergies | 4 | 4 | 4 | 2 | 4 | Avoid medical promises; balance particle goals, MERV support, fit, source control, and replacement timing |
-| Best Air Filter for Smoke | 4 | 4 | 4 | 2 | 4 | Separate particle filtration from gases and odors; avoid health or universal compatibility claims |
 | MERV 8 vs MERV 11 for Dust | 4 | 4 | 4 | 2 | 3 | Narrow comparison supporting the dust pillar without repeating its media, source, and depth coverage |
 | Best Air Filter for Older HVAC Systems | 4 | 4 | 4 | 3 | 4 | Avoid age-based assumptions; require equipment guidance, fit, airflow, and compatibility boundaries |
 | MERV 8 vs MERV 11 for Pets | 4 | 4 | 4 | 2 | 3 | Compare pet-household loading and particle goals without medical or universal compatibility claims |
@@ -50,5 +49,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - A roadmap item does not authorize implementation; current user/owner scope still controls changes.
 
 - Published 2026-08-21: Best Air Filter for Allergies, covering allergy-focused MERV 11/13 selection, pollen and pet-particle context, fit/bypass, runtime, maintenance, and an explicit non-medical boundary.
+- Published 2026-08-23: Best Air Filter for Smoke, separating particles from gases and odors across wildfire, tobacco, wood, fireplace, and cooking sources, with activated-carbon, MERV, loading, fit, and compatibility guidance.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.
