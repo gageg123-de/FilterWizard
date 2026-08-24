@@ -43,4 +43,6 @@ The 2026-08-21 guide at `/blog/best-air-filter-for-allergies.html` targets aller
 
 The 2026-08-23 guide at `/blog/best-air-filter-for-smoke.html` targets smoke-filter buying intent. It is distinct from the black-filter troubleshooting page and the Allergies/Dust/MERV pillars through its particle-versus-gas/odor framework, smoke-source sections, activated-carbon mechanism, wildfire infiltration, and smoke-event loading guidance.
 
+The 2026-08-24 guide at `/blog/merv-11-vs-merv-13-for-allergies.html` targets a narrow two-option comparison and purchase decision. Its information gain over the broad Allergy pillar and three-rating MERV hub is the direct MERV 11/13 threshold comparison, pollen and pet-particle interpretation, actual-product pressure-drop nuance, one-inch-versus-deeper-media analysis, system-age misconceptions, fit/bypass, and explicit conditions favoring either rating.
+
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

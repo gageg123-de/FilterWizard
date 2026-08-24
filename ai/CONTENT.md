@@ -6,7 +6,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists twenty-three static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists twenty-six static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
@@ -103,5 +103,7 @@ The focused troubleshooting guide at [`../blog/why-does-my-air-filter-move.html`
 The allergy-focused buyer guide at [`../blog/best-air-filter-for-allergies.html`](../blog/best-air-filter-for-allergies.html) targets “best air filter for allergies.” Published 2026-08-21, it distinguishes particle filtration from medical outcomes and adds pollen, MERV 11 vs. 13, fit/bypass, runtime, and seasonal-loading depth. It uses fourteen matching FAQs, two delayed Finder CTAs, no direct retailer block, three reviewed images, and reciprocal links from the five strongest related guides.
 
 The smoke-focused buyer guide at [`../blog/best-air-filter-for-smoke.html`](../blog/best-air-filter-for-smoke.html) targets “best air filter for smoke” plus wildfire, tobacco, wood, fireplace, cooking, activated-carbon, odor, gas-phase, loading, and MERV 11/13 intent. Published 2026-08-23, its smoke-specific information gain is the separation of particle capture from gas and odor control. It uses fourteen matching FAQs, two delayed Finder CTAs, no direct retailer block, three reviewed images, authoritative EPA/ASHRAE sources, and reciprocal links from the five strongest technical and buying guides.
+
+The narrow comparison at [`../blog/merv-11-vs-merv-13-for-allergies.html`](../blog/merv-11-vs-merv-13-for-allergies.html) targets “MERV 11 vs MERV 13 for allergies.” Published 2026-08-24, it compares the ratings’ tested particle-size requirements, pollen and pet-related contexts, product-level pressure drop, one-inch versus deeper media, system-age misconceptions, fit/bypass, and loading without repeating the broader Allergy or three-rating MERV pillars. It uses fourteen matching FAQs, two delayed Finder CTAs, no direct retailer block, three reviewed images, Article/FAQ/Breadcrumb schema, and reciprocal links from the Allergy, MERV, restriction, and thickness guides.
 
 Update this file when: article/template components, preview behavior, publishing checklist, or current article inventory changes.

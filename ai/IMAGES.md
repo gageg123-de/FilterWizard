@@ -72,4 +72,6 @@ The allergy-focused buying guide uses three generated and visually verified 1200
 
 The smoke-focused buying guide uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-smoke-hero.webp`, `merv-smoke-particle-comparison.webp`, and `smoke-filter-selection-guide.webp`. The hero shows faint outdoor haze without indoor smoke or fire. Supporting text was checked after conversion; both graphics explicitly separate particle filtration from smoke-gas and odor control and make no safety, health, or perfect-capture claim.
 
+The MERV 11-versus-13 allergy comparison uses three generated and visually verified 1200×800 WebPs: `merv-11-vs-13-allergies-hero.webp`, `merv-11-vs-13-particle-comparison.webp`, and `choose-merv-11-or-13.webp`. A first comparison draft was rejected because it treated MERV 13 resistance as categorically higher; the production graphic instead states that resistance varies by design for both ratings. All embedded labels were checked after WebP conversion, and no image makes a medical or universal-winner claim.
+
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

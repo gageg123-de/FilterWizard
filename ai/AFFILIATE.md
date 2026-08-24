@@ -6,6 +6,8 @@ The dust pillar has high commercial-investigation intent but no direct retailer 
 
 The smoke buyer guide has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs follow particle-versus-gas/odor, MERV, size, fit, loading, and compatibility guidance; correctly sized retailer choices remain gated in the existing Finder. It makes no product-ranking, odor-elimination, or exposure-safety claim.
 
+The MERV 11-versus-13 allergy comparison has high purchase-decision intent but no direct retailer block. Its two delayed Filter Finder CTAs follow particle thresholds, product resistance, depth, fit, loading, and compatibility guidance; retailer options remain gated behind a confirmed three-dimensional size. It makes no medical, universal-MERV-13, or product-ranking claim.
+
 The pets pillar is a high-commercial-intent guide but uses no direct retailer block. Two delayed Filter Finder CTAs preserve existing eligibility, sponsored attributes, `filterwizard-20`, and delegated click tracking.
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.
