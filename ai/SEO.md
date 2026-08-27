@@ -1,6 +1,6 @@
 # SEO
 
-Last verified: 2026-08-20
+Last verified: 2026-08-27
 
 The production dust pillar `/blog/best-air-filter-for-dust.html` targets “best air filter for dust” and the related HVAC/furnace-filter, dusty-house, MERV 8/11/13, media-type, depth, airflow, and replacement cluster. It links to the pets pillar and technical hubs; future dust comparisons should serve narrower intent instead of repeating its broad buying guide.
 
@@ -9,7 +9,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, twenty-three articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, twenty-eight articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.
@@ -46,5 +46,7 @@ The 2026-08-23 guide at `/blog/best-air-filter-for-smoke.html` targets smoke-fil
 The 2026-08-24 guide at `/blog/merv-11-vs-merv-13-for-allergies.html` targets a narrow two-option comparison and purchase decision. Its information gain over the broad Allergy pillar and three-rating MERV hub is the direct MERV 11/13 threshold comparison, pollen and pet-particle interpretation, actual-product pressure-drop nuance, one-inch-versus-deeper-media analysis, system-age misconceptions, fit/bypass, and explicit conditions favoring either rating.
 
 The 2026-08-26 guide at `/blog/how-tight-should-an-air-filter-fit.html` targets fit-diagnosis and sizing-to-purchase intent. It is distinct from the general size guide and movement, bending, whistling, and uneven-loading pages through its correct-fit criteria, too-loose versus too-tight comparison, non-universal clearance guidance, nominal-versus-actual brand variation, old-filter-versus-slot measurement logic, and no-standard-size path.
+
+The 2026-08-27 guide at `/blog/can-i-use-a-slightly-different-size-air-filter.html` targets a known-size substitution decision rather than size discovery or general fit diagnosis. Its information gain is the same-nominal versus different-nominal distinction, smaller and larger substitution consequences, temporary and unavailable-size paths, manufacturer-documented alternatives, and explicit rejection of trimming, folding, crushing, stacking, taping, and improvised spacers.
 
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

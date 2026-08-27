@@ -1,6 +1,6 @@
 # Analytics
 
-Last verified: 2026-08-20
+Last verified: 2026-08-27
 
 The dust buying pillar reuses the shared article event path for page view, scroll depth, share clicks, two Filter Finder CTA clicks, Formspree interaction, and downstream size-gated retailer clicks. It adds no analytics scripts or listeners and sends no new parameters.
 
@@ -69,5 +69,7 @@ The filter-thickness buyer guide uses the same shared article listeners for page
 The fiberglass-versus-pleated guide uses the same shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-fiberglass-vs-pleated-air-filters`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
 The air-filter-fit guide uses the shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-how-tight-should-an-air-filter-fit`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
+
+The air-filter-size substitution guide uses the shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-can-i-use-a-slightly-different-size-air-filter`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.

@@ -1,6 +1,6 @@
 # Images
 
-Last verified: 2026-08-20
+Last verified: 2026-08-27
 
 The dust buying pillar uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-dust-hero.webp` (71,784 bytes), `merv-for-dusty-homes.webp` (63,526 bytes), and `choose-air-filter-for-dust.webp` (71,352 bytes). The hero shows light realistic shelf dust without brands or an exaggerated cloud. The MERV graphic uses the reviewed 8/11/13 conditional labels. An initial decision graphic was rejected because it added an unrequested MERV 14–16 range; the final asset contains only size, compatible-MERV, dusty-condition inspection, and the explicit filtration-limit note.
 
@@ -75,5 +75,7 @@ The smoke-focused buying guide uses three generated and visually verified 1200×
 The MERV 11-versus-13 allergy comparison uses three generated and visually verified 1200×800 WebPs: `merv-11-vs-13-allergies-hero.webp`, `merv-11-vs-13-particle-comparison.webp`, and `choose-merv-11-or-13.webp`. A first comparison draft was rejected because it treated MERV 13 resistance as categorically higher; the production graphic instead states that resistance varies by design for both ratings. All embedded labels were checked after WebP conversion, and no image makes a medical or universal-winner claim.
 
 The air-filter-fit guide uses three generated and visually verified 1200×800 WebPs: `how-tight-air-filter-fit-hero.webp` (36,766 bytes), `air-filter-fit-comparison.webp` (91,088 bytes), and `nominal-vs-actual-filter-size.webp` (58,680 bytes). The hero shows a square, unforced installation. The fit comparison uses exactly Too Loose, Correct, and Too Tight without a numerical tolerance. The nominal-versus-actual graphic uses an illustrative nominal label and explicitly states that actual dimensions vary by manufacturer and model; it makes no precise universal measurement claim.
+
+The air-filter-size substitution guide uses three generated and visually verified 1200×800 WebPs: `slightly-different-air-filter-size-hero.webp` (62,106 bytes), `air-filter-size-substitution-guide.webp` (69,928 bytes), and `air-filter-size-unavailable-guide.webp` (63,908 bytes). A first hero draft was rejected because it exposed internal equipment components; the production hero uses an accessible return grille with sealed equipment in the background. The first substitution infographic was also rejected because it omitted the required “Compare Fit” cue. Both production infographics use exact reviewed labels, distinguish same-nominal brand comparison from different-nominal substitution, and avoid numerical tolerances or claims that nearby nominal sizes are interchangeable.
 
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

@@ -1,6 +1,6 @@
 # Affiliate Integration
 
-Last verified: 2026-08-20
+Last verified: 2026-08-27
 
 The dust pillar has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs appear after MERV, media, depth, source, and compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size. The existing `filterwizard-20` tag, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
@@ -56,5 +56,7 @@ The filter-restriction pillar has moderately high commercial intent and no direc
 The filter-thickness buyer guide has high commercial-investigation intent but no direct retailer destinations. Its two CTAs appear only after depth, fit, MERV, and cabinet-compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. It does not imply that purchasing a deeper filter upgrades a system. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
 The fiberglass-versus-pleated guide has high commercial-investigation intent but no direct retailer destinations. Its two CTAs follow construction, filtration, airflow, MERV, thickness, and compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. It does not frame pleated media as an automatic upgrade. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
+
+The size-substitution guide has high sizing-to-purchase intent but no direct retailer destinations. Its two CTAs follow confirmation of the intended nominal length, width, and thickness; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. It does not recommend a nearby nominal size to create a retailer click. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
 Update this file when: Store ID, retailers, URL generation, disclosures, link attributes, product rules, or tracking changes.
