@@ -8,6 +8,8 @@ The smoke buyer guide has high commercial-investigation intent but no direct ret
 
 The MERV 11-versus-13 allergy comparison has high purchase-decision intent but no direct retailer block. Its two delayed Filter Finder CTAs follow particle thresholds, product resistance, depth, fit, loading, and compatibility guidance; retailer options remain gated behind a confirmed three-dimensional size. It makes no medical, universal-MERV-13, or product-ranking claim.
 
+The air-filter-fit guide has strong sizing-to-purchase intent but no direct retailer block. Its two delayed Filter Finder CTAs follow nominal-versus-actual sizing, loose/tight diagnosis, measurement, and fit confirmation; retailer options remain gated behind a valid confirmed three-dimensional size. It preserves the `filterwizard-20` path and makes no mismatched-size recommendation.
+
 The pets pillar is a high-commercial-intent guide but uses no direct retailer block. Two delayed Filter Finder CTAs preserve existing eligibility, sponsored attributes, `filterwizard-20`, and delegated click tracking.
 
 Amazon Associates Store ID `filterwizard-20` is defined as `amazonAffiliateTag` in [`../assets/js/script.js`](../assets/js/script.js). Do not change or remove it without owner authorization.

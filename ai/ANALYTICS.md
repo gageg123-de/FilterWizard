@@ -68,4 +68,6 @@ The filter-thickness buyer guide uses the same shared article listeners for page
 
 The fiberglass-versus-pleated guide uses the same shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-fiberglass-vs-pleated-air-filters`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
 
+The air-filter-fit guide uses the shared article listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling with source `blog-how-tight-should-an-air-filter-fit`. It adds no page-specific listener, raw personal data, direct retailer link, or duplicate analytics script.
+
 Update this file when: IDs, initialization, consent gating, event names/parameters, or external verification changes.

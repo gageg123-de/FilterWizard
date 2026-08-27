@@ -74,4 +74,6 @@ The smoke-focused buying guide uses three generated and visually verified 1200×
 
 The MERV 11-versus-13 allergy comparison uses three generated and visually verified 1200×800 WebPs: `merv-11-vs-13-allergies-hero.webp`, `merv-11-vs-13-particle-comparison.webp`, and `choose-merv-11-or-13.webp`. A first comparison draft was rejected because it treated MERV 13 resistance as categorically higher; the production graphic instead states that resistance varies by design for both ratings. All embedded labels were checked after WebP conversion, and no image makes a medical or universal-winner claim.
 
+The air-filter-fit guide uses three generated and visually verified 1200×800 WebPs: `how-tight-air-filter-fit-hero.webp` (36,766 bytes), `air-filter-fit-comparison.webp` (91,088 bytes), and `nominal-vs-actual-filter-size.webp` (58,680 bytes). The hero shows a square, unforced installation. The fit comparison uses exactly Too Loose, Correct, and Too Tight without a numerical tolerance. The nominal-versus-actual graphic uses an illustrative nominal label and explicitly states that actual dimensions vary by manufacturer and model; it makes no precise universal measurement claim.
+
 Update this file when: directories, formats, dimensions, responsive conventions, preview behavior, or production assets change.

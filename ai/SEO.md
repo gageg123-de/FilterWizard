@@ -45,4 +45,6 @@ The 2026-08-23 guide at `/blog/best-air-filter-for-smoke.html` targets smoke-fil
 
 The 2026-08-24 guide at `/blog/merv-11-vs-merv-13-for-allergies.html` targets a narrow two-option comparison and purchase decision. Its information gain over the broad Allergy pillar and three-rating MERV hub is the direct MERV 11/13 threshold comparison, pollen and pet-particle interpretation, actual-product pressure-drop nuance, one-inch-versus-deeper-media analysis, system-age misconceptions, fit/bypass, and explicit conditions favoring either rating.
 
+The 2026-08-26 guide at `/blog/how-tight-should-an-air-filter-fit.html` targets fit-diagnosis and sizing-to-purchase intent. It is distinct from the general size guide and movement, bending, whistling, and uneven-loading pages through its correct-fit criteria, too-loose versus too-tight comparison, non-universal clearance guidance, nominal-versus-actual brand variation, old-filter-versus-slot measurement logic, and no-standard-size path.
+
 Update this file when: URLs, metadata patterns, schema, sitemap/robots behavior, redirects, internal linking, or page types change.

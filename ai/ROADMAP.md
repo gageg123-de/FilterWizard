@@ -6,7 +6,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty-three articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; twenty-seven articles; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -51,5 +51,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Published 2026-08-21: Best Air Filter for Allergies, covering allergy-focused MERV 11/13 selection, pollen and pet-particle context, fit/bypass, runtime, maintenance, and an explicit non-medical boundary.
 - Published 2026-08-23: Best Air Filter for Smoke, separating particles from gases and odors across wildfire, tobacco, wood, fireplace, and cooking sources, with activated-carbon, MERV, loading, fit, and compatibility guidance.
 - Published 2026-08-24: MERV 11 vs MERV 13 for Allergies, a narrow comparison covering tested particle ranges, pollen and pet-related material, product resistance, filter depth, fit/bypass, loading, and compatibility without medical claims.
+- Published 2026-08-26: How Tight Should an Air Filter Fit, a fit-diagnosis guide covering correct seating, loose and tight symptoms, nominal-versus-actual dimensions, brand variation, bypass, physical binding, and measurement when the existing filter is wrong or missing.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.
