@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-08-27
+Last verified: 2026-08-28
+
+The dirty-filter cooling guide reuses shared article page-view, scroll-depth, share, Filter Finder CTA, Formspree interaction, and delegated retailer-click behavior. Its article slug and email source are `can-dirty-air-filter-cause-ac-not-to-cool` and `blog-can-dirty-air-filter-cause-ac-not-to-cool`; no listener or analytics script was added.
 
 The dust buying pillar reuses the shared article event path for page view, scroll depth, share clicks, two Filter Finder CTA clicks, Formspree interaction, and downstream size-gated retailer clicks. It adds no analytics scripts or listeners and sends no new parameters.
 

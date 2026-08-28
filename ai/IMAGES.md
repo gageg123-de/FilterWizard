@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-08-27
+Last verified: 2026-08-28
+
+The dirty-filter cooling guide uses three generated and visually reviewed 1200×800 WebPs: `dirty-air-filter-ac-not-cooling-hero.webp`, `dirty-filter-reduced-ac-airflow.webp`, and `ac-not-cooling-filter-check-guide.webp`. The hero shows safe return-grille access with sealed equipment; the graphics state that filter restriction is one possible cause and present icing conditionally. All embedded labels were reviewed after WebP conversion.
 
 The dust buying pillar uses three generated and visually verified 1200×800 WebPs: `best-air-filter-for-dust-hero.webp` (71,784 bytes), `merv-for-dusty-homes.webp` (63,526 bytes), and `choose-air-filter-for-dust.webp` (71,352 bytes). The hero shows light realistic shelf dust without brands or an exaggerated cloud. The MERV graphic uses the reviewed 8/11/13 conditional labels. An initial decision graphic was rejected because it added an unrequested MERV 14–16 range; the final asset contains only size, compatible-MERV, dusty-condition inspection, and the explicit filtration-limit note.
 

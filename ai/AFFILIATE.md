@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-08-27
+Last verified: 2026-08-28
+
+The dirty-filter cooling guide has troubleshooting intent and no direct retailer block. Its two delayed Filter Finder CTAs follow safe filter diagnosis and size confirmation; retailer choices remain gated behind a valid three-dimensional size. It does not claim that buying a filter will solve an undiagnosed cooling failure, and the `filterwizard-20` path is unchanged.
 
 The dust pillar has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs appear after MERV, media, depth, source, and compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size. The existing `filterwizard-20` tag, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 

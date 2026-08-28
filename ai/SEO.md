@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-08-27
+Last verified: 2026-08-28
+
+The 2026-08-28 guide `/blog/can-dirty-air-filter-cause-ac-not-to-cool.html` targets “can a dirty air filter cause AC not to cool” and the narrow intent “AC running but not cooling: is the filter responsible?” Owner-provided three-month GSC evidence (about 2,212 impressions, 17 clicks, and 0.77% CTR sitewide) plus small early impressions for AC-not-cooling variants informed prioritization without being treated as proof of search volume. The page is deliberately separate from frozen-coil, general clogged-filter, restriction, and energy-bill intent.
 
 The production dust pillar `/blog/best-air-filter-for-dust.html` targets “best air filter for dust” and the related HVAC/furnace-filter, dusty-house, MERV 8/11/13, media-type, depth, airflow, and replacement cluster. It links to the pets pillar and technical hubs; future dust comparisons should serve narrower intent instead of repeating its broad buying guide.
 
