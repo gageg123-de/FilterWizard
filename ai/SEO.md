@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-08-28
+Last verified: 2026-08-30
+
+The 2026-08-30 guide `/blog/why-does-my-new-air-filter-smell.html` targets “why does my new air filter smell” and the narrow troubleshooting intent “odor began after replacement: is the filter itself responsible?” It is distinct from wet-filter moisture, black-filter discoloration, fast debris loading, smoke-filter selection, reusable-filter maintenance, and generic HVAC-odor diagnosis. The topic fits the established specific-symptom strategy without claiming Search Console volume for this individual query.
 
 The 2026-08-28 guide `/blog/can-dirty-air-filter-cause-ac-not-to-cool.html` targets “can a dirty air filter cause AC not to cool” and the narrow intent “AC running but not cooling: is the filter responsible?” Owner-provided three-month GSC evidence (about 2,212 impressions, 17 clicks, and 0.77% CTR sitewide) plus small early impressions for AC-not-cooling variants informed prioritization without being treated as proof of search volume. The page is deliberately separate from frozen-coil, general clogged-filter, restriction, and energy-bill intent.
 
@@ -11,7 +13,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, twenty-eight articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, thirty articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

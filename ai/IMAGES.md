@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-08-28
+Last verified: 2026-08-30
+
+The new-filter odor guide uses three generated and visually reviewed 1200×800 WebPs: `new-air-filter-smell-hero.webp` (85,032 bytes), `new-air-filter-odor-source-guide.webp` (63,212 bytes), and `air-filter-smell-normal-vs-concerning.webp` (77,716 bytes). The hero shows safe return-grille inspection with no exposed equipment. Both graphics were checked after conversion for exact readable labels, conditional language, and the absence of mold, toxicity, or electrical-failure claims. The hero is eager/high-priority; supporting images are lazy-loaded.
 
 The dirty-filter cooling guide uses three generated and visually reviewed 1200×800 WebPs: `dirty-air-filter-ac-not-cooling-hero.webp`, `dirty-filter-reduced-ac-airflow.webp`, and `ac-not-cooling-filter-check-guide.webp`. The hero shows safe return-grille access with sealed equipment; the graphics state that filter restriction is one possible cause and present icing conditionally. All embedded labels were reviewed after WebP conversion.
 

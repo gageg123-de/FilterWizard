@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-08-28
+Last verified: 2026-08-30
+
+The troubleshooting guide at [`../blog/why-does-my-new-air-filter-smell.html`](../blog/why-does-my-new-air-filter-smell.html) targets “why does my new air filter smell” and the narrow intent of determining whether odor after a replacement comes from the filter, its packaging/storage, moisture, smoke, or another HVAC-area source. Published 2026-08-30, its 2,600 substantive article words and 16-minute estimate use one comparison table, two decision graphics, 14 visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-why-does-my-new-air-filter-smell`, six Related Articles, and no direct retailer block. It passed duplicate preflight because wet-filter, black-filter, fast-loading, smoke-selection, and filter-reuse pages do not own odor appearing immediately after a new filter is installed. One reciprocal link from the wet-filter guide connects the moisture boundary without broad HVAC-odor drift.
 
 The troubleshooting guide at [`../blog/can-dirty-air-filter-cause-ac-not-to-cool.html`](../blog/can-dirty-air-filter-cause-ac-not-to-cool.html) targets “can a dirty air filter cause AC not to cool” and related AC-running-but-not-cooling, weak-airflow, clogged-filter, and replacement-intent queries. Published 2026-08-28 in response to owner-provided three-month Search Console evidence showing early traction for specific filter and HVAC-symptom searches, it keeps low-volume query impressions as a directional signal rather than a volume claim. The page owns dirty-filter-related poor cooling, while the freeze guide retains evaporator-icing intent, the clogged guide retains general symptoms, the restriction guide retains pressure-drop compatibility, and the energy guide retains cost/runtime intent. It uses 14 matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-can-dirty-air-filter-cause-ac-not-to-cool`, six Related Articles, and no direct retailer block.
 
@@ -8,7 +10,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists twenty-nine static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-08-28
+Last verified: 2026-08-30
+
+The new-filter odor guide reuses shared article page-view, scroll-depth, share, two Filter Finder CTA, Formspree interaction, and delegated downstream retailer-click behavior. Its article slug and email source are `why-does-my-new-air-filter-smell` and `blog-why-does-my-new-air-filter-smell`; no analytics script or listener was added.
 
 The dirty-filter cooling guide reuses shared article page-view, scroll-depth, share, Filter Finder CTA, Formspree interaction, and delegated retailer-click behavior. Its article slug and email source are `can-dirty-air-filter-cause-ac-not-to-cool` and `blog-can-dirty-air-filter-cause-ac-not-to-cool`; no listener or analytics script was added.
 

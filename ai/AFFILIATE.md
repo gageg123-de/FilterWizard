@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-08-28
+Last verified: 2026-08-30
+
+The new-filter odor guide has troubleshooting intent and no direct retailer block. Its two delayed Filter Finder CTAs appear only after the reader establishes that replacement may be warranted and confirms size; it does not imply that buying a filter resolves an unidentified HVAC odor. Existing size gating, sponsored attributes, delegated click tracking, disclosure, and `filterwizard-20` remain unchanged.
 
 The dirty-filter cooling guide has troubleshooting intent and no direct retailer block. Its two delayed Filter Finder CTAs follow safe filter diagnosis and size confirmation; retailer choices remain gated behind a valid three-dimensional size. It does not claim that buying a filter will solve an undiagnosed cooling failure, and the `filterwizard-20` path is unchanged.
 
