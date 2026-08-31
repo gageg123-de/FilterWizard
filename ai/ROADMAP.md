@@ -1,12 +1,12 @@
 # Roadmap
 
-Last verified: 2026-08-30
+Last verified: 2026-08-31
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty articles, including the distinct new-filter odor troubleshooting guide published 2026-08-30; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-one articles, including the distinct dust-around-supply-vents troubleshooting guide published 2026-08-31; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -54,5 +54,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Published 2026-08-26: How Tight Should an Air Filter Fit, a fit-diagnosis guide covering correct seating, loose and tight symptoms, nominal-versus-actual dimensions, brand variation, bypass, physical binding, and measurement when the existing filter is wrong or missing.
 - Published 2026-08-27: Can I Use a Slightly Different Size Air Filter, a narrow substitution guide covering same-nominal brand variation, different-nominal smaller and larger replacements, temporary and unavailable-size decisions, documented alternatives, and prohibited improvised workarounds.
 - Published 2026-08-28: Can a Dirty Air Filter Cause Your AC Not to Cool, a narrow troubleshooting guide connecting severe filter loading to reduced airflow and poor cooling while keeping icing, restriction, clogged-filter symptoms, energy use, and non-filter failures distinct.
+- Published 2026-08-31: Why Is There Dust Around My Air Vents, a narrow supply-register troubleshooting guide distinguishing room-air deposition from missing/damaged filters, fit, bypass, and conditions warranting further HVAC evaluation without treating surface dust as proof of duct contamination.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.

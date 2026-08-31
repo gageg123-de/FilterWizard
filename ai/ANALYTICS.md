@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-08-30
+Last verified: 2026-08-31
+
+The dust-around-vents guide reuses shared article page-view, scroll-depth, share, two Filter Finder CTA, Formspree interaction, and delegated downstream retailer-click behavior. Its article slug and email source are `dust-around-air-vents-filter-problem` and `blog-dust-around-air-vents-filter-problem`; no analytics script or listener was added.
 
 The new-filter odor guide reuses shared article page-view, scroll-depth, share, two Filter Finder CTA, Formspree interaction, and delegated downstream retailer-click behavior. Its article slug and email source are `why-does-my-new-air-filter-smell` and `blog-why-does-my-new-air-filter-smell`; no analytics script or listener was added.
 

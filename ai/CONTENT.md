@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-08-30
+Last verified: 2026-08-31
+
+The troubleshooting guide at [`../blog/dust-around-air-vents-filter-problem.html`](../blog/dust-around-air-vents-filter-problem.html) targets “dust around air vents” and the narrow intent of deciding whether visible buildup around supply registers reflects room-air deposition, filter absence/damage, poor fit, bypass, or another HVAC source. Published 2026-08-31, its 2,597 substantive article words and 16-minute estimate use one nine-row comparison table, two decision graphics, 14 visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-dust-around-air-vents-filter-problem`, six Related Articles, and no direct retailer block. It passed duplicate preflight because the dust pillar owns product selection, the fit guide owns physical seating, and the loading/restriction guides do not own dust visible at supply vents. Reciprocal links from the dust pillar and fit guide connect those boundaries.
 
 The troubleshooting guide at [`../blog/why-does-my-new-air-filter-smell.html`](../blog/why-does-my-new-air-filter-smell.html) targets “why does my new air filter smell” and the narrow intent of determining whether odor after a replacement comes from the filter, its packaging/storage, moisture, smoke, or another HVAC-area source. Published 2026-08-30, its 2,600 substantive article words and 16-minute estimate use one comparison table, two decision graphics, 14 visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-why-does-my-new-air-filter-smell`, six Related Articles, and no direct retailer block. It passed duplicate preflight because wet-filter, black-filter, fast-loading, smoke-selection, and filter-reuse pages do not own odor appearing immediately after a new filter is installed. One reciprocal link from the wet-filter guide connects the moisture boundary without broad HVAC-odor drift.
 
@@ -10,7 +12,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-one static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
