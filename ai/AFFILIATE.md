@@ -2,6 +2,8 @@
 
 Last verified: 2026-08-31
 
+The brown-filter guide has troubleshooting intent and no direct retailer block. Its two delayed Finder CTAs appear only after condition, moisture, loading, fit, and replacement guidance; it does not imply that buying a filter identifies or corrects an unknown contaminant source. Existing size gating, disclosure, sponsored attributes, delegated click tracking, and `filterwizard-20` remain unchanged.
+
 The dust-around-vents guide has troubleshooting intent and no direct retailer block. Its two delayed Finder CTAs follow filter-condition, fit, bypass, and duct-cleaning boundaries; it does not imply that buying a filter resolves an unidentified register or duct condition. Existing size gating, disclosure, sponsored attributes, delegated click tracking, and `filterwizard-20` remain unchanged.
 
 The new-filter odor guide has troubleshooting intent and no direct retailer block. Its two delayed Filter Finder CTAs appear only after the reader establishes that replacement may be warranted and confirms size; it does not imply that buying a filter resolves an unidentified HVAC odor. Existing size gating, sponsored attributes, delegated click tracking, disclosure, and `filterwizard-20` remain unchanged.

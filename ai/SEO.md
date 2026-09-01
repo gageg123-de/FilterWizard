@@ -2,6 +2,8 @@
 
 Last verified: 2026-08-31
 
+The 2026-08-31 guide `/blog/why-is-my-air-filter-brown.html` targets “why is my air filter brown” and the specific visual-troubleshooting intent “does tan/brown filter discoloration represent ordinary dry loading or something that needs investigation?” It uses timing, uniform-versus-patchy pattern, moisture, texture, and recent dust/smoke/construction context while leaving black discoloration, rapid loading, wet filters, uneven loading, and dust/smoke product selection to their established pages. The topic passed semantic duplicate preflight across 31 existing articles before publication.
+
 The 2026-08-31 guide `/blog/dust-around-air-vents-filter-problem.html` targets “dust around air vents” and the specific diagnostic intent “does visible dust at supply registers mean the filter or bypass is responsible?” It separates room-air deposition, one-vent versus many-vent patterns, filter fit, and recurrent visible discharge without becoming a dust-filter buying guide or duct-cleaning page.
 
 The 2026-08-30 guide `/blog/why-does-my-new-air-filter-smell.html` targets “why does my new air filter smell” and the narrow troubleshooting intent “odor began after replacement: is the filter itself responsible?” It is distinct from wet-filter moisture, black-filter discoloration, fast debris loading, smoke-filter selection, reusable-filter maintenance, and generic HVAC-odor diagnosis. The topic fits the established specific-symptom strategy without claiming Search Console volume for this individual query.

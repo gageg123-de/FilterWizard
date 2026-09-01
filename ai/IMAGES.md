@@ -2,6 +2,8 @@
 
 Last verified: 2026-08-31
 
+The brown-filter guide uses three generated and visually reviewed 1200×800 WebPs: `brown-air-filter-hero.webp` (87,124 bytes), `brown-air-filter-pattern-guide.webp` (139,082 bytes), and `brown-air-filter-decision-guide.webp` (74,014 bytes). The hero shows realistic dry tan loading without mold, moisture, branding, or unsafe access. Both graphics were checked after conversion for exact readable labels and the footer guardrails that color alone cannot identify a contaminant or diagnose mold, rust, or smoke. The hero is eager/high-priority; both supporting graphics are lazy-loaded.
+
 The dust-around-vents guide uses three generated and visually reviewed 1200×800 WebPs: `dust-around-air-vents-hero.webp` (50,182 bytes), `air-filter-bypass-dust-diagram.webp` (76,574 bytes), and `dust-around-vents-filter-check-guide.webp` (61,686 bytes). The hero shows realistic light register-edge buildup without mold or unsafe access. Both graphics were checked after conversion for exact readable labels, conditional bypass language, and the absence of percentages, tolerances, or automatic diagnoses. The hero is eager/high-priority; supporting graphics are lazy-loaded.
 
 The new-filter odor guide uses three generated and visually reviewed 1200×800 WebPs: `new-air-filter-smell-hero.webp` (85,032 bytes), `new-air-filter-odor-source-guide.webp` (63,212 bytes), and `air-filter-smell-normal-vs-concerning.webp` (77,716 bytes). The hero shows safe return-grille inspection with no exposed equipment. Both graphics were checked after conversion for exact readable labels, conditional language, and the absence of mold, toxicity, or electrical-failure claims. The hero is eager/high-priority; supporting images are lazy-loaded.

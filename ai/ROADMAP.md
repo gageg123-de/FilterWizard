@@ -6,7 +6,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-one articles, including the distinct dust-around-supply-vents troubleshooting guide published 2026-08-31; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-two articles, including the distinct brown-filter discoloration guide published 2026-08-31; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -55,5 +55,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Published 2026-08-27: Can I Use a Slightly Different Size Air Filter, a narrow substitution guide covering same-nominal brand variation, different-nominal smaller and larger replacements, temporary and unavailable-size decisions, documented alternatives, and prohibited improvised workarounds.
 - Published 2026-08-28: Can a Dirty Air Filter Cause Your AC Not to Cool, a narrow troubleshooting guide connecting severe filter loading to reduced airflow and poor cooling while keeping icing, restriction, clogged-filter symptoms, energy use, and non-filter failures distinct.
 - Published 2026-08-31: Why Is There Dust Around My Air Vents, a narrow supply-register troubleshooting guide distinguishing room-air deposition from missing/damaged filters, fit, bypass, and conditions warranting further HVAC evaluation without treating surface dust as proof of duct contamination.
+- Published 2026-08-31: Why Is My Air Filter Turning Brown, a narrow visual-troubleshooting guide using timing, pattern, dryness, texture, and environmental context to separate plausible ordinary loading from conditions worth investigating without identifying contaminants by color.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.
