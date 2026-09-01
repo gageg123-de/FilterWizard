@@ -2,6 +2,8 @@
 
 Last verified: 2026-09-01
 
+The 2026-09-01 controlled size-page batch adds self-canonical `/filter-sizes/16x20x1.html`, `/filter-sizes/14x20x1.html` and `/filter-sizes/14x25x1.html`. Each has unique title, description, social metadata, WebPage/FAQ/Breadcrumb schema and size-specific confusion guidance. The selection used Search Console’s directional 20x25x1 signal without claiming performance for the new URLs; 16x24x1, 18x20x1, 18x24x1, 20x24x1 and 24x24x1 remain uncreated candidates.
+
 ## Search-result CTR pass — 2026-09-01
 
 An owner-provided Google Search Console last-7-days export was used as directional evidence for a surgical metadata audit. It showed `/blog/filters-in-every-return-vent.html` at 127 impressions, 1 click, 0.79% CTR, and position 8.67; `/blog/why-is-my-air-filter-bending.html` at 75 impressions, 2 clicks, 2.67% CTR, and position 8.44; `/blog/dirty-air-filter-cause-ac-freeze.html` at 31 impressions, 0 clicks, and position 9.45; `/blog/how-to-find-your-air-filter-size.html` at 17 impressions, 0 clicks, and position 9.47; and `/filter-sizes/20x25x1.html` at 11 impressions, 0 clicks, and position 8. Search Console may rewrite snippets and needs additional impressions and time before this implementation can be evaluated; no CTR improvement is claimed yet.
@@ -31,12 +33,12 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, thirty-one articles, the 20x25x1, 16x25x1, and 20x20x1 filter-size pilots, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, published articles, six filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.
 - Blog pages link to the Finder and related articles; homepage and blog index use text-only previews.
-- All three size-page pilots use self-canonical WebPage, matching FAQPage and two-level BreadcrumbList schema. No `/filter-sizes/` index URL exists.
+- All six size pages use self-canonical WebPage, matching FAQPage and two-level BreadcrumbList schema. No `/filter-sizes/` index URL exists.
 
 ## Rules
 

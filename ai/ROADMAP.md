@@ -1,12 +1,12 @@
 # Roadmap
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-two articles, including the distinct brown-filter discoloration guide published 2026-08-31; three hand-authored size-page pilots; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-two articles; six hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -14,7 +14,7 @@ Static custom-domain site; four-step Finder; known/unknown size safety; validati
 |---|---:|---:|---:|---:|---:|---|
 | Validate live analytics/affiliate funnel | 5 | 5 | 2 | 2 | 2 | Dashboard access and event QA |
 | Publish additional intent-led articles | 4 | 3 | 5 | 2 | 2 | Search intent, editorial/image QA, maintenance owner |
-| Evaluate all three size-page pilots before a small batch | 4 | 4 | 5 | 2 | 3 | Indexation, differentiation, engagement, safety and maintenance evidence |
+| Evaluate the six-page size set before another batch | 4 | 4 | 5 | 2 | 3 | Indexation, differentiation, engagement, safety and maintenance evidence |
 | Improve internal linking/content audits | 3 | 3 | 4 | 2 | 2 | Search/index data and content inventory |
 | Email replacement reminders | 5 | 4 | 1 | 4 | 4 | Demand evidence, provider, consent/legal, operations |
 

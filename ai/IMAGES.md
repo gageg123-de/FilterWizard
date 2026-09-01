@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
+
+The 16x20x1, 14x20x1 and 14x25x1 size pages intentionally reuse the existing 1200×800 `how-to-measure-air-filter.webp` instructional figure and social image, matching the image-light pilot convention. Page-specific alt text and captions describe the applicable measurement problem without asserting a universal actual dimension. No new image asset or derivative was needed.
 
 The brown-filter guide uses three generated and visually reviewed 1200×800 WebPs: `brown-air-filter-hero.webp` (87,124 bytes), `brown-air-filter-pattern-guide.webp` (139,082 bytes), and `brown-air-filter-decision-guide.webp` (74,014 bytes). The hero shows realistic dry tan loading without mold, moisture, branding, or unsafe access. Both graphics were checked after conversion for exact readable labels and the footer guardrails that color alone cannot identify a contaminant or diagnose mold, rust, or smoke. The hero is eager/high-priority; both supporting graphics are lazy-loaded.
 

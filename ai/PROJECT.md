@@ -1,6 +1,6 @@
 # Project
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
 
 ## Mission and audience
 
@@ -18,7 +18,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 - Amazon, Home Depot, Lowe's, and Filterbuy search options after size confirmation.
 - Amazon Associates Store ID `filterwizard-20`.
 - Thirty-two blog articles, a blog index, homepage guide previews, legal pages, email-interest capture, GA4, Clarity, and consent controls.
-- Three production filter-size guides: [`../filter-sizes/20x25x1.html`](../filter-sizes/20x25x1.html), [`../filter-sizes/16x25x1.html`](../filter-sizes/16x25x1.html), and [`../filter-sizes/20x20x1.html`](../filter-sizes/20x20x1.html).
+- Six production filter-size guides: 20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1 and 14x25x1 under [`../filter-sizes/`](../filter-sizes/).
 
 ## Business and acquisition
 
@@ -29,7 +29,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 ## Status boundaries
 
 - Implemented: features listed above.
-- Implemented controlled pilot set: unique 20x25x1, 16x25x1, and 20x20x1 landing pages. Additional pages remain proposed and require explicit scope plus evidence from the three-page set.
+- Implemented controlled six-page set: the three original pilots plus differentiated 16x20x1, 14x20x1 and 14x25x1 landing pages. Additional pages remain proposed and require explicit scope plus evidence from the current set.
 - Experimental: reminders, saved/multi-filter profiles, history, photo assistance, model lookup, property-manager tools.
 - Deprecated: subscription/founding-member fake-door positioning and direct checkout. Do not revive without a product decision.
 - Not implemented: accounts, payments, inventory, fulfillment, backend, database, formal analytics dashboard, Cloudflare Workers/Pages code.

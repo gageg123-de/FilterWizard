@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
+
+The 16x20x1, 14x20x1 and 14x25x1 pages extend the existing explicit size-intent retailer pattern without changing affiliate architecture. Each warns readers to confirm fit, provides Amazon/Home Depot/Lowe's searches plus a Filterbuy nominal-size path, preserves `filterwizard-20`, sponsored/new-tab attributes, disclosure and delegated click tracking, and contains no price or personalized compatibility claim.
 
 The brown-filter guide has troubleshooting intent and no direct retailer block. Its two delayed Finder CTAs appear only after condition, moisture, loading, fit, and replacement guidance; it does not imply that buying a filter identifies or corrects an unknown contaminant source. Existing size gating, disclosure, sponsored attributes, delegated click tracking, and `filterwizard-20` remain unchanged.
 
@@ -28,7 +30,7 @@ This file owns commercial link eligibility, disclosure, and attribution safeguar
 
 Retailer cards appear only for confirmed sizes. Links open a new tab and use `rel="nofollow sponsored noopener"`, `data-link-location="filter-finder-results"`, retailer data attributes, and filter size for Amazon. A delegated document click listener emits `amazon_click`; card listeners emit `filter_finder_retailer_clicked`. Page/footer and result disclosures state the Amazon relationship.
 
-The static 20x25x1, 16x25x1, and 20x20x1 pilots are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
+The six static size pages are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
 
 ## Rules and testing
 

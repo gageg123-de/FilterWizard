@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
+
+The controlled size-page batch published 2026-09-01 adds 16x20x1, 14x20x1 and 14x25x1 to the three original pilots. All are commercial/informational WebPages rather than blog articles. Their unique value is respectively compact-rectangle confusion, narrow-face fit/movement, and long-narrow return-grille plus same-length/same-width confusion. Each uses ten matched FAQs, three Finder CTAs, four retailer searches, cautious MERV and replacement guidance, and the existing measurement image; the blog index and homepage remain unchanged.
 
 The troubleshooting guide at [`../blog/why-is-my-air-filter-brown.html`](../blog/why-is-my-air-filter-brown.html) targets “why is my air filter brown” and the narrow intent of interpreting tan/brown HVAC-filter discoloration through timing, pattern, dryness, texture, and environmental context without treating color as contaminant identification. Published 2026-08-31, its 2,227 substantive diagnostic words and 15-minute estimate use one six-row color comparison table, two reviewed decision graphics, 14 visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-why-is-my-air-filter-brown`, six Related Articles, and no direct retailer block. It passed duplicate preflight because the black-filter page owns black/dark discoloration, the fast-loading page owns loading rate regardless of hue, the wet-filter page owns moisture, and the one-sided page owns uneven loading. Reciprocal links from the black-filter and fast-loading guides preserve those boundaries.
 
@@ -48,7 +50,7 @@ The MERV comparison hub at [`../blog/merv-8-vs-merv-11-vs-merv-13.html`](../blog
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
-Filter-size landing pages are not blog articles or product offers. The 20x25x1, 16x25x1, and 20x20x1 pilots reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. The newer pages add size-specific nearby-size tables and airflow guidance; 20x20x1 also explains the limits of rotating a square nominal frame. Future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+Filter-size landing pages are not blog articles or product offers. The six current pages reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. Differentiation and future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 
 ## Article pattern
 

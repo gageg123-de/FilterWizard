@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-08-31
+Last verified: 2026-09-01
+
+The 16x20x1, 14x20x1 and 14x25x1 pages reuse the existing `filter_size_page_view`, Finder CTA, retailer-click and related-link paths through static `data-filter-size` attributes. Each has three tracked Finder CTAs and four tracked retailer searches; no analytics script, event, parameter or listener was added.
 
 The brown-filter guide reuses shared article page-view, scroll-depth, share, two Filter Finder CTA, Formspree interaction, and delegated downstream retailer-click behavior. Its article slug and email source are `why-is-my-air-filter-brown` and `blog-why-is-my-air-filter-brown`; no analytics script or listener was added.
 
@@ -34,7 +36,7 @@ This file documents instrumentation, not legal compliance or confirmed dashboard
 
 Parameters include normalized size, MERV, interval, replacements/year, confidence, conditions, location, source, link URL/location, and article slug. Invalid inputs send length, not raw text. Email events send `has_email`, not the address.
 
-Size-page events use only the static page size (`20x25x1`, `16x25x1`, or `20x20x1`), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
+Size-page events use only the static page size (one of the six published nominal sizes), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
 
 ## Testing and risks
 

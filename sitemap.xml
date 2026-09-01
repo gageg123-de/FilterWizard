@@ -223,6 +223,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://filter-wizard.com/filter-sizes/16x20x1.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://filter-wizard.com/filter-sizes/14x20x1.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://filter-wizard.com/filter-sizes/14x25x1.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://filter-wizard.com/legal/privacy-policy.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
