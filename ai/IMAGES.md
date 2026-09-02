@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-01
+Last verified: 2026-09-02
+
+The 2026-09-02 16x24x1, 18x20x1, and 24x24x1 size pages reuse the existing 1200×800 `how-to-measure-air-filter.webp` instructional figure and social image. This follows the image-light size-page convention and avoids decorative derivatives. Each page supplies size-specific alt text and captions without asserting a universal actual dimension; no new image was created.
 
 The furnace short-cycling guide uses three generated, converted, and visually reviewed 1200×800 WebPs: `furnace-short-cycling-filter-hero.webp` (85,566 bytes), `dirty-filter-short-cycling-airflow.webp` (106,550 bytes), and `furnace-short-cycling-checklist.webp` (78,644 bytes). The hero shows safe inspection beside a closed furnace. The airflow graphic states that a dirty filter is one possible contributor; the decision graphic keeps inspection at the accessible filter and states never to bypass safety controls. All embedded text was checked after WebP conversion. The hero is eager/high-priority; both supporting graphics are lazy-loaded.
 

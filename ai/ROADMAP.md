@@ -1,12 +1,12 @@
 # Roadmap
 
-Last verified: 2026-09-01
+Last verified: 2026-09-02
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-three articles; six hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-three articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -14,7 +14,7 @@ Static custom-domain site; four-step Finder; known/unknown size safety; validati
 |---|---:|---:|---:|---:|---:|---|
 | Validate live analytics/affiliate funnel | 5 | 5 | 2 | 2 | 2 | Dashboard access and event QA |
 | Publish additional intent-led articles | 4 | 3 | 5 | 2 | 2 | Search intent, editorial/image QA, maintenance owner |
-| Evaluate the six-page size set before another batch | 4 | 4 | 5 | 2 | 3 | Indexation, differentiation, engagement, safety and maintenance evidence |
+| Evaluate the nine-page size set before another batch | 4 | 4 | 5 | 2 | 3 | Indexation, differentiation, engagement, safety and maintenance evidence |
 | Improve internal linking/content audits | 3 | 3 | 4 | 2 | 2 | Search/index data and content inventory |
 | Email replacement reminders | 5 | 4 | 1 | 4 | 4 | Demand evidence, provider, consent/legal, operations |
 
@@ -94,5 +94,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Published 2026-08-31: Why Is There Dust Around My Air Vents, a narrow supply-register troubleshooting guide distinguishing room-air deposition from missing/damaged filters, fit, bypass, and conditions warranting further HVAC evaluation without treating surface dust as proof of duct contamination.
 - Published 2026-08-31: Why Is My Air Filter Turning Brown, a narrow visual-troubleshooting guide using timing, pattern, dryness, texture, and environmental context to separate plausible ordinary loading from conditions worth investigating without identifying contaminants by color.
 - Published 2026-09-01: Can a Dirty Air Filter Cause a Furnace to Short Cycle, selected through the GSC-weighted decision layer because specific troubleshooting and filter-causation patterns materially outperformed broad comparison categories in the owner-provided seven-day export. The guide keeps dirty-filter causation conditional, limits homeowners to accessible filter/register checks, prohibits safety-control manipulation, and escalates persistent cycling.
+- Published 2026-09-02: controlled filter-size expansion added 16x24x1, 18x20x1, and 24x24x1 after real-world availability, first-party sizing-pattern, distinct-utility, retailer-path, and thin-page review. No size hub was added; reconsider one when contextual related links can no longer keep every size guide discoverable within a small number of useful clicks or when GSC shows a stable cluster that needs a consolidated landing page. Article #34 remains deferred pending fresher evidence, and the furnace-short-cycling page remains unchanged for observation.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.

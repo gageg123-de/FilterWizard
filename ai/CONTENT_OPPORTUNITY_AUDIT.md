@@ -1,6 +1,6 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-01
+Last verified: 2026-09-02
 
 This documentation-only audit applies the Topic-Reality, demand/intent, and preliminary duplicate gates to possible Filter Wizard articles. It does not authorize publication. No production page, image, stylesheet, script, analytics integration, sitemap entry, or affiliate link changed during this audit.
 
@@ -18,7 +18,7 @@ This documentation-only audit applies the Topic-Reality, demand/intent, and prel
 |---|---|---|
 | Appearance and loading | Black, brown, wet, dirty-fast, dirty-one-side, clogged | Saturated/near-saturated; new colors, textures, and short timeframes usually overlap |
 | Airflow and equipment symptoms | Restriction, whistling, bending, movement, freezing, poor cooling, energy | Strong but not closed; heating-specific symptoms can remain distinct |
-| Sizing and fit | General sizing, missing label, fit, substitution, depth, arrow, six size pages | General explanatory layer is near-saturated; new work needs a distinct decision or validated size demand |
+| Sizing and fit | General sizing, missing label, fit, substitution, depth, arrow, nine size pages | General explanatory layer is near-saturated; new work needs a distinct decision or validated size demand |
 | Filter selection | MERV 8/11/13, allergies, dust, pets, smoke, media, washable/disposable | Household-use and MERV-choice variants are near-saturated; rating-system translation remains open |
 | Return placement | Every return; return plus furnace | Near-saturated; additional location wording risks duplication |
 | Maintenance and reuse | Change timing; vacuum/reuse; washable/disposable | Established; only clearly distinct operating questions should advance |
@@ -220,3 +220,9 @@ The decision model is 40% Filter Wizard GSC pattern alignment, 20% real-world/us
 - Homeowner discussions used only to confirm wording/recurrence, not technical truth: MERV/MPR/FPR <https://www.reddit.com/r/homeowners/comments/unma8x>, missing filter <https://www.reddit.com/r/homeowners/comments/1i2iues/>, clean filter <https://www.reddit.com/r/homeowners/comments/1us3kum/>, oily-filter anecdote <https://www.reddit.com/r/hvacadvice/comments/yuiexw>.
 
 Update this file when new first-party data, independent demand evidence, a new article, or a changed existing intent materially changes a classification or ranking.
+
+## Controlled filter-size expansion — 2026-09-02
+
+The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.
+
+Those three passed marketed-size and distinct-utility review: 16x24x1 addresses the close 16x25x1 substitution problem, 18x20x1 separates a middle rectangular width from existing 16x20x1 and 20x20x1 guides, and 24x24x1 adds a large-square orientation/nearby-square case. Twenty-two candidates and rejection/defer reasons are recorded in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md). The furnace-short-cycling article was not changed; evaluate it only after a reasonable observation period or enough impressions accumulate. Re-rank the informational backlog with fresher GSC evidence after the size expansion rather than pre-authorizing the next article.
