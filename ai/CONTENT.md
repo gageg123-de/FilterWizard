@@ -2,6 +2,64 @@
 
 Last verified: 2026-09-01
 
+## Topic-Reality Preflight
+
+Search content begins with real user problems. Keywords are evidence of those problems, not an excuse to invent them. Filter Wizard must not create a standalone article merely because a scenario is technically possible, a phrase is unique, or the publishing calendar has an opening. Every proposed problem, symptom, comparison, question, or buying decision must have a defensible real-world basis and meaningful homeowner intent before duplicate-topic review begins. Never fabricate a homeowner problem to fill the calendar.
+
+### Required workflow
+
+Future article production follows this order:
+
+1. **Topic-Reality Preflight:** ask whether homeowners plausibly encounter this problem often enough, or with enough importance, to justify a dedicated Filter Wizard page. Answer from evidence, not imagination.
+2. **Search-demand and user-intent validation:** document observable first-party, search-pattern, technical, commercial, or community evidence. If no SEO tool is available, record “No verified search-volume data available.”
+3. **Duplicate-Topic Preflight:** inventory the published library and compare the proposed intent with titles, URLs, headings, FAQs, substantive coverage, and conversion intent.
+4. **Editorial and factual research:** verify mechanisms, safety boundaries, and claims with appropriate authoritative sources.
+5. **Draft:** use the production system and preserve the approved intent boundary.
+6. **Post-Draft Intent Audit:** compare the finished page with its nearest neighbors and stop if sections remain interchangeable.
+7. **Technical Validation:** perform the repository-required content, schema, link, image, analytics, accessibility, and runtime checks.
+8. **Publication:** stage only intentional files, commit, and publish only with the required authority.
+
+A topic that fails steps 1 or 2 must not advance merely because it would have a unique title or URL.
+
+### Evidence hierarchy
+
+**Strong evidence** includes Filter Wizard Search Console query/page clusters; legitimately observed autocomplete, related searches, or People Also Ask results; established keyword-tool demand; manufacturer troubleshooting or product documentation; EPA, DOE, ENERGY STAR, ASHRAE, or similar technical material; repeated independent homeowner discussions; repeated independent HVAC-service discussion; relevant retailer search/category behavior; or multiple independent credible sources describing the same condition.
+
+**Moderate evidence** includes several independent homeowner reports; several credible HVAC sources; a clear adjacent Search Console pattern; terminology repeated across independent sources; or a logical extension of a documented common problem whose distinct search intent is independently visible.
+
+**Weak evidence** includes one forum post, contractor blog, manufacturer mention, or anecdote; a technically plausible mechanism without demand evidence; AI-generated keywords; speculative long-tail wording; or changing one adjective in an existing title.
+
+**Invalid evidence** includes “this could theoretically happen,” “it seems plausible,” “an AI suggested it,” “we have not written about it,” “it creates another keyword,” or “it fits the calendar.” Fabricated search volume, keyword difficulty, CPC, traffic, trends, autocomplete/PAA results, forum discussions, manufacturer guidance, or homeowner behavior are prohibited.
+
+### Reality classifications
+
+- **Verified real-world topic:** strong evidence supports both the underlying problem/question and meaningful homeowner intent. Eligible for duplicate-topic review.
+- **Plausible but weakly supported:** the mechanism could occur, but meaningful user/search intent is insufficient. Do not publish by default; gather new evidence.
+- **Contrived / unsupported:** primarily theoretical, artificially specific, misleading, or unsupported. Reject.
+- **Factually false / misleading premise:** credible evidence contradicts the proposed premise. Reject or, only when meaningful demand is demonstrated, reformulate the page to correct the misconception immediately.
+
+A query containing a false assumption never authorizes Filter Wizard to repeat the assumption as fact. “Can a Higher-MERV Filter Restrict Airflow?” may responsibly examine conditions and product resistance; “Why Higher-MERV Filters Ruin Your HVAC System” adopts an unsupported universal premise.
+
+### Anti-expansion safeguards
+
+- **Contrived long tails:** do not create URLs by changing a color, timeframe, room, season, pet, adjective, filter dimension, or symptom intensity unless the result is a materially different real problem. “Dirty after 3 days,” “after 5 days,” “after one week,” and “dusty right after changing” normally belong to the broad rapid-loading intent.
+- **Rare but real:** low volume is not an automatic rejection. An uncommon topic may qualify when the problem is documented, the need is meaningful, the answer is distinct and unusually useful, the site is relevant, and some defensible intent evidence exists.
+- **Search-volume honesty:** never invent monthly volume, difficulty, CPC, traffic, or trend percentages. Autocomplete presence is qualitative evidence, not a number. State when verified volume is unavailable.
+- **Community evidence:** forums can establish repeated symptoms and homeowner wording, but anecdotes are not technical proof. Verify explanations independently, identify anecdotal evidence as such, and do not manufacture consensus.
+- **False-premise correction:** a question title may reflect a demonstrated misconception, but the answer must correct it immediately and must not reinforce it.
+
+### Relationship to duplication and rejected-topic tracking
+
+Reality and demand establish that a question deserves consideration; duplicate review establishes whether it deserves a new URL. Passing one does not imply passing the other. Record every proposed topic as **Validated**, **Research Needed**, or **Rejected / Do Not Create**, including the evidence, nearest page, decision reason, and a concrete revisit trigger. A rejected topic may return only with material new evidence, not new wording.
+
+Filter Wizard experience illustrates the distinction:
+
+- **Recently changed filter already looks dusty:** rejected as a new URL because the rapid-loading guide already owns immediate visible loading, normal capture versus clogging, causes, fit, airflow, and monitoring.
+- **Filter covered in pet hair:** rejected as a new URL because the pet pillar already owns visible fur versus dander, hair on the filter/return, loading, replacement, fit, and MERV choice.
+- **Sticky or greasy filter:** plausible mechanisms exist, but the 2026-09-01 audit found sparse, context-specific reports and no verified search-volume evidence; existing black, brown, wet, smoke, and rapid-loading pages already absorb the useful observations. Treat as Research Needed, not a publishable standalone topic, unless independent demand evidence materially improves.
+
+The current research pool, evidence record, classifications, and ranked shortlist are maintained in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
+
 The controlled size-page batch published 2026-09-01 adds 16x20x1, 14x20x1 and 14x25x1 to the three original pilots. All are commercial/informational WebPages rather than blog articles. Their unique value is respectively compact-rectangle confusion, narrow-face fit/movement, and long-narrow return-grille plus same-length/same-width confusion. Each uses ten matched FAQs, three Finder CTAs, four retailer searches, cautious MERV and replacement guidance, and the existing measurement image; the blog index and homepage remain unchanged.
 
 The troubleshooting guide at [`../blog/why-is-my-air-filter-brown.html`](../blog/why-is-my-air-filter-brown.html) targets “why is my air filter brown” and the narrow intent of interpreting tan/brown HVAC-filter discoloration through timing, pattern, dryness, texture, and environmental context without treating color as contaminant identification. Published 2026-08-31, its 2,227 substantive diagnostic words and 15-minute estimate use one six-row color comparison table, two reviewed decision graphics, 14 visible/schema-matched FAQs, three reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, two delayed Finder CTAs, Formspree source `blog-why-is-my-air-filter-brown`, six Related Articles, and no direct retailer block. It passed duplicate preflight because the black-filter page owns black/dark discoloration, the fast-loading page owns loading rate regardless of hue, the wet-filter page owns moisture, and the one-sided page owns uneven loading. Reciprocal links from the black-filter and fast-loading guides preserve those boundaries.
@@ -68,7 +126,9 @@ Article images use as many verified 3:2 WebPs as the subject needs. The first vi
 
 ## Deployment-ready article checklist
 
-1. Inventory published articles in `blog/`, `blog/index.html`, `sitemap.xml`, and relevant content/SEO/roadmap documentation before selecting the topic. Compare titles, URLs, primary keywords, search intent, and substantive coverage rather than relying on an unused title or slug.
+1. Pass the Topic-Reality and demand/intent preflights in that order, then inventory published articles in `blog/`, `blog/index.html`, `sitemap.xml`, and relevant content/SEO/roadmap documentation. Compare titles, URLs, primary keywords, search intent, and substantive coverage rather than relying on an unused title or slug.
+   - [ ] Topic-Reality Preflight passed with documented evidence.
+   - [ ] Search-demand/user-intent evidence is documented without fabricated metrics.
    - [ ] Duplicate-topic preflight passed before implementation; no existing page substantially satisfies the proposed search intent.
    - [ ] Finished draft remains substantively distinct; improve an overlapping page or choose a narrower topic instead of publishing a competing URL.
 2. Define intent, unique title, slug, canonical, description, and honest date.

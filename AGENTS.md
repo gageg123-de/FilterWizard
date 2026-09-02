@@ -1,6 +1,6 @@
 # Filter Wizard AI Operating Guide
 
-Last verified: 2026-07-19
+Last verified: 2026-09-01
 
 Filter Wizard is a static homeowner utility that helps people confirm HVAC filter information, choose a cautious MERV recommendation, estimate replacement timing, and reach retailer search options. Near-term revenue is Amazon Associates commission; useful content and the free Filter Finder come before monetization.
 
@@ -23,6 +23,7 @@ Filter Wizard is a static homeowner utility that helps people confirm HVAC filte
 - Do not create ZIP replacements, `changed-files-*` folders, or duplicate project copies. Do not edit archives as production code.
 - Avoid unrelated cleanup. Preserve user changes in a dirty worktree.
 - Treat the production header as a shared DOM contract. For every new or modified blog article, reuse the exact header markup from a currently verified known-good production article; do not reconstruct, simplify, rename, approximate, or replace its navigation wrappers. Preserve `.nav`, `.nav-links`, `data-header`, `data-nav-toggle`, and `data-nav-menu`. Before completion, compare the header DOM and navigation links with the selected reference, verify desktop and mobile navigation, and confirm the mobile toggle updates `aria-expanded`.
+- Topic-Reality Guardrail: before duplicate-topic review or drafting, verify that a proposed problem, symptom, question, comparison, or buying decision has a defensible real-world basis and meaningful user intent. Technical possibility, an unused phrase, an AI suggestion, or calendar pressure is not sufficient. Never invent homeowner problems, search demand, technical mechanisms, autocomplete/PAA observations, community reports, or keyword metrics. Reject or reformulate contrived, unsupported, or false-premise topics before duplicate-topic review. The detailed evidence standard and rejection record live in [`CONTENT.md`](ai/CONTENT.md).
 - New article production must begin with an inventory of existing published content. Before proposing, drafting, creating, or implementing a topic, inspect `blog/`, `blog/index.html`, `sitemap.xml`, and relevant content/SEO/roadmap documentation; compare titles, URLs, primary keywords, search intent, and substantive coverage. Never create a page solely because its title or slug is unique: semantic or search-intent overlap is duplication. If an existing page already satisfies substantially the same query, strengthen that page or choose a genuinely distinct long-tail topic. Record that this check passed before implementation and repeat it against the finished draft before completion.
 
 When documentation and implementation disagree, stop treating the document as authority: verify the code path, report the contradiction, correct the documentation in the same change when authorized, and avoid changing behavior merely to make an old document true.
@@ -33,7 +34,7 @@ When documentation and implementation disagree, stop treating the document as au
 - Decisions and uncertainty: [`DECISION_FRAMEWORK.md`](ai/DECISION_FRAMEWORK.md)
 - Code and UI: [`ARCHITECTURE.md`](ai/ARCHITECTURE.md), [`DESIGN_SYSTEM.md`](ai/DESIGN_SYSTEM.md)
 - Finder: [`FILTER_FINDER.md`](ai/FILTER_FINDER.md), [`FILTER_LOGIC.md`](ai/FILTER_LOGIC.md)
-- Growth: [`SEO.md`](ai/SEO.md), [`CONTENT.md`](ai/CONTENT.md), [`FILTER_SIZE_PAGES.md`](ai/FILTER_SIZE_PAGES.md), [`IMAGES.md`](ai/IMAGES.md)
+- Growth: [`SEO.md`](ai/SEO.md), [`CONTENT.md`](ai/CONTENT.md), [`CONTENT_OPPORTUNITY_AUDIT.md`](ai/CONTENT_OPPORTUNITY_AUDIT.md), [`FILTER_SIZE_PAGES.md`](ai/FILTER_SIZE_PAGES.md), [`IMAGES.md`](ai/IMAGES.md)
 - Revenue and measurement: [`AFFILIATE.md`](ai/AFFILIATE.md), [`ANALYTICS.md`](ai/ANALYTICS.md)
 - Quality and safety: [`PRIVACY_AND_CONSENT.md`](ai/PRIVACY_AND_CONSENT.md), [`ACCESSIBILITY.md`](ai/ACCESSIBILITY.md), [`PERFORMANCE.md`](ai/PERFORMANCE.md), [`TESTING.md`](ai/TESTING.md), [`SECURITY.md`](ai/SECURITY.md)
 - Operations: [`DEPLOYMENT.md`](ai/DEPLOYMENT.md), [`GIT_WORKFLOW.md`](ai/GIT_WORKFLOW.md), [`CHANGELOG_GUIDELINES.md`](ai/CHANGELOG_GUIDELINES.md)

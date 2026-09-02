@@ -20,6 +20,48 @@ Static custom-domain site; four-step Finder; known/unknown size safety; validati
 
 Recommended sequence: establish trustworthy funnel baselines first; continue differentiated content and internal linking; validate one useful size page before any scaled architecture; consider reminders only after opt-in demand and operating requirements are known.
 
+## Evidence-gated content backlog — 2026-09-01
+
+Every future article must pass Topic Reality, demand/intent validation, and duplicate review in that order. The supporting evidence and full candidate pool are recorded in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md). These labels are research status, not publication authority.
+
+### Validated
+
+| Candidate | Status | Preliminary boundary |
+|---|---|---|
+| MERV vs. MPR vs. FPR: How Air Filter Ratings Compare | Best next candidate | Rating-system translation; distinct from choosing among MERV 8/11/13 |
+| Are Furnace Filters and AC Filters the Same? | Second candidate | Homeowner terminology and shared forced-air filtration location |
+| Can a Dirty Air Filter Cause a Furnace to Short Cycle? | Third candidate | Filter-related heating-cycle symptom, with non-filter causes and safety limits |
+| Can You Put a HEPA Filter in a Furnace? | Validated candidate | True-HEPA compatibility rather than general higher-MERV choice |
+| Can You Run an HVAC System Without an Air Filter? | Validated candidate | Missing-filter operation and safe next action |
+| Should You Run the HVAC Fan Continuously for Filtration? | Validated candidate | Runtime/filtration tradeoff rather than filter selection |
+| HVAC Filter vs. Portable Air Purifier | Validated candidate | Central versus room-device decision |
+
+### Research Needed
+
+| Candidate | Why not ready | Revisit trigger |
+|---|---|---|
+| Can a Dirty Filter Cause Weak Airflow From Vents? | Real mechanism and adjacent first-party signal, but high overlap with clogged, cooling, restriction, whistling, and bending pages | A distinct query cluster or proof the current pages fail the whole-house weak-airflow intent |
+| Why Does My Air Filter Stay Clean? | Repeated anecdotes but limited authoritative/search evidence and several possible system causes | Independent search evidence plus authoritative diagnostic support |
+| How Many Air Filters Does My House Have? | Real configuration question but strong overlap with both return-filter articles and sizing guidance | A distinct query cluster not satisfied by existing return/filter-location coverage |
+| Electrostatic vs. Pleated Air Filters | Real product distinction but overlaps washable/disposable and fiberglass/pleated guides | Verified comparison demand and a non-duplicative product boundary |
+| Why Is My Air Filter Torn or Ripped? | Plausible symptom with sparse demand evidence | Repeated independent reports and credible technical documentation |
+| Why Is My Air Filter Sticky or Greasy? | Plausible cooking/smoke/spray mechanisms, sparse context-specific reports, no verified volume, and high overlap | Multiple independent demand signals demonstrating distinct intent |
+
+### Rejected / Do Not Create
+
+| Candidate family | Reason | Reconsider only if |
+|---|---|---|
+| New filter already dusty; dirty after 1/3/5/7 days or one week | Duplicate/contrived timeframe variants of rapid loading | Materially distinct intent is independently demonstrated |
+| Filter covered in pet/dog/cat hair | Pet pillar already owns visible hair, dander distinction, loading, fit, maintenance, and MERV | New evidence establishes a separate unresolved decision |
+| Why Does My Air Filter Look Gray? | Color adjective overlaps brown, black, clogged, and rapid-loading guidance | A distinct real-world problem beyond appearance is shown |
+| Filters get dirty faster in summer/winter | Seasonal adjective variants of rapid loading | A season-specific mechanism and distinct user action justify a page |
+| MERV 8 vs. MERV 11 for dust or pets | Existing dust/pet pillars and MERV hub already compare these choices | Current pages cannot satisfy a demonstrated direct-comparison cluster |
+| Leaky filter slot lets dust bypass | Existing fit, dust-around-vents, and uneven-loading pages own the useful intent | A separate configuration problem is demonstrated |
+| Dirty filter causes a water leak | Freeze and wet-filter pages already own the causal chain | A distinct query requires materially different guidance |
+| What order do filter dimensions go in? | Existing sizing and missing-label guides own three-dimension identification | Evidence shows a separate decision not solved by those guides |
+| Best filter for older HVAC systems | Age alone is not a compatibility rule; existing MERV/restriction content corrects it | Demand supports a carefully reformulated compatibility question |
+| Why MERV 13 always damages HVAC systems | False universal premise already corrected by restriction/MERV pages | Never as stated; only a distinct misconception-debunking need could qualify |
+
 ## Experimental ideas
 
 | Candidate | U | M | S | C | R | Evidence/dependency gate |
@@ -29,10 +71,6 @@ Recommended sequence: establish trustworthy funnel baselines first; continue dif
 | Local air-quality adjustments | 3 | 2 | 3 | 4 | 4 | Reliable API and location consent |
 | Photo-assisted identification | 5 | 4 | 3 | 5 | 5 | Vision reliability, uploads, uncertainty UX |
 | HVAC-model lookup | 4 | 4 | 5 | 5 | 5 | Licensed, complete, verified data |
-| Best Air Filter for Allergies | 4 | 4 | 4 | 2 | 4 | Avoid medical promises; balance particle goals, MERV support, fit, source control, and replacement timing |
-| MERV 8 vs MERV 11 for Dust | 4 | 4 | 4 | 2 | 3 | Narrow comparison supporting the dust pillar without repeating its media, source, and depth coverage |
-| Best Air Filter for Older HVAC Systems | 4 | 4 | 4 | 3 | 4 | Avoid age-based assumptions; require equipment guidance, fit, airflow, and compatibility boundaries |
-| MERV 8 vs MERV 11 for Pets | 4 | 4 | 4 | 2 | 3 | Compare pet-household loading and particle goals without medical or universal compatibility claims |
 | Best Air Filter for Bedrooms | 3 | 3 | 3 | 2 | 2 | Address room use, noise, central-system limits, and supported filtration without implying room-level HVAC control |
 | Landlord/property-manager tools | 4 | 4 | 3 | 5 | 4 | Multi-property accounts and validation |
 | Contractor leads | 3 | 5 | 3 | 4 | 4 | Partner quality, disclosures, legal flows |
