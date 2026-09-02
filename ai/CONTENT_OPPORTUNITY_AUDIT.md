@@ -155,13 +155,54 @@ Cooking aerosols, smoke residue, sprays, and moisture mixed with debris offer pl
 
 Rejected ideas remain rejected unless new evidence changes the underlying intent, not merely the wording. The main reasons are duplicate intent (new-filter dust, pet hair, timeframe variants, MERV-for-dust/pets, bypass, water leak, dimensions, carbon odor, return location), artificial adjective/season expansion (gray, summer, winter), a misleading premise (older equipment alone determines filter choice), a false universal premise (MERV 13 always causes damage), or an indirect generic-HVAC question with weak evidence (blank thermostat). Production should strengthen the owning page instead.
 
-## Recommendation
+## Historical recommendation before GSC reranking
 
 **Best next article:** *MERV vs. MPR vs. FPR: How Air Filter Ratings Compare*. It has the strongest combination of authoritative support, repeatedly visible comparison intent, distinctness, site fit, internal-link value, and a natural non-coercive conversion path. It passes preliminary duplicate review because the current MERV hub compares efficiency levels within MERV but does not translate proprietary rating systems.
 
 **Second choice:** *Are Furnace Filters and AC Filters the Same?* It resolves a documented terminology problem that naturally leads to placement and size confirmation without duplicating the return-configuration guides.
 
 **Third choice:** *Can a Dirty Air Filter Cause a Furnace to Short Cycle?* It extends the successful symptom format into heating with strong manufacturer support, but its moderate overlap with clogged/restriction content requires the strictest final duplicate preflight.
+
+## GSC-driven decision layer — 2026-09-01
+
+The preceding ranking remains the historical broad-evidence audit. A subsequent decision used the owner-provided `filter-wizard.com-Performance-on-Search-2026-09-01.xlsx` seven-day export as the highest-weight strategic signal. The export covers 2026-08-24 through 2026-08-30 and records 6 clicks, 538 impressions, 1.12% CTR, and average position 23.5 overall. Category summaries below use only listed page rows, exclude the homepage, blog index, and legal pages, and weight position by impressions. Small samples and different page ages prevent causal conclusions.
+
+| Content pattern | Listed pages | Impressions | Clicks | CTR | Impression-weighted position | Strongest listed page | Weakest listed page |
+|---|---:|---:|---:|---:|---:|---|---|
+| Filter troubleshooting | 6 | 125 | 3 | 2.40% | 8.38 | Bending, 75 impressions/2 clicks at position 8.44 | Black filter, 4 impressions at position 9 |
+| Return/filter configuration | 2 | 133 | 1 | 0.75% | 8.63 | Every-return, 127 impressions/1 click at position 8.67 | Return-and-furnace, 6 impressions at position 7.83 |
+| Sizing | 3 | 31 | 0 | 0% | 8.81 | 20x25x1, 11 impressions at position 8 | General sizing, 17 impressions at position 9.47 |
+| Fit | 1 | 4 | 0 | 0% | 9.75 | Fit guide, position 9.75 | Same page |
+| HVAC symptom / filter causation | 2 | 56 | 1 | 1.79% | 10.05 | AC-freeze guide, position 9.45 | Restriction guide, position 10.8 |
+| Maintenance/replacement | 3 | 40 | 0 | 0% | 13.67 | Vacuum/reuse, 36 impressions at position 12.11 | Arrow guide, 3 impressions at position 33.67 |
+| MERV comparison | 1 | 2 | 0 | 0% | 52.50 | MERV 11 vs 13 for allergies, position 52.5 | Same page |
+| Product/filter-type comparison | 3 | 92 | 0 | 0% | 62.02 | Depth comparison, position 45.8 | Washable vs disposable, position 72.35 |
+| Best-filter commercial | 4 | 46 | 0 | 0% | 62.20 | Pets, position 60.09 | Allergies, position 70.8 |
+
+The pattern supports the working hypothesis: Google was giving page-one-ish visibility to narrow troubleshooting, configuration, sizing, fit, and filter-causation pages, while broad comparisons and best-filter pages ranked much deeper in this export. This is directional, not proof that format alone caused ranking. The query sheet strengthens the weak-comparison observation: its non-brand rows are dominated by comparison/pet queries at roughly positions 47–85. It does **not** contain the previously summarized AC-not-cooling, airflow, bending, sizing, or furnace query families, so their exact query metrics were not re-created. The repository's earlier owner-provided three-month summary remains the only documented basis for small AC-not-cooling query impressions.
+
+### GSC-weighted candidate scorecard
+
+The decision model is 40% Filter Wizard GSC pattern alignment, 20% real-world/user-intent evidence, 15% distinctness, 10% technical confidence, 10% internal-link value, and 5% commercial value. Scores are directional editorial judgments, not traffic predictions.
+
+| Rank | Candidate | Content pattern and GSC resemblance | Reality evidence | Duplicate risk | Technical confidence | Internal links | Commercial | Score | Confidence |
+|---:|---|---|---|---|---|---|---|---:|---|
+| 1 | Dirty filter and furnace short cycling | Very high: specific HVAC symptom/filter-causation resembles AC freeze and restriction | Strong; Trane, Carrier, and Lennox | Moderate, passed strict review | High | High | Moderate | 91 | High |
+| 2 | Are furnace and AC filters the same? | High: terminology/location resembles return configuration and sizing | Strong | Low–moderate | High | High | High | 85 | High |
+| 3 | Run HVAC without a filter | High: specific urgent homeowner question resembles troubleshooting | Strong | Moderate | High | High | Moderate | 82 | Medium–high |
+| 4 | Run HVAC fan continuously for filtration | Moderate: specific operating question, but farther from filter-first scope | Strong | Low | High | High | Low | 74 | Medium |
+| 5 | Put a HEPA filter in a furnace | Moderate-low: compatibility overlaps weak MERV/comparison patterns | Strong | Moderate | High | High | High | 70 | Medium–high |
+| 6 | MERV vs MPR vs FPR | Low: broad rating comparison resembles the weakest current category | Strong | Low | High | High | High | 65 | Medium |
+| 7 | HVAC filter vs portable air purifier | Low: broad device comparison resembles weak comparison pages and widens scope | Strong | Low | High | High | Moderate | 59 | Medium |
+
+### Winning candidate and gates
+
+**Winner: Can a Dirty Air Filter Cause a Furnace to Short Cycle?** It best matches the demonstrated site-specific pattern without inventing a symptom. Manufacturer troubleshooting documentation independently confirms that dirty-filter airflow restriction can contribute to short cycling.
+
+- **Topic-Reality Preflight: passed.** The question and mechanism recur across three independent furnace manufacturers; the premise is framed conditionally.
+- **Duplicate-Topic Preflight: passed across 32 existing articles.** The clogged-filter page owns broad clog symptoms and longer cycles; restriction owns product/system resistance; AC freeze owns coil icing; AC-not-cooling owns cooling performance; energy-bill owns runtime/cost. None owns repeated short furnace heating cycles, protective interruption, a filter-first check, and escalation when replacement does not help.
+- **Post-draft intent audit: passed.** The finished guide remains centered on short furnace heating cycles, explicitly contrasts them with longer clogged-filter runtime, and keeps alternative furnace causes high-level rather than becoming a generic furnace repair page.
+- **Deferred:** the other six validated candidates remain valid research opportunities. GSC changed priority, not their reality classifications.
 
 ## External evidence register
 

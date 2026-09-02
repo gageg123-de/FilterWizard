@@ -6,7 +6,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-two articles; six hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-three articles; six hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -30,7 +30,6 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 |---|---|---|
 | MERV vs. MPR vs. FPR: How Air Filter Ratings Compare | Best next candidate | Rating-system translation; distinct from choosing among MERV 8/11/13 |
 | Are Furnace Filters and AC Filters the Same? | Second candidate | Homeowner terminology and shared forced-air filtration location |
-| Can a Dirty Air Filter Cause a Furnace to Short Cycle? | Third candidate | Filter-related heating-cycle symptom, with non-filter causes and safety limits |
 | Can You Put a HEPA Filter in a Furnace? | Validated candidate | True-HEPA compatibility rather than general higher-MERV choice |
 | Can You Run an HVAC System Without an Air Filter? | Validated candidate | Missing-filter operation and safe next action |
 | Should You Run the HVAC Fan Continuously for Filtration? | Validated candidate | Runtime/filtration tradeoff rather than filter selection |
@@ -94,5 +93,6 @@ Annual cost estimates are already implemented; future work would improve price d
 - Published 2026-08-28: Can a Dirty Air Filter Cause Your AC Not to Cool, a narrow troubleshooting guide connecting severe filter loading to reduced airflow and poor cooling while keeping icing, restriction, clogged-filter symptoms, energy use, and non-filter failures distinct.
 - Published 2026-08-31: Why Is There Dust Around My Air Vents, a narrow supply-register troubleshooting guide distinguishing room-air deposition from missing/damaged filters, fit, bypass, and conditions warranting further HVAC evaluation without treating surface dust as proof of duct contamination.
 - Published 2026-08-31: Why Is My Air Filter Turning Brown, a narrow visual-troubleshooting guide using timing, pattern, dryness, texture, and environmental context to separate plausible ordinary loading from conditions worth investigating without identifying contaminants by color.
+- Published 2026-09-01: Can a Dirty Air Filter Cause a Furnace to Short Cycle, selected through the GSC-weighted decision layer because specific troubleshooting and filter-causation patterns materially outperformed broad comparison categories in the owner-provided seven-day export. The guide keeps dirty-filter causation conditional, limits homeowners to accessible filter/register checks, prohibits safety-control manipulation, and escalates persistent cycling.
 
 Update this file when: a candidate is implemented, rejected, or materially reframed; priorities/dependencies change; or evidence changes the scores or sequence.

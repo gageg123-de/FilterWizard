@@ -2,6 +2,8 @@
 
 Last verified: 2026-09-01
 
+The 2026-09-01 GSC-driven decision layer selected `/blog/can-dirty-air-filter-cause-furnace-short-cycling.html` over the earlier MERV/MPR/FPR recommendation. In the owner-provided seven-day export, filter troubleshooting, return configuration, sizing, fit, and HVAC-symptom/filter-causation pages had impression-weighted positions from 8.38 to 10.05, while the listed MERV, product-comparison, and best-filter categories were 52.50 to 62.20. The new page follows the demonstrated specific-symptom pattern while retaining reality and duplicate gates; it does not claim query volume or future performance. Exact category construction and limitations are recorded in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
+
 The 2026-09-01 content-opportunity audit adds a Topic-Reality and demand gate before duplicate review. Repository-documented Search Console data remains the primary first-party signal, but small counts are directional rather than proof of volume. No verified search-volume, keyword-difficulty, CPC, autocomplete, or People Also Ask dataset was available for the audit; none was inferred. The research record and current shortlist are in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
 
 The 2026-09-01 controlled size-page batch adds self-canonical `/filter-sizes/16x20x1.html`, `/filter-sizes/14x20x1.html` and `/filter-sizes/14x25x1.html`. Each has unique title, description, social metadata, WebPage/FAQ/Breadcrumb schema and size-specific confusion guidance. The selection used Search Console’s directional 20x25x1 signal without claiming performance for the new URLs; 16x24x1, 18x20x1, 18x24x1, 20x24x1 and 24x24x1 remain uncreated candidates.

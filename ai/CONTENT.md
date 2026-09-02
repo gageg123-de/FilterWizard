@@ -2,6 +2,8 @@
 
 Last verified: 2026-09-01
 
+The 2026-09-01 furnace short-cycling guide is the thirty-third published article and the first selected through the GSC-weighted decision layer in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md). It owns the narrow question of whether a dirty or restrictive filter can contribute to repeated short furnace heating cycles. Its 2,286 substantive article-content words use a 15-minute estimate. The filter-first inspection stays outside sealed equipment, presents protective limit interruption conditionally, keeps non-filter furnace causes high-level, prohibits safety-control bypass, and sends persistent cycling to qualified service. It uses 12 matched FAQs, two Finder CTAs, no retailer block, Article/FAQ/Breadcrumb schema, Formspree source `blog-furnace-short-cycling`, three reviewed 1200×800 WebPs, contextual links to seven established guides, and limited reciprocal links from the clogged-filter and restriction guides.
+
 ## Topic-Reality Preflight
 
 Search content begins with real user problems. Keywords are evidence of those problems, not an excuse to invent them. Filter Wizard must not create a standalone article merely because a scenario is technically possible, a phrase is unique, or the publishing calendar has an opening. Every proposed problem, symptom, comparison, question, or buying decision must have a defensible real-world basis and meaningful homeowner intent before duplicate-topic review begins. Never fabricate a homeowner problem to fill the calendar.
@@ -74,7 +76,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-two static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-three static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
