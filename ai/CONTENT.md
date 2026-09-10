@@ -1,6 +1,6 @@
 # Content and Articles
 
-Last verified: 2026-09-01
+Last verified: 2026-09-09
 
 The 2026-09-01 furnace short-cycling guide is the thirty-third published article and the first selected through the GSC-weighted decision layer in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md). It owns the narrow question of whether a dirty or restrictive filter can contribute to repeated short furnace heating cycles. Its 2,286 substantive article-content words use a 15-minute estimate. The filter-first inspection stays outside sealed equipment, presents protective limit interruption conditionally, keeps non-filter furnace causes high-level, prohibits safety-control bypass, and sends persistent cycling to qualified service. It uses 12 matched FAQs, two Finder CTAs, no retailer block, Article/FAQ/Breadcrumb schema, Formspree source `blog-furnace-short-cycling`, three reviewed 1200×800 WebPs, contextual links to seven established guides, and limited reciprocal links from the clogged-filter and restriction guides.
 
@@ -22,6 +22,8 @@ Future article production follows this order:
 8. **Publication:** stage only intentional files, commit, and publish only with the required authority.
 
 A topic that fails steps 1 or 2 must not advance merely because it would have a unique title or URL.
+
+Publication also requires topical integration: identify the page's primary intent owner and cluster, choose useful outgoing links, add a justified incoming link when appropriate, evaluate its hub and Filter Finder relationships, and curate Related Articles. The durable methodology and audit command are in [`INTERNAL_LINKING.md`](INTERNAL_LINKING.md).
 
 ### Evidence hierarchy
 
