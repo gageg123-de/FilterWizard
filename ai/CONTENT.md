@@ -80,7 +80,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-three static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-four static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
@@ -110,11 +110,11 @@ The troubleshooting hub at [`../blog/why-is-my-air-filter-getting-dirty-so-fast.
 
 The dedicated guide at [`../blog/why-is-my-air-filter-black.html`](../blog/why-is-my-air-filter-black.html) targets “why is my air filter black” and related soot/dark-filter searches. Published 2026-07-28, it keeps color separate from diagnosis: black does not itself prove mold, combustion failure, carbon monoxide, or a need for duct cleaning. It links to all nine supporting articles, the Finder, and two relevant size pilots; seven related articles link back with varied anchors.
 
-The MERV comparison hub at [`../blog/merv-8-vs-merv-11-vs-merv-13.html`](../blog/merv-8-vs-merv-11-vs-merv-13.html) targets “MERV 8 vs MERV 11 vs MERV 13.” It links filtration decisions to size confirmation, replacement timing, airflow guidance, clogged-filter symptoms, energy use, frozen-coil cautions, the Filter Finder, and the three current size-page pilots. Existing articles and size pages link back with context-specific anchor text.
+The MERV comparison hub at [`../blog/merv-8-vs-merv-11-vs-merv-13.html`](../blog/merv-8-vs-merv-11-vs-merv-13.html) targets “MERV 8 vs MERV 11 vs MERV 13.” It links filtration decisions to size confirmation, replacement timing, airflow guidance, clogged-filter symptoms, energy use, frozen-coil cautions, the Filter Finder, and the current size-guide set. Existing articles and size pages link back with context-specific anchor text.
 
 This file owns editorial workflow and article composition. Search targeting belongs to [`SEO.md`](SEO.md), image production to [`IMAGES.md`](IMAGES.md), component styling to [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), and final checks to [`TESTING.md`](TESTING.md).
 
-Filter-size landing pages are not blog articles or product offers. The six current pages reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. Differentiation and future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+Filter-size landing pages are not blog articles or product offers. The nine current pages reuse article presentation patterns but use WebPage schema, no blog preview cards, no invented authors, and size-specific fit, dimension, MERV, timing and retailer-warning content. Differentiation and future-content rules live in [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 
 ## Article pattern
 

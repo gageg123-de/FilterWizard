@@ -280,6 +280,8 @@ The comparison candidate retains strong editorial merit, but the first-party pat
 
 **Post-Draft Intent Audit — PASSED.** The finished article remains centered on terminology and system-type exceptions. Its placement material routes readers to the established every-return and return-plus-furnace owners instead of reproducing their configuration diagnoses; its size material routes to the sizing hub rather than teaching the full measurement workflow. Substantive sections cannot be moved unchanged into those pages without changing their primary intent.
 
+**Post-publication inventory:** 34 published blog articles, nine filter-size guides, 49 sitemap URLs, and 45 non-legal content pages. Article #35 is not authorized by this audit or the runner-up list.
+
 Runner-up status is not authorization for article 35. Reassess with later GSC data and repeat all gates.
 
 ## Controlled filter-size expansion — 2026-09-02

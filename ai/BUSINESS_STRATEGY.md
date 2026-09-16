@@ -1,6 +1,6 @@
 # Business Strategy
 
-Last verified: 2026-07-22
+Last verified: 2026-09-16
 
 ## Strategic thesis
 
@@ -34,7 +34,7 @@ The visible forms use reminder-oriented language, but repository code only prove
 Invest when a proposal improves a core user job, has an observable outcome, preserves size/compatibility uncertainty, and can be maintained with current capacity. Require stronger evidence as operational complexity, privacy exposure, or irreversible SEO footprint rises.
 
 - Content: require distinct search intent, homeowner value, internal-link role, and an update owner.
-- Filter-size pages: 20x25x1, 16x25x1, and 20x20x1 form a controlled three-page pilot set. Validate indexation, engagement, fit-safety behavior, cannibalization and maintenance burden before a small batch or templated expansion; follow [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
+- Filter-size pages: the original 20x25x1, 16x25x1, and 20x20x1 pilot has expanded to a controlled nine-page production set. Validate indexation, engagement, fit-safety behavior, cannibalization, differentiation, and maintenance burden before any further page or templated expansion; follow [`FILTER_SIZE_PAGES.md`](FILTER_SIZE_PAGES.md).
 - Reminders/accounts: require demonstrated opt-in demand, provider/retention decisions, legal review, and operating ownership.
 - Photo/model identification: require reliable data, explicit confidence/failure UX, privacy design, and no compatibility guarantee.
 - Monetization: prefer relevant retailer choice and disclosure; never optimize commission at the expense of fit or trust.
