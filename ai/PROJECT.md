@@ -1,6 +1,6 @@
 # Project
 
-Last verified: 2026-09-02
+Last verified: 2026-09-16
 
 ## Mission and audience
 

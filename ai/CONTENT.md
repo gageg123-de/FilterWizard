@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-09
+Last verified: 2026-09-16
+
+The 2026-09-16 guide `/blog/are-furnace-and-ac-filters-the-same.html` is the thirty-fourth published article. It was selected through the fresh 28-day GSC decision layer after Topic-Reality, demand/intent, duplicate, technical-evidence, and strategic-scoring gates passed. It owns the terminology question of when furnace filter and AC filter are two names for the shared return-air filter in a central forced-air system, while the existing return pages continue to own filter location/count and series-versus-parallel configuration. The 2,127-word article uses a 14-minute estimate, 10 matched FAQs, two Finder CTAs, zero retailer blocks, three reviewed existing 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-furnace-ac-filters-same`, and two limited reciprocal Related Articles links. It distinguishes central HVAC from window, portable, ductless, boiler, separate-system, and purpose-built media arrangements.
 
 The 2026-09-01 furnace short-cycling guide is the thirty-third published article and the first selected through the GSC-weighted decision layer in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md). It owns the narrow question of whether a dirty or restrictive filter can contribute to repeated short furnace heating cycles. Its 2,286 substantive article-content words use a 15-minute estimate. The filter-first inspection stays outside sealed equipment, presents protective limit interruption conditionally, keeps non-filter furnace causes high-level, prohibits safety-control bypass, and sends persistent cycling to qualified service. It uses 12 matched FAQs, two Finder CTAs, no retailer block, Article/FAQ/Breadcrumb schema, Formspree source `blog-furnace-short-cycling`, three reviewed 1200×800 WebPs, contextual links to seven established guides, and limited reciprocal links from the clogged-filter and restriction guides.
 

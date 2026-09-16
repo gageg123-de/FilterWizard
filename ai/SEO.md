@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-02
+Last verified: 2026-09-16
+
+The 2026-09-16 guide `/blog/are-furnace-and-ac-filters-the-same.html` was selected from the fresh 28-day GSC audit because its terminology/configuration intent resembles the site's strongest return, sizing, and narrow troubleshooting patterns. It has unique metadata, a self-canonical URL, Article/FAQ/Breadcrumb schema, and ten visible/schema-matched FAQs. It does not claim search volume for the exact query. The existing return-filter pages retain ownership of location and multi-filter configuration.
 
 The 2026-09-02 controlled size expansion adds self-canonical `/filter-sizes/16x24x1.html`, `/filter-sizes/18x20x1.html`, and `/filter-sizes/24x24x1.html`. The selection follows the strong first-party sizing pattern—20x25x1 had 11 impressions at position 8 and 16x25x1 had 3 impressions at position 8 in the owner-provided 2026-08-24 through 2026-08-30 export—without claiming exact-query demand for the new sizes. Each page has distinct metadata, size-specific confusion guidance, WebPage/FAQ/Breadcrumb schema, and a self-canonical URL. No new informational article was created, and the furnace-short-cycling page was left unchanged for observation.
 
@@ -39,7 +41,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, published articles, six filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 34 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

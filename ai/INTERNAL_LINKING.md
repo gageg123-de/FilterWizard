@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-09-09
+Last verified: 2026-09-16
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 48 indexable URLs: the homepage, blog index, 33 blog articles, nine size guides, and four legal pages. The 44 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 49 indexable URLs: the homepage, blog index, 34 blog articles, nine size guides, and four legal pages. The 45 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -32,6 +32,7 @@ The sitemap contains 48 indexable URLs: the homepage, blog index, 33 blog articl
 | HVAC symptom / filter causation | Each symptom page owns whether the filter can contribute to that outcome | AC freeze, AC not cooling, energy bill, furnace short cycling; restrictive-filter guide owns compatibility/restriction rather than a single symptom |
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
 | Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction |
+| HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
 | MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide provides the compatibility boundary |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |

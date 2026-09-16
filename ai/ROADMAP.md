@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-02
+Last verified: 2026-09-16
+
+## 2026-09-16 GSC-selected article
+
+Article #34, *Are Furnace Filters and AC Filters the Same?*, was selected from the fresh owner-provided 28-day Search Console export and published at `/blog/are-furnace-and-ac-filters-the-same.html`. It follows the demonstrated configuration/sizing pattern and passed all five pre-draft gates. Runner-ups remain unapproved: do not treat the shortlist as an article #35 queue. Observe the new page and reassess with later first-party data.
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 

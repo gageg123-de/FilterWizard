@@ -221,6 +221,67 @@ The decision model is 40% Filter Wizard GSC pattern alignment, 20% real-world/us
 
 Update this file when new first-party data, independent demand evidence, a new article, or a changed existing intent materially changes a classification or ranking.
 
+## Fresh 28-day GSC decision — 2026-09-16
+
+This layer preserves the earlier audit and reranks opportunities using the owner-provided `filter-wizard.com-Performance-on-Search-2026-09-16.xlsx` export. The workbook is a Web Search, last-28-days export covering 2026-08-18 through 2026-09-14. It reports 25 clicks, 2,657 impressions, 0.94% CTR, and average position 16.8 overall. The United States accounts for 21 clicks and 2,253 impressions at position 14.14; mobile accounts for 18 clicks and 1,844 impressions at position 9.04. Metrics are observations for this export, not forecasts or search-volume estimates.
+
+The clearest first-party pattern is still narrow diagnosis and configuration. Brown-filter (278 impressions, 7 clicks, position 5.69), bending (322/5/7.91), movement (113/3/7.88), every-return configuration (507/2/8.92), new-filter smell (110/2/8.88), AC freeze (186/1/8.92), restriction (111/1/9.86), wet-filter (88/1/7.73), and dirty-one-side (59/1/6.17) pages all earned page-one-ish average positions. General sizing (64 impressions, position 8.28) and listed size pages also remain competitive. Broad comparisons and commercial selection remain much deeper: washable/disposable (100 impressions, position 68.02), fiberglass/pleated (92, 62.66), pets (83, 54.95), smoke (32, 54.94), allergies (15, 60.87), and MERV 11/13 (28, 47.54). Different page ages and query mixes prevent causal claims.
+
+### Candidate pool and gates
+
+| Candidate | GSC pattern | Reality | Duplicate result | Decision |
+|---|---|---|---|---|
+| Are furnace filters and AC filters the same? | Strong: configuration, location, and sizing | Strong manufacturer evidence | Pass: placement pages do not own terminology | Selected |
+| Can you run HVAC without an air filter? | Strong troubleshooting pattern | Strong | Moderate overlap with maintenance/sizing | Shortlist |
+| Why does an air filter stay clean? | Strong symptom pattern | Moderate | Moderate overlap with dirty-fast/clogged | Research further |
+| Can you put a HEPA filter in a furnace? | Moderate compatibility pattern | Strong | Moderate MERV/restriction overlap | Shortlist |
+| Should the HVAC fan run continuously for filtration? | Moderate operating-question pattern | Strong | Low overlap; broader HVAC scope | Shortlist |
+| MERV vs. MPR vs. FPR | Weak first-party comparison pattern | Strong | Low overlap | Defer |
+| HVAC filter vs. portable air purifier | Weak first-party comparison pattern | Strong | Low overlap; broader scope | Defer |
+| What is a pleated air filter? | Direct query evidence, but weak position and existing media guide | Strong | High overlap | Merge into fiberglass/pleated |
+| Are pleated filters better? | Direct query evidence | Strong | High overlap | Merge into fiberglass/pleated |
+| Dirty filter and weak vent airflow | Strong symptom pattern | Strong | High overlap with clogged/restriction | Reject duplicate |
+| Furnace blowing cold air from a dirty filter | Strong symptom pattern | Strong | High overlap/generic furnace scope | Reject/merge |
+| Air filter not getting dirty | Strong symptom pattern | Moderate | Moderate overlap; no GSC query evidence | Research further |
+| Torn or ripped air filter | Strong symptom pattern | Weak–moderate | Moderate overlap with fit/bending | Research further |
+| Filter during remodeling | Strong loading pattern | Strong | High overlap with dirty-fast/dust | Merge |
+| Filter dimension order | Strong sizing pattern | Strong | High overlap with sizing hub | Merge |
+| How many filters does a house have? | Strong configuration pattern | Strong | High overlap with return guides | Merge |
+| Heat-pump filter vs. furnace filter | Strong terminology pattern | Strong | Same core intent as selected candidate | Merge into selected page |
+| Electrostatic vs. pleated filters | Weak comparison pattern | Strong | High overlap with washable/media guides | Defer/merge |
+| Sticky or greasy filter | Symptom pattern only; no first-party demand | Weak | High appearance-cluster overlap | Reject pending new evidence |
+| Newly changed filter already dusty | Symptom pattern only | Real but duplicate | Fails dirty-fast/clogged boundary | Reject duplicate |
+| Filter covered in pet hair | Symptom pattern only | Real but duplicate | Fails pet/dirty-fast boundary | Reject duplicate |
+
+### Shortlist scorecard
+
+The directional score uses 25% GSC alignment, 20% reality/intent, 20% distinctness, 15% topical fit, 10% technical confidence, 5% internal-link value, and 5% conversion usefulness. Cannibalization remains a gate rather than a scoring offset.
+
+| Rank | Candidate | GSC | Reality | Distinctness | Fit | Technical | Links | Conversion | Score |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | Are furnace filters and AC filters the same? | 24 | 19 | 18 | 15 | 10 | 5 | 5 | 96 |
+| 2 | Can you run HVAC without an air filter? | 23 | 19 | 15 | 15 | 10 | 5 | 4 | 91 |
+| 3 | Can you put a HEPA filter in a furnace? | 16 | 19 | 15 | 15 | 10 | 5 | 5 | 85 |
+| 4 | MERV vs. MPR vs. FPR | 8 | 20 | 20 | 15 | 10 | 5 | 5 | 83 |
+| 5 | Should the HVAC fan run continuously for filtration? | 17 | 18 | 19 | 11 | 9 | 5 | 2 | 81 |
+| 6 | Air filter stays clean after months | 22 | 13 | 14 | 15 | 7 | 5 | 2 | 78 |
+
+The comparison candidate retains strong editorial merit, but the first-party pattern intentionally reduces its publication priority. Scores guide the decision; they do not predict traffic.
+
+### Selected opportunity and pre-draft gate record
+
+**Selected:** *Are Furnace Filters and AC Filters the Same?* (`/blog/are-furnace-and-ac-filters-the-same.html`).
+
+- **Topic-Reality Preflight — PASSED.** Trane directly states that furnace, AC, and heat-pump filter terms refer to the same type of filter in a forced-air system; Carrier explains that central cooling commonly uses the return-side filter at the indoor furnace or air handler. The confusion is real and technically answerable.
+- **GSC/User-Intent Validation — PASSED.** The exact proposed query is not exposed in the workbook and no volume is claimed. The page pattern closely matches Filter Wizard's strongest first-party return/configuration and sizing pages, while manufacturer terminology confirms meaningful homeowner intent.
+- **Duplicate-Topic Preflight — PASSED across 33 published articles.** `filters-in-every-return-vent` owns which returns require filters; `filter-at-return-and-furnace` owns filters in series versus separate return paths; the sizing hub owns dimension discovery. None directly owns whether “furnace filter” and “AC filter” are usually seasonal names for the shared forced-air filter, when they are not interchangeable, or how to confirm the actual installed arrangement.
+- **Technical-Evidence Gate — PASSED.** Trane, Carrier, Lennox, and DOE Building Science guidance support the shared return-air role, variable locations, and configuration caveats. The article must distinguish central forced-air systems from ductless, window, portable, and purpose-built media arrangements.
+- **Strategic Scoring — PASSED.** It ranks first under the fresh model because it combines the proven configuration/sizing pattern with low cannibalization and a natural size-confirmation/Finder path.
+
+**Post-Draft Intent Audit — PASSED.** The finished article remains centered on terminology and system-type exceptions. Its placement material routes readers to the established every-return and return-plus-furnace owners instead of reproducing their configuration diagnoses; its size material routes to the sizing hub rather than teaching the full measurement workflow. Substantive sections cannot be moved unchanged into those pages without changing their primary intent.
+
+Runner-up status is not authorization for article 35. Reassess with later GSC data and repeat all gates.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.
