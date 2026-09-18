@@ -284,6 +284,19 @@ The comparison candidate retains strong editorial merit, but the first-party pat
 
 Runner-up status is not authorization for article 35. Reassess with later GSC data and repeat all gates.
 
+## Article #35 publication decision — 2026-09-17
+
+The historically second-ranked candidate, *Can You Run an HVAC System Without an Air Filter?*, was not published from score alone. It independently passed fresh production gates against the 34-article library before `/blog/can-you-run-hvac-without-air-filter.html` was created.
+
+- **Topic-Reality Preflight — PASSED.** Current Trane equipment instructions explicitly warn against operating applicable heating or cooling equipment with filters removed; DOE Building Science guidance supports the return-side filter's equipment-protection role; and recurring independent homeowner discussions confirm the missing-filter situation and wording. Community reports establish occurrence, not technical truth.
+- **Search-demand/User-Intent Validation — PASSED.** The urgent decision recurs across manufacturer, contractor, and homeowner language and matches Filter Wizard's strong troubleshooting/configuration content pattern. The supplied GSC data does not expose meaningful exact-query demand, and no numeric search volume is claimed.
+- **Duplicate-Topic Preflight — PASSED across 34 existing articles.** Replacement timing owns intervals; clogged owns installed-filter loading; find-size owns dimension discovery; fit and slightly-different-size own seating/substitution; return pages own filter count/location; article #34 owns furnace-versus-AC terminology. None owns whether a required filter may be absent during operation and the immediate safe recovery path.
+- **Cannibalization Test — PASSED.** The closest likely competitor is `/blog/can-you-vacuum-and-reuse-an-air-filter.html`, whose no-replacement section discourages filterless operation but centers clean-versus-replace. Article #35 owns missing required filter → operating decision → locate/size/install/escalate and links outward rather than reproducing those guides.
+- **Technical-Evidence Review — PASSED.** Trane, DOE Building Science Education, Carrier replacement guidance, and Trane filter guidance support the filter requirement, equipment-protection role, safe replacement workflow, location variability, and system-type qualification. The article does not invent an allowable filterless runtime or claim instant damage.
+- **Post-Draft Intent Audit — PASSED.** The finished guide remains centered on the missing-filter decision. Sizing, fit, clogging, restriction, configuration, terminology, moisture, and bending receive concise routing only; their detailed diagnosis remains with existing intent owners.
+
+**Post-publication inventory:** 35 published blog articles, nine filter-size guides, 50 sitemap URLs, and 46 non-legal content pages. Article #36 is not authorized by the remaining shortlist.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.

@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-09-16
+Last verified: 2026-09-17
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 49 indexable URLs: the homepage, blog index, 34 blog articles, nine size guides, and four legal pages. The 45 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 50 indexable URLs: the homepage, blog index, 35 blog articles, nine size guides, and four legal pages. The 46 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -36,7 +36,7 @@ The sitemap contains 49 indexable URLs: the homepage, blog index, 34 blog articl
 | MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide provides the compatibility boundary |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |
-| Maintenance | `/blog/how-often-change-air-filter.html` owns replacement timing | vacuum/reuse owns clean-versus-replace; clogged guide owns condition-based replacement signals |
+| Maintenance | `/blog/how-often-change-air-filter.html` owns replacement timing | vacuum/reuse owns clean-versus-replace; clogged guide owns condition-based replacement signals; HVAC-without-filter owns the missing-required-filter operating decision and safe recovery path |
 | Filter-size guides | `/blog/how-to-find-your-air-filter-size.html` is the discovery and verification hub | 20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1, 24x24x1 |
 
 ### Specialized ownership boundaries

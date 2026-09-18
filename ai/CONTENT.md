@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-16
+Last verified: 2026-09-17
+
+The 2026-09-17 guide `/blog/can-you-run-hvac-without-air-filter.html` is the thirty-fifth published article. A fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence review passed before production: Trane equipment instructions explicitly prohibit operating applicable heating or cooling equipment with filters removed; DOE guidance supports the return-side filter's equipment-protection role; and repeated independent homeowner questions establish the real urgent decision without supplying technical proof. No verified numeric query volume is claimed. The 2,404-word guide owns the missing-required-filter operation and immediate recovery path, while replacement timing, clogging, sizing, fit, configuration, and furnace/AC terminology retain their existing owners. It uses a 14-minute estimate, 10 matched FAQs, two Finder CTAs, zero retailer blocks, three reviewed existing 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-can-you-run-hvac-without-air-filter`, and one contextual incoming link from the replacement-timing guide. It provides no universal filterless runtime, rejects wrong-size improvisation, distinguishes central forced-air systems from other equipment, and keeps unsafe HVAC work outside homeowner scope.
 
 The 2026-09-16 guide `/blog/are-furnace-and-ac-filters-the-same.html` is the thirty-fourth published article. It was selected through the fresh 28-day GSC decision layer after Topic-Reality, demand/intent, duplicate, technical-evidence, and strategic-scoring gates passed. It owns the terminology question of when furnace filter and AC filter are two names for the shared return-air filter in a central forced-air system, while the existing return pages continue to own filter location/count and series-versus-parallel configuration. The 2,127-word article uses a 14-minute estimate, 10 matched FAQs, two Finder CTAs, zero retailer blocks, three reviewed existing 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-furnace-ac-filters-same`, and two limited reciprocal Related Articles links. It distinguishes central HVAC from window, portable, ductless, boiler, separate-system, and purpose-built media arrangements.
 
@@ -80,7 +82,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-four static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-five static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

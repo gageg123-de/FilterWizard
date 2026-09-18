@@ -1,6 +1,6 @@
 # Project
 
-Last verified: 2026-09-16
+Last verified: 2026-09-17
 
 ## Mission and audience
 
@@ -17,7 +17,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 - 45/60/75/90-day schedules, reminder months, and price-range-based annual estimates.
 - Amazon, Home Depot, Lowe's, and Filterbuy search options after size confirmation.
 - Amazon Associates Store ID `filterwizard-20`.
-- Thirty-four blog articles, a blog index, homepage guide previews, legal pages, email-interest capture, GA4, Clarity, and consent controls.
+- Thirty-five blog articles, a blog index, homepage guide previews, legal pages, email-interest capture, GA4, Clarity, and consent controls.
 - Nine production filter-size guides: 20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1 under [`../filter-sizes/`](../filter-sizes/).
 
 ## Business and acquisition

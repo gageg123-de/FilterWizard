@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-16
+Last verified: 2026-09-17
+
+The 2026-09-17 guide `/blog/can-you-run-hvac-without-air-filter.html` owns the urgent missing-required-filter operation and safe recovery intent. It passed fresh reality, demand, duplicate, cannibalization, and technical-evidence gates against 34 articles; no exact-query GSC demand or verified numeric volume is claimed. Its unique title/description, self-canonical URL, Open Graph/Twitter fields, Article/FAQ/Breadcrumb schema, and ten matched FAQs preserve the boundary with replacement timing, clogging, sizing, fit, configuration, and furnace-versus-AC terminology pages.
 
 The 2026-09-16 guide `/blog/are-furnace-and-ac-filters-the-same.html` was selected from the fresh 28-day GSC audit because its terminology/configuration intent resembles the site's strongest return, sizing, and narrow troubleshooting patterns. It has unique metadata, a self-canonical URL, Article/FAQ/Breadcrumb schema, and ten visible/schema-matched FAQs. It does not claim search volume for the exact query. The existing return-filter pages retain ownership of location and multi-filter configuration.
 
@@ -41,7 +43,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 34 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 35 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

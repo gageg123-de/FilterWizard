@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-16
+Last verified: 2026-09-17
+
+## 2026-09-17 evidence-gated article
+
+Article #35, *Can You Run an HVAC System Without an Air Filter?*, was published at `/blog/can-you-run-hvac-without-air-filter.html` only after fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence gates passed. It owns the urgent missing-required-filter operating decision and safe recovery path without claiming an allowable filterless runtime or absorbing sizing, clogged-filter, configuration, or article #34 terminology intent. No exact-query Search Console demand or verified numeric search volume is claimed. Article #36 is not authorized; all future content remains evidence-gated.
 
 ## 2026-09-16 GSC-selected article
 
@@ -10,7 +14,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-four articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-five articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
