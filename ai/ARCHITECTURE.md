@@ -1,6 +1,6 @@
 # Architecture
 
-Last verified: 2026-09-02
+Last verified: 2026-09-18
 
 ## Actual stack
 
@@ -13,8 +13,10 @@ Architecture constraints are current facts, not permanent preferences. Adding a 
 - [`../index.html`](../index.html): homepage, Finder markup, modal, result UI, and general email form.
 - [`../assets/css/style.css`](../assets/css/style.css): all shared styles and responsive rules.
 - [`../assets/js/script.js`](../assets/js/script.js): navigation, reveal effects, consent, Finder, forms, shares, article tracking, retailer links.
-- [`../blog/`](../blog/): index plus twenty-eight hand-authored articles.
-- [`../filter-sizes/`](../filter-sizes/): nine hand-authored size pages (20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1); no index, generator or bulk system.
+- [`../blog/`](../blog/): index plus thirty-five hand-authored articles.
+- [`../filter-sizes/`](../filter-sizes/): nine preserved static size pages (20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1); no public index.
+- [`../data/filter-sizes.json`](../data/filter-sizes.json): central size-page manifest containing page identity, deployment state, evidence, metadata, distinct utility, and retailer-query facts.
+- [`../tools/filter-size-pages.mjs`](../tools/filter-size-pages.mjs): dependency-free size-page generator and production validator. It runs only at authoring time; hosting still serves plain static HTML.
 - [`../legal/`](../legal/): canonical privacy, cookie, terms, and affiliate pages.
 - Root legal HTML files: `noindex, follow` meta-refresh compatibility URLs pointing to `/legal/`.
 - [`../assets/images/`](../assets/images/): `blog`, `brand`, `homepage`, `products`, and `social` assets.
@@ -34,7 +36,7 @@ Runtime integrations are GA4, Microsoft Clarity, Formspree, Amazon, Home Depot, 
 |---|---|
 | Navigation/footer | Every production HTML page; verify duplication |
 | Add article | New `blog/*.html`, `blog/index.html`, homepage previews, `sitemap.xml`, reciprocal links |
-| Add filter-size page | Pilot patterns in `filter-sizes/20x25x1.html` and `filter-sizes/16x25x1.html`; follow `FILTER_SIZE_PAGES.md` and require explicit authorization before another |
+| Add filter-size page | Add one gated record to `data/filter-sizes.json`, follow `FILTER_SIZE_PAGES.md`, generate with `node tools/filter-size-pages.mjs generate <slug>`, and validate before indexing |
 | Finder questions/UI | `index.html`, `style.css`, `script.js` |
 | Size/MERV/schedule/cost logic | `script.js` functions documented in `FILTER_LOGIC.md` |
 | Amazon behavior | `amazonAffiliateTag`, `buildRetailerSearchQuery`, `getRetailerLinks`, click tracking in `script.js` |
@@ -43,9 +45,9 @@ Runtime integrations are GA4, Microsoft Clarity, Formspree, Amazon, Home Depot, 
 | Global styles | `style.css`; reuse tokens and shared classes |
 | Metadata/schema | `<head>` of the affected page and `sitemap.xml` when appropriate |
 
-Technical debt: duplicated HTML and analytics bootstrap, inconsistent schema coverage between older articles, static content-card duplication, and no automated regression suite.
+Technical debt: duplicated HTML and analytics bootstrap, inconsistent schema coverage between older articles, static content-card duplication, and no full automated regression suite. Size-page metadata and production invariants now have targeted automated validation.
 
-The size-page pilots reuse the article shell, quick-answer card, responsive table, MERV cards, FAQ details, related grid, retailer cards, header/footer and consent bootstrap. Page-specific content, WebPage/FAQ/Breadcrumb schema, retailer URLs and `data-filter-size-*` attributes remain in each HTML file. Shared JS reads the static `data-filter-size` value for scoped events; there is no templating layer.
+The size-page system reuses the article shell, quick-answer card, responsive table, FAQ details, related grid, retailer cards, header/footer and consent bootstrap. Existing public HTML is preserved. Future approved pages are rendered from structured records by an authoring-time Node tool, then committed as static HTML. Shared JS reads the static `data-filter-size` value for scoped events. The validator discovers the Amazon tag from the same runtime constant used by Finder, preventing a second affiliate-tag configuration source.
 
 ## Architectural invariants and risks
 

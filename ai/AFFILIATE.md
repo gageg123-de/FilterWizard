@@ -69,4 +69,8 @@ The fiberglass-versus-pleated guide has high commercial-investigation intent but
 
 The size-substitution guide has high sizing-to-purchase intent but no direct retailer destinations. Its two CTAs follow confirmation of the intended nominal length, width, and thickness; retailer choices remain gated behind a valid confirmed three-dimensional size in the existing Filter Finder. It does not recommend a nearby nominal size to create a retailer click. The Store ID `filterwizard-20`, disclosures, sponsored attributes, and delegated click tracking are unchanged.
 
+## Filter-size authoring safeguard
+
+`data/filter-sizes.json` stores only each size-specific Amazon search query. `tools/filter-size-pages.mjs` discovers the Store ID from the authoritative `amazonAffiliateTag` constant in `assets/js/script.js`, generates the URL, and validates every published size-page Amazon link against that output. Do not add a second tag value to the manifest or generator. Existing links remain static HTML for reliable crawling and no-JavaScript access; delegated runtime click tracking remains unchanged.
+
 Update this file when: Store ID, retailers, URL generation, disclosures, link attributes, product rules, or tracking changes.

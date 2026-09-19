@@ -1,8 +1,18 @@
 # Filter-Size Pages
 
-Last verified: 2026-09-02
+Last verified: 2026-09-18
 
-Nine hand-authored production pages exist: [`../filter-sizes/20x25x1.html`](../filter-sizes/20x25x1.html), [`../filter-sizes/16x25x1.html`](../filter-sizes/16x25x1.html), [`../filter-sizes/20x20x1.html`](../filter-sizes/20x20x1.html), [`../filter-sizes/16x20x1.html`](../filter-sizes/16x20x1.html), [`../filter-sizes/14x20x1.html`](../filter-sizes/14x20x1.html), [`../filter-sizes/14x25x1.html`](../filter-sizes/14x25x1.html), [`../filter-sizes/16x24x1.html`](../filter-sizes/16x24x1.html), [`../filter-sizes/18x20x1.html`](../filter-sizes/18x20x1.html), and [`../filter-sizes/24x24x1.html`](../filter-sizes/24x24x1.html). The directory remains file-routed with no index page, generator, data source, or bulk system. The implemented set is not authorization for mass generation.
+Nine production pages exist: [`../filter-sizes/20x25x1.html`](../filter-sizes/20x25x1.html), [`../filter-sizes/16x25x1.html`](../filter-sizes/16x25x1.html), [`../filter-sizes/20x20x1.html`](../filter-sizes/20x20x1.html), [`../filter-sizes/16x20x1.html`](../filter-sizes/16x20x1.html), [`../filter-sizes/14x20x1.html`](../filter-sizes/14x20x1.html), [`../filter-sizes/14x25x1.html`](../filter-sizes/14x25x1.html), [`../filter-sizes/16x24x1.html`](../filter-sizes/16x24x1.html), [`../filter-sizes/18x20x1.html`](../filter-sizes/18x20x1.html), and [`../filter-sizes/24x24x1.html`](../filter-sizes/24x24x1.html). Their public HTML and URLs were preserved during the 2026-09-18 architecture migration. [`../data/filter-sizes.json`](../data/filter-sizes.json) is now the central manifest for identity, metadata, deployment status, evidence, unique utility, and retailer-query facts; [`../tools/filter-size-pages.mjs`](../tools/filter-size-pages.mjs) validates the production set and provides a gated generator for future approved records. This architecture is not authorization for mass generation.
+
+## Structured architecture and commands
+
+The manifest uses four explicit statuses: `indexed` for a reviewed sitemap page; `approved` for a fully researched generation-ready draft; `research` for a plausible but unproven candidate; and `rejected` for a candidate that failed the current evidence or information-gain gate. Rejected records require new evidence before reconsideration.
+
+Run `node tools/filter-size-pages.mjs validate` before and after every size-page change. It checks manifest integrity, duplicate slugs, manifest/page parity, titles and descriptions, H1s, canonicals, schema types, sitemap membership, Amazon query/tag output, tracking hooks, and normalized near-duplicate body similarity. The Amazon tag is discovered from the authoritative runtime configuration in `assets/js/script.js`; it is not duplicated in the manifest or tool.
+
+Future generation is data-first: add one evidence-supported record, set it to `approved`, and provide its `generation` object with researched page-specific copy, nearby-size rows, FAQs, related pages, and publication date. Then run `node tools/filter-size-pages.mjs generate <slug>`. The command refuses research/rejected records, thin size-specific content, fewer than six FAQs, missing fields, and accidental overwrite without `--force`. Review the generated HTML, add justified incoming links and sitemap entry, run all validation, and only then change the record to `indexed`. Existing pages remain preservation baselines rather than being regenerated solely to normalize formatting.
+
+The current first-party record supports the size-intent cluster and the existing 20x25x1/16x25x1 pages, but it does not expose verified exact-query demand for another nominal size. No verified Filter Finder size-selection analytics are available. Consequently, the 2026-09-18 audit deployed **zero** new size URLs: all remaining candidates stay non-indexable until new evidence and distinct utility exist.
 
 The 2026-09-02 controlled expansion rechecked the six-page baseline and added 16x24x1, 18x20x1, and 24x24x1. Selection used the owner-provided seven-day GSC sizing pattern, independent marketed-size evidence, direct retailer/category availability where observable, and page-specific confusion sets. GSC did not show exact queries for the new dimensions; no exact-size demand is claimed. 16x24x1 owns the one-inch distinction from 16x25x1, 18x20x1 owns the middle-width choice between 16x20x1 and 20x20x1, and 24x24x1 owns the large-square/orientation problem. Remaining candidates require a fresh evidence check.
 
@@ -55,16 +65,16 @@ Sources used for reality validation, not volume claims: Carrier’s available on
 
 ### Permanent future workflow
 
-1. Verify a real-world marketed nominal size.
-2. Check first-party/GSC evidence without inferring popularity from code presence.
-3. Confirm manufacturer and retailer availability.
-4. Inventory existing size pages and their confusion sets.
-5. Define distinct homeowner utility.
-6. Reject thin or interchangeable candidates.
-7. Draft against the strongest production benchmark.
-8. Run a post-draft duplication and dimension-copy audit.
-9. Validate every affiliate/retailer path and tracking attribute.
-10. Validate schema, metadata, links, sitemap, header, and runtime behavior before publishing.
+1. Verify a real-world marketed nominal size using independent manufacturer/retailer evidence.
+2. Record first-party GSC or verified analytics evidence without inferring popularity from code presence.
+3. Inventory existing size pages, confusion sets, and the candidate's distinct homeowner task.
+4. Reject thin, interchangeable, or cannibalizing candidates; keep them `research` or `rejected` in the manifest.
+5. Add a complete structured record only after approval, including unique copy, FAQs, nearby sizes, and related paths.
+6. Generate one page and review the complete HTML; never generate an unreviewed batch.
+7. Add at least one justified incoming contextual link and any useful sibling relationships.
+8. Run the automated validator and the internal-link audit.
+9. Manually verify metadata, structured data, accessibility, mobile layout, Finder behavior, retailer paths, and tracking.
+10. Add the sitemap entry and change status to `indexed` only after every gate passes.
 
 A candidate that fails step 1 or step 5 stops. For every draft, scan the H1, title, meta, canonical, breadcrumb, JSON-LD, FAQs, CTA attributes, retailer queries, captions, alt text, and related links for stray dimensions introduced by template reuse. Compare intros, paragraphs, FAQ sets, confusion examples, and link paths across the batch; drop any page that still reads like find-and-replace output.
 
@@ -74,7 +84,7 @@ Roadmap presence does not authorize creation. A first page requires explicit pro
 
 ## Established pilot conventions
 
-- URL: `/filter-sizes/{normalized-size}.html`; only the six pages listed above are implemented.
+- URL: `/filter-sizes/{normalized-size}.html`; only the nine pages listed above are implemented.
 - Reuse the production header/footer, article shell, quick answer, responsive tables, MERV cards, retailer cards, FAQ details and related-link grid.
 - Use a visible Home/current-page breadcrumb when no parent index exists; do not link a nonexistent `/filter-sizes/` page.
 - Use WebPage rather than Product schema because Filter Wizard does not sell the filter. Visible FAQ and breadcrumb must match their schemas.

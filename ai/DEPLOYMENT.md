@@ -14,7 +14,7 @@ Evidence labels and inference rules are defined in [`DECISION_FRAMEWORK.md`](DEC
 
 - Likely production/source branch: `main`; verify in GitHub Pages settings.
 - Likely source folder: repository root; verify externally.
-- Build command: none.
+- Production build command: none. `node tools/filter-size-pages.mjs` is an authoring-time generator/validator that emits committed static HTML; hosting does not execute it.
 - Output directory: repository root.
 - Environment variables: none in repository.
 - Custom domain: `filter-wizard.com`.

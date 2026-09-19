@@ -19,6 +19,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 - Amazon Associates Store ID `filterwizard-20`.
 - Thirty-five blog articles, a blog index, homepage guide previews, legal pages, email-interest capture, GA4, Clarity, and consent controls.
 - Nine production filter-size guides: 20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1 under [`../filter-sizes/`](../filter-sizes/).
+- A dependency-free, authoring-time filter-size manifest/generator/validator. It preserves the nine static production pages and blocks unvalidated candidate sizes from deployment.
 
 ## Business and acquisition
 
@@ -29,7 +30,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 ## Status boundaries
 
 - Implemented: features listed above.
-- Implemented controlled nine-page set: the six-page baseline plus differentiated 16x24x1, 18x20x1 and 24x24x1 landing pages. Additional pages remain proposed and require explicit scope, real-world size evidence, and information gain beyond dimension substitution.
+- Implemented controlled nine-page set: the six-page baseline plus differentiated 16x24x1, 18x20x1 and 24x24x1 landing pages. Additional records remain non-deployable research/rejections in `data/filter-sizes.json` until explicit scope, real-world size evidence, and information gain beyond dimension substitution are verified.
 - Experimental: reminders, saved/multi-filter profiles, history, photo assistance, model lookup, property-manager tools.
 - Deprecated: subscription/founding-member fake-door positioning and direct checkout. Do not revive without a product decision.
 - Not implemented: accounts, payments, inventory, fulfillment, backend, database, formal analytics dashboard, Cloudflare Workers/Pages code.

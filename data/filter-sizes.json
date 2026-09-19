@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "siteBaseUrl": "https://filter-wizard.com",
+  "pageDefaults": {
+    "directory": "filter-sizes",
+    "amazonSearchSuffix": "air filter",
+    "requiredSchemas": ["WebPage", "FAQPage", "BreadcrumbList"],
+    "finderHref": "/#filter-finder"
+  },
+  "sizes": [
+    {
+      "nominalSize": "14x20x1",
+      "dimensions": { "width": 14, "height": 20, "depth": 1 },
+      "slug": "14x20x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "14x20x1 Air Filter Guide: Fit, MERV and Buying Tips | Filter Wizard",
+      "description": "Verify a 14x20x1 air filter, understand nominal and actual sizing, diagnose loose fit, compare MERV choices and shop without guessing on dimensions.",
+      "h1": "14x20x1 Air Filters: Fit, MERV and Buying Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/14x20x1.html",
+      "amazonSearchQuery": "14x20x1 air filter",
+      "uniqueUtility": "Diagnoses loose fit and distinguishes the shorter 20-inch side from nearby 14x25x1 products.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "14x25x1",
+      "dimensions": { "width": 14, "height": 25, "depth": 1 },
+      "slug": "14x25x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "14x25x1 Air Filter Guide: Dimensions, MERV and Replacement | Filter Wizard",
+      "description": "Confirm a 14x25x1 air filter, distinguish it from 14x20x1 and 16x25x1, compare actual dimensions, MERV options and replacement planning.",
+      "h1": "14x25x1 Air Filters: Dimensions, MERV and Replacement Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/14x25x1.html",
+      "amazonSearchQuery": "14x25x1 air filter",
+      "uniqueUtility": "Separates two plausible neighboring labels: 14x20x1 and 16x25x1.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "16x20x1",
+      "dimensions": { "width": 16, "height": 20, "depth": 1 },
+      "slug": "16x20x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "16x20x1 Air Filter Guide: Size, MERV and Replacement | Filter Wizard",
+      "description": "Confirm a 16x20x1 air filter, compare nominal and actual dimensions, avoid nearby-size mistakes, choose cautious MERV guidance and plan replacements.",
+      "h1": "16x20x1 Air Filters: Size, MERV and Replacement Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/16x20x1.html",
+      "amazonSearchQuery": "16x20x1 air filter",
+      "uniqueUtility": "Explains the common 16x20x1 label and prevents substitution with longer 16-inch-wide filters.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "16x24x1",
+      "dimensions": { "width": 16, "height": 24, "depth": 1 },
+      "slug": "16x24x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "16x24x1 Air Filter Guide: Dimensions, Fit and MERV | Filter Wizard",
+      "description": "Confirm a 16x24x1 air filter, avoid confusing it with 16x25x1, compare actual dimensions, check fit and choose cautious MERV guidance.",
+      "h1": "16x24x1 Air Filters: Dimensions, Fit and MERV",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/16x24x1.html",
+      "amazonSearchQuery": "16x24x1 air filter",
+      "uniqueUtility": "Focuses on the easy-to-miss one-inch difference from 16x25x1.",
+      "evidence": ["Published production page", "First-party Search Console impressions recorded in ai/FILTER_SIZE_PAGES.md", "Manufacturer and retailer availability"]
+    },
+    {
+      "nominalSize": "16x25x1",
+      "dimensions": { "width": 16, "height": 25, "depth": 1 },
+      "slug": "16x25x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "16x25x1 Air Filter Guide: Size, MERV and Replacement | Filter Wizard",
+      "description": "Learn how to confirm a 16x25x1 air filter, compare nominal and actual dimensions, avoid nearby-size mistakes, choose MERV guidance and plan replacements.",
+      "h1": "16x25x1 Air Filters: Size, MERV and Replacement Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/16x25x1.html",
+      "amazonSearchQuery": "16x25x1 air filter",
+      "uniqueUtility": "Covers a high-frequency residential label and its confusion with 16x24x1 and deeper media.",
+      "evidence": ["Published production page", "First-party Search Console impressions recorded in ai/FILTER_SIZE_PAGES.md", "Manufacturer and retailer availability"]
+    },
+    {
+      "nominalSize": "18x20x1",
+      "dimensions": { "width": 18, "height": 20, "depth": 1 },
+      "slug": "18x20x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "18x20x1 Air Filter Guide: Fit, Nearby Sizes and MERV | Filter Wizard",
+      "description": "Verify an 18x20x1 air filter, distinguish it from 16x20x1 and 20x20x1, compare actual dimensions and choose careful MERV guidance.",
+      "h1": "18x20x1 Air Filters: Fit, Nearby Sizes and MERV",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/18x20x1.html",
+      "amazonSearchQuery": "18x20x1 air filter",
+      "uniqueUtility": "Distinguishes the 18-inch width from the more familiar 16- and 20-inch alternatives.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "20x20x1",
+      "dimensions": { "width": 20, "height": 20, "depth": 1 },
+      "slug": "20x20x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "20x20x1 Air Filter Guide: Size, MERV and Replacement | Filter Wizard",
+      "description": "Learn how to confirm a 20x20x1 air filter, compare nominal and actual dimensions, avoid nearby-size mistakes, choose MERV guidance and plan replacements.",
+      "h1": "20x20x1 Air Filters: Size, MERV and Replacement Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/20x20x1.html",
+      "amazonSearchQuery": "20x20x1 air filter",
+      "uniqueUtility": "Explains square-frame orientation and distinguishes it from rectangular 20-inch sizes.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "20x25x1",
+      "dimensions": { "width": 20, "height": 25, "depth": 1 },
+      "slug": "20x25x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "20x25x1 Air Filter Guide: Size, MERV and Replacement | Filter Wizard",
+      "description": "Learn how to confirm a 20x25x1 air filter, compare nominal and actual dimensions, choose a compatible MERV rating and estimate replacement timing.",
+      "h1": "20x25x1 Air Filters: Size, MERV and Replacement Guide",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/20x25x1.html",
+      "amazonSearchQuery": "20x25x1 air filter",
+      "uniqueUtility": "Supports a proven size query with fit, product-dimension, and replacement safeguards.",
+      "evidence": ["Published production page", "First-party Search Console impressions and page-one-range position recorded in ai/FILTER_SIZE_PAGES.md", "Manufacturer and retailer availability"]
+    },
+    {
+      "nominalSize": "24x24x1",
+      "dimensions": { "width": 24, "height": 24, "depth": 1 },
+      "slug": "24x24x1",
+      "status": "indexed",
+      "indexEligible": true,
+      "preserveExisting": true,
+      "title": "24x24x1 Air Filter Guide: Square Size, Fit and MERV | Filter Wizard",
+      "description": "Confirm a 24x24x1 square air filter, compare nearby sizes, understand nominal versus actual dimensions and choose careful MERV guidance.",
+      "h1": "24x24x1 Air Filters: Square Size, Fit and MERV",
+      "canonicalUrl": "https://filter-wizard.com/filter-sizes/24x24x1.html",
+      "amazonSearchQuery": "24x24x1 air filter",
+      "uniqueUtility": "Addresses square-frame orientation and nearby 24-inch rectangular sizes.",
+      "evidence": ["Published production page", "Manufacturer and retailer availability recorded in ai/FILTER_SIZE_PAGES.md"]
+    },
+    {
+      "nominalSize": "18x24x1",
+      "dimensions": { "width": 18, "height": 24, "depth": 1 },
+      "slug": "18x24x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Multiple-market availability noted in historical research"],
+      "blocker": "No verified first-party exact-size demand or sufficiently distinct utility package yet."
+    },
+    {
+      "nominalSize": "20x24x1",
+      "dimensions": { "width": 20, "height": 24, "depth": 1 },
+      "slug": "20x24x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Marketed size noted in historical research"],
+      "blocker": "Requires stronger independent market evidence and distinct homeowner utility."
+    },
+    {
+      "nominalSize": "18x25x1",
+      "dimensions": { "width": 18, "height": 25, "depth": 1 },
+      "slug": "18x25x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand."
+    },
+    {
+      "nominalSize": "20x30x1",
+      "dimensions": { "width": 20, "height": 30, "depth": 1 },
+      "slug": "20x30x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand."
+    },
+    {
+      "nominalSize": "16x25x4",
+      "dimensions": { "width": 16, "height": 25, "depth": 4 },
+      "slug": "16x25x4",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "Deep-media cabinet compatibility and product-specific actual dimensions require stronger research."
+    },
+    {
+      "nominalSize": "20x25x4",
+      "dimensions": { "width": 20, "height": 25, "depth": 4 },
+      "slug": "20x25x4",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "Deep-media cabinet compatibility and product-specific actual dimensions require stronger research."
+    },
+    {
+      "nominalSize": "14x24x1",
+      "dimensions": { "width": 14, "height": 24, "depth": 1 },
+      "slug": "14x24x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "12x20x1",
+      "dimensions": { "width": 12, "height": 20, "depth": 1 },
+      "slug": "12x20x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "12x24x1",
+      "dimensions": { "width": 12, "height": 24, "depth": 1 },
+      "slug": "12x24x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "12x25x1",
+      "dimensions": { "width": 12, "height": 25, "depth": 1 },
+      "slug": "12x25x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "14x14x1",
+      "dimensions": { "width": 14, "height": 14, "depth": 1 },
+      "slug": "14x14x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "16x16x1",
+      "dimensions": { "width": 16, "height": 16, "depth": 1 },
+      "slug": "16x16x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "24x30x1",
+      "dimensions": { "width": 24, "height": 30, "depth": 1 },
+      "slug": "24x30x1",
+      "status": "research",
+      "indexEligible": false,
+      "evidence": ["Candidate recorded in ai/FILTER_SIZE_PAGES.md"],
+      "blocker": "No verified first-party exact-size demand or distinct utility package."
+    },
+    {
+      "nominalSize": "18x18x1",
+      "dimensions": { "width": 18, "height": 18, "depth": 1 },
+      "slug": "18x18x1",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Historical candidate review"],
+      "blocker": "Insufficient evidence of meaningful demand and distinct utility."
+    },
+    {
+      "nominalSize": "15x20x1",
+      "dimensions": { "width": 15, "height": 20, "depth": 1 },
+      "slug": "15x20x1",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Historical candidate review"],
+      "blocker": "Insufficient evidence of meaningful demand and distinct utility."
+    },
+    {
+      "nominalSize": "15x25x1",
+      "dimensions": { "width": 15, "height": 25, "depth": 1 },
+      "slug": "15x25x1",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Historical candidate review"],
+      "blocker": "Insufficient evidence of meaningful demand and distinct utility."
+    },
+    {
+      "nominalSize": "12x12x1",
+      "dimensions": { "width": 12, "height": 12, "depth": 1 },
+      "slug": "12x12x1",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Historical candidate review"],
+      "blocker": "Insufficient evidence of meaningful demand and distinct utility."
+    },
+    {
+      "nominalSize": "16x25x5",
+      "dimensions": { "width": 16, "height": 25, "depth": 5 },
+      "slug": "16x25x5",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Manufacturer-specific whole-house products noted in historical research"],
+      "blocker": "Generic nominal guidance is unsafe without model-level cabinet and actual-dimension research."
+    },
+    {
+      "nominalSize": "20x25x5",
+      "dimensions": { "width": 20, "height": 25, "depth": 5 },
+      "slug": "20x25x5",
+      "status": "rejected",
+      "indexEligible": false,
+      "evidence": ["Manufacturer-specific whole-house products noted in historical research"],
+      "blocker": "Generic nominal guidance is unsafe without model-level cabinet and actual-dimension research."
+    }
+  ]
+}
