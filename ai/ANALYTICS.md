@@ -1,6 +1,12 @@
 # Analytics
 
-Last verified: 2026-09-01
+Last verified: 2026-09-20
+
+The 2026-09-20 affiliate-funnel audit corrected two article CTA instrumentation gaps: the pets guide and replacement-frequency guide now use the shared `data-article-filter-finder-cta` contract with explicit slug and CTA-location values. The delegated handler now records the declared CTA location and page path instead of collapsing every article click to `article_body`.
+
+Article and size-page Finder CTAs also store a short-lived, static entry context in session storage before navigating to the homepage. The next Finder open consumes that context so `filter_finder_started` can distinguish an article or size-page source from a generic homepage start. Values contain only an article slug or published nominal size plus a fixed CTA location; they expire after 30 minutes and never contain free-form input, email, or an unvalidated size. If session storage is unavailable, navigation and the Finder continue with the existing opener entry point.
+
+`filter_finder_retailer_clicked` now includes `is_affiliate_retailer`. The retained `is_recommended_retailer` parameter is false for Amazon because the card is an affiliate search path, not an independent retailer recommendation. The delegated `amazon_click` event remains the Amazon-specific outbound event, and no purchase or commission event is claimed.
 
 The 16x20x1, 14x20x1 and 14x25x1 pages reuse the existing `filter_size_page_view`, Finder CTA, retailer-click and related-link paths through static `data-filter-size` attributes. Each has three tracked Finder CTAs and four tracked retailer searches; no analytics script, event, parameter or listener was added.
 

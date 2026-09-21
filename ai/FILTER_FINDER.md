@@ -1,6 +1,6 @@
 # Filter Finder
 
-Last verified: 2026-07-19
+Last verified: 2026-09-20
 
 The Finder exists only on [`../index.html`](../index.html). Entry points include the hero CTA, inline Finder CTA, navigation/anchor links, article links to `/#filter-finder`, and restart controls. [`../assets/js/script.js`](../assets/js/script.js) controls it.
 
@@ -37,7 +37,7 @@ Back is disabled on step one; Next validates before advancing. The modal closes 
 
 Results include size/confidence, MERV display/caution, schedule, next month, reminder months, yearly estimate, product illustration, personalized insight, disclosures, copy action, optional email, and retailer cards only after confirmation. Unknown users see location-specific guidance and can update the same report with a valid size.
 
-Local storage keys: `filterWizardFinderResults` stores the latest report; `filterWizardEmailSignups` stores the latest submitted email/source/timestamp; `filterWizardConsent` stores consent. This is device-local, not an account.
+Local storage keys: `filterWizardFinderResults` stores the latest report; `filterWizardEmailSignups` stores the latest submitted email/source/timestamp; `filterWizardConsent` stores consent. Session storage key `filterWizardFinderEntryContext` temporarily carries a static article slug or published size plus CTA location across the navigation to the homepage. It is consumed on the next Finder open and ignored after 30 minutes. These are browser-local, not an account.
 
 Errors cover missing choices, invalid dimensions, missing conditions, failed images, failed email submission, and unavailable clipboard access. See [`ANALYTICS.md`](ANALYTICS.md) for events.
 
@@ -48,6 +48,7 @@ Errors cover missing choices, invalid dimensions, missing conditions, failed ima
 - “High confidence” means selected from the internal common-size list, not verified physical fit.
 - Back/restart/close must not trap users or silently convert an unknown size into a confirmed one.
 - Results explain uncertainty and never imply equipment inspection, diagnosis, guaranteed compatibility, or guaranteed reminders.
+- Result copy describes size/MERV guidance and retailer searches rather than a tested product, guaranteed best match, or independent retailer recommendation.
 
 Change questions or branching only with a mapped before/after journey, impact on stored state and analytics, migration behavior for old local-storage values, and known/unknown branch regression tests.
 

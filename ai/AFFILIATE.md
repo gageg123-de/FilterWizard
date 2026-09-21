@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-09-16
+Last verified: 2026-09-20
+
+The 2026-09-20 funnel audit verified all nine static size-page Amazon searches and the Finder's centralized URL builder. Every static link uses the page's exact nominal-size `air filter` query, `filterwizard-20`, and `nofollow sponsored noopener`; no missing tag, malformed Amazon URL, or mismatched size query was found. The Finder now labels Amazon as an `Affiliate link`, uses `Search Amazon`, and describes the destination as a search for the confirmed size and suggested MERV. It no longer presents Amazon as a recommended retailer or describes the MERV/size output as a specific product match.
 
 The 16x20x1, 14x20x1 and 14x25x1 pages extend the existing explicit size-intent retailer pattern without changing affiliate architecture. Each warns readers to confirm fit, provides Amazon/Home Depot/Lowe's searches plus a Filterbuy nominal-size path, preserves `filterwizard-20`, sponsored/new-tab attributes, disclosure and delegated click tracking, and contains no price or personalized compatibility claim.
 
@@ -28,7 +30,7 @@ This file owns commercial link eligibility, disclosure, and attribution safeguar
 
 `buildRetailerSearchQuery` combines confirmed size, MERV, and `air filter`. `getRetailerLinks` builds `https://www.amazon.com/s?k=...&tag=filterwizard-20` dynamically and checks the tag. Missing tags emit `filter_wizard_amazon_tag_missing`. Home Depot and Lowe's use dynamic comparison searches. Filterbuy uses its nominal-size category convention, `https://filterbuy.com/air-filters/{normalized-size}/`, rather than a search phrase in the path. These comparison retailers must not be represented as active affiliate programs.
 
-Retailer cards appear only for confirmed sizes. Links open a new tab and use `rel="nofollow sponsored noopener"`, `data-link-location="filter-finder-results"`, retailer data attributes, and filter size for Amazon. A delegated document click listener emits `amazon_click`; card listeners emit `filter_finder_retailer_clicked`. Page/footer and result disclosures state the Amazon relationship.
+Retailer cards appear only for confirmed sizes. Links open a new tab and use `rel="nofollow sponsored noopener"`, `data-link-location="filter-finder-results"`, retailer data attributes, and filter size for Amazon. A delegated document click listener emits `amazon_click`; card listeners emit `filter_finder_retailer_clicked`. Amazon is visually featured because it is the active affiliate link, not because Filter Wizard independently recommends that retailer. Page/footer and result disclosures state the Amazon relationship.
 
 The nine static size pages are explicit size-intent contexts. Each shows a prominent fit warning before four retailer searches, uses its nominal-size `air filter` query, carries `filterwizard-20` on Amazon, uses the established sponsored/new-tab attributes, and identifies only Amazon as the active affiliate. `filter_size_page_retailer_click` records the comparison action; the delegated `amazon_click` also records Amazon attribution metadata.
 

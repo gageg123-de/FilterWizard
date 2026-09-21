@@ -71,6 +71,8 @@ const finderStorageKey = "filterWizardFinderResults";
 const emailStorageKey = "filterWizardEmailSignups";
 const finderTotalSteps = 4;
 const amazonAffiliateTag = "filterwizard-20";
+const finderEntryContextStorageKey = "filterWizardFinderEntryContext";
+const finderEntryContextMaxAgeMs = 1000 * 60 * 30;
 const genericProductImage = "/assets/images/products/filter-product-generic.webp";
 const confirmSizeProductImage = "/assets/images/products/filter-product-confirm-size.webp";
 const filterPriceRanges = {
@@ -460,8 +462,37 @@ const consentManager = (() => {
   };
 })();
 
+function setFinderEntryContext(entryPoint) {
+  if (!entryPoint) return;
+
+  try {
+    window.sessionStorage.setItem(finderEntryContextStorageKey, JSON.stringify({
+      entryPoint,
+      createdAt: Date.now()
+    }));
+  } catch {
+    // Finder navigation still works when session storage is unavailable.
+  }
+}
+
+function consumeFinderEntryContext() {
+  try {
+    const storedValue = window.sessionStorage.getItem(finderEntryContextStorageKey);
+    window.sessionStorage.removeItem(finderEntryContextStorageKey);
+    if (!storedValue) return "";
+
+    const context = JSON.parse(storedValue);
+    const age = Date.now() - Number(context?.createdAt || 0);
+    if (age < 0 || age > finderEntryContextMaxAgeMs) return "";
+
+    return typeof context?.entryPoint === "string" ? context.entryPoint : "";
+  } catch {
+    return "";
+  }
+}
+
 function getFinderEntryPoint(opener) {
-  return opener?.dataset?.entryPoint || "unknown";
+  return consumeFinderEntryContext() || opener?.dataset?.entryPoint || "unknown";
 }
 
 function resetFinderAnalytics(entryPoint = "unknown") {
@@ -658,9 +689,14 @@ function trackArticleFilterFinderClick(event) {
   const link = event.target.closest?.("[data-article-filter-finder-cta]");
   if (!link) return;
 
+  const articleSlug = link.dataset.articleSlug || getArticleSlug() || "unknown";
+  const ctaLocation = link.dataset.ctaLocation || "article_body";
+  setFinderEntryContext(`article:${articleSlug}:${ctaLocation}`);
+
   trackEvent("article_filter_finder_click", {
-    article_slug: link.dataset.articleSlug || "unknown",
-    cta_location: "article_body"
+    article_slug: articleSlug,
+    cta_location: ctaLocation,
+    page_path: window.location.pathname
   });
 }
 
@@ -678,9 +714,12 @@ function trackFilterSizePageClick(event) {
 
   const finderLink = event.target.closest?.("[data-filter-size-finder-cta]");
   if (finderLink) {
+    const filterSize = filterSizePage.dataset.filterSize || "unknown";
+    const ctaLocation = finderLink.dataset.ctaLocation || "unknown";
+    setFinderEntryContext(`size_page:${filterSize}:${ctaLocation}`);
     trackEvent("filter_size_page_filter_finder_click", {
-      filter_size: filterSizePage.dataset.filterSize || "unknown",
-      cta_location: finderLink.dataset.ctaLocation || "unknown"
+      filter_size: filterSize,
+      cta_location: ctaLocation
     });
     return;
   }
@@ -1528,10 +1567,12 @@ function getRetailerLinks(result) {
   return [
     {
       name: "Amazon",
-      subtext: "Fast shipping and broad filter-size availability",
+      subtext: "Search Amazon for the confirmed size and suggested MERV",
       url: amazonUrl,
-      recommended: true,
-      badge: "Recommended Retailer"
+      recommended: false,
+      featured: true,
+      affiliate: true,
+      badge: "Affiliate link"
     },
     {
       name: "Home Depot",
@@ -1664,15 +1705,13 @@ function renderFinderReport(result) {
   const showRetailers = hasValidSize;
 
   if (finderResultHeading) {
-    finderResultHeading.textContent = hasValidSize
-      ? "You're all set"
-      : "Your filter type is ready";
+    finderResultHeading.textContent = "Your guidance is ready";
   }
   if (finderResultSubheading) {
     finderResultSubheading.textContent = result.recommendedFilterType === "MERV 13"
       ? "We found a filtration option worth considering."
       : hasValidSize
-        ? "We found your best match."
+        ? "Your size and filter guidance are ready."
         : "Confirm the printed size before ordering.";
   }
   if (finderConfidencePill) {
@@ -1766,12 +1805,12 @@ function renderFinderReport(result) {
         const card = document.createElement("article");
         card.className = "finder-retailer-card";
 
-        if (retailer.recommended) {
+        if (retailer.featured) {
           card.classList.add("is-recommended");
 
           const badge = document.createElement("span");
           badge.className = "finder-retailer-badge";
-          badge.textContent = retailer.badge || "Recommended Retailer";
+          badge.textContent = retailer.badge || "Featured option";
 
           card.appendChild(badge);
         }
@@ -1787,7 +1826,7 @@ function renderFinderReport(result) {
         link.href = retailer.url;
         link.target = "_blank";
         link.rel = "nofollow sponsored noopener";
-        link.textContent = retailer.recommended ? "Shop on Amazon" : "View Options";
+        link.textContent = retailer.affiliate ? "Search Amazon" : "View Options";
         link.dataset.retailerName = retailer.name;
         link.dataset.retailerUrl = retailer.url;
         link.dataset.linkLocation = "filter-finder-results";
@@ -1805,6 +1844,7 @@ function renderFinderReport(result) {
             replacements_per_year: result.replacementsPerYear,
             size_confidence_level: result.sizeConfidenceLevel,
             is_recommended_retailer: Boolean(retailer.recommended),
+            is_affiliate_retailer: Boolean(retailer.affiliate),
             affiliate_tag_present: retailer.name === "Amazon"
               ? Boolean(amazonAffiliateTag)
               : false

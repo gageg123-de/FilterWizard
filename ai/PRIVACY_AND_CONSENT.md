@@ -1,6 +1,6 @@
 # Privacy and Consent
 
-Last verified: 2026-07-19
+Last verified: 2026-09-20
 
 This is implementation documentation, not legal advice or a compliance guarantee. Policies require professional review when services or practices change.
 
@@ -9,6 +9,8 @@ This file owns the technical data-flow and consent contract. Security controls b
 `consentManager` in [`../assets/js/script.js`](../assets/js/script.js) creates the cookie banner and settings dialog. One optional category exists: analytics, granted or denied. Advertising storage, ad user data, and ad personalization stay denied. Preference storage is treated as essential.
 
 The choice is stored in local storage as `filterWizardConsent` with version 1, timestamp, analytics value, and 183-day maximum age. Users can reopen settings through footer `data-cookie-settings` buttons. Google Consent Mode is defaulted before GA configuration. Clarity receives `consentv2`; it retries briefly until Clarity is available.
+
+Session storage key `filterWizardFinderEntryContext` holds only a static article slug or published nominal size, a fixed CTA-location label, and a timestamp. It exists to preserve the Finder entry source across same-tab navigation, is consumed on the next Finder open, and is ignored after 30 minutes. It contains no email, free-form text, or raw invalid-size value.
 
 GA and Clarity script resources are loaded on production pages regardless of choice, while storage consent defaults denied. Do not describe this as “analytics scripts load only after acceptance.” If a jurisdiction or policy requires no pre-consent network load, the architecture must change and be legally reviewed.
 
@@ -21,6 +23,7 @@ Formspree receives email, source, timestamp, and Finder result fields when users
 | Consent choice | Browser local storage | Remember analytics preference | 183-day client expiry |
 | Latest Finder report | Browser local storage | Restore/use latest result | No explicit client expiry documented |
 | Latest signup object | Browser local storage | Client-side signup state | No explicit client expiry documented |
+| Finder entry context | Browser session storage | Attribute the next Finder start to an article or size-page CTA | Consumed on next Finder open; ignored after 30 minutes |
 | Email and submitted fields | Formspree | Lead/reminder interest | Provider/account retention unknown locally |
 | Analytics interaction data | GA4/Clarity | Product/content measurement | Dashboard retention unknown locally |
 
