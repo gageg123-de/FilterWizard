@@ -68,7 +68,6 @@ const articleContent = document.querySelector("[data-article-content]");
 const filterSizePage = document.querySelector("[data-filter-size-page]");
 const backToTopButton = document.querySelector("[data-back-to-top]");
 const finderStorageKey = "filterWizardFinderResults";
-const emailStorageKey = "filterWizardEmailSignups";
 const finderTotalSteps = 4;
 const amazonAffiliateTag = "filterwizard-20";
 const finderEntryContextStorageKey = "filterWizardFinderEntryContext";
@@ -2131,7 +2130,6 @@ async function handleEmailFormSubmit(event, eventName, successElement) {
   const submitButton = form.querySelector(".form-submit");
   const originalText = submitButton?.textContent || "Submit";
   const formData = new FormData(form);
-  const email = String(formData.get("email") || "").trim();
   const submittedAt = new Date().toISOString();
 
   formData.set("submittedAt", submittedAt);
@@ -2145,12 +2143,6 @@ async function handleEmailFormSubmit(event, eventName, successElement) {
 
   try {
     await postToFormspree(form, formData);
-    const signup = {
-      email,
-      source: String(formData.get("source") || "Email Form"),
-      submittedAt
-    };
-    saveLatestToLocalStorage(emailStorageKey, signup);
     trackEvent(eventName, {
       form_location: String(formData.get("source") || "Email Form"),
       has_finder_result: Boolean(latestFinderReport),
@@ -2167,7 +2159,7 @@ async function handleEmailFormSubmit(event, eventName, successElement) {
       recommended_filter_product: latestFinderReport?.productTitle || "",
       estimated_filter_price: latestFinderReport?.productPrice || "",
       has_confirmed_size: latestFinderReport ? hasConfirmedFilterSize(latestFinderReport) : false,
-      has_email: Boolean(email)
+      has_email: Boolean(String(formData.get("email") || "").trim())
     });
     trackEvent("generate_lead", {
       form_location: String(formData.get("source") || "Email Form"),

@@ -1,6 +1,6 @@
 # Privacy and Consent
 
-Last verified: 2026-09-20
+Last verified: 2026-09-21
 
 This is implementation documentation, not legal advice or a compliance guarantee. Policies require professional review when services or practices change.
 
@@ -14,7 +14,7 @@ Session storage key `filterWizardFinderEntryContext` holds only a static article
 
 GA and Clarity script resources are loaded on production pages regardless of choice, while storage consent defaults denied. Do not describe this as “analytics scripts load only after acceptance.” If a jurisdiction or policy requires no pre-consent network load, the architecture must change and be legally reviewed.
 
-Formspree receives email, source, timestamp, and Finder result fields when users submit. Local storage also retains the latest signup object and Finder report. Inputs containing email/size are marked `data-clarity-mask`. Analytics must never receive raw email, phone, payment information, or raw invalid size.
+Formspree receives email, source, timestamp, and Finder result fields when users submit. The browser does not retain a duplicate signup object or raw email after a successful submission; local storage retains only the latest Finder report and consent preference. Inputs containing email/size are marked `data-clarity-mask`. Analytics must never receive raw email, phone, payment information, or raw invalid size.
 
 ## Data inventory and change gate
 
@@ -22,7 +22,6 @@ Formspree receives email, source, timestamp, and Finder result fields when users
 |---|---|---|---|
 | Consent choice | Browser local storage | Remember analytics preference | 183-day client expiry |
 | Latest Finder report | Browser local storage | Restore/use latest result | No explicit client expiry documented |
-| Latest signup object | Browser local storage | Client-side signup state | No explicit client expiry documented |
 | Finder entry context | Browser session storage | Attribute the next Finder start to an article or size-page CTA | Consumed on next Finder open; ignored after 30 minutes |
 | Email and submitted fields | Formspree | Lead/reminder interest | Provider/account retention unknown locally |
 | Analytics interaction data | GA4/Clarity | Product/content measurement | Dashboard retention unknown locally |

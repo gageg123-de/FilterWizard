@@ -1,6 +1,10 @@
 # Analytics
 
-Last verified: 2026-09-20
+Last verified: 2026-09-21
+
+The 2026-09-21 coverage audit confirmed the consent-first GA4 (`G-64VWBW3NHS`) and Clarity (`xbqsjc3yut`) initializer exactly once on all 50 canonical production HTML pages: the homepage, blog index, 35 articles, nine size guides, and four canonical legal pages. Eighteen newer articles had used the shared event attributes and listeners without initializing either analytics service; those pages now reuse the established initializer without adding page-specific listeners or changing the event taxonomy. Coverage must be checked whenever a production HTML page is added.
+
+The same audit removed the unused `filterWizardEmailSignups` local-storage write. Successful forms still send the entered email and existing metadata to Formspree, but the browser no longer retains a duplicate raw-email signup object. Analytics continues to receive only the documented non-email metadata and boolean `has_email` signal.
 
 The 2026-09-20 affiliate-funnel audit corrected two article CTA instrumentation gaps: the pets guide and replacement-frequency guide now use the shared `data-article-filter-finder-cta` contract with explicit slug and CTA-location values. The delegated handler now records the declared CTA location and page path instead of collapsing every article click to `article_body`.
 
@@ -22,8 +26,8 @@ The dust buying pillar reuses the shared article event path for page view, scrol
 
 ## Active integrations
 
-- GA4 measurement ID `G-64VWBW3NHS` is initialized in production HTML. There is no Google Tag Manager container; `googletagmanager.com/gtag/js` is the GA4 loader.
-- Microsoft Clarity project `xbqsjc3yut` is initialized in production HTML.
+- GA4 measurement ID `G-64VWBW3NHS` is initialized once on every canonical production HTML page. There is no Google Tag Manager container; `googletagmanager.com/gtag/js` is the GA4 loader.
+- Microsoft Clarity project `xbqsjc3yut` is initialized once on every canonical production HTML page.
 - No Search Console verification meta tag was found. A root Cloudflare verification file exists, which is not evidence of Search Console setup.
 
 Pages set Google consent defaults to denied before `gtag('config')`, then load GA/Clarity scripts. [`../assets/js/script.js`](../assets/js/script.js) updates Google consent and calls Clarity `consentv2` based on stored/user choice. Network scripts therefore load before opt-in even though analytics storage defaults denied; this distinction must be reflected in privacy review.
