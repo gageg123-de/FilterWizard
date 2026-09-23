@@ -1,10 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-17
+Last verified: 2026-09-22
 
-## 2026-09-17 evidence-gated article
+## 2026-09-22 evidence-gated article
 
-Article #35, *Can You Run an HVAC System Without an Air Filter?*, was published at `/blog/can-you-run-hvac-without-air-filter.html` only after fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence gates passed. It owns the urgent missing-required-filter operating decision and safe recovery path without claiming an allowable filterless runtime or absorbing sizing, clogged-filter, configuration, or article #34 terminology intent. No exact-query Search Console demand or verified numeric search volume is claimed. Article #36 is not authorized; all future content remains evidence-gated.
+Article #36, *Can You Put a HEPA Filter in a Furnace?*, was published at `/blog/can-you-put-hepa-filter-in-furnace.html` only after fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence gates passed. It owns true-HEPA compatibility with standard furnace/central HVAC filtration, distinguishes HEPA from MERV 13, and explains purpose-built HEPA arrangements without presenting a universal drop-in answer. No exact-query Search Console demand or verified numeric search volume is claimed. Article #37 is not authorized; all future content remains evidence-gated.
 
 ## 2026-09-16 GSC-selected article
 
@@ -14,7 +14,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-five articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-six articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -36,10 +36,10 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 
 | Candidate | Status | Preliminary boundary |
 |---|---|---|
-| MERV vs. MPR vs. FPR: How Air Filter Ratings Compare | Best next candidate | Rating-system translation; distinct from choosing among MERV 8/11/13 |
-| Are Furnace Filters and AC Filters the Same? | Second candidate | Homeowner terminology and shared forced-air filtration location |
-| Can You Put a HEPA Filter in a Furnace? | Validated candidate | True-HEPA compatibility rather than general higher-MERV choice |
-| Can You Run an HVAC System Without an Air Filter? | Validated candidate | Missing-filter operation and safe next action |
+| MERV vs. MPR vs. FPR: How Air Filter Ratings Compare | Validated candidate; not authorized next | Rating-system translation; distinct from choosing among MERV 8/11/13 |
+| Are Furnace Filters and AC Filters the Same? | Implemented 2026-09-16 | Homeowner terminology and shared forced-air filtration location |
+| Can You Put a HEPA Filter in a Furnace? | Implemented 2026-09-22 | True-HEPA compatibility rather than general higher-MERV choice |
+| Can You Run an HVAC System Without an Air Filter? | Implemented 2026-09-17 | Missing-filter operation and safe next action |
 | Should You Run the HVAC Fan Continuously for Filtration? | Validated candidate | Runtime/filtration tradeoff rather than filter selection |
 | HVAC Filter vs. Portable Air Purifier | Validated candidate | Central versus room-device decision |
 

@@ -51,7 +51,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 35 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 36 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

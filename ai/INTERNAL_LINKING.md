@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 50 indexable URLs: the homepage, blog index, 35 blog articles, nine size guides, and four legal pages. The 46 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 51 indexable URLs: the homepage, blog index, 36 blog articles, nine size guides, and four legal pages. The 47 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -33,7 +33,7 @@ The sitemap contains 50 indexable URLs: the homepage, blog index, 35 blog articl
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
 | Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction |
 | HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
-| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide provides the compatibility boundary |
+| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |
 | Maintenance | `/blog/how-often-change-air-filter.html` owns replacement timing | vacuum/reuse owns clean-versus-replace; clogged guide owns condition-based replacement signals; HVAC-without-filter owns the missing-required-filter operating decision and safe recovery path |
@@ -45,6 +45,7 @@ The sitemap contains 50 indexable URLs: the homepage, blog index, 35 blog articl
 - Black and brown own color interpretation; wet owns moisture; dirty-on-one-side owns asymmetric loading.
 - Bending, movement, and whistling own their respective physical symptoms. Fit and restriction are supporting diagnoses, not alternate owners.
 - AC freeze, AC not cooling, energy cost, and furnace short cycling each own one downstream symptom. None should become another general clogged-filter page.
+- The MERV hub owns ordinary MERV selection; the restriction guide owns general filter/system resistance; the furnace-HEPA guide owns true-HEPA definition, non-equivalence, and compatibility with central HVAC or purpose-built HEPA equipment.
 - Find-size owns the discovery process; fit owns seating and clearance; slightly-different-size owns substitution risk; thickness comparison owns one-, two-, and four-inch construction tradeoffs.
 - General MERV comparison owns rating choice. Allergy, dust, smoke, and pets pages own household-specific selection.
 

@@ -295,7 +295,20 @@ The historically second-ranked candidate, *Can You Run an HVAC System Without an
 - **Technical-Evidence Review — PASSED.** Trane, DOE Building Science Education, Carrier replacement guidance, and Trane filter guidance support the filter requirement, equipment-protection role, safe replacement workflow, location variability, and system-type qualification. The article does not invent an allowable filterless runtime or claim instant damage.
 - **Post-Draft Intent Audit — PASSED.** The finished guide remains centered on the missing-filter decision. Sizing, fit, clogging, restriction, configuration, terminology, moisture, and bending receive concise routing only; their detailed diagnosis remains with existing intent owners.
 
-**Post-publication inventory:** 35 published blog articles, nine filter-size guides, 50 sitemap URLs, and 46 non-legal content pages. Article #36 is not authorized by the remaining shortlist.
+**Post-publication inventory:** 35 published blog articles, nine filter-size guides, 50 sitemap URLs, and 46 non-legal content pages. Article #36 was not authorized by the remaining shortlist at that time.
+
+## Article #36 publication decision — 2026-09-22
+
+The historically third-ranked candidate, *Can You Put a HEPA Filter in a Furnace?*, was not published from its 85-point score alone. It independently passed fresh production gates against the 35-article library before `/blog/can-you-put-hepa-filter-in-furnace.html` was created.
+
+- **Topic-Reality Preflight — PASSED.** Current EPA guidance defines HEPA separately from MERV; EPA and DOE/PNNL materials require compatibility and pressure-drop evaluation for high-efficiency/HEPA filtration; and Resideo documentation confirms that purpose-built residential HEPA cabinets and bypass or independently ducted arrangements exist.
+- **Search-demand/User-Intent Validation — PASSED.** Exact compatibility wording recurs in authoritative guidance, search results, and independent homeowner discussions. Community material establishes occurrence and wording, not technical truth. The documented GSC data does not expose meaningful exact-query demand, and no verified numeric search volume is claimed.
+- **Duplicate-Topic Preflight — PASSED across 35 existing articles.** The MERV guide owns ordinary MERV selection; restriction owns general airflow resistance; thickness owns one-, two-, and four-inch depth; allergy, smoke, and dust own contaminant-specific selection. None owns true HEPA definition plus standard central-HVAC compatibility and purpose-built HEPA arrangements.
+- **Cannibalization Test — PASSED.** The closest likely competitor is `/blog/can-air-filter-be-too-restrictive.html`. That page owns general installed-filter resistance, while article #36 owns whether true HEPA can be integrated into the furnace/central-HVAC filtration path and routes broader resistance detail outward.
+- **Technical-Evidence Review — PASSED.** EPA supports the HEPA definition, HEPA/MERV distinction, compatibility requirement, and particle-versus-gas boundary; DOE/PNNL supports system-specific pressure-drop checks; Resideo supplies a documented example of purpose-built residential HEPA equipment. The article makes no HEPA-to-MERV conversion and no universal compatibility or restriction claim.
+- **Post-Draft Intent Audit — PASSED.** The finished guide stays centered on true-HEPA compatibility, cabinet/sealing/system design, and dedicated configurations. Its MERV, restriction, depth, allergy, smoke, and sizing material is concise routing rather than replacement coverage.
+
+**Post-publication inventory:** 36 published blog articles, nine filter-size guides, 51 sitemap URLs, and 47 non-legal content pages. Article #37 remains unapproved and requires a new evidence-based decision.
 
 ## Controlled filter-size expansion — 2026-09-02
 
