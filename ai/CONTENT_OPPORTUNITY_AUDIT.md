@@ -310,6 +310,17 @@ The historically third-ranked candidate, *Can You Put a HEPA Filter in a Furnace
 
 **Post-publication inventory:** 36 published blog articles, nine filter-size guides, 51 sitemap URLs, and 47 non-legal content pages. Article #37 remains unapproved and requires a new evidence-based decision.
 
+## September 23, 2026: article #37 fresh decision
+
+The previously research-only candidate *Why Is My Air Filter Still Clean After Months?* was not published from its 78-point historical score or from neighboring-page GSC performance. It independently passed a new gate review against the 36-article library.
+
+- **Topic-Reality and user-intent — PASSED.** Multiple independent homeowner discussions use substantially the same observation, including an established exact-wording question. No verified search-volume data or exact-query GSC demand is claimed.
+- **Duplicate and cannibalization — PASSED.** The replacement guide is the closest competitor because it briefly answers what to do when a filter still looks clean. Article #37 owns interpretation and safe verification of unexpectedly low visible loading; replacement timing, dirty-fast, uneven loading, fit, and configuration pages retain their existing intents.
+- **Technical and cause-by-cause evidence — PASSED with exclusions.** Carrier supports variation by system usage, filter type, and household conditions; Trane supports varied locations and multiple systems/filters; DOE/PNNL supports correct sizing and sealed filter-rack installation. Low-airflow diagnosis, backward-filter causation, memory error, duct faults, and equipment faults were rejected as causes because appearance does not establish them.
+- **Post-draft audit — PASSED.** The final article keeps the supported cause groups narrow and routes detailed replacement, configuration, fit, sizing, and dirty-pattern questions to existing owners.
+
+**Post-publication inventory:** 37 published blog articles, nine filter-size guides, 52 sitemap URLs, and 48 non-legal content pages. Article #38 remains unapproved.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.

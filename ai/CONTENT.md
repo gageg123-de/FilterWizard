@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-22
+Last verified: 2026-09-23
+
+The 2026-09-23 guide `/blog/why-is-my-air-filter-still-clean.html` is the thirty-seventh published article. It passed fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, and cause-by-cause gates against the 36-article library. Recurring homeowner questions establish the observation as real, while Carrier, Trane, and DOE/PNNL guidance support only the retained cause groups: system usage and household conditions, filter location or multiple systems, and fit/sealing. No exact-query GSC demand or verified numeric search volume is claimed. The article treats appearance as an observation rather than an airflow, efficiency, IAQ, or equipment diagnosis; it routes replacement timing, configuration, fit, sizing, and dirty-pattern detail to their established owners. It uses a 12-minute estimate, nine matched FAQs, one Finder CTA, zero retailer blocks, two reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-clean-air-filter`, and one contextual incoming link from the replacement-timing guide.
 
 The 2026-09-22 guide `/blog/can-you-put-hepa-filter-in-furnace.html` is the thirty-sixth published article. Fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence reviews passed against the 35-article library. EPA and DOE/PNNL guidance establish the HEPA definition and the need to verify high-efficiency filter pressure drop and system compatibility; Resideo documentation establishes that purpose-built residential HEPA cabinets and bypass arrangements exist. Recurring homeowner wording establishes intent, but no verified numeric search volume or exact-query GSC demand is claimed. The article owns true-HEPA compatibility with a furnace/central HVAC system, while the MERV, restriction, thickness, allergy, smoke, sizing, and fit guides retain their existing intents. It uses a 14-minute estimate, 10 matched FAQs, two Finder CTAs, zero retailer blocks, three new reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-hepa-filter-in-furnace`, and one contextual incoming link from the MERV comparison guide. It rejects HEPA–MERV equivalence, universal restriction claims, medical promises, unsafe retrofits, and any suggestion that Filter Finder validates HEPA compatibility.
 
@@ -84,7 +86,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-six static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-seven static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-02
+Last verified: 2026-09-23
+
+The clean-filter troubleshooting guide uses two generated and visually verified 1200×800 WebPs: `clean-air-filter-after-months-hero.webp` (homeowner safely inspecting lightly loaded media beside closed equipment) and `hvac-filter-location-configurations.webp` (one central-filter arrangement and one return-grille-filter arrangement). Neither image claims a fault from appearance, presents a universal configuration, shows unsafe equipment access, or includes diagnostic measurements.
 
 The 2026-09-02 16x24x1, 18x20x1, and 24x24x1 size pages reuse the existing 1200×800 `how-to-measure-air-filter.webp` instructional figure and social image. This follows the image-light size-page convention and avoids decorative derivatives. Each page supplies size-specific alt text and captions without asserting a universal actual dimension; no new image was created.
 

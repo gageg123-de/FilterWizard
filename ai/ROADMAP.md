@@ -1,10 +1,14 @@
 # Roadmap
 
-Last verified: 2026-09-22
+Last verified: 2026-09-23
+
+## 2026-09-23 evidence-gated article
+
+Article #37, *Why Is My Air Filter Still Clean After Months?*, was published at `/blog/why-is-my-air-filter-still-clean.html` only after fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, and cause-by-cause gates passed. It owns interpretation of unexpectedly low visible filter loading without treating appearance as an airflow, efficiency, IAQ, or equipment diagnosis. No exact-query Search Console demand or verified numeric search volume is claimed. Article #38 is not authorized; future content remains evidence-gated.
 
 ## 2026-09-22 evidence-gated article
 
-Article #36, *Can You Put a HEPA Filter in a Furnace?*, was published at `/blog/can-you-put-hepa-filter-in-furnace.html` only after fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence gates passed. It owns true-HEPA compatibility with standard furnace/central HVAC filtration, distinguishes HEPA from MERV 13, and explains purpose-built HEPA arrangements without presenting a universal drop-in answer. No exact-query Search Console demand or verified numeric search volume is claimed. Article #37 is not authorized; all future content remains evidence-gated.
+Article #36, *Can You Put a HEPA Filter in a Furnace?*, was published at `/blog/can-you-put-hepa-filter-in-furnace.html` only after fresh Topic-Reality, demand/intent, duplicate, cannibalization, and technical-evidence gates passed. It owns true-HEPA compatibility with standard furnace/central HVAC filtration, distinguishes HEPA from MERV 13, and explains purpose-built HEPA arrangements without presenting a universal drop-in answer. No exact-query Search Console demand or verified numeric search volume was claimed.
 
 ## 2026-09-16 GSC-selected article
 
@@ -14,7 +18,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-six articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-seven articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 

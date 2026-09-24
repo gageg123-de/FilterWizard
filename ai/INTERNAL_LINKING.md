@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 51 indexable URLs: the homepage, blog index, 36 blog articles, nine size guides, and four legal pages. The 47 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 52 indexable URLs: the homepage, blog index, 37 blog articles, nine size guides, and four legal pages. The 48 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
