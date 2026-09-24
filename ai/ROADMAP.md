@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-23
+Last verified: 2026-09-24
+
+## 2026-09-24 evidence-gated article
+
+Article #38, *Should You Run Your HVAC Fan Continuously?*, was published at `/blog/should-hvac-fan-run-continuously.html` only after fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, claim-by-claim, and Filter-Wizard-relevance gates passed. It owns continuous fan operation through the filtration and filter-loading lens; energy, humidity, and comfort remain qualified system-specific tradeoffs rather than generic HVAC coverage. No exact-query Search Console demand or verified numeric search volume is claimed. Article #39 is not authorized; future content remains evidence-gated.
 
 ## 2026-09-23 evidence-gated article
 
@@ -18,7 +22,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-seven articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-eight articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 

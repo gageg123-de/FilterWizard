@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-23
+Last verified: 2026-09-24
+
+The continuous-HVAC-fan filtration guide uses two generated, converted, and visually verified 1200×800 WebPs: `continuous-hvac-fan-filtration-hero.webp` (homeowner reviewing a generic fan control beside a closed return grille) and `hvac-fan-auto-on-circulate.webp` (a brand-neutral conceptual comparison of fan modes). The graphic uses only the reviewed AUTO, ON, and CIRCULATE labels, makes no energy, health, or universal-setting claim, and notes through the caption that control behavior varies. Both images avoid exposed equipment and branded thermostat interfaces; the hero is eager/high-priority and the supporting graphic is lazy-loaded.
 
 The clean-filter troubleshooting guide uses two generated and visually verified 1200×800 WebPs: `clean-air-filter-after-months-hero.webp` (homeowner safely inspecting lightly loaded media beside closed equipment) and `hvac-filter-location-configurations.webp` (one central-filter arrangement and one return-grille-filter arrangement). Neither image claims a fault from appearance, presents a universal configuration, shows unsafe equipment access, or includes diagnostic measurements.
 

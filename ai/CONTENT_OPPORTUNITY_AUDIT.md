@@ -1,6 +1,6 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-02
+Last verified: 2026-09-24
 
 This documentation-only audit applies the Topic-Reality, demand/intent, and preliminary duplicate gates to possible Filter Wizard articles. It does not authorize publication. No production page, image, stylesheet, script, analytics integration, sitemap entry, or affiliate link changed during this audit.
 
@@ -320,6 +320,17 @@ The previously research-only candidate *Why Is My Air Filter Still Clean After M
 - **Post-draft audit — PASSED.** The final article keeps the supported cause groups narrow and routes detailed replacement, configuration, fit, sizing, and dirty-pattern questions to existing owners.
 
 **Post-publication inventory:** 37 published blog articles, nine filter-size guides, 52 sitemap URLs, and 48 non-legal content pages. Article #38 remains unapproved.
+
+## September 24, 2026: article #38 fresh decision
+
+The historical continuous-fan candidate was independently revalidated rather than published from its earlier shortlist score. The newer GSC evidence supports the site's broader narrow-question and filter-behavior pattern, but does not establish exact-query demand for continuous HVAC fan operation.
+
+- **Topic-Reality and user-intent — PASSED.** EPA guidance directly discusses longer HVAC fan runtime for filtration; thermostat and HVAC manufacturers document AUTO, ON, scheduled, and CIRCULATE behavior; and recurring independent homeowner discussions use the same filtration decision. No exact-query GSC demand or verified numeric search volume is claimed.
+- **Duplicate and cannibalization — PASSED.** `/blog/how-often-change-air-filter.html` is the nearest competitor because runtime affects loading and replacement, but it owns replacement timing. Article #38 owns whether added fan runtime is worthwhile specifically for filtration, including mode selection and qualified loading, energy, and humidity tradeoffs. The MERV and restriction guides retain filter-selection and pressure-drop ownership.
+- **Technical and claim-by-claim evidence — PASSED with exclusions.** EPA and ASHRAE support longer runtime as additional central-filtration opportunity; DOE supports a high-level PSC/ECM efficiency distinction; Google Nest supports energy, mixing, and possible earlier replacement implications; Resideo supports interval-based CIRCULATE; DOE/PNNL and Lennox support a conditional cooling-season humidity caveat. Universal IAQ improvement, allergy benefit, MERV safety, replacement multipliers, and both extend-life and shorten-life blower claims were rejected.
+- **Filter-Wizard relevance and post-draft intent — PASSED.** The finished guide remains centered on air passing through the installed filter, filter loading, compatibility, and replacement implications. Energy, humidity, room mixing, and controls are concise decision caveats rather than generic HVAC-operation coverage.
+
+**Post-publication inventory:** 38 published blog articles, nine filter-size guides, 53 sitemap URLs, and 49 non-legal content pages. Article #39 remains unapproved.
 
 ## Controlled filter-size expansion — 2026-09-02
 

@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-23
+Last verified: 2026-09-24
+
+The 2026-09-24 guide `/blog/should-hvac-fan-run-continuously.html` is the thirty-eighth published article. It passed fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, claim-by-claim, and Filter-Wizard-relevance gates against the 37-article library. EPA and ASHRAE support the filtration-runtime relationship; DOE supports the high-level motor-efficiency distinction; Google Nest, Resideo, and Lennox support control-mode and conditional energy/humidity guidance. No exact-query GSC demand or verified numeric search volume is claimed. The article owns continuous fan operation specifically as a filtration and filter-loading decision, while replacement timing, MERV selection, restriction, contaminants, and generic HVAC operation retain their owners. It uses a 13-minute estimate, ten matched FAQs, one Finder CTA, zero retailer blocks, two reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-continuous-hvac-fan`, and one contextual incoming link from the replacement-timing guide.
 
 The 2026-09-23 guide `/blog/why-is-my-air-filter-still-clean.html` is the thirty-seventh published article. It passed fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, and cause-by-cause gates against the 36-article library. Recurring homeowner questions establish the observation as real, while Carrier, Trane, and DOE/PNNL guidance support only the retained cause groups: system usage and household conditions, filter location or multiple systems, and fit/sealing. No exact-query GSC demand or verified numeric search volume is claimed. The article treats appearance as an observation rather than an airflow, efficiency, IAQ, or equipment diagnosis; it routes replacement timing, configuration, fit, sizing, and dirty-pattern detail to their established owners. It uses a 12-minute estimate, nine matched FAQs, one Finder CTA, zero retailer blocks, two reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-clean-air-filter`, and one contextual incoming link from the replacement-timing guide.
 
@@ -86,7 +88,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-seven static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-eight static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

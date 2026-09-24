@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-09-17
+Last verified: 2026-09-24
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 52 indexable URLs: the homepage, blog index, 37 blog articles, nine size guides, and four legal pages. The 48 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 53 indexable URLs: the homepage, blog index, 38 blog articles, nine size guides, and four legal pages. The 49 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -33,7 +33,7 @@ The sitemap contains 52 indexable URLs: the homepage, blog index, 37 blog articl
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
 | Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction |
 | HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
-| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility |
+| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility; continuous-fan guide owns fan runtime as a filtration/filter-loading decision |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |
 | Maintenance | `/blog/how-often-change-air-filter.html` owns replacement timing | vacuum/reuse owns clean-versus-replace; clogged guide owns condition-based replacement signals; HVAC-without-filter owns the missing-required-filter operating decision and safe recovery path |
