@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-24
+Last verified: 2026-09-25
+
+The 2026-09-25 guide `/blog/merv-vs-mpr-vs-fpr.html` is the thirty-ninth published article. It independently passed Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, source-of-truth, conversion-claim, Filter-Wizard-relevance, and commercial-independence gates against the 38-article library. EPA and ASHRAE establish MERV as the national-consensus/Standard 52.2 framework; current 3M Filtrete material defines MPR and supplies product-specific MPR/MERV pairings; current Home Depot guidance defines FPR and product listings show that an FPR tier does not map to one exact MERV value. No exact-query GSC demand or verified numeric search volume is claimed. The article owns rating-system identification and careful cross-label comparison, while the MERV 8/11/13 guide retains ordinary MERV selection, the restriction guide retains pressure-drop compatibility, and the HEPA guide retains true-HEPA compatibility. It uses a 14-minute estimate, ten matched FAQs, one Finder CTA, zero retailer blocks, one reviewed existing 1200×800 WebP, Article/FAQ/Breadcrumb schema, Formspree source `blog-merv-mpr-fpr`, and one contextual incoming link from the MERV guide. It contains no universal MPR/FPR conversion chart.
 
 The 2026-09-24 guide `/blog/should-hvac-fan-run-continuously.html` is the thirty-eighth published article. It passed fresh Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, claim-by-claim, and Filter-Wizard-relevance gates against the 37-article library. EPA and ASHRAE support the filtration-runtime relationship; DOE supports the high-level motor-efficiency distinction; Google Nest, Resideo, and Lennox support control-mode and conditional energy/humidity guidance. No exact-query GSC demand or verified numeric search volume is claimed. The article owns continuous fan operation specifically as a filtration and filter-loading decision, while replacement timing, MERV selection, restriction, contaminants, and generic HVAC operation retain their owners. It uses a 13-minute estimate, ten matched FAQs, one Finder CTA, zero retailer blocks, two reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-continuous-hvac-fan`, and one contextual incoming link from the replacement-timing guide.
 
@@ -88,7 +90,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-eight static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists thirty-nine static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 

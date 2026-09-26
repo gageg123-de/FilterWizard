@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-24
+Last verified: 2026-09-25
+
+The 2026-09-25 guide `/blog/merv-vs-mpr-vs-fpr.html` owns the rating-system identification and cross-label comparison intent. Its metadata and content distinguish standards-based MERV from proprietary MPR and FPR without publishing a universal conversion formula; product-specific paired labels remain the comparison source of truth. The supplied GSC history shows weak broad-comparison performance and no exact-query demand is claimed, so publication rests on recurring confusion, authoritative source coverage, low duplication, and direct relevance to Filter Wizard's MERV-based guidance. The page has unique metadata, a self-canonical URL, Article/FAQ/Breadcrumb schema, and ten visible/schema-matched FAQs.
 
 The 2026-09-23 guide `/blog/why-is-my-air-filter-still-clean.html` owns unexpectedly low visible filter-loading interpretation. Its metadata and content avoid diagnosing airflow, filtration efficiency, indoor air quality, or equipment condition from appearance. No exact-query GSC demand or verified numeric volume is claimed; the publication decision rests on recurring homeowner intent, the site's demonstrated narrow-troubleshooting pattern, and authoritative support for the limited checks included.
 
@@ -53,7 +55,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 38 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 39 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

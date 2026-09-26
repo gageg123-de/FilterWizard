@@ -4,7 +4,11 @@ Last verified: 2026-09-25
 
 ## 2026-09-25 rejected article review
 
-*Why Is My Air Filter Torn or Ripped?* was independently re-researched and rejected as a standalone article. Physical filter damage is real, but exact-query demand remains unverified, independent homeowner recurrence is sparse, and the defensible guidance is already owned by the bending, fit, sizing, wet-filter, restriction, and vacuum/reuse pages. Several proposed causes lacked credible residential-HVAC support. No production URL was created, and article #39 remains unapproved.
+*Why Is My Air Filter Torn or Ripped?* was independently re-researched and rejected as a standalone article. Physical filter damage is real, but exact-query demand remains unverified, independent homeowner recurrence is sparse, and the defensible guidance is already owned by the bending, fit, sizing, wet-filter, restriction, and vacuum/reuse pages. Several proposed causes lacked credible residential-HVAC support. No production URL was created. That rejection remains permanent absent materially new evidence.
+
+## 2026-09-25 evidence-gated article
+
+Article #39, *MERV vs. MPR vs. FPR: What’s the Difference?*, was published at `/blog/merv-vs-mpr-vs-fpr.html` only after fresh reality, intent, duplicate, cannibalization, technical, source-of-truth, conversion-claim, relevance, and commercial-independence gates passed. It owns rating-system identification and careful comparison across current product labels; it does not publish a universal conversion chart or claim exact-query GSC demand. The MERV selection, restriction, and true-HEPA pages retain their existing owners. Article #40 is not authorized; the next content decision remains evidence-gated.
 
 ## 2026-09-24 evidence-gated article
 
@@ -26,7 +30,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-eight articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-nine articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -48,11 +52,11 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 
 | Candidate | Status | Preliminary boundary |
 |---|---|---|
-| MERV vs. MPR vs. FPR: How Air Filter Ratings Compare | Validated candidate; not authorized next | Rating-system translation; distinct from choosing among MERV 8/11/13 |
+| MERV vs. MPR vs. FPR: What’s the Difference? | Implemented 2026-09-25 | Rating-system identification and careful cross-label comparison; distinct from choosing among MERV 8/11/13 |
 | Are Furnace Filters and AC Filters the Same? | Implemented 2026-09-16 | Homeowner terminology and shared forced-air filtration location |
 | Can You Put a HEPA Filter in a Furnace? | Implemented 2026-09-22 | True-HEPA compatibility rather than general higher-MERV choice |
 | Can You Run an HVAC System Without an Air Filter? | Implemented 2026-09-17 | Missing-filter operation and safe next action |
-| Should You Run the HVAC Fan Continuously for Filtration? | Validated candidate | Runtime/filtration tradeoff rather than filter selection |
+| Should You Run the HVAC Fan Continuously for Filtration? | Implemented 2026-09-24 | Runtime/filtration tradeoff rather than filter selection |
 | HVAC Filter vs. Portable Air Purifier | Validated candidate | Central versus room-device decision |
 
 ### Research Needed

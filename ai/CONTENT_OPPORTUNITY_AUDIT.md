@@ -340,6 +340,18 @@ The historical continuous-fan candidate was independently revalidated rather tha
 
 **Post-publication inventory:** 38 published blog articles, nine filter-size guides, 53 sitemap URLs, and 49 non-legal content pages. Article #39 remains unapproved.
 
+## September 25, 2026: article #39 fresh decision
+
+The historically validated *MERV vs. MPR vs. FPR* candidate was independently revalidated rather than published from its earlier score. The documented GSC evidence still shows broad comparison pages ranking materially deeper than narrow troubleshooting pages and does not establish exact-query demand for this topic. Publication therefore rests on demonstrated recurring label confusion, authoritative definitions, low duplication, and direct relevance to Filter Wizard's MERV-based product guidance—not on a traffic forecast.
+
+- **Topic reality and user intent — PASSED.** EPA explicitly distinguishes consensus-standard MERV from proprietary MPR and FPR, while current 3M Filtrete and Home Depot materials actively use their respective labels. Search-result recurrence and independent homeowner discussions establish recurring comparison confusion. No verified search-volume data or exact-query GSC demand is claimed.
+- **Duplicate and cannibalization — PASSED.** `/blog/merv-8-vs-merv-11-vs-merv-13.html` is the nearest competitor, but it owns selection among ordinary MERV levels. Article #39 owns which organization defines each rating, what each label communicates, and how to compare actual products without inventing a conversion formula. The restriction and HEPA guides retain pressure-drop and true-HEPA compatibility ownership.
+- **Technical and source-of-truth review — PASSED.** ASHRAE and EPA support the MERV test framework; 3M supports MPR's scope and current product-specific MPR/MERV pairings; Home Depot supports FPR's current weighted 1–12 system. Current product listings show that one FPR tier can carry different MERV labels, so a universal exact conversion was rejected.
+- **Conversion-claim and commercial-independence review — PASSED.** The article publishes no universal three-way chart, treats current paired product labels as product-specific evidence, contains zero retailer blocks, and places one neutral Filter Finder CTA only after the comparison guidance.
+- **Post-draft intent audit — PASSED.** The finished page remains a rating-language guide rather than another MERV-selection, restriction, HEPA, allergy, dust, or smoke article. A major section cannot move unchanged into those pages without changing their primary intent.
+
+**Post-publication inventory:** 39 published blog articles, nine filter-size guides, 54 sitemap URLs, and 50 non-legal content pages. Article #40 remains unapproved and requires a new evidence-based decision.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.
