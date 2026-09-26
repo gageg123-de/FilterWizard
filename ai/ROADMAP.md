@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-24
+Last verified: 2026-09-25
+
+## 2026-09-25 rejected article review
+
+*Why Is My Air Filter Torn or Ripped?* was independently re-researched and rejected as a standalone article. Physical filter damage is real, but exact-query demand remains unverified, independent homeowner recurrence is sparse, and the defensible guidance is already owned by the bending, fit, sizing, wet-filter, restriction, and vacuum/reuse pages. Several proposed causes lacked credible residential-HVAC support. No production URL was created, and article #39 remains unapproved.
 
 ## 2026-09-24 evidence-gated article
 
@@ -59,7 +63,6 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | Why Does My Air Filter Stay Clean? | Repeated anecdotes but limited authoritative/search evidence and several possible system causes | Independent search evidence plus authoritative diagnostic support |
 | How Many Air Filters Does My House Have? | Real configuration question but strong overlap with both return-filter articles and sizing guidance | A distinct query cluster not satisfied by existing return/filter-location coverage |
 | Electrostatic vs. Pleated Air Filters | Real product distinction but overlaps washable/disposable and fiberglass/pleated guides | Verified comparison demand and a non-duplicative product boundary |
-| Why Is My Air Filter Torn or Ripped? | Plausible symptom with sparse demand evidence | Repeated independent reports and credible technical documentation |
 | Why Is My Air Filter Sticky or Greasy? | Plausible cooking/smoke/spray mechanisms, sparse context-specific reports, no verified volume, and high overlap | Multiple independent demand signals demonstrating distinct intent |
 
 ### Rejected / Do Not Create
@@ -76,6 +79,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | What order do filter dimensions go in? | Existing sizing and missing-label guides own three-dimension identification | Evidence shows a separate decision not solved by those guides |
 | Best filter for older HVAC systems | Age alone is not a compatibility rule; existing MERV/restriction content corrects it | Demand supports a carefully reformulated compatibility question |
 | Why MERV 13 always damages HVAC systems | False universal premise already corrected by restriction/MERV pages | Never as stated; only a distinct misconception-debunking need could qualify |
+| Why Is My Air Filter Torn or Ripped? | Sparse exact-intent evidence; supported causes/actions substantially duplicate bending, fit, sizing, wet-filter, restriction, and reuse owners; several proposed causes are unsupported | New exact-intent demand plus multiple credible residential sources establish distinct causes and actions not already served |
 
 ## Experimental ideas
 

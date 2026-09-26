@@ -1,8 +1,16 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-24
+Last verified: 2026-09-25
 
 This documentation-only audit applies the Topic-Reality, demand/intent, and preliminary duplicate gates to possible Filter Wizard articles. It does not authorize publication. No production page, image, stylesheet, script, analytics integration, sitemap entry, or affiliate link changed during this audit.
+
+## Torn-filter publication review — 2026-09-25
+
+**Decision: rejected; do not create `/blog/why-is-my-air-filter-torn.html` without materially new evidence.** Physical tears and ripped media are real conditions, but the proposed standalone article failed the fresh user-intent, distinctness, cause-by-cause evidence, and Filter Wizard relevance gates. No exact-query Search Console evidence or verified search-volume data was available. Search-result research found only sparse independent homeowner reports, while the September GSC evidence supports the broader physical-filter troubleshooting pattern rather than this exact question.
+
+The technically supportable guidance is already owned by current pages. The bending guide covers loading, restriction, wrong size, weak support, moisture, damaged frames, collapse, and replacement of torn disposable filters. The fit and sizing guides cover undersized gaps and forced oversized filters. The wet-filter guide owns moisture damage, and the vacuum/reuse guide owns handling or cleaning damage and replacement of torn media. A new page would therefore rely heavily on material that could move unchanged into existing intent owners.
+
+Cause review retained only narrow, qualified findings: visible media damage can create bypass and warrants replacement; careful installation matters; correct fit and a rack without visible bypass matter; heavy loading can contribute to deformation or collapse; and moisture or unapproved cleaning can weaken some disposable media. Proposed standalone causes such as pets, rodents, insects, a manufacturing defect, backward installation, a blower fault, or a duct fault lacked adequate residential-HVAC evidence for this topic and were rejected. One recurring report involving direct UV exposure was not broad enough to justify a general article or a new cause section. Reconsider only if new exact-intent demand evidence and multiple credible residential sources establish distinct causes and actions beyond the bending, fit, wet, and reuse guides.
 
 ## Baseline and evidence limits
 
