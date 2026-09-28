@@ -1,6 +1,47 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-25
+Last verified: 2026-09-27
+
+## Household HVAC filter-count publication review — 2026-09-27
+
+**Decision: rejected as a separate article #40; do not create `/blog/how-many-air-filters-does-a-house-have.html` without materially new information gain.** The underlying question is verified and recurring, but the proposal failed the duplicate, cannibalization, and post-research distinctness gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available. The documented return/configuration GSC strength is directional cluster evidence only.
+
+- **Topic reality, user intent, and Filter Wizard relevance — PASSED.** Trane states that filter location varies and that a home with multiple HVAC systems will likely have at least one filter for each unit; Carrier distinguishes central filtered returns from unfiltered room returns and documents equipment-side cabinets; Lennox equipment guidance documents one return-air filter location or filters at multiple return openings. Filtrete publishes the exact homeowner question, and repeated independent homeowner discussions ask how many filters to find after moving or discovering several locations. Community evidence establishes recurrence, not configuration rules.
+- **Technical, configuration-source, and filter-count claim review — PASSED with strict qualifications.** Supported configurations include one designed central return-side filter, one or more designated filtered return grilles, separate filtration arrangements for multiple systems, and purpose-built media cabinets. Lennox and Resideo documentation supports rejecting automatic double filtration and warns that another filtration device can create excessive resistance. No universal household count, per-floor, per-return, per-thermostat, or per-outdoor-unit formula is defensible.
+- **Duplicate-Topic Preflight — FAILED.** `/blog/filters-in-every-return-vent.html` already explains one central filter versus multiple return filters, warns that an empty grille is not necessarily missing a filter, and provides a safe checklist covering every accessible return and equipment-side location. `/blog/filter-at-return-and-furnace.html` already compares one central rack, filtered returns, return-plus-equipment filtration, purpose-built stages, empty central tracks, and unclear inherited configurations; it also records each accessible filter's location and size. The proposed article's essential sections and actions already exist there.
+- **Cannibalization Test — FAILED.** The every-return page is the closest primary competitor, with the return-plus-furnace page a second near-equal owner. A count page would need to restate both pages' configuration tables and inspection workflow, blurring which URL owns filter-location diagnosis. Adding multiple-system wording does not create enough distinct utility for a standalone page.
+- **Post-Draft Intent Audit — NOT RUN.** Drafting stopped at the mandatory gates. No article, image, index card, homepage card, sitemap entry, incoming link, or other production change was created.
+
+### Configuration ledger
+
+| Configuration | Source and support | Limitation | Decision |
+|---|---|---|---|
+| One central filter near furnace/air handler | Trane and Carrier document a filter beside the furnace/air handler or in a return-side cabinet | Does not establish one filter for every house | Keep, conditional |
+| One filtered central return grille | Carrier documents a large central return that may include a filter; Trane documents return-grille locations | A large return is not automatically filtered | Keep, conditional |
+| Multiple filtered return grilles | Lennox air-handler instructions allow a filter at each return opening when the system uses multiple filter grilles | Equipment-specific documentation; not permission to filter every return | Keep, qualified |
+| Multiple independent HVAC systems | Trane says multiple-system homes will likely have at least one filter for each unit; Filtrete describes multiple central units requiring multiple filters | “Likely” is not a universal count formula; thermostat, floor, and condenser counts are not proof | Keep, qualified |
+| Return filter plus equipment filter | Existing Lennox/Resideo instructions warn against double filtration in applicable systems; specialized staged arrangements can exist | Cannot infer intent from two visible locations or an empty track | Keep only as a warning; configuration-specific |
+| Media cabinet/specialty filtration | Resideo documents return-duct media cabinets and purpose-built air cleaners | Installation and redesign are professional/equipment-specific matters | Keep only as an exception |
+| Ductless mini-split screens | Different equipment category from Filter Wizard's central disposable-filter focus | Adds little to the count decision and risks scope drift | Reject from standalone article scope |
+
+### Filter-count claim ledger
+
+| Claim | Decision | Reason |
+|---|---|---|
+| Every house has at least one HVAC filter | Reject | Boiler-only and other non-forced-air configurations make the universal premise unsafe |
+| Every central forced-air system has exactly one filter | Reject | Multiple designated filtered returns and specialized arrangements exist |
+| Every return grille should contain a filter | Reject | Carrier distinguishes central filtered returns from ordinary room returns; existing pages already warn against this |
+| A home can use one central filter | Keep, qualified | Supported by Trane, Carrier, and Lennox documentation |
+| A system can use multiple filtered returns | Keep, qualified | Supported by Lennox equipment instructions, not a universal design rule |
+| Multiple HVAC systems can mean multiple filtration arrangements | Keep, qualified | Supported directionally by Trane and Filtrete; actual equipment documentation controls |
+| Each thermostat, floor, or outdoor condenser corresponds to one filter | Reject | None is a universal identification rule |
+| A filter can be at a return grille, near a furnace/air handler, or in a media cabinet | Keep, qualified | Supported across Trane, Carrier, Lennox, and Resideo sources |
+| Return plus equipment filtration is always better | Reject | Applicable manufacturer instructions warn against unintended double filtration and excess resistance |
+| An empty filter slot proves a filter is missing | Reject | Existing designed configurations and equipment changes can leave an unused location |
+| Adding a second filter improves indoor air quality | Reject | No universal benefit; may increase resistance or violate the designed arrangement |
+| Multiple filters necessarily create excessive restriction | Reject | Parallel filtered returns differ from filters in series; purpose-built arrangements exist |
+| Ductless mini-splits use the same disposable filters as central HVAC | Reject | Different filtration equipment and maintenance model |
+| Homeowners can inspect ordinary accessible filter locations without invasive equipment access | Keep, qualified | Manufacturer homeowner guidance supports accessible return/cabinet checks; sealed or tool-required compartments remain out of scope |
 
 This documentation-only audit applies the Topic-Reality, demand/intent, and preliminary duplicate gates to possible Filter Wizard articles. It does not authorize publication. No production page, image, stylesheet, script, analytics integration, sitemap entry, or affiliate link changed during this audit.
 

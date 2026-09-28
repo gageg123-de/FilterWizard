@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-25
+Last verified: 2026-09-27
+
+## 2026-09-27 rejected article review
+
+*How Many HVAC Air Filters Does a House Have?* was independently researched and rejected as a standalone article #40. The question and legitimate configurations are real: Trane, Carrier, Lennox, and Filtrete document central equipment filters, filtered return grilles, multiple filtered returns, and multiple-system households. However, `/blog/filters-in-every-return-vent.html` and `/blog/filter-at-return-and-furnace.html` already own the configuration distinctions, empty-location warnings, accessible-location checklist, and add/remove safeguards; the sizing and furnace-versus-AC guides own their adjacent decisions. A new page would mostly consolidate existing answers rather than add a distinct homeowner decision. No exact-query GSC evidence or verified numeric search-volume data was available. No production URL was created, article #40 remains unused, and article #41 is not authorized.
 
 ## 2026-09-25 rejected article review
 
@@ -65,7 +69,6 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 |---|---|---|
 | Can a Dirty Filter Cause Weak Airflow From Vents? | Real mechanism and adjacent first-party signal, but high overlap with clogged, cooling, restriction, whistling, and bending pages | A distinct query cluster or proof the current pages fail the whole-house weak-airflow intent |
 | Why Does My Air Filter Stay Clean? | Repeated anecdotes but limited authoritative/search evidence and several possible system causes | Independent search evidence plus authoritative diagnostic support |
-| How Many Air Filters Does My House Have? | Real configuration question but strong overlap with both return-filter articles and sizing guidance | A distinct query cluster not satisfied by existing return/filter-location coverage |
 | Electrostatic vs. Pleated Air Filters | Real product distinction but overlaps washable/disposable and fiberglass/pleated guides | Verified comparison demand and a non-duplicative product boundary |
 | Why Is My Air Filter Sticky or Greasy? | Plausible cooking/smoke/spray mechanisms, sparse context-specific reports, no verified volume, and high overlap | Multiple independent demand signals demonstrating distinct intent |
 
@@ -84,6 +87,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | Best filter for older HVAC systems | Age alone is not a compatibility rule; existing MERV/restriction content corrects it | Demand supports a carefully reformulated compatibility question |
 | Why MERV 13 always damages HVAC systems | False universal premise already corrected by restriction/MERV pages | Never as stated; only a distinct misconception-debunking need could qualify |
 | Why Is My Air Filter Torn or Ripped? | Sparse exact-intent evidence; supported causes/actions substantially duplicate bending, fit, sizing, wet-filter, restriction, and reuse owners; several proposed causes are unsupported | New exact-intent demand plus multiple credible residential sources establish distinct causes and actions not already served |
+| How Many HVAC Air Filters Does a House Have? | Real recurring question, but the every-return and return-plus-furnace guides already own the configuration types, location-identification workflow, empty-slot caution, and add/remove safeguards; a new URL would be a summary of existing owners | Material new evidence demonstrates a count-specific decision or action that the existing configuration pages cannot satisfy |
 
 ## Experimental ideas
 
