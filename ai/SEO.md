@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-25
+Last verified: 2026-09-27
+
+The 2026-09-27 guide `/blog/hvac-filter-vs-air-purifier.html` owns the functional distinction between central HVAC filtration and portable room air cleaning. It passed fresh reality, intent, duplicate, cannibalization, technical, MERV/CADR, particle/gas, relevance, and commercial-independence gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and eleven visible/schema-matched FAQs distinguish it from MERV selection, true-HEPA compatibility, contaminant selection, and continuous-fan operation.
 
 The 2026-09-25 guide `/blog/merv-vs-mpr-vs-fpr.html` owns the rating-system identification and cross-label comparison intent. Its metadata and content distinguish standards-based MERV from proprietary MPR and FPR without publishing a universal conversion formula; product-specific paired labels remain the comparison source of truth. The supplied GSC history shows weak broad-comparison performance and no exact-query demand is claimed, so publication rests on recurring confusion, authoritative source coverage, low duplication, and direct relevance to Filter Wizard's MERV-based guidance. The page has unique metadata, a self-canonical URL, Article/FAQ/Breadcrumb schema, and ten visible/schema-matched FAQs.
 
@@ -55,7 +57,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 39 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 40 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

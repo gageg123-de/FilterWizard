@@ -393,6 +393,18 @@ The historically validated *MERV vs. MPR vs. FPR* candidate was independently re
 
 **Post-publication inventory:** 39 published blog articles, nine filter-size guides, 54 sitemap URLs, and 50 non-legal content pages. Article #40 remains unapproved and requires a new evidence-based decision.
 
+## September 27, 2026: article #40 fresh decision
+
+The historically deferred *HVAC Air Filter vs. Portable Air Purifier* candidate was independently revalidated rather than published from its earlier opportunity status. Filter Wizard's first-party history still favors narrow troubleshooting over broad comparisons and does not establish exact-query demand, so publication rests on a verified homeowner decision, authoritative technical separation, low semantic duplication, and a clear Filter Wizard boundary—not a traffic forecast.
+
+- **Topic reality and user intent — PASSED.** EPA directly compares portable room air cleaners with furnace/HVAC filters and describes them as complementary approaches; current search-result recurrence and independent homeowner discussions repeat the “do I need both?” decision. No verified numeric search-volume data or exact-query GSC evidence is claimed.
+- **Duplicate and cannibalization — PASSED.** `/blog/can-you-put-hepa-filter-in-furnace.html` is the nearest competitor, but it owns true-HEPA compatibility in the central HVAC path. Article #40 owns central filtration versus portable room air cleaning, including where each operates, when it filters, and why neither automatically replaces the other. MERV, restriction, contaminant, and continuous-fan pages retain their owners.
+- **Technical and source-of-truth review — PASSED.** EPA supports the central-versus-room distinction, HVAC-runtime dependency, complementary use, particle/gas boundary, source-control/ventilation context, and ozone caution. ENERGY STAR defines CADR for complete room-air-cleaner clean-air delivery and room/area selection. ASHRAE Standard 52.2 defines the particle-removal test framework underlying MERV. No MERV-to-CADR conversion or unsupported coverage number is published.
+- **Health, relevance, and commercial-independence review — PASSED.** The article makes no medical promise, product ranking, purifier recommendation, or purifier affiliate offer. Its center of gravity remains the HVAC-filter decision, with one Finder CTA explicitly limited to ordinary compatible HVAC filters after physical size confirmation.
+- **Post-draft intent audit — PASSED.** The finished page retains substantive unique value after adjacent MERV, HEPA, smoke, allergy, restriction, and fan-runtime material is routed to existing owners. It does not become a purifier shopping guide or a rewritten MERV article.
+
+**Post-publication inventory:** 40 published blog articles, nine filter-size guides, 55 sitemap URLs, and 51 non-legal content pages. Article #41 remains unapproved.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.

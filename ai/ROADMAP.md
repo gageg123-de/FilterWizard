@@ -2,9 +2,13 @@
 
 Last verified: 2026-09-27
 
+## 2026-09-27 evidence-gated article
+
+Article #40, *HVAC Air Filter vs. Portable Air Purifier: What’s the Difference?*, was published at `/blog/hvac-filter-vs-air-purifier.html` only after fresh reality, intent, duplicate, cannibalization, technical, HVAC-filter, room-air-cleaner, MERV/CADR, particle/gas, health-claim, runtime/coverage, relevance, commercial-independence, and post-draft gates passed. It owns central-HVAC filtration versus portable room air cleaning. It does not convert MERV to CADR, recommend purifier products, add purifier affiliate links, or claim exact-query GSC demand or verified numeric search volume. The MERV, HEPA, restriction, contaminant, and fan-runtime guides retain their intent ownership. Article #41 is not authorized.
+
 ## 2026-09-27 rejected article review
 
-*How Many HVAC Air Filters Does a House Have?* was independently researched and rejected as a standalone article #40. The question and legitimate configurations are real: Trane, Carrier, Lennox, and Filtrete document central equipment filters, filtered return grilles, multiple filtered returns, and multiple-system households. However, `/blog/filters-in-every-return-vent.html` and `/blog/filter-at-return-and-furnace.html` already own the configuration distinctions, empty-location warnings, accessible-location checklist, and add/remove safeguards; the sizing and furnace-versus-AC guides own their adjacent decisions. A new page would mostly consolidate existing answers rather than add a distinct homeowner decision. No exact-query GSC evidence or verified numeric search-volume data was available. No production URL was created, article #40 remains unused, and article #41 is not authorized.
+*How Many HVAC Air Filters Does a House Have?* was independently researched and rejected as a standalone article #40. The question and legitimate configurations are real: Trane, Carrier, Lennox, and Filtrete document central equipment filters, filtered return grilles, multiple filtered returns, and multiple-system households. However, `/blog/filters-in-every-return-vent.html` and `/blog/filter-at-return-and-furnace.html` already own the configuration distinctions, empty-location warnings, accessible-location checklist, and add/remove safeguards; the sizing and furnace-versus-AC guides own their adjacent decisions. A new page would mostly consolidate existing answers rather than add a distinct homeowner decision. No exact-query GSC evidence or verified numeric search-volume data was available. At that review, no production URL was created and the article #40 number remained unused; the rejection did not authorize a substitute candidate.
 
 ## 2026-09-25 rejected article review
 
@@ -34,7 +38,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; thirty-nine articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -61,7 +65,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | Can You Put a HEPA Filter in a Furnace? | Implemented 2026-09-22 | True-HEPA compatibility rather than general higher-MERV choice |
 | Can You Run an HVAC System Without an Air Filter? | Implemented 2026-09-17 | Missing-filter operation and safe next action |
 | Should You Run the HVAC Fan Continuously for Filtration? | Implemented 2026-09-24 | Runtime/filtration tradeoff rather than filter selection |
-| HVAC Filter vs. Portable Air Purifier | Validated candidate | Central versus room-device decision |
+| HVAC Filter vs. Portable Air Purifier | Implemented 2026-09-27 | Central versus room-device decision |
 
 ### Research Needed
 

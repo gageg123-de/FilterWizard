@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-09-25
+Last verified: 2026-09-27
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 54 indexable URLs: the homepage, blog index, 39 blog articles, nine size guides, and four legal pages. The 50 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 55 indexable URLs: the homepage, blog index, 40 blog articles, nine size guides, and four legal pages. The 51 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -33,7 +33,7 @@ The sitemap contains 54 indexable URLs: the homepage, blog index, 39 blog articl
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
 | Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction |
 | HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
-| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV/MPR/FPR guide owns rating-system identification and cross-label comparison; MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility; continuous-fan guide owns fan runtime as a filtration/filter-loading decision |
+| MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV/MPR/FPR guide owns rating-system identification and cross-label comparison; MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility; continuous-fan guide owns fan runtime as a filtration/filter-loading decision; HVAC-filter-versus-air-purifier guide owns central filtration versus portable room air cleaning and the MERV/CADR boundary |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |
 | Maintenance | `/blog/how-often-change-air-filter.html` owns replacement timing | vacuum/reuse owns clean-versus-replace; clogged guide owns condition-based replacement signals; HVAC-without-filter owns the missing-required-filter operating decision and safe recovery path |
@@ -46,6 +46,7 @@ The sitemap contains 54 indexable URLs: the homepage, blog index, 39 blog articl
 - Bending, movement, and whistling own their respective physical symptoms. Fit and restriction are supporting diagnoses, not alternate owners.
 - AC freeze, AC not cooling, energy cost, and furnace short cycling each own one downstream symptom. None should become another general clogged-filter page.
 - The MERV hub owns ordinary MERV selection; the MERV/MPR/FPR guide owns what the three labels mean and how to compare actual products without a universal conversion; the restriction guide owns general filter/system resistance; the furnace-HEPA guide owns true-HEPA definition, non-equivalence, and compatibility with central HVAC or purpose-built HEPA equipment.
+- The HVAC-filter-versus-air-purifier guide owns where central and portable filtration act, their runtime and coverage distinctions, and why MERV and CADR are not interchangeable. It routes HVAC efficiency choice, true HEPA compatibility, contaminants, and fan-runtime detail to their established owners.
 - Find-size owns the discovery process; fit owns seating and clearance; slightly-different-size owns substitution risk; thickness comparison owns one-, two-, and four-inch construction tradeoffs.
 - General MERV comparison owns rating choice. Allergy, dust, smoke, and pets pages own household-specific selection.
 

@@ -13,7 +13,7 @@ Architecture constraints are current facts, not permanent preferences. Adding a 
 - [`../index.html`](../index.html): homepage, Finder markup, modal, result UI, and general email form.
 - [`../assets/css/style.css`](../assets/css/style.css): all shared styles and responsive rules.
 - [`../assets/js/script.js`](../assets/js/script.js): navigation, reveal effects, consent, Finder, forms, shares, article tracking, retailer links.
-- [`../blog/`](../blog/): index plus thirty-five hand-authored articles.
+- [`../blog/`](../blog/): index plus forty hand-authored articles.
 - [`../filter-sizes/`](../filter-sizes/): nine preserved static size pages (20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1); no public index.
 - [`../data/filter-sizes.json`](../data/filter-sizes.json): central size-page manifest containing page identity, deployment state, evidence, metadata, distinct utility, and retailer-query facts.
 - [`../tools/filter-size-pages.mjs`](../tools/filter-size-pages.mjs): dependency-free size-page generator and production validator. It runs only at authoring time; hosting still serves plain static HTML.

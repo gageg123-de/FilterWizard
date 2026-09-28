@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-24
+Last verified: 2026-09-27
+
+The 2026-09-27 HVAC-filter-versus-portable-air-purifier guide adds two generated, visually reviewed 1200×800 WebPs: `hvac-filter-vs-air-purifier-hero.webp` (living room with a portable cleaner and separate return grille) and `hvac-filter-vs-portable-cleaner.webp` (two-panel conceptual central-versus-room airflow illustration). Neither image includes brands, certification marks, performance numbers, MERV/CADR equivalence, medical claims, or a portable cleaner connected to ductwork. The hero is eager/high priority; the supporting diagram is lazy-loaded.
 
 The continuous-HVAC-fan filtration guide uses two generated, converted, and visually verified 1200×800 WebPs: `continuous-hvac-fan-filtration-hero.webp` (homeowner reviewing a generic fan control beside a closed return grille) and `hvac-fan-auto-on-circulate.webp` (a brand-neutral conceptual comparison of fan modes). The graphic uses only the reviewed AUTO, ON, and CIRCULATE labels, makes no energy, health, or universal-setting claim, and notes through the caption that control behavior varies. Both images avoid exposed equipment and branded thermostat interfaces; the hero is eager/high-priority and the supporting graphic is lazy-loaded.
 

@@ -1,6 +1,8 @@
 # Content and Articles
 
-Last verified: 2026-09-25
+Last verified: 2026-09-27
+
+The 2026-09-27 guide `/blog/hvac-filter-vs-air-purifier.html` is the fortieth published article. It independently passed Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, central-HVAC, portable-air-cleaner, MERV/CADR, particle/gas, health-claim, runtime/coverage, Filter-Wizard-relevance, commercial-independence, and post-draft gates against the 39-article library. EPA establishes the complementary but non-interchangeable roles of central filters and portable room air cleaners; ENERGY STAR defines CADR for complete room-air-cleaner performance; and ASHRAE Standard 52.2 defines the particle-removal test framework underlying MERV. No exact-query GSC demand or verified numeric search volume is claimed. The article owns central HVAC filtration versus portable room air cleaning, while the MERV, HEPA, restriction, contaminant, and continuous-fan guides retain their existing intents. It uses a 14-minute estimate, eleven matched FAQs, one Finder CTA, zero retailer blocks, two new reviewed 1200×800 WebPs, Article/FAQ/Breadcrumb schema, Formspree source `blog-hvac-filter-vs-air-purifier`, and one contextual incoming link from the furnace-HEPA guide. It publishes no MERV-to-CADR conversion, portable-purifier affiliate path, product roundup, or medical promise.
 
 The 2026-09-25 guide `/blog/merv-vs-mpr-vs-fpr.html` is the thirty-ninth published article. It independently passed Topic-Reality, user-intent, duplicate, cannibalization, technical-evidence, source-of-truth, conversion-claim, Filter-Wizard-relevance, and commercial-independence gates against the 38-article library. EPA and ASHRAE establish MERV as the national-consensus/Standard 52.2 framework; current 3M Filtrete material defines MPR and supplies product-specific MPR/MERV pairings; current Home Depot guidance defines FPR and product listings show that an FPR tier does not map to one exact MERV value. No exact-query GSC demand or verified numeric search volume is claimed. The article owns rating-system identification and careful cross-label comparison, while the MERV 8/11/13 guide retains ordinary MERV selection, the restriction guide retains pressure-drop compatibility, and the HEPA guide retains true-HEPA compatibility. It uses a 14-minute estimate, ten matched FAQs, one Finder CTA, zero retailer blocks, one reviewed existing 1200×800 WebP, Article/FAQ/Breadcrumb schema, Formspree source `blog-merv-mpr-fpr`, and one contextual incoming link from the MERV guide. It contains no universal MPR/FPR conversion chart.
 
@@ -90,7 +92,7 @@ The dust-focused buying pillar at [`../blog/best-air-filter-for-dust.html`](../b
 
 Pet-home pillar update: `/blog/best-air-filter-for-pets.html` is the twenty-second production article. It uses two delayed Filter Finder CTAs after substantive guidance and no direct retailer block.
 
-[`../blog/index.html`](../blog/index.html) lists thirty-nine static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
+[`../blog/index.html`](../blog/index.html) lists forty static articles. The homepage Latest Guides section shows the newest three. Both use the same text-only preview hierarchy: category pill, reading time/date, H3 title, excerpt, primary Read Guide link. Preview images are not shown.
 
 The newest airflow-restriction pillar contains 2,504 visible words and uses a 17-minute reading-time estimate.
 
