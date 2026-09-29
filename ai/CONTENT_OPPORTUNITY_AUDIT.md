@@ -405,6 +405,18 @@ The historically deferred *HVAC Air Filter vs. Portable Air Purifier* candidate 
 
 **Post-publication inventory:** 40 published blog articles, nine filter-size guides, 55 sitemap URLs, and 51 non-legal content pages. Article #41 remains unapproved.
 
+## September 29, 2026: article #41 fresh decision
+
+The previously deferred *Electrostatic vs. Pleated Air Filters* candidate was independently revalidated rather than promoted from the historical list. The earlier defer/merge decision correctly identified overlap risk, but current authoritative evidence establishes a distinct terminology problem: pleated describes media geometry, while electrostatic charge can be an overlapping capture attribute, and the market also uses “electrostatic” for washable passive products and powered electronic equipment.
+
+- **Topic reality and user intent — PASSED.** Current product listings and recurring homeowner questions use “electrostatic pleated,” “washable electrostatic,” and electrostatic-versus-pleated wording. No exact-query Filter Wizard GSC evidence or verified numeric search-volume data is claimed.
+- **Terminology and category-overlap review — PASSED.** ASHRAE distinguishes passive charged-fiber media from powered electrostatic precipitators. Current 3M documentation confirms disposable pleated charged media; AMFCO documentation confirms washable passive products, including a pleated washable design. The page therefore rejects electrostatic-versus-pleated as mutually exclusive categories.
+- **Duplicate and cannibalization review — PASSED.** Fiberglass-versus-pleated retains basic media/construction comparison; washable-versus-disposable retains lifecycle and cleaning; MERV retains efficiency selection; restriction retains pressure-drop compatibility; vacuum/reuse retains disposable-cleaning risk. Article #41 owns the terminology and overlap decision those pages do not resolve.
+- **Performance, safety, relevance, and commercial-independence review — PASSED.** The article makes no category-wide efficiency, airflow, pressure-drop, lifespan, health, or cost ranking; separates passive media from powered equipment; confines ozone caution to applicable powered technologies; contains zero retailer blocks; and limits one Finder CTA to ordinary compatible disposable HVAC filters.
+- **Post-draft intent audit — PASSED.** After adjacent lifecycle, construction, rating, restriction, and contaminant detail is routed to existing owners, the page retains substantial unique value explaining what “electrostatic” means and why it may coexist with pleated construction.
+
+**Post-publication inventory:** 41 published blog articles, nine filter-size guides, 56 sitemap URLs, and 52 non-legal content pages. Article #42 remains unapproved.
+
 ## Controlled filter-size expansion — 2026-09-02
 
 The next production action exploited the second strong first-party lane rather than publishing article #34. In the owner-provided 2026-08-24 through 2026-08-30 export, `/filter-sizes/20x25x1.html` had 11 impressions at position 8, `/filter-sizes/16x25x1.html` had 3 impressions at position 8, and the general size guide had 17 impressions at position 9.47. The query table did not expose exact missing-size queries, so the batch does not claim search volume for 16x24x1, 18x20x1, or 24x24x1.

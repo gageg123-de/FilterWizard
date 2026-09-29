@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-27
+Last verified: 2026-09-29
+
+The 2026-09-29 guide `/blog/electrostatic-vs-pleated-air-filters.html` owns the distinction between pleated construction and electrostatic capture terminology. It passed fresh reality, intent, terminology, category-overlap, duplicate, cannibalization, technical, safety, relevance, commercial-independence, and post-draft gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and eleven matched FAQs distinguish it from fiberglass-versus-pleated construction, washable-versus-disposable lifecycle, MERV selection, restriction, and reuse pages.
 
 The 2026-09-27 guide `/blog/hvac-filter-vs-air-purifier.html` owns the functional distinction between central HVAC filtration and portable room air cleaning. It passed fresh reality, intent, duplicate, cannibalization, technical, MERV/CADR, particle/gas, relevance, and commercial-independence gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and eleven visible/schema-matched FAQs distinguish it from MERV selection, true-HEPA compatibility, contaminant selection, and continuous-fan operation.
 

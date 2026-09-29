@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-27
+Last verified: 2026-09-29
+
+The 2026-09-29 electrostatic-versus-pleated terminology guide adds two generated, visually reviewed 1200×800 WebPs: `electrostatic-vs-pleated-hero.webp` (a disposable pleated filter beside a washable electrostatic-style filter) and `pleated-electrostatic-overlap.webp` (one pleated filter with a charged-fiber particle-capture cutaway). Neither image shows brands, ratings, sparks, powered passive media, ozone, washing disposable media, or mutually exclusive category labels. The hero is eager/high priority and the supporting illustration is lazy-loaded.
 
 The 2026-09-27 HVAC-filter-versus-portable-air-purifier guide adds two generated, visually reviewed 1200×800 WebPs: `hvac-filter-vs-air-purifier-hero.webp` (living room with a portable cleaner and separate return grille) and `hvac-filter-vs-portable-cleaner.webp` (two-panel conceptual central-versus-room airflow illustration). Neither image includes brands, certification marks, performance numbers, MERV/CADR equivalence, medical claims, or a portable cleaner connected to ductwork. The hero is eager/high priority; the supporting diagram is lazy-loaded.
 

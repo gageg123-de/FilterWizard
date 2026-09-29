@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-27
+Last verified: 2026-09-29
+
+## 2026-09-29 evidence-gated article
+
+Article #41, *Electrostatic vs. Pleated Air Filters: What Do the Terms Mean?*, was published at `/blog/electrostatic-vs-pleated-air-filters.html` only after fresh terminology, category-overlap, duplicate, cannibalization, mechanism, maintenance, airflow, ozone, health, relevance, commercial-independence, and post-draft gates passed. It owns what “electrostatic” means and how it relates to pleated construction. It explicitly treats pleated and electrostatically charged as overlapping attributes, separates disposable charged media, washable passive products, and powered electronic equipment, declares no universal winner, and claims no exact-query GSC demand or verified numeric search volume. Article #42 is not authorized.
 
 ## 2026-09-27 evidence-gated article
 
@@ -38,7 +42,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-one articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -73,7 +77,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 |---|---|---|
 | Can a Dirty Filter Cause Weak Airflow From Vents? | Real mechanism and adjacent first-party signal, but high overlap with clogged, cooling, restriction, whistling, and bending pages | A distinct query cluster or proof the current pages fail the whole-house weak-airflow intent |
 | Why Does My Air Filter Stay Clean? | Repeated anecdotes but limited authoritative/search evidence and several possible system causes | Independent search evidence plus authoritative diagnostic support |
-| Electrostatic vs. Pleated Air Filters | Real product distinction but overlaps washable/disposable and fiberglass/pleated guides | Verified comparison demand and a non-duplicative product boundary |
+| Electrostatic vs. Pleated Air Filters | Implemented as article #41 after fresh terminology/category-overlap validation | Published 2026-09-29; article #42 remains unapproved |
 | Why Is My Air Filter Sticky or Greasy? | Plausible cooking/smoke/spray mechanisms, sparse context-specific reports, no verified volume, and high overlap | Multiple independent demand signals demonstrating distinct intent |
 
 ### Rejected / Do Not Create
