@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-09-29
+Last verified: 2026-09-30
+
+## 2026-09-30 rejected article review
+
+*Can You Use a Thicker Air Filter Than Your HVAC System Currently Has?* was independently researched and rejected as a standalone article #42. The homeowner question is real, and Resideo media-cabinet installation literature confirms that deeper-media changes can involve a dedicated cabinet, transitions, clearance, and return-duct work. However, `/blog/1-inch-vs-2-inch-vs-4-inch-air-filters.html` already owns the practical 1-inch-to-2-inch/4-inch decision: rack and cabinet depth, face-size versus depth, deeper-cabinet evaluation, MERV and pressure-drop boundaries, stacking, forcing, service life, and a compatibility checklist. `/blog/can-i-use-a-slightly-different-size-air-filter.html` separately owns thicker-filter substitution, nominal versus actual dimensions, approved multi-depth arrangements or adapters, and the no-trim/no-crush/no-spacer safeguards. A new URL would repeat those two owners rather than add a distinct homeowner action. No exact-query Filter Wizard GSC evidence or verified numeric search-volume data was available. No production URL was created, article #42 remains unused, and no substitute article is authorized.
 
 ## 2026-09-29 evidence-gated article
 
@@ -96,6 +100,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | Why MERV 13 always damages HVAC systems | False universal premise already corrected by restriction/MERV pages | Never as stated; only a distinct misconception-debunking need could qualify |
 | Why Is My Air Filter Torn or Ripped? | Sparse exact-intent evidence; supported causes/actions substantially duplicate bending, fit, sizing, wet-filter, restriction, and reuse owners; several proposed causes are unsupported | New exact-intent demand plus multiple credible residential sources establish distinct causes and actions not already served |
 | How Many HVAC Air Filters Does a House Have? | Real recurring question, but the every-return and return-plus-furnace guides already own the configuration types, location-identification workflow, empty-slot caution, and add/remove safeguards; a new URL would be a summary of existing owners | Material new evidence demonstrates a count-specific decision or action that the existing configuration pages cannot satisfy |
+| Can You Use a Thicker Air Filter Than Your HVAC System Currently Has? | Real compatibility question, but the thickness guide already owns rack/cabinet depth and the 1-inch-to-deeper-media decision, while the size-substitution guide owns supported alternatives and every safe-fit safeguard | Material new evidence establishes a distinct upgrade decision or action not already answered by those two pages |
 
 ## Experimental ideas
 

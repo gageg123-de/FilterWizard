@@ -1,6 +1,32 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-27
+Last verified: 2026-09-30
+
+## Thicker-filter compatibility publication review — 2026-09-30
+
+**Decision: rejected as a separate article #42; do not create `/blog/can-you-use-thicker-air-filter.html` without materially new information gain.** The underlying homeowner question is verified and recurring, but the proposal failed the duplicate, thickness-article cannibalization, and size-substitution cannibalization gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available.
+
+- **Topic reality, user intent, technical evidence, and Filter Wizard relevance — PASSED.** Exact-question search recurrence confirms homeowner confusion. Resideo's F100/F200 installation literature documents a purpose-built media cabinet, model-specific cartridge sizes, required access clearance, and retrofit installations that can require return-duct transitions and sheet-metal work. AprilAire documentation likewise ties replacement media to the installed cabinet model. These sources support the cabinet-compatibility decision but not a new URL.
+- **Filter-rack/cabinet, face-size/depth, retrofit, airflow, MERV, safety, and commercial-independence reviews — PASSED with qualifications.** Matching nominal width and height does not establish depth compatibility; cabinet or rack documentation controls. Deeper pleated designs can provide more media area, but depth alone does not establish MERV, pressure drop, service life, or superiority. No forced fit, trimming, crushing, stacking, spacer, homemade-adapter, or DIY sheet-metal instructions are appropriate.
+- **Duplicate-Topic Preflight — FAILED.** `/blog/1-inch-vs-2-inch-vs-4-inch-air-filters.html` already answers whether a 1-inch filter can be replaced with a 4-inch filter, defines depth as the third dimension, explains purpose-built deep media cabinets, separates depth from MERV and pressure drop, rejects stacking and forcing, and gives a checklist for deciding whether to keep the current depth or seek cabinet evaluation.
+- **Thickness-Article Cannibalization Test — FAILED.** The thickness guide is the direct primary owner. Its introduction, Quick Answer, compatibility section, stacking section, decision framework, recommendation, and FAQs collectively satisfy the proposed query. A new article would reproduce its central answer and most of its supporting sections.
+- **Size-Substitution Cannibalization Test — FAILED.** `/blog/can-i-use-a-slightly-different-size-air-filter.html` explicitly says a 2-inch or 4-inch filter is not a drop-in substitute for a 1-inch slot, explains cabinet-supported alternatives and approved conversions, distinguishes nominal from actual dimensions, and prohibits trimming, folding, crushing, taping, spacers, and other improvised fit methods.
+- **Post-Draft Intent Audit — NOT RUN.** Drafting stopped at the mandatory ownership gates. No article, image, index card, homepage card, sitemap entry, internal-link edit, or other production change was created. Article #42 remains unused, and no substitute article was authorized.
+
+### Thicker-filter claim ledger
+
+| Claim | Decision | Reason |
+|---|---|---|
+| Matching face dimensions make 1-inch and 4-inch filters interchangeable | Reject | Depth and the installed holder remain independent compatibility constraints |
+| A 1-inch rack generally accepts a 4-inch filter | Reject | The actual rack or cabinet must be designed for the selected depth |
+| Deeper media may require a dedicated cabinet or system modification | Keep, qualified | Resideo documents cabinet installation, clearance, transitions, and return-duct integration; the actual installation controls |
+| Some documented arrangements may support more than one filter option | Keep, qualified | Only applicable manufacturer or cabinet documentation can establish an approved alternative |
+| Homeowners can stack, compress, trim, tape, or adapt filters to change depth | Reject | These are improvised substitutions, not documented compatibility |
+| A deeper filter always has higher MERV, lower pressure drop, better filtration, or longer service life | Reject | Depth is not an efficiency, resistance, or service-life rating |
+| Deeper pleated media can provide more media area | Keep, qualified | It is a design possibility, not a universal product-performance guarantee |
+| Nominal dimensions establish one universal actual size | Reject | Actual dimensions vary by product and proprietary cabinet family |
+| Cabinet/rack depth and manufacturer-approved dimensions control fit | Keep | Supported by current manufacturer cabinet and replacement-media documentation |
+| A generic article should teach cabinet or duct modification | Reject | Retrofit work is equipment-specific and outside the safe homeowner scope |
 
 ## Household HVAC filter-count publication review — 2026-09-27
 
