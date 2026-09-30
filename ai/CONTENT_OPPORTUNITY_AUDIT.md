@@ -2,6 +2,210 @@
 
 Last verified: 2026-09-30
 
+## Article #42 opportunity discovery audit — 2026-09-30
+
+**Decision: discovery complete; article #42 remains unapproved and unimplemented.** The current 41-article library, nine size guides, newest owner-provided Search Console export, earlier exports, historical rejections, external homeowner intent, and authoritative technical sources were reviewed. Thirty-five plausible concepts entered the broad pool. Nine failed the reality/relevance filter, 20 failed duplicate/cannibalization review, four belong to existing-page improvement, none qualified as a new size-page opportunity, and two survived as genuinely distinct new-article candidates. No production page, index card, homepage card, sitemap entry, image, or internal link was created.
+
+The recommended candidate for a future evidence-gated article #42 review is **Do You Have to Use the Same Brand of HVAC Air Filter?** It is a recommendation for the next full publication-gate review, not publication authority. The second survivor is **Furnace Air Filter vs. Humidifier Filter: What's the Difference?** Article #43 remains unauthorized.
+
+### Repository and inventory basis
+
+- Production inventory at audit time: 41 published blog articles, nine filter-size guides, 56 sitemap/indexable URLs, and 52 non-legal content pages.
+- All 41 article titles, H1s, section headings, FAQs, intros, substantive copy, and internal-link roles were inspected. The inventory was not inferred from filenames or roadmap counts alone.
+- Primary and secondary intent ownership was compared against `blog/index.html`, `sitemap.xml`, the Filter Finder, and the current internal-linking map.
+- The prior torn/ripped-filter, household-filter-count, thicker-filter, and filter-change-shutdown rejections remain in force. Rejected candidates did not consume article #42.
+
+### Methodology
+
+1. Verified repository state and production inventory.
+2. Mapped each current article's primary decision and meaningful secondary coverage.
+3. Parsed the attached `filter-wizard.com-Performance-on-Search-2026-09-30.xlsx` workbook and compared the preceding short-period and 28-day exports where useful.
+4. Built a broad pool from first-party queries, current content boundaries, prior audits, authoritative-source gaps, and recurring homeowner wording.
+5. Applied topic reality and Filter Wizard relevance before duplicate review.
+6. Applied semantic duplication, cannibalization, existing-page-improvement, and information-gain tests.
+7. Researched authoritative support and independent homeowner recurrence for the survivors.
+8. Scored only the two survivors. Scores are editorial prioritization aids, not traffic forecasts.
+
+### Current content ownership and saturation
+
+| Cluster | Current primary owners | Secondary coverage relevant to discovery | Audit conclusion |
+|---|---|---|---|
+| Filter appearance and condition | clogged-signs hub; dirty-fast, black, brown, wet, one-side, unexpectedly clean, new-smell, and dust-around-vents guides | Replacement timing, fit, airflow symptoms, moisture escalation | Saturated; color, loading-speed, odor, and surface-condition variants need materially new evidence and action |
+| Physical behavior | bending/bowing, movement, whistling | Fit, restriction, airflow direction, wet media | Saturated for ordinary movement/deformation symptoms |
+| HVAC effects | freeze, not-cooling, energy-use, short-cycling, and restriction guides | Clogged signs and fan-runtime relationships | Strong first-party pattern, but most obvious causation queries already have direct owners |
+| Size, fit, and depth | find-size, tight-fit, slightly-different-size, 1/2/4-inch comparison, and nine size guides | Nominal versus actual dimensions, cabinet/rack compatibility, brand variation | Highly saturated; brand substitution is the remaining distinct purchase decision, not another dimension page |
+| Placement and configuration | every-return, return-plus-furnace, arrow-direction, and furnace-versus-AC guides | Filter location, multiple systems, heat pumps, air handlers, media cabinets | Saturated; household-count and installation-summary concepts remain rejected |
+| Ratings and technology | MERV 8/11/13, MERV 11/13 for allergies, MERV/MPR/FPR, HEPA compatibility, HVAC-versus-portable cleaner, fiberglass/pleated, washable/disposable, electrostatic/pleated | Pressure drop, powered versus passive technology, MERV compatibility | Saturated; new rating or technology URLs need a genuinely different homeowner decision |
+| Contaminant selection | pets, dust, allergies, smoke | Carbon/odor limits and portable-room-cleaner distinction | Saturated; contaminant adjectives and carbon-only variations belong to existing owners |
+| Maintenance and operation | change frequency, vacuum/reuse, run-without-filter, continuous-fan | Safe replacement workflow in arrow-direction guide | Saturated for general schedules and routine replacement mechanics |
+| Adjacent replacement components | No primary article | Furnace-versus-AC explains HVAC filter terminology, but no page distinguishes an HVAC air filter from a whole-house humidifier water panel/pad | Verified narrow gap; eligible only as a terminology/identification article |
+
+### First-party GSC analysis
+
+The newest workbook covers **September 22–28, 2026** and is filtered to Web / Last 7 days. It reports 9 clicks, 1,093 impressions, 0.82% CTR, and an impression-weighted average position of approximately 8.76. United States traffic accounts for 9 clicks and 894 impressions at approximately position 9.22. Mobile accounts for 796 impressions at approximately position 7.40; desktop accounts for 288 impressions at approximately position 12.59.
+
+Compared with the preceding non-overlapping September 12–18 export, impressions increased from 811 to 1,093 and clicks increased from 5 to 9, while the weighted average position improved from approximately 10.26 to 8.76. This is directional evidence only: the samples are short, the indexed library changed, and disclosed query rows are incomplete.
+
+The workbook discloses 35 query rows, whose impressions sum to far less than the sitewide 1,093. Query reporting is therefore partial/privacy-limited. The separate query and page sheets do not establish query-to-landing-page pairs.
+
+Notable disclosed query evidence belongs to current owners:
+
+- `can a filter that's too restrictive damage my furnace` — 6 impressions, average position 8.17; owned by `/blog/can-air-filter-be-too-restrictive.html`.
+- `brown air filter` — 4 impressions, average position 7.50; owned by `/blog/why-is-my-air-filter-brown.html`.
+- `fiberglass vs pleated air filter` and close fiberglass wording — recurring disclosed impressions; owned by `/blog/fiberglass-vs-pleated-air-filters.html`.
+- `merv 13 vs merv 11`, `merv 11 vs 13`, and related MERV wording — recurring but substantially deeper positions; owned by the two current MERV comparison pages.
+- `do i need filters in return grilles and unit both` — 3 impressions, average position 8.00; owned by `/blog/filter-at-return-and-furnace.html` and supported by `/blog/filters-in-every-return-vent.html`.
+- `are ac and furnace filters same` — 2 impressions, average position 9.00; owned by `/blog/are-furnace-and-ac-filters-the-same.html`.
+- `upgrade my filter rack to a four inch media cabinet, worth it` — 1 impression, average position 5.00; already answered by the thickness guide and does not reverse the thicker-filter rejection.
+- `still white` — 1 impression, average position 3.00; consistent with the clean-filter article.
+
+Page evidence continues to favor narrow physical/configuration topics: brown filter (169 impressions, three clicks, position 4.46), bending (202 impressions, one click, position 6.29), movement (34 impressions, one click, position 8.03), return plus furnace (11 impressions, one click, position 7.18), every return (123 impressions, position 7.84), new-filter smell (118 impressions, position 8.14), vacuum/reuse (33 impressions, position 6.39), dirty on one side (25 impressions, position 5.16), restriction (25 impressions, position 7.00), and thickness (24 impressions, position 9.71). This supports a directional content pattern, not exact demand for either survivor.
+
+**Exact-query evidence:** no disclosed Filter Wizard query established demand for either shortlisted topic. **No verified numeric search-volume data was available.**
+
+### Authoritative and external evidence reviewed
+
+- **Trane homeowner filter guidance:** correct three-dimensional size and type matter; the existing filter/frame and equipment information are starting points. Supports the replacement-compatibility side of the brand question, not a universal same-brand rule.
+- **Carrier homeowner replacement guidance:** replacement filters are available through multiple channels once the correct filter size is established. Supports the fact that equipment brand alone does not define a single retail source; it does not establish that every same-size product fits.
+- **Filtrete FAQ and refillable-filter documentation:** nominal names can differ by brand or system; users must check actual frame dimensions; refillable/deep products list cabinet-specific fit. Supports both ordinary cross-brand possibility and proprietary/cabinet exceptions.
+- **AprilAire replacement-media documentation:** air-cleaner media and humidifier water panels are tied to specific installed models. Supports model-specific exceptions and the distinction between HVAC filter media and a humidifier evaporative component.
+- **ASHRAE Handbook furnace guidance:** a forced-air furnace filter is in the circulating airstream ahead of the blower/heat exchanger and removes dust from that air. Supports the HVAC air filter's distinct function.
+- **AprilAire water-panel documentation:** a water panel is the replaceable evaporative element in a whole-house humidifier and helps convert water to vapor. Supports the humidifier-component side of the comparison.
+- **Resideo humidifier homeowner manual:** identifies a model-specific humidifier pad and replacement process. Confirms that “humidifier filter” can mean a separate pad associated with the humidifier, not the central HVAC particle filter.
+- **Independent homeowner discussions:** repeatedly ask whether a replacement must be the same brand and separately refer to furnace filters and humidifier filters/pads. These establish wording and recurrence only; they were not used for fit, performance, or maintenance truth.
+
+### Broad candidate pool and disposition
+
+| # | Concept researched | Disposition | Primary reason/current owner |
+|---:|---|---|---|
+| 1 | Must a replacement HVAC filter be the same brand? | **Shortlist** | Distinct brand-substitution decision with standard-size and proprietary-media exceptions |
+| 2 | Furnace air filter vs. humidifier filter/water panel | **Shortlist** | Distinct component-identification gap; authoritative manufacturer terminology exists |
+| 3 | Do unused HVAC filters expire? | Reality/source failure; defer | Recurring evidence was thin and available shelf-life claims were product/storage specific |
+| 4 | Are expensive HVAC filters worth it? | Existing-page improvement | Fiberglass/pleated, MERV, thickness, and restriction pages already own the useful decisions |
+| 5 | Activated-carbon HVAC filters for odors | Duplicate | Smoke guide and HVAC-versus-portable-cleaner guide own particles versus gases/odors |
+| 6 | Heat-pump filter vs. furnace filter | Duplicate | Furnace-versus-AC guide already owns shared forced-air terminology and heat-pump exception |
+| 7 | Mini-split filters | Relevance failure | Different equipment/maintenance category; already handled as an exception |
+| 8 | Do boilers have air filters? | Relevance/information-gain failure | Non-forced-air exception already covered; too thin for a Filter Wizard article |
+| 9 | Air-handler filter vs. furnace filter | Duplicate | Furnace-versus-AC guide owns the terminology/system relationship |
+| 10 | Dirty filter causing weak airflow | Duplicate | Clogged-signs, not-cooling, restriction, whistling, and bending pages own the mechanism and actions |
+| 11 | Dirty filter causing overheating | Duplicate | Short-cycling and restriction owners cover supported furnace effects and escalation |
+| 12 | Burning smell after filter change | Reality/safety failure | Generic HVAC safety symptom with no defensible filter-specific standalone boundary |
+| 13 | Filter changes during remodeling | Existing-page improvement | Dirty-fast and replacement-timing pages own unusually high loading and inspection cadence |
+| 14 | Filter changes during wildfire smoke | Existing-page improvement | Smoke and replacement-timing pages own particle goal and loading-based replacement |
+| 15 | Cut-to-fit HVAC filters | Duplicate | Slightly-different-size and fit pages own physical compatibility/no-trim safeguards |
+| 16 | Scented filters or adding essential oil | Duplicate | New-filter-smell article already warns against spraying or adding fragrances/oils |
+| 17 | Can HVAC filters be recycled? | Reality/information-gain failure | Material and local-program variability left no substantial, authoritative universal answer |
+| 18 | HVAC filters for mold | Duplicate/scope risk | Allergy, wet-filter, and IAQ boundaries already own particle filtration versus moisture remediation |
+| 19 | Antimicrobial HVAC filters | Evidence/health-claim failure | Product-specific claims and medical/antimicrobial implications lack a safe category-level answer |
+| 20 | Sticky or greasy air filter | Historical deferment | Sparse specific evidence and high overlap with dirty-fast, smoke, and new-smell owners |
+| 21 | MERV-A vs. MERV | Duplicate/technical niche | Electrostatic/pleated and MERV owners already cover charge, test labels, and selection limits |
+| 22 | Media cabinet vs. standard filter rack | Duplicate | Thickness guide owns rack/cabinet compatibility and deeper-media tradeoffs |
+| 23 | Filter stuck or filter door will not close | Duplicate | Fit, sizing, thickness, and wrong-size safeguards own the useful action |
+| 24 | What if an air filter has no arrow? | Duplicate | Arrow-direction article owns airflow identification and safe installation |
+| 25 | What if a filter has no printed size? | Duplicate | Find-size article owns measuring and nominal/actual dimensions |
+| 26 | New-homeowner HVAC filter checklist | Cannibalizing summary | Would consolidate location, count, size, arrow, and timing owners without a new decision |
+| 27 | ERV/HRV filters | Relevance failure | Separate ventilation-equipment maintenance category outside the site's current core |
+| 28 | UV air cleaner vs. HVAC filter | Relevance/evidence failure | Powered IAQ equipment comparison would drift beyond filter selection and repeat article #40 boundaries |
+| 29 | Construction-dust filter choice | Duplicate | Dust, dirty-fast, MERV, and timing pages already supply the defensible guidance |
+| 30 | Should HVAC be off during a filter change? | Historical rejection | Arrow-direction article already owns the complete replacement procedure and exact FAQ |
+| 31 | How many HVAC filters does a house have? | Historical rejection | Every-return and return-plus-furnace pages own configuration and location discovery |
+| 32 | Can a homeowner upgrade to a thicker filter? | Historical rejection | Thickness and slightly-different-size pages own cabinet compatibility and no-improvisation rules |
+| 33 | Why is a filter torn or ripped? | Historical rejection | Fit, bending, wet, restriction, sizing, and reuse pages own the defensible causes/actions |
+| 34 | Can an HVAC filter prevent carbon monoxide? | False-premise/high-stakes failure | A particle filter is not a carbon-monoxide control or detector |
+| 35 | Can high MERV damage a furnace? | Existing-page improvement | The restriction guide already owns this exact compatibility question |
+
+### Funnel counts
+
+- Concepts researched: **35**
+- Failed topic reality or Filter Wizard relevance: **9**
+- Failed duplication/cannibalization: **20**
+- Classified as existing-page improvements: **4**
+- Classified as filter-size-page opportunities: **0**
+- Survived as new-article candidates: **2**
+
+The shortlist is below the requested target range because a third candidate did not clear every gate. The audit does not pad the roadmap with a weak URL.
+
+### Validated article #42 shortlist
+
+#### 1. Do You Have to Use the Same Brand of HVAC Air Filter?
+
+- **Suggested URL:** `/blog/do-you-have-to-use-same-brand-air-filter.html`
+- **Primary homeowner question:** Must the replacement filter match the furnace/air-handler or old-filter brand, or can a different brand be used safely?
+- **Primary intent:** Brand substitution while preserving actual size, depth/cabinet fit, tested efficiency, and system compatibility.
+- **Why it is real:** Manufacturers sell both ordinary retail filters and cabinet-specific/proprietary media, nominal labels vary, and independent homeowners repeatedly ask whether “same brand” is required.
+- **First-party GSC evidence:** None for the exact intent in the disclosed query rows. Current size/fit/configuration performance is directional cluster evidence only.
+- **External intent evidence:** Repeated homeowner questions about OEM versus generic filters, especially after moving or encountering deep-media cabinets. Search results also recur around compatible replacement brands.
+- **Authoritative source availability:** Trane and Carrier establish correct size/type and replacement channels; Filtrete documents brand-dependent nominal labels and cabinet-specific fit; AprilAire documents model-specific media. No source supports “brand never matters” as a universal rule.
+- **Nearest existing pages:** `/blog/how-to-find-air-filter-size.html`, `/blog/can-i-use-a-slightly-different-size-air-filter.html`, and `/blog/how-tight-should-air-filter-fit.html`.
+- **Ownership boundary:** Existing pages own dimensions, physical substitution, and seating. This candidate would own whether the brand name itself is a compatibility requirement, including the difference between ordinary standard-size replacements and model/cabinet-specific media.
+- **Information gain:** Explains when brand is incidental, when actual dimensions differ despite the same nominal label, when a cabinet or refillable frame requires a listed compatible media, and which product facts to compare without asserting universal interchangeability.
+- **Cannibalization risk:** **MODERATE (-3).** Size/fit material must remain concise and linked rather than recreated.
+- **Filter Finder relevance:** High after the user confirms the supported physical size; the Finder cannot validate proprietary cabinet/media compatibility.
+- **Likely internal-link cluster:** Size, fit, slightly-different-size, thickness, MERV, Filter Finder.
+- **Major factual/safety risks:** Saying all same-size filters are interchangeable; ignoring actual dimensions or cabinet-specific media; treating matching brand as proof of HVAC compatibility; implying Filter Finder validates proprietary replacements.
+- **Score breakdown:** Real-world evidence 5/5; GSC 0/5; external intent 4/5; distinct intent 4/5; information gain 4/5; source depth 4/5; Filter Wizard relevance 5/5; internal linking 5/5; commercial/Finder relevance 5/5. **Raw total: 36/45. Cannibalization penalty: -3. Adjusted total: 33.**
+
+#### 2. Furnace Air Filter vs. Humidifier Filter: What's the Difference?
+
+- **Suggested URL:** `/blog/furnace-air-filter-vs-humidifier-filter.html`
+- **Primary homeowner question:** Is the “humidifier filter” or water panel near the furnace the same component as the HVAC air filter?
+- **Primary intent:** Identify two separate service components, their different functions, and why their replacement specifications and maintenance instructions are not interchangeable.
+- **Why it is real:** AprilAire itself uses “humidifier filter” alongside “water panel,” Resideo calls the component a humidifier pad, and homeowners refer separately to furnace filters and humidifier filters/pads.
+- **First-party GSC evidence:** None for the exact intent in the disclosed query rows.
+- **External intent evidence:** Exact comparison pages and independent homeowner discussions recur, especially among new homeowners identifying equipment-room replacement parts. Community material supports wording only.
+- **Authoritative source availability:** ASHRAE establishes the forced-air filter's circulating-air function; AprilAire and Resideo establish model-specific evaporative water panels/pads and their distinct humidifier role.
+- **Nearest existing pages:** `/blog/are-furnace-and-ac-filters-the-same.html`, `/blog/how-to-find-air-filter-size.html`, and `/blog/how-often-change-air-filter.html`.
+- **Ownership boundary:** Furnace-versus-AC owns two seasonal names for the same central forced-air filtration relationship. This candidate would own a genuinely different component: HVAC particle filter versus whole-house humidifier evaporative pad/water panel. It would not become a humidifier maintenance tutorial.
+- **Information gain:** Prevents buying or servicing the wrong component; distinguishes air-path particle capture from a water-fed evaporative element; explains model-specific identification and separate instructions without universal replacement schedules.
+- **Cannibalization risk:** **LOW (0).** No current page substantively covers water panels or humidifier pads.
+- **Filter Finder relevance:** Limited but legitimate for the HVAC-filter side only; the Finder does not identify humidifier pads or water panels.
+- **Likely internal-link cluster:** Furnace-versus-AC terminology, find-size, replacement timing, Filter Finder boundary.
+- **Major factual/safety risks:** Calling every humidifier component a filter; implying all humidifiers use a pad; inventing universal change intervals; providing invasive water/electrical service steps; allowing the article to drift into whole-house humidifier buying or repair.
+- **Score breakdown:** Real-world evidence 4/5; GSC 0/5; external intent 3/5; distinct intent 5/5; information gain 4/5; source depth 5/5; Filter Wizard relevance 4/5; internal linking 4/5; commercial/Finder relevance 2/5. **Raw total: 31/45. Cannibalization penalty: 0. Adjusted total: 31.**
+
+### Recommended article #42 candidate
+
+**Recommend: Do You Have to Use the Same Brand of HVAC Air Filter?**
+
+The qualitative decision narrowly favors this candidate because it stays at the center of Filter Wizard's replacement-selection mission, answers a recurring purchase/compatibility decision, and naturally connects the size, fit, thickness, ratings, and Finder journeys. Its moderate overlap is controllable only if a future publication review holds the boundary to **brand substitution**, keeps dimension and MERV explanations brief, and treats proprietary media as a documented exception rather than a reason to recommend OEM products universally.
+
+The humidifier-filter comparison has cleaner ownership and stronger source separation, but it is more peripheral to the product funnel and has weaker demonstrated external intent. It remains a valid runner-up, not a fallback authorized for publication.
+
+This recommendation does not approve drafting or publication. A future task must rerun topic reality, current GSC, duplicate/cannibalization, product-documentation, technical, safety, commercial-independence, and post-draft gates before article #42 can exist.
+
+### Existing-page improvement opportunities
+
+These are not article #42 candidates and were not implemented:
+
+1. **Restrictive-filter guide:** the exact damage-to-furnace wording now has first-party impressions near page one. Reassess the concise answer/FAQ and snippet alignment without creating a new URL or making a universal damage claim.
+2. **MERV 11 versus MERV 13 guide:** the disclosed MERV comparison cluster is recurring but ranks substantially deeper. Review intent alignment, differentiation from the MERV hub, and internal links before considering any new MERV page.
+3. **Fiberglass versus pleated guide:** exact and “are fiberglass furnace filters good” wording recurs. Confirm the existing Quick Answer/FAQ directly resolves the value question; improve the owner rather than publish “are expensive filters worth it.”
+4. **Furnace-versus-AC guide:** exact terminology appears while the page-level position remains deeper than the strongest troubleshooting pages. Monitor and later review title/snippet/internal-link alignment; do not split heat-pump or air-handler variants.
+5. **Return-configuration pair:** the exact return-grille-plus-unit query continues to validate the current owner. Preserve the every-return and return-plus-furnace boundary and improve their connection only if later page/query evidence shows ambiguity.
+
+### Filter-size opportunities
+
+**None.** The workbook discloses one 20x20x1 query impression, which is insufficient to justify a new size page and supplies no distinct homeowner utility. The nine-page size set remains unchanged and must be evaluated under the size-page guardrail before any expansion.
+
+### Rejected/deferred ledger and reconsideration thresholds
+
+| Candidate/family | Current state | Why it is not a new URL | Reconsider only if |
+|---|---|---|---|
+| Torn/ripped HVAC filter | Rejected/deferred | Sparse recurrence; defensible causes/actions already distributed across fit, bending, wet, restriction, sizing, and reuse owners | Repeated independent query evidence plus authoritative residential-HVAC causation that creates a distinct safe diagnostic path |
+| Household HVAC filter count | Rejected/deferred | Every-return and return-plus-furnace pages own count/configuration discovery | New first-party demand and a decision not substantially answered by those configuration owners |
+| Thicker-filter upgrade | Rejected/deferred | Thickness and slightly-different-size pages own rack/cabinet depth and substitution safety | Evidence of a distinct homeowner action those pages cannot absorb without losing their current intent |
+| Turn HVAC off before changing filter | Rejected/deferred | Arrow-direction page already owns the complete procedure and exact FAQ | A materially different equipment-access decision with enough authoritative, safe information gain for a standalone article |
+| Sticky/greasy filter | Research needed/deferred | Weak context-specific evidence and high overlap with dirty-fast, smoke, and new-smell pages | Multiple independent demand signals plus authoritative cause/action evidence |
+| Unused-filter shelf life | Research needed/deferred | Current evidence is product- and storage-condition-specific; residential intent is weak | Multiple residential manufacturers publish compatible storage/shelf-life guidance and independent homeowner demand recurs |
+| Carbon/odor filter | Merge only | Smoke and HVAC-versus-portable-cleaner pages already separate particle and gas/odor filtration | A distinct first-party query cluster reveals an unmet HVAC-filter decision rather than a contaminant variation |
+| Weak airflow / overheating / high-MERV damage | Existing-owner improvement | Clogged, cooling, short-cycling, and restriction pages own these mechanisms | Current owners demonstrably fail a distinct query intent that cannot be corrected in place |
+| Heat-pump, air-handler, mini-split, or boiler naming variants | Merge/reject | Furnace-versus-AC owns central forced-air terminology and exceptions; non-central equipment drifts from scope | Strong demand and a new filter-specific decision beyond nomenclature |
+| Construction, wildfire, pets, gray/color, seasonal, or timeframe variants | Merge/reject | Dirty-fast, timing, dust, smoke, pet, and appearance owners already cover the actionable guidance | New evidence establishes a different cause, safe action, and intent owner rather than an adjective or context variant |
+
+### Audit conclusion
+
+The current library does not need another broad comparison or symptom permutation. First-party evidence rewards the existing narrow troubleshooting/configuration strategy, but the disclosed queries mostly strengthen current owners. The next defensible research target is a tightly bounded **same-brand replacement compatibility** article, with the **humidifier water-panel distinction** as a lower-priority runner-up. Neither is approved for production by this audit.
+
 ## Filter-change shutdown publication review — 2026-09-30
 
 **Decision: rejected as a separate article #42; do not create `/blog/turn-off-hvac-before-changing-air-filter.html` without materially new information gain.** The homeowner question is verified, but the proposal failed the duplicate, airflow-direction cannibalization, and thin-content/information-gain gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available.
