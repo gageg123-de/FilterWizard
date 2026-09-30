@@ -2,6 +2,36 @@
 
 Last verified: 2026-09-30
 
+## Filter-change shutdown publication review — 2026-09-30
+
+**Decision: rejected as a separate article #42; do not create `/blog/turn-off-hvac-before-changing-air-filter.html` without materially new information gain.** The homeowner question is verified, but the proposal failed the duplicate, airflow-direction cannibalization, and thin-content/information-gain gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available.
+
+- **Topic reality, user intent, manufacturer source review, and Filter Wizard relevance — PASSED.** Trane's homeowner procedure starts by turning off the HVAC system and ends by closing the filter cover and turning the system back on. AprilAire Model 2410 instructions specify thermostat mode OFF and fan AUTO before removing the air-cleaner door. Carrier's current homeowner procedures describe either thermostat shutdown or an equipment power cutoff, while applicable furnace manuals require electrical isolation when service involves a blower access door. Independent homeowner discussions confirm recurring uncertainty about changing a filter while the blower runs. Community reports establish wording and recurrence only.
+- **Thermostat/electrical-disconnect, blower-removal, access-type, electrical-safety, reinstall/direction, and commercial-independence reviews — PASSED with strict qualifications.** Thermostat OFF is not electrical isolation; a separate fan ON or circulation setting can continue commanding the blower; and power-isolation requirements depend on the actual equipment and access method. A normal accessible return grille or dedicated filter holder is not equivalent to opening a blower or electrical service compartment. Manufacturer instructions control. No universal breaker rule, electrical-service procedure, or claim of immediate damage from a momentary filter-removal interval is supportable.
+- **Change-Frequency Cannibalization Test — PASSED.** `/blog/how-often-change-air-filter.html` owns inspection and replacement timing rather than shutdown level. It contains only brief installation reminders and does not independently answer the thermostat-versus-disconnect question.
+- **Run-Without-Filter Cannibalization Test — PASSED.** `/blog/can-you-run-hvac-without-air-filter.html` owns deliberate or continued operation with a missing required filter, not the control-setting procedure for routine replacement. That boundary is defensible, although the no-filter page already supplies the adjacent reason not to resume operation before reinstalling the filter.
+- **Duplicate-Topic Preflight and Airflow-Direction Cannibalization Test — FAILED.** `/blog/air-filter-arrow-direction.html` already includes the exact FAQ “Should I turn off the HVAC system before changing the filter?” and a complete ten-step installation procedure: thermostat off, wait for blower stop, photograph and remove the old filter, identify airflow, install without force, close the cover or grille, restore operation, observe normal behavior, and record the date. It also covers return grilles, furnace slots, air-handler racks, sealed-panel limits, sizing, fit, and escalation.
+- **Thin-Content / Information-Gain Test — FAILED.** Once the current airflow-direction procedure and adjacent sizing, fit, timing, and no-filter material are excluded, the unique content is a short equipment-specific distinction: ordinary accessible filter changes require the blower to be stopped, whereas access involving a blower/service compartment may require electrical isolation under the applicable manual. Expanding that distinction to article length would require duplicating the existing installation guide or adding generic electrical-safety filler.
+- **Post-Draft Intent Audit — NOT RUN.** Drafting stopped at the mandatory gates. No article, image, index card, homepage card, sitemap entry, internal-link edit, or other production change was created. Article #42 remains unused, and no substitute article was authorized.
+
+### Filter-change shutdown claim ledger
+
+| Claim | Decision | Reason |
+|---|---|---|
+| The blower should be stopped before ordinary filter removal | Keep | Trane, Carrier, and AprilAire replacement procedures begin with shutdown |
+| Thermostat OFF is sufficient electrical isolation | Reject | Control shutdown does not establish de-energization |
+| Thermostat OFF is commonly used for accessible routine replacement | Keep, qualified | Supported by manufacturer homeowner procedures; actual equipment instructions control |
+| Fan AUTO guarantees an immediate stop in every system | Reject | Controls, delays, schedules, and equipment behavior vary; confirm the blower has stopped |
+| Fan ON can continue blower operation without a heating or cooling call | Keep, qualified | AprilAire thermostat documentation defines ON as continuous fan operation |
+| Every filter change requires the circuit breaker or disconnect | Reject | Manufacturer procedures vary with access type and equipment |
+| A breaker or service disconnect is never required | Reject | Some equipment manuals require power isolation for blower-door filter service |
+| A return-grille filter change and blower-compartment access have identical precautions | Reject | Access hazards and manufacturer requirements differ |
+| Removing a filter briefly while the blower runs causes immediate equipment damage | Reject | No authoritative source supports that universal catastrophic claim |
+| Stopping airflow helps prevent loose debris from being drawn into the system | Keep, qualified | Trane expressly gives this reason; it is not a damage threshold |
+| The normal filter cover or grille should be closed before restart | Keep | Manufacturer replacement sequences restore covers before operation |
+| The replacement's size, seating, and airflow direction should be confirmed | Keep | Established manufacturer procedure and existing intent owners support these checks |
+| Homeowners should open electrical/control panels to ensure shutdown | Reject | Outside routine filter replacement and Filter Wizard's safety scope |
+
 ## Thicker-filter compatibility publication review — 2026-09-30
 
 **Decision: rejected as a separate article #42; do not create `/blog/can-you-use-thicker-air-filter.html` without materially new information gain.** The underlying homeowner question is verified and recurring, but the proposal failed the duplicate, thickness-article cannibalization, and size-substitution cannibalization gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available.
