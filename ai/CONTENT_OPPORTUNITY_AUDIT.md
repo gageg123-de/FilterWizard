@@ -251,6 +251,42 @@ At discovery time, the next defensible full publication review was a tightly bou
 | Product-specific actual dimensions should be checked when fit is uncertain | Keep | Supported by Filtrete and current production guidance |
 | Brand switching is primarily a compatibility question, not a loyalty question | Keep, qualified | Useful framing, but compatibility includes more than the nominal label or brand name |
 
+## Furnace-filter-versus-humidifier-media publication review — 2026-09-30
+
+**Decision: published as article #42 at `/blog/furnace-air-filter-vs-humidifier-filter.html`.** The remaining discovery-audit survivor was independently revalidated rather than promoted automatically. Topic reality, search intent, current-audit consistency, duplicate/cannibalization, terminology, component-function, maintenance, configuration, humidifier-type, health, water/mineral, Finder, commercial-independence, information-gain, and post-draft intent gates passed. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available. Article #43 remains unapproved.
+
+- **Reality, intent, and terminology — PASSED.** AprilAire uses “Water Panel” and also acknowledges “humidifier filter”; Resideo/Honeywell Home uses “humidifier pad”; GeneralAire uses “Vapor Pad” and lists water panel, evaporator sleeve, water filter, and humidifier filter as alternate market terms. Recurring homeowner discussions separately ask about furnace filters and humidifier filters or pads. Community sources establish wording and recurrence only.
+- **Technical and humidifier-type review — PASSED.** Trane documents the HVAC filter's return-air particle-capture role. AprilAire, Resideo, Honeywell Home, GeneralAire, and Lennox document evaporative media that receives water so moving air can pick up moisture. AprilAire and Resideo steam documentation establishes that steam equipment can instead use model-specific canisters, electrodes, inlet-water filters, or other service parts. The article therefore does not claim every whole-house humidifier has a filter or pad.
+- **Duplicate and cannibalization reviews — PASSED.** Furnace-versus-AC retains whether seasonal names describe the shared forced-air filter; replacement timing retains HVAC-filter inspection and interval guidance; find-size retains HVAC-filter dimensions; HVAC-versus-portable-cleaner retains central versus room particle cleaning. None owns humidifier media identification, terminology, model-based selection, or its non-interchangeability with the HVAC filter.
+- **Maintenance, mineral, health, and safety reviews — PASSED with qualifications.** Manufacturer schedules vary by model and conditions, so no universal interval is published. Mineral deposits are described only as a possible effect of water chemistry and use, not a diagnosis. No mold, disease, allergy, asthma, or medical outcome is claimed. The page gives no internal service, water-line, electrical, or steam-canister procedure.
+- **Information gain and post-draft intent — PASSED.** After adjacent HVAC-filter timing, sizing, MERV, and air-cleaner material is routed to existing owners, the article retains distinct value: separate functions and locations; manufacturer-specific water-panel, pad, vapor-pad, and canister terminology; evaporative-versus-steam boundaries; model-specific replacement logic; separate maintenance bases; and the Finder boundary.
+- **Commercial independence and Finder relevance — PASSED.** The article contains zero retailer blocks and no humidifier affiliate path. Filter Finder is offered once for the HVAC-filter side after supported size is known and is explicitly unable to identify humidifier pads, panels, canisters, or model-specific parts.
+
+### Furnace-filter-versus-humidifier-media claim ledger
+
+| Claim | Decision | Evidence boundary |
+|---|---|---|
+| A furnace/HVAC filter and humidifier media are the same component | Reject | Manufacturer documentation assigns them different locations, functions, and replacement identifiers |
+| Every whole-house humidifier has a filter or pad | Reject | Steam and other designs use different service components |
+| “Humidifier filter” is the universal technical term | Reject | Manufacturers use water panel, humidifier pad, vapor pad, canister, and other model-specific terms |
+| Many evaporative whole-house humidifiers use a water panel or pad | Keep, qualified | Supported by AprilAire, Resideo/Honeywell Home, GeneralAire, and Lennox for their evaporative products |
+| HVAC air filters capture particles from circulating return air | Keep | Supported by Trane; exact efficiency still depends on the filter and system |
+| Evaporative humidifier media supports water evaporation into moving air | Keep | Supported by current manufacturer explanations and manuals |
+| Humidifier pads meaningfully replace HVAC particle filtration | Reject | No reviewed evidence supports interchangeability or an HVAC-filter role |
+| HVAC filters add humidity | Reject | That is not the particle filter's function |
+| Replacing one component services the other | Reject | They have separate holders, identifiers, and maintenance instructions |
+| Both components follow one universal schedule | Reject | Manufacturer and model instructions vary |
+| Humidifier-media timing is model/manufacturer specific | Keep | Supported by model-specific manuals, indicators, and product guidance |
+| Mineral deposits can affect evaporative media | Keep, qualified | AprilAire and Resideo describe deposit/loading effects; no universal water-quality diagnosis is made |
+| Every dirty pad causes mold or illness | Reject | Unsupported health and biological generalization |
+| Steam humidifiers use the same pad as bypass units | Reject | AprilAire and Resideo document steam canisters and other steam-specific parts |
+| HVAC filters may use MERV ratings | Keep | MERV applies to particle-filter performance, not generic humidifier media |
+| Humidifier water panels should be selected by MERV | Reject | Replacement is identified from humidifier model/product documentation |
+| Filter Finder identifies humidifier replacement media | Reject | Current Finder covers HVAC air filters only |
+| Filter Finder can help with the HVAC-filter side | Keep, qualified | Supported after the system's filter size is independently known |
+| HVAC-filter size determines humidifier-media size | Reject | Humidifier model and manufacturer documentation control the humidifier part |
+| Model-specific humidifier documentation should control service and replacement | Keep | It is the direct source for the installed product's terminology, part, and procedure |
+
 ## Filter-change shutdown publication review — 2026-09-30
 
 **Decision: rejected as a separate article #42; do not create `/blog/turn-off-hvac-before-changing-air-filter.html` without materially new information gain.** The homeowner question is verified, but the proposal failed the duplicate, airflow-direction cannibalization, and thin-content/information-gain gates. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available.

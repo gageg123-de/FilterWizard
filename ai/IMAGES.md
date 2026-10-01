@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-29
+Last verified: 2026-09-30
+
+The 2026-09-30 furnace-filter-versus-humidifier-media guide adds two generated, visually reviewed 1200×800 WebPs: `furnace-filter-vs-humidifier-filter-hero.webp` (a homeowner holding an unbranded pleated HVAC filter beside closed HVAC equipment and a separate whole-house humidifier cabinet) and `hvac-filter-vs-humidifier-water-panel.webp` (an unbranded side-by-side comparison of a pleated HVAC air filter and a distinct mesh-style humidifier water panel). Neither image places humidifier media in the filter rack, applies MERV to the pad, shows water entering HVAC equipment, displays exposed wiring, or implies universal equipment geometry. The hero is eager/high priority and the supporting comparison is lazy-loaded.
 
 The 2026-09-29 electrostatic-versus-pleated terminology guide adds two generated, visually reviewed 1200×800 WebPs: `electrostatic-vs-pleated-hero.webp` (a disposable pleated filter beside a washable electrostatic-style filter) and `pleated-electrostatic-overlap.webp` (one pleated filter with a charged-fiber particle-capture cutaway). Neither image shows brands, ratings, sparks, powered passive media, ozone, washing disposable media, or mutually exclusive category labels. The hero is eager/high priority and the supporting illustration is lazy-loaded.
 

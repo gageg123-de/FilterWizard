@@ -1,6 +1,8 @@
 # SEO
 
-Last verified: 2026-09-29
+Last verified: 2026-09-30
+
+The 2026-09-30 guide `/blog/furnace-air-filter-vs-humidifier-filter.html` owns the distinction between a central HVAC particle filter and model-specific whole-house humidifier media. It passed fresh reality, intent, duplicate, cannibalization, terminology, configuration, humidifier-type, maintenance, safety, relevance, commercial-independence, information-gain, and post-draft gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and nine matched FAQs distinguish it from furnace-versus-AC naming, HVAC-filter replacement timing, sizing, and portable-air-cleaner comparisons.
 
 The 2026-09-29 guide `/blog/electrostatic-vs-pleated-air-filters.html` owns the distinction between pleated construction and electrostatic capture terminology. It passed fresh reality, intent, terminology, category-overlap, duplicate, cannibalization, technical, safety, relevance, commercial-independence, and post-draft gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and eleven matched FAQs distinguish it from fiberglass-versus-pleated construction, washable-versus-disposable lifecycle, MERV selection, restriction, and reuse pages.
 

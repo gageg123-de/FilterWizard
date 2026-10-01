@@ -2,6 +2,10 @@
 
 Last verified: 2026-09-30
 
+## 2026-09-30 article #42 publication
+
+Article #42, *Furnace Air Filter vs. Humidifier Filter: What’s the Difference?*, was published at `/blog/furnace-air-filter-vs-humidifier-filter.html` after independently passing reality, intent, current-audit, duplicate, furnace-versus-AC, replacement-timing, sizing, terminology, component-function, maintenance, configuration, humidifier-type, health, water/mineral, Finder, commercial-independence, information-gain, and post-draft gates. It owns HVAC particle filtration versus the model-specific water panel, evaporative pad, vapor pad, or other service component used by a whole-house humidifier. Manufacturer terminology is kept product-specific; evaporative pad systems are separated from steam canisters; no universal service interval, mold outcome, health promise, or humidifier affiliate path was added. No exact-query GSC evidence or verified numeric search-volume data was available. Filter Finder is presented only for the HVAC-filter side. Article #43 remains unapproved.
+
 ## 2026-09-30 article #42 opportunity discovery audit
 
 The current 41-article library, nine size guides, newest owner-provided September 22–28 Search Console export, prior exports, historical rejections, external homeowner intent, and authoritative sources were audited without creating production content. Of 35 plausible concepts, nine failed reality/relevance, 20 failed duplication/cannibalization, four belong to existing-page improvement, none qualified as a size-page opportunity, and two survived as new-article candidates. The validated shortlist is: **Do You Have to Use the Same Brand of HVAC Air Filter?** (recommended for the next full publication-gate review) and **Furnace Air Filter vs. Humidifier Filter: What's the Difference?** (runner-up). Neither had exact-query GSC evidence; no verified numeric search-volume data was available. The recommendation is not publication authority: article #42 remains unapproved and unimplemented, article #43 is unauthorized, and all recorded rejection decisions remain in force. Full ownership, evidence, scoring, and reconsideration detail is in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
@@ -58,7 +62,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-one articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-two articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 
@@ -94,6 +98,7 @@ Every future article must pass Topic Reality, demand/intent validation, and dupl
 | Can a Dirty Filter Cause Weak Airflow From Vents? | Real mechanism and adjacent first-party signal, but high overlap with clogged, cooling, restriction, whistling, and bending pages | A distinct query cluster or proof the current pages fail the whole-house weak-airflow intent |
 | Why Does My Air Filter Stay Clean? | Repeated anecdotes but limited authoritative/search evidence and several possible system causes | Independent search evidence plus authoritative diagnostic support |
 | Electrostatic vs. Pleated Air Filters | Implemented as article #41 after fresh terminology/category-overlap validation | Published 2026-09-29; article #42 remains unapproved |
+| Furnace Air Filter vs. Humidifier Filter | Implemented as article #42 after fresh terminology/component-distinction validation | Published 2026-09-30; article #43 remains unapproved |
 | Why Is My Air Filter Sticky or Greasy? | Plausible cooking/smoke/spray mechanisms, sparse context-specific reports, no verified volume, and high overlap | Multiple independent demand signals demonstrating distinct intent |
 
 ### Rejected / Do Not Create
