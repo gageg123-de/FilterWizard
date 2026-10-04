@@ -1,6 +1,141 @@
 # Content Opportunity Audit
 
-Last verified: 2026-09-30
+Last verified: 2026-10-04
+
+## Article #43 opportunity discovery audit — 2026-10-04
+
+**Decision: discovery complete; exactly one concept survives for a future publication-gate review. Article #43 remains unapproved and unimplemented.** The current 42-article library, nine filter-size guides, October 4 owner-provided Search Console export, prior audits and rejection records, current manufacturer documentation, and recurring homeowner wording were reviewed. No production HTML, homepage content, blog-index card, sitemap entry, image, stylesheet, script, Filter Finder behavior, internal production link, or size page was changed.
+
+The **RECOMMENDED ARTICLE #43 CANDIDATE** is **What Does “Change Filter” Mean on a Thermostat?** This is a recommendation for a separate full publication-gate review, not authority to draft or publish. Existing-page improvements supported by first-party data currently outrank immediate publication, especially the generic MERV 11-versus-13 and furnace-versus-AC terminology owners.
+
+### Repository, inventory, and semantic-review basis
+
+- Verified production state: 42 published blog articles, nine filter-size guides, 57 sitemap/indexable URLs, and 53 non-legal content pages. The sitemap contains the homepage, blog index, 42 articles, nine size guides, and four legal pages.
+- All 42 article files were parsed through their full `<article>` bodies, including visible FAQ content. The corpus contains approximately 112,390 extracted article words. Titles, H1s, section headings, substantive body copy, FAQs, intent-routing links, and Finder boundaries were compared; the review was not title- or filename-only.
+- The newest page remains `/blog/furnace-air-filter-vs-humidifier-filter.html`. No article #43 exists under another production URL.
+- The torn/ripped-filter, household-filter-count, thicker-filter, filter-change-shutdown, and same-brand replacement rejections remain in force. New wording in the October workbook does not reverse them.
+
+### October 4 Search Console evidence
+
+The supplied `filter-wizard.com-Performance-on-Search-2026-10-04.xlsx` export is filtered to **Web / Last 7 days** and its daily rows cover **September 23–29, 2026**. The daily sheet reports **5 clicks, 1,064 impressions, 0.47% CTR, and an impression-weighted average position of approximately 8.98**. United States rows account for 5 clicks and 867 impressions at approximately position 9.51. Mobile accounts for 764 impressions at approximately position 7.74; desktop accounts for 293 impressions at approximately position 12.22; tablet accounts for seven impressions.
+
+The workbook exposes 39 query rows totaling only 83 impressions and zero clicks, far below the sitewide total. Query reporting is therefore partial/privacy-limited. Its query and page sheets are separate aggregates and do not establish query-to-page pairs. Page-row impressions total 1,067, three more than the daily total; that small dimensional discrepancy is preserved rather than silently normalized.
+
+The previous documented export covered September 22–28. Because six of seven days overlap, the change from 9 clicks / 1,093 impressions / approximately 8.76 position to 5 clicks / 1,064 impressions / approximately 8.98 position is **not** a valid independent week-over-week trend. The defensible conclusion is that overall impression scale and the narrow troubleshooting/configuration pattern remained broadly similar.
+
+#### Required special-query reviews
+
+| Review | Current evidence | Decision |
+|---|---|---|
+| Restrictive filter / furnace damage | `can a filter that's too restrictive damage my furnace` has 4 impressions at position 7.25; the restriction page has 25 impressions at position 6.8 | **B — Existing-page improvement/monitoring.** The current owner is correctly matched and already answers the exact question; no new URL |
+| Fiberglass filters | Four disclosed variants total 10 impressions; the fiberglass-versus-pleated page has 17 impressions at position 11.47 | **B — Existing-page improvement.** Strengthen the current owner and snippet; do not create a second fiberglass page |
+| Furnace versus AC terminology | Eight disclosed variants total 10 impressions; the current page has 28 impressions at position 21.64 | **B — Existing-page improvement.** Exact intent belongs to the current terminology owner; allow for the page's recent publication age when interpreting rank |
+| MERV 11 versus 13 | Eight disclosed variants total 27 impressions, generally at positions 34–45; the allergy-specific MERV page has 29 impressions at position 38.38 | **B — Highest-priority existing-page review.** Clarify the generic owner, internal routing, and search-intent separation rather than publish another comparison |
+| Dirty fast / still clean | `my filter turns gray in two weeks, is that normal` and `still white` have one impression each; the dirty-fast page has 3 impressions and the clean-filter page has 11 impressions at position 5.09 | **B — Monitor and refine existing owners only.** Exact observations are already answered |
+| Four-inch media-cabinet retrofit | `upgrade my filter rack to a four inch media cabinet, worth it` has 1 impression at position 5; the thickness page has 29 impressions at position 9.52. Two 1-inch substitution variants add one impression each at deeper positions | **C — Reject new URL.** The thickness and size-substitution owners already contain the cabinet, depth, stacking, and no-improvisation decisions; prior rejection stands |
+
+No disclosed query establishes demand for the thermostat-reminder survivor. **Exact-query Filter Wizard GSC evidence: none. No verified numeric search-volume data was available.**
+
+### Current performance pattern
+
+The strongest page rows continue to favor narrow, visually concrete or configuration-specific questions: bending (193 impressions, one click, position 6.34), brown filters (166 impressions, three clicks, position 4.66), filtered returns (127 impressions, position 8.06), new-filter odor (111 impressions, position 8.25), return-plus-furnace configuration (8 impressions, one click, position 6.5), movement (28 impressions, position 7.86), wet filters (27 impressions, position 7.96), uneven loading (25 impressions, position 4.84), and restriction (25 impressions, position 6.8). Broad commercial/comparison content remains less consistent: the allergy MERV comparison sits around position 38.38 and the smoke guide around 33.25.
+
+This supports two planning conclusions, not a traffic forecast: protect the site's narrow homeowner-question focus, and improve existing exact-intent owners before adding adjacent comparison pages. The thermostat-reminder concept survives because it is a narrow, observable maintenance message with a different decision path—not because the site needs another URL.
+
+### Fresh external evidence
+
+- [Google Nest filter reminders](https://support.google.com/googlehome/answer/9240203) documents a filter reminder based on system runtime, a last-changed value, advanced configuration, and a reset after service. It also notes that other thermostats may use set calendar intervals.
+- [Honeywell Home FocusPRO N100 reminder documentation](https://docs.honeywellhome.com/focuspro-n100-im/en-us/Content/Installation-Manual/Reminders.htm) identifies a Replace Filter message and a model-specific reset action.
+- [Honeywell Home T6 Pro II alerts](https://docs.honeywellhome.com/t6-pro-ii/en-us/Content/Installation-Instructions/7.%20Alerts%20and%20Reminders.htm) documents filter reminders configured by fan runtime or calendar days, including separate Filter 1 and Filter 2 reminders.
+- [Honeywell Home X8 alerts and reminders](https://docs.honeywellhome.com/x8s-iug/Alerts%20and%20Reminders.htm) distinguishes air-filter reminders from humidifier-pad, humidifier-tank/water-filter, dehumidifier-filter, and ventilator reminders. This supports a necessary model/configuration boundary.
+- [Carrier's filter-location FAQ](https://www.carrier.com/us/en/residential/homeowner-resources/faqs/) and [Trane's filter-location guidance](https://www.trane.com/residential/en/resources/blog/air-filter-hvac-system/) confirm that filter location varies among return grilles, equipment-side slots, and duct/filter cabinets. They validate the location question but also reinforce the material already owned by Filter Wizard's sizing and configuration pages.
+- Repeated independent homeowner discussions ask why a thermostat still says Change Filter after replacement, what part the message refers to, whether the thermostat senses filter condition, and where the filter is located. These discussions establish recurrence and wording only; manufacturer documentation controls the technical explanation and reset instructions.
+
+### Candidate funnel
+
+Classification key: **A — New article candidate**, **B — Existing-page improvement**, **C — Reject / no action as a separate URL**.
+
+| # | Concept investigated | Class | Owner or decision |
+|---:|---|:---:|---|
+| 1 | What does “Change Filter” or “Replace Filter” mean on a thermostat? | **A** | Survivor; owns reminder meaning, timer/runtime basis, action sequence, and model-specific reset boundary |
+| 2 | Does a thermostat know that the HVAC filter is dirty? | **A (merged)** | Same intent owner as #1; not a second candidate |
+| 3 | Why does the filter reminder remain after the filter was changed? | **A (merged)** | Same intent owner as #1; reset behavior is model-specific |
+| 4 | Where is my HVAC/furnace/AC air filter? | **C** | Sizing, every-return, return-plus-furnace, furnace-versus-AC, missing-filter, and clean-filter pages already contain the full useful location workflow |
+| 5 | Where is the air filter in an apartment or condo? | **C** | Installation-type variant of the same owned location intent; no separate decision |
+| 6 | Is the filter at the air handler or behind a return grille? | **C** | Existing configuration owners explain both arrangements and warn against adding filters blindly |
+| 7 | Can a restrictive filter damage a furnace? | **B** | Exact question already owned by the restriction guide; first-party page-one evidence supports refinement, not another URL |
+| 8 | Are fiberglass furnace filters good? | **B** | Fiberglass-versus-pleated owner; improve exact wording and snippet |
+| 9 | MERV 11 versus MERV 13 | **B** | Existing generic and allergy-specific MERV owners; resolve routing/intent before any new content |
+| 10 | Furnace filter versus AC filter | **B** | Existing terminology owner; monitor maturation and improve only with a focused hypothesis |
+| 11 | Filter turns gray/dirty within two weeks | **B** | Dirty-fast owner; timeframe variants remain non-distinct |
+| 12 | Air filter is still white/clean | **B** | Clean-filter owner; current page already ranks for the observed wording |
+| 13 | Is a four-inch media-cabinet upgrade worth it? | **C** | Thickness owner and prior thicker-filter rejection already cover the decision |
+| 14 | Can I use a 1-inch filter instead of a 2-inch or 4-inch filter? | **C** | Thickness and slightly-different-size owners; no reversal of rejection |
+| 15 | MERV 12 versus MERV 11 or 13 | **C** | Existing MERV framework can absorb the rating; a one-number permutation has no distinct action |
+| 16 | Furnace filter versus air filter | **C** | Existing furnace-versus-AC terminology page already explains the common central-HVAC labels |
+| 17 | Furnace filter for smoke | **B** | Smoke owner already handles particles, gases, odor, fit, runtime, and loading |
+| 18 | Filter door will not close / filter is stuck | **C** | Fit, size-substitution, thickness, and no-force safeguards own the useful action |
+| 19 | Supply vent versus return vent: where does the filter go? | **C** | Arrow-direction and return-configuration owners explain the return path and location |
+| 20 | Do unused HVAC filters expire? | **C** | Historical research-needed item; current storage/shelf-life evidence remains product-specific and intent remains weak |
+| 21 | Can HVAC filters be recycled? | **C** | Material and local-program variability still leave no substantial universal Filter Wizard decision |
+| 22 | Should I change the filter during remodeling or construction? | **C** | Dirty-fast and replacement-timing owners already cover unusual particle loading and inspection cadence |
+| 23 | Media cabinet versus standard filter rack | **C** | Thickness guide owns deep-media cabinet purpose, compatibility, and no-improvisation boundary |
+| 24 | Is a thermostat's humidifier-pad reminder the same as its air-filter reminder? | **C** | Article #42 owns the component distinction; candidate #1 may briefly route model-specific reminder labels without recreating it |
+
+**Funnel counts:** 24 concepts investigated; three closely related thermostat-message phrasings consolidated into one **A** candidate; seven **B** existing-page improvement opportunities; 14 **C** reject/no-action decisions; one surviving article concept.
+
+### Special review: “Where is my HVAC air filter?”
+
+**Topic reality: passed. New-article duplication and information-gain gates: failed.** Carrier, Trane, Lennox, and repeated homeowner discussions confirm the question is real. A new URL is nevertheless unwarranted because the current library already supplies the complete answer across closely related owners:
+
+- `/blog/how-to-find-your-air-filter-size.html` has dedicated methods for return grilles, furnace/air-handler slots, media cabinets, accessible-search limits, multiple systems, manuals, cabinet labels, and escalation.
+- `/blog/filters-in-every-return-vent.html` owns central versus filtered-return layouts and an accessible location-identification workflow.
+- `/blog/filter-at-return-and-furnace.html` owns separate return paths versus filters installed in series, empty-slot ambiguity, and add/remove safeguards.
+- `/blog/are-furnace-and-ac-filters-the-same.html` owns common return-path terminology and a dedicated “Where Should You Look?” section plus FAQ.
+- `/blog/can-you-run-hvac-without-air-filter.html` owns the urgent missing-filter path and a dedicated “What If I Can't Find Where the Filter Goes?” section plus FAQ.
+- `/blog/why-is-my-air-filter-still-clean.html` owns checking whether the homeowner is looking at the right filter or system.
+
+A standalone location article would consolidate these workflows and blur the established configuration owners. The appropriate action is to improve internal routing or wording if first-party location queries emerge—not create a new page now.
+
+### RECOMMENDED ARTICLE #43 CANDIDATE
+
+#### What Does “Change Filter” Mean on a Thermostat?
+
+- **Suggested durable URL:** `/blog/thermostat-change-filter-message.html`
+- **Primary homeowner question:** Does the thermostat's Change/Replace Filter message mean it detected a dirty filter, and what should the homeowner do after seeing it?
+- **Validated primary intent:** Interpret an HVAC-filter maintenance reminder, distinguish calendar/runtime logic from direct filter-condition proof, identify the relevant system filter, follow the actual filter inspection/replacement decision, and use the thermostat model's instructions to reset or dismiss the reminder.
+- **Why it is real:** Google Nest and Honeywell Home maintain dedicated reminder documentation; multiple thermostat families expose reminder settings; independent homeowners repeatedly ask what the message means, where the filter is, and why the notice remains after replacement.
+- **Exact-query GSC evidence:** None in the disclosed October workbook.
+- **Verified numeric search volume:** Unavailable.
+- **Nearest existing owners:** `/blog/how-often-change-air-filter.html`, `/blog/how-to-find-your-air-filter-size.html`, `/blog/can-you-run-hvac-without-air-filter.html`, `/blog/furnace-air-filter-vs-humidifier-filter.html`, and `/blog/should-hvac-fan-run-continuously.html`.
+- **Ownership boundary:** Existing pages own actual replacement timing, filter location/size, missing-filter operation, humidifier-component terminology, and fan-mode tradeoffs. This candidate would own what the thermostat reminder represents and does not represent, what to verify, and why reset instructions cannot be universalized.
+- **Distinct information gain:** Calendar versus fan-runtime reminders; reminder versus direct dirty-filter diagnosis; Filter 1/Filter 2 and accessory-label ambiguity; persistent reminder after physical replacement; model-specific reset/dismissal; the difference between acknowledging a reminder and proving a filter is serviceable; routing to the correct existing owner.
+- **Technical boundaries:** Do not claim every reminder is a simple timer, every thermostat senses dirt, every reminder means immediate replacement, or one button sequence works across brands. Do not provide thermostat wiring, installer-menu, factory-reset, or equipment-opening instructions. Use model documentation.
+- **Filter Wizard relevance:** High. The observable message sends a homeowner directly into the filter-location, inspection, replacement, and selection journey. Filter Finder becomes relevant only after the supported physical size is independently known.
+- **Commercial independence:** High; the article needs no retailer block, thermostat recommendation, or product comparison.
+- **Cannibalization risk:** Moderate. Location and timing must be concise routes, not rewritten sections.
+- **Directional score:** 34/45 raw; -2 cannibalization penalty; **32/45 adjusted**. This is an editorial prioritization aid, not a traffic forecast.
+- **Publication status:** Discovery survivor only. A future article must independently pass topic-reality, exact-intent, duplicate, timing, location, thermostat-technology, reminder-logic, model-specific reset, accessory-reminder, safety, Finder, commercial-independence, information-gain, and post-draft gates.
+
+### Existing-page improvement queue
+
+Existing-page work should precede publication while the October evidence is still this small and overlapping.
+
+1. **MERV 11 versus 13 ownership and intent routing.** The disclosed generic cluster has 27 impressions at deep positions, while the page row surfaced is allergy-specific. Audit titles, introductions, internal anchors, and the generic-versus-allergy boundary before changing copy.
+2. **Furnace-versus-AC terminology.** Ten disclosed exact/close impressions confirm the owner, but the page sits around position 21.64. Because it was published only on September 16, first inspect query/page alignment and allow maturation; avoid a premature rewrite.
+3. **Fiberglass-versus-pleated snippet and exact wording.** Ten disclosed query impressions and position around 11.47 support focused title/description/introduction review rather than another article.
+4. **Restrictive-filter furnace-damage answer.** Four exact-query impressions at position 7.25 and page position 6.8 show correct ownership. Review snippet clarity and CTR only; do not broaden into fear-based damage claims.
+5. **Smoke guide intent alignment.** Three disclosed furnace-filter-for-smoke impressions and page position around 33.25 indicate an existing-owner optimization opportunity, not a new smoke page.
+6. **Dirty-fast and still-clean wording.** Preserve their distinct owners; the clean-filter page already appears around position 5.09. Any change should be a measured query-language refinement, not timeframe variants.
+7. **Thickness and substitution routing.** The four-inch cabinet query already ranks around position 5, while substitution variants rank deeper. Improve pathways between the two owners only if a complete query/page review shows confusion; do not reopen the rejected thicker-filter URL.
+
+### Historical rejection status
+
+All documented rejections remain active. In particular, a filter-location article does not revive the rejected household-filter-count page; the four-inch query does not revive the thicker-filter candidate; and thermostat-reminder research does not revive the rejected filter-change-shutdown article. Torn/ripped, same-brand replacement, sticky/greasy, unused-filter shelf life, and other recorded candidates retain their existing reconsideration thresholds.
+
+### Audit conclusion
+
+The 2026-10-04 discovery audit found one distinct future publication-gate candidate: **What Does “Change Filter” Mean on a Thermostat?** It deserves review because it owns reminder interpretation rather than replacement timing or location. It is not approved for publication. The stronger immediate evidence supports improving existing MERV, furnace-versus-AC, fiberglass, restriction, smoke, and timing owners. Article #43 remains unimplemented, and article #44 is not authorized by this discovery record.
 
 ## Article #42 opportunity discovery audit — 2026-09-30
 

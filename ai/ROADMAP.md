@@ -1,6 +1,12 @@
 # Roadmap
 
-Last verified: 2026-09-30
+Last verified: 2026-10-04
+
+## 2026-10-04 article #43 opportunity discovery audit
+
+The verified 42-article library, nine size guides, 57-URL sitemap, full article bodies and FAQs, historical audits/rejections, and the owner-provided September 23–29 Search Console export were reviewed without changing production. Twenty-four plausible concepts were classified. One consolidated concept survived for a future publication-gate review: **What Does “Change Filter” Mean on a Thermostat?** It would own the meaning and limits of a thermostat maintenance reminder, calendar-versus-runtime logic, model-specific reset behavior, and the route to the actual filter inspection/replacement decision. Google Nest and Honeywell Home documentation plus recurring homeowner questions establish topic reality and technical source depth, but the workbook contains no exact-query evidence and no verified numeric search-volume data was available. The recommendation is not publication authority: article #43 remains unapproved and unimplemented.
+
+The stronger immediate first-party opportunities are existing-page reviews: generic MERV 11-versus-13 intent/routing, furnace-versus-AC terminology, fiberglass-versus-pleated wording, restrictive-filter furnace-damage snippet clarity, smoke intent alignment, and dirty-fast/still-clean wording. The proposed “Where is my HVAC air filter?” page was rejected as a separate URL because the sizing, every-return, return-plus-furnace, furnace-versus-AC, missing-filter, and clean-filter pages already own the complete useful location and configuration workflow. All historical rejection records remain active. Full evidence, workbook limitations, candidate funnel, ownership boundaries, and reconsideration rules are in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
 
 ## 2026-09-30 article #42 publication
 
