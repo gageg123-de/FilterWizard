@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-06
+Last verified: 2026-10-07
+
+## 2026-10-07 article #43 publication
+
+Article #43, *Does Your Furnace Filter Slot Need a Cover?*, was published at `/blog/does-furnace-filter-slot-need-cover.html` after a fresh implementation review passed topic-reality, user-intent, duplicate, cannibalization, information-gain, technical-evidence, safety, Filter Wizard relevance, commercial-independence, and post-draft gates. It owns the access-cover decision for an installed return-side filter slot: purpose, leakage at the opening, configuration-specific closure methods, missing or damaged parts, removable access, and the distinction between a narrow filter cover and a larger equipment service panel. Adjacent fit, movement, whistling, location, replacement, thickness, and no-filter pages remain the intent owners for their questions. The guide adds no retailer block, Filter Finder CTA, fabrication tutorial, or unsafe closure advice. No exact-query GSC evidence or verified numeric search-volume data was available. Article #44 remains unapproved.
 
 ## 2026-10-06 MERV ownership optimization
 
@@ -80,7 +84,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-two articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-three articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 

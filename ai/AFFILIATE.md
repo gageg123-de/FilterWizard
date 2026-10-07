@@ -1,6 +1,8 @@
 # Affiliate Integration
 
-Last verified: 2026-09-20
+Last verified: 2026-10-07
+
+The filter-slot-cover guide has maintenance and safety intent, zero retailer blocks, and zero Filter Finder CTAs. It adds no product recommendation, cover affiliate link, cabinet part link, retailer behavior, or tracking change. The existing size gate and Amazon Store ID `filterwizard-20` remain unchanged.
 
 The 2026-09-20 funnel audit verified all nine static size-page Amazon searches and the Finder's centralized URL builder. Every static link uses the page's exact nominal-size `air filter` query, `filterwizard-20`, and `nofollow sponsored noopener`; no missing tag, malformed Amazon URL, or mismatched size query was found. The Finder now labels Amazon as an `Affiliate link`, uses `Search Amazon`, and describes the destination as a search for the confirmed size and suggested MERV. It no longer presents Amazon as a recommended retailer or describes the MERV/size output as a specific product match.
 

@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-10-06
+Last verified: 2026-10-07
+
+## Furnace filter-slot cover intent — 2026-10-07
+
+The new `/blog/does-furnace-filter-slot-need-cover.html` page owns whether an accessible return-side filter opening requires its intended removable closure, what that closure does, how it differs from a blower/service panel, and what to do when the original cover is missing or damaged. It passed current duplicate and cannibalization review against fit, clean-filter, movement, whistling, sizing, configuration, thickness, replacement-direction, and no-filter owners. No exact-query GSC evidence or verified numeric search volume is claimed. Its unique title and description, self-canonical URL, Article/FAQ/Breadcrumb schema, eight matched FAQs, and contextual link from the clean-filter guide reinforce the narrow ownership without creating a Finder or retailer path.
 
 ## MERV 11-versus-13 intent ownership — 2026-10-06
 

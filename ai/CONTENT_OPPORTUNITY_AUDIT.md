@@ -1,6 +1,19 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-06
+Last verified: 2026-10-07
+
+## Article #43 filter-slot-cover publication review — 2026-10-07
+
+**Decision: PUBLISHED.** After the higher-leverage MERV ownership optimization was completed, *Does Your Furnace Filter Slot Need a Cover?* independently passed a fresh publication workflow and was implemented at `/blog/does-furnace-filter-slot-need-cover.html`. Article #44 remains unapproved.
+
+- Verified pre-publication state: 42 articles, nine filter-size guides, 57 sitemap URLs, and 53 non-legal content pages. No existing page or alternate URL owned the access-cover decision.
+- Exact-query Filter Wizard GSC evidence: none. No verified numeric search-volume data was available. Publication rests on recurring homeowner wording, DOE/PNNL's dedicated homeowner guide, current technical documentation, and distinct information gain—not a traffic forecast.
+- DOE/PNNL states that an accessible furnace or central-heat-pump filter slot should have a door or cover and documents clips, tabs, thumb screws, sliding doors, and purpose-made magnetic covers. BPI-1200 treats an absent or poorly sealed filter-slot cover as a condition to correct. Trane distinguishes filter access from the blower access door, while Carrier documents configuration-dependent filter access and secure panel replacement.
+- The final ownership boundary is the filter-access opening itself: its purpose, return-side leakage, configuration-specific closures, missing or damaged cover decisions, removable sealing, and filter-slot-cover versus equipment-panel safety. Fit, bypass diagnosis from appearance, movement, whistling, location, airflow direction, configuration, thickness, and no-filter operation remain with their existing owners.
+- The article rejects permanent caulking, universal tape fixes, improvised sheet metal, safety-switch bypass, leaving equipment panels off, and covering combustion-air, vent, drain, wiring, or equipment-service openings. It provides no fabrication instructions and makes no quantified airflow, energy, dust, comfort, or health claim.
+- The finished guide contains eight visible/schema-matched FAQs, two inspected 1200×800 WebPs, zero Finder CTAs, zero retailer blocks, one contextual incoming link from the clean-filter guide, and current shared analytics, consent, Formspree, header, and footer behavior.
+
+All earlier torn/ripped, household-filter-count, thicker-filter, filter-change-shutdown, same-brand, and location-page rejections remain in force. The thermostat-reminder discovery concept remains unapproved and is not Article #44 authority.
 
 ## MERV 11-versus-13 ownership optimization — 2026-10-06
 

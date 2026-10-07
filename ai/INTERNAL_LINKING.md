@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-10-06
+Last verified: 2026-10-07
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 57 indexable URLs: the homepage, blog index, 42 blog articles, nine size guides, and four legal pages. The 53 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 58 indexable URLs: the homepage, blog index, 43 blog articles, nine size guides, and four legal pages. The 54 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -31,7 +31,7 @@ The sitemap contains 57 indexable URLs: the homepage, blog index, 42 blog articl
 | Physical filter behavior | Each symptom page owns its observed behavior | bending/bowing, movement, whistling |
 | HVAC symptom / filter causation | Each symptom page owns whether the filter can contribute to that outcome | AC freeze, AC not cooling, energy bill, furnace short cycling; restrictive-filter guide owns compatibility/restriction rather than a single symptom |
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
-| Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction |
+| Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction, filter-slot-cover decision |
 | HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
 | Adjacent HVAC components | `/blog/furnace-air-filter-vs-humidifier-filter.html` owns HVAC particle filter versus whole-house humidifier media | furnace-versus-AC retains shared forced-air terminology; timing and sizing retain HVAC-filter maintenance and dimensions |
 | MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV/MPR/FPR guide owns rating-system identification and cross-label comparison; MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility; continuous-fan guide owns fan runtime as a filtration/filter-loading decision; HVAC-filter-versus-air-purifier guide owns central filtration versus portable room air cleaning and the MERV/CADR boundary |

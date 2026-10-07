@@ -1,6 +1,8 @@
 # Analytics
 
-Last verified: 2026-09-21
+Last verified: 2026-10-07
+
+The filter-slot-cover guide reuses the existing consent-first GA4 and Clarity initializer plus shared article view, scroll-depth, share, and Formspree interaction behavior. Its article slug and email source are `does-furnace-filter-slot-need-cover` and `blog-furnace-filter-slot-cover`. It intentionally has no Filter Finder CTA or retailer block and adds no script, listener, event, parameter, or raw-email storage.
 
 The 2026-09-21 coverage audit confirmed the consent-first GA4 (`G-64VWBW3NHS`) and Clarity (`xbqsjc3yut`) initializer exactly once on all 50 canonical production HTML pages: the homepage, blog index, 35 articles, nine size guides, and four canonical legal pages. Eighteen newer articles had used the shared event attributes and listeners without initializing either analytics service; those pages now reuse the established initializer without adding page-specific listeners or changing the event taxonomy. Coverage must be checked whenever a production HTML page is added.
 

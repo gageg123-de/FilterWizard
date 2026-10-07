@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-09-30
+Last verified: 2026-10-07
+
+The 2026-10-07 furnace-filter-slot-cover guide adds two generated and visually reviewed 1200×800 WebPs: `furnace-filter-slot-cover-hero.webp` (89,968 bytes), showing a homeowner holding a narrow removable cover beside an accessible return-side filter slot while the larger equipment panels remain closed, and `filter-slot-cover-vs-service-panel.webp` (85,642 bytes), showing the size and location distinction between the narrow slot closure and the closed equipment panel. Neither image contains brands, labels, exposed wiring or blower parts, tape, fabricated repairs, reversed filters, or a suggestion that the two panels are interchangeable. The hero is eager/high priority and the supporting image is lazy-loaded.
 
 The 2026-09-30 furnace-filter-versus-humidifier-media guide adds two generated, visually reviewed 1200×800 WebPs: `furnace-filter-vs-humidifier-filter-hero.webp` (a homeowner holding an unbranded pleated HVAC filter beside closed HVAC equipment and a separate whole-house humidifier cabinet) and `hvac-filter-vs-humidifier-water-panel.webp` (an unbranded side-by-side comparison of a pleated HVAC air filter and a distinct mesh-style humidifier water panel). Neither image places humidifier media in the filter rack, applies MERV to the pad, shows water entering HVAC equipment, displays exposed wiring, or implies universal equipment geometry. The hero is eager/high priority and the supporting comparison is lazy-loaded.
 
