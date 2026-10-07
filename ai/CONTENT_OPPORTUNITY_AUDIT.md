@@ -1,6 +1,59 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-04
+Last verified: 2026-10-06
+
+## Article #43 slot-cover validation and next-action review — 2026-10-06
+
+**Decision: the provisional “Does Your Furnace Filter Slot Need a Cover?” concept passes a repository-side publication-gate assessment as a distinct but moderate-overlap topic; it is not approved for publication and is deferred behind a higher-leverage existing-page action.** No Article #43, production HTML, homepage or blog-index card, sitemap entry, image, stylesheet, script, Finder behavior, retailer path, or production internal link was created or changed.
+
+The single recommended next action is a focused **MERV 11-versus-13 ownership and positioning optimization**. The generic comparison intent should be consolidated around `/blog/merv-8-vs-merv-11-vs-merv-13.html`, while `/blog/merv-11-vs-merv-13-for-allergies.html` remains explicitly allergy-specific. This recommendation is an implementation task for a separate authorized run, not authority to make production changes from this discovery review.
+
+### Repository and evidence basis
+
+- Verified production state: 42 blog articles, nine filter-size guides, 57 sitemap/indexable URLs, and 53 non-legal content pages. `/blog/furnace-air-filter-vs-humidifier-filter.html` remains the newest article. No Article #43 or semantically equivalent slot-cover page exists.
+- All 42 complete `<article>` bodies and visible FAQs were included in the semantic corpus review. The extracted corpus remains approximately 112,390 words. The review also inspected headings, FAQ questions, contextual links, Related Articles, and the existing intent map.
+- The owner-provided `filter-wizard.com-Performance-on-Search-2026-10-06.xlsx` export is filtered to Web / Last 7 days. Its daily rows cover September 28 through October 4, 2026 and total 7 clicks, 1,111 impressions, 0.63% CTR, and an impression-weighted average position of approximately 12.03. Mobile supplies 781 impressions (70.3%), desktop 315, and tablet 15.
+- The workbook exposes 62 query rows totaling 145 impressions and zero clicks. Its 43 page rows total 1,122 impressions, 11 more than the daily total. Query and page sheets are independent privacy-limited dimensions and cannot establish query-to-page pairs; the discrepancy is preserved rather than normalized.
+- No disclosed query provides first-party evidence for the slot-cover concept. **Exact-query Filter Wizard GSC evidence: none. No verified numeric search-volume data was available.**
+- The Deep Research report correctly identified the narrow troubleshooting/configuration performance pattern and the DOE/PNNL source depth. It could not see the full repository and therefore understated the amount of secondary-intent overlap. It also did not account for the repository's existing October 4 thermostat-reminder discovery survivor; that concept remains unapproved rather than being silently erased or replaced.
+
+### Slot-cover publication gates
+
+| Gate | Result | Repository-side finding |
+|---|---|---|
+| Topic reality | **Passed** | DOE/PNNL publishes a dedicated furnace/heat-pump filter-slot replacement guide, explicitly addresses slots without doors, and repeated independent homeowner questions ask whether a missing cover matters. |
+| Search demand / user intent | **Passed with qualification** | Direct recurring homeowner wording and a dedicated federal homeowner guide establish meaningful intent, but no exact-query GSC evidence or verified numeric volume exists. |
+| Duplicate topic | **Passed narrowly** | No current page owns whether an exposed filter-access opening needs its intended removable cover. Several pages already own adjacent fit, bypass, location, access, and symptom material. |
+| Cannibalization | **Passed with moderate risk** | A future page must not recreate fit, movement, whistling, filter location, no-filter operation, thickness, or general bypass diagnosis. |
+| Information gain / thin content | **Passed narrowly** | Unique material remains around access-opening purpose, return-side leakage, configuration-specific cover types, missing/damaged-cover decisions, removable sealing, and filter-slot-cover versus equipment-panel safety. |
+| Technical evidence | **Passed** | DOE/PNNL says a media-box access panel should use a flexible air-tight gasket; its homeowner guide describes clip, tab, thumb-screw, sliding, and magnetic covers and says the cover should be reinstalled to reduce leakage. Trane documents a purpose-built rack with a hinged door. These examples do not establish one universal design. |
+| Safety | **Passed** | A future article must reject energized-equipment access, safety-switch bypass, permanent caulking that blocks service, universal tape or improvised-metal instructions, and the assumption that every visible opening is defective. |
+| Filter Wizard relevance | **Passed** | The decision concerns the filter rack, return-air path, sealing, safe filter access, and correct replacement workflow. |
+| Commercial / Finder independence | **Passed** | The answer needs no retailer block or forced Finder CTA. Finder cannot diagnose a missing cover or approve a repair. |
+
+### Semantic overlap and surviving information gain
+
+- `/blog/why-is-my-air-filter-still-clean.html` already owns clean-filter interpretation and states, from DOE/PNNL guidance, that the media box and access cover should fit and seal so air follows the intended path. It does not own what to do when the cover itself is missing.
+- `/blog/how-tight-should-an-air-filter-fit.html` owns filter seating, clearance, bypass gaps, and whether the access cover closes normally. It does not own the access-opening closure decision.
+- `/blog/why-does-my-air-filter-move.html` owns movement, retainers, rack support, and an absent filter door as one possible support defect. It does not own return-side leakage through an uncovered slot.
+- `/blog/why-does-my-air-filter-whistle.html` owns noise from gaps, loose covers, rack geometry, loading, and restriction. It does not own whether a silent exposed slot is intended to be closed.
+- `/blog/how-to-find-your-air-filter-size.html` owns locating accessible filter doors, racks, slots, labels, and compartments. `/blog/can-you-run-hvac-without-air-filter.html` owns operation with a missing required filter and safe recovery. Neither owns a present filter with a missing access cover.
+- `/blog/air-filter-arrow-direction.html` owns the replacement sequence, including closing the cover or grille, and distinguishes filter access from sealed service panels. It does not explain the cover's independent function.
+- `/blog/filter-at-return-and-furnace.html`, `/blog/filters-in-every-return-vent.html`, and the thickness guide own configuration identification, empty-slot ambiguity, supported rack depth, and no-improvisation rules.
+
+After those owned sections are excluded, a future slot-cover article still has one coherent decision: **determine whether the installed filter-access opening is intended to close; understand that an uncovered or poorly sealed return-side opening can admit unwanted air; distinguish the removable filter cover from a blower/service panel; identify whether the original cover, gasket, latch, or cabinet-specific part is missing or damaged; and use documentation or qualified service rather than permanent or unsafe improvisation.** That is enough for a future publication-gate implementation, but not enough to outrank the current first-party optimization opportunity.
+
+### Existing-page opportunity comparison
+
+1. **MERV 11 versus MERV 13 ownership and positioning — highest priority.** The workbook discloses 44 impressions across generic MERV 11/13 variants at an impression-weighted position of approximately 39.09. The allergy-specific page has 48 page impressions at position 35.62, while the general MERV 8/11/13 owner has six at position 36.17. Both pages contain broad MERV 11-versus-13 comparison material. This is a demonstrated query family plus a repository-confirmed ownership split, so the next task should clarify titles, introductions, internal anchors, and section boundaries without creating a third URL.
+2. **Why Does My New Air Filter Smell? — strong but evidence-limited CTR review.** The page has 107 impressions, zero clicks, and position 8.30, but the disclosed query sheet contains no odor query and cannot be joined to the page row. Its current title, description, H1, and Quick Answer already directly answer the intent. A change without query/snippet evidence would be more speculative than the MERV ownership correction.
+3. **Filters in Every Return Vent — monitor before another rewrite.** The page has 172 impressions, one click, and position 7.64. Its title and description were already made direct in the September 1 CTR pass. The seven disclosed “return grilles and the unit both” impressions are semantically closer to the separate return-plus-furnace owner, and the workbook cannot prove which URL received them.
+4. **Should You Run Your HVAC Fan Continuously? — exact owner, deeper position.** Twenty-four disclosed continuous-fan impressions confirm the intent, and the page row has 33 impressions at position 32.85. The title, H1, and Quick Answer already match the question, and the page was published recently; a future source/positioning review is justified, not a new URL.
+5. **MERV/MPR/FPR and fiberglass/pleated — existing-owner improvements.** Their disclosed clusters total 20 and 11 impressions respectively, with the correct current owners. Restrictive-filter/furnace-damage remains minor because the exact six-impression query averages position 9.5 and the existing article already has the exact FAQ and substantive section.
+
+### Article #43 and historical status
+
+The slot-cover concept is **PROVISIONALLY VALID BUT DEFERRED**. It may return for a complete publication implementation review after the higher-priority MERV ownership work, provided its boundary remains the missing/access-cover decision and current evidence is rechecked. The October 4 thermostat-reminder concept remains a separate discovery survivor, not an approved article. Neither concept consumes Article #43. Historical torn/ripped, household-filter-count, thicker-filter, shutdown-before-change, same-brand, and location-page rejections remain in force.
 
 ## Article #43 opportunity discovery audit — 2026-10-04
 

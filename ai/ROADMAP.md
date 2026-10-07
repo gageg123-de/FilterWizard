@@ -1,6 +1,12 @@
 # Roadmap
 
-Last verified: 2026-10-04
+Last verified: 2026-10-06
+
+## 2026-10-06 article #43 slot-cover validation and next priority
+
+The complete 42-article corpus, October 6 owner-provided Search Console workbook, Deep Research report, current governance, historical rejections, and current DOE/PNNL and manufacturer evidence were reviewed without changing production. **Does Your Furnace Filter Slot Need a Cover?** passes a repository-side publication-gate assessment as a real, technically supported, narrowly distinct question, but it remains **provisionally valid and deferred**. Existing pages already own fit, bypass, movement, whistling, location, replacement procedure, and safe equipment-access boundaries; a future page could own only the filter-access-cover function, missing-cover decision, return-side leakage, configuration-specific cover types, and the distinction between a removable filter-slot cover and a blower/service panel. It has no exact-query Filter Wizard GSC evidence, and no verified numeric search-volume data was available. Article #43 remains unapproved and unimplemented; the October 4 thermostat-reminder survivor also remains unapproved.
+
+The single recommended next action is a focused **MERV 11-versus-13 ownership and positioning optimization**. The October 6 workbook discloses 44 generic comparison impressions around position 39, while the allergy-specific page and general MERV hub both contain substantial two-rating comparison material and both sit deep in the page data. A separate implementation review should consolidate generic intent around the existing general MERV owner and preserve the allergy page's narrower decision. The new-filter-smell and every-return pages have stronger page-one visibility, but their current metadata and direct answers are already aligned and the privacy-limited workbook provides no query-to-page joins to support a less speculative rewrite. Full gate results, overlap mapping, evidence limits, and alternative ranking are in [`CONTENT_OPPORTUNITY_AUDIT.md`](CONTENT_OPPORTUNITY_AUDIT.md).
 
 ## 2026-10-04 article #43 opportunity discovery audit
 
