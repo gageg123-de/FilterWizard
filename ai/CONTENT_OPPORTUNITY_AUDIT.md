@@ -2,6 +2,21 @@
 
 Last verified: 2026-10-06
 
+## MERV 11-versus-13 ownership optimization — 2026-10-06
+
+The existing-page priority identified by the Article #43 review was implemented without creating a new URL. The October 6 owner-provided Search Console workbook disclosed 44 generic MERV 11-versus-13 query impressions at an impression-weighted position of approximately 39.09. Its query and page sheets remain separate privacy-limited dimensions and do not establish which URL served any query.
+
+Before the change, `/blog/merv-8-vs-merv-11-vs-merv-13.html` contained the intended generic comparison section, but `/blog/merv-11-vs-merv-13-for-allergies.html` repeated a full generic comparison table, airflow and pressure-drop analysis, one-inch-versus-deeper-media comparison, system-age discussion, fit/loading sections, a generic upgrade checklist, generic decision framework, and generic FAQs. The overlap made the intended owner unclear despite the allergy modifier in the specialized page's title.
+
+The accepted ownership contract is now:
+
+- `/blog/merv-8-vs-merv-11-vs-merv-13.html` is the primary owner of generic MERV 8/11/13 selection and generic MERV 11-versus-13 differences, upgrade value, pressure-drop caveats, and system-compatibility considerations.
+- `/blog/merv-11-vs-merv-13-for-allergies.html` is the primary owner of MERV 11 versus MERV 13 specifically for allergy-related airborne particles, including pollen, pet-related particles, settled-particle/source-control limits, and the boundary between filtration and health outcomes.
+
+The generic page now answers the MERV 11-to-13 question in its introduction and Quick Answer, cites EPA's current test-range minimums in the dedicated comparison, adds matched upgrade and airflow FAQs, and routes allergy-specific readers to the specialized page. The allergy page now identifies its narrower audience in the eyebrow, introduction, Quick Answer, comparison table, checklist, decision framework, recommendation, social descriptions, and six matched FAQs. Its generic engineering sections were consolidated into a compatibility summary that routes the broader rating decision, restriction, thickness, fit, and replacement timing to their established owners. Publication dates and URLs remain unchanged; meaningful `dateModified` and sitemap `lastmod` values were updated to October 6, 2026.
+
+No third MERV comparison URL should be created unless materially new evidence establishes an intent that these owners cannot satisfy. Article #43 remains deferred and unapproved. The slot-cover candidate remains **PROVISIONALLY VALID BUT DEFERRED**, and the thermostat-reminder discovery survivor remains unapproved.
+
 ## Article #43 slot-cover validation and next-action review — 2026-10-06
 
 **Decision: the provisional “Does Your Furnace Filter Slot Need a Cover?” concept passes a repository-side publication-gate assessment as a distinct but moderate-overlap topic; it is not approved for publication and is deferred behind a higher-leverage existing-page action.** No Article #43, production HTML, homepage or blog-index card, sitemap entry, image, stylesheet, script, Finder behavior, retailer path, or production internal link was created or changed.

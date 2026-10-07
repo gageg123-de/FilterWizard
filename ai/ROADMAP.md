@@ -2,6 +2,12 @@
 
 Last verified: 2026-10-06
 
+## 2026-10-06 MERV ownership optimization
+
+The higher-priority existing-page action from the Article #43 review is implemented. `/blog/merv-8-vs-merv-11-vs-merv-13.html` now owns generic MERV 11-versus-13 comparison and upgrade intent within the broader residential rating guide. `/blog/merv-11-vs-merv-13-for-allergies.html` now owns only the allergy-focused application: pollen and pet-related airborne particles, source-control limits, and health-claim boundaries. Generic pressure-drop, depth, age, fit, loading, and upgrade guidance on the allergy page was consolidated and routed to the general MERV, restriction, thickness, fit, and timing owners rather than duplicated.
+
+The change responds to 44 disclosed generic MERV 11/13 impressions around position 39 in the October 6 workbook, without claiming a query-to-page relationship. No new MERV article was created. Article #43 remains deferred and unapproved; the slot-cover candidate remains **PROVISIONALLY VALID BUT DEFERRED**, and the thermostat-reminder survivor remains unapproved.
+
 ## 2026-10-06 article #43 slot-cover validation and next priority
 
 The complete 42-article corpus, October 6 owner-provided Search Console workbook, Deep Research report, current governance, historical rejections, and current DOE/PNNL and manufacturer evidence were reviewed without changing production. **Does Your Furnace Filter Slot Need a Cover?** passes a repository-side publication-gate assessment as a real, technically supported, narrowly distinct question, but it remains **provisionally valid and deferred**. Existing pages already own fit, bypass, movement, whistling, location, replacement procedure, and safe equipment-access boundaries; a future page could own only the filter-access-cover function, missing-cover decision, return-side leakage, configuration-specific cover types, and the distinction between a removable filter-slot cover and a blower/service panel. It has no exact-query Filter Wizard GSC evidence, and no verified numeric search-volume data was available. Article #43 remains unapproved and unimplemented; the October 4 thermostat-reminder survivor also remains unapproved.

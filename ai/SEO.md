@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-09-30
+Last verified: 2026-10-06
+
+## MERV 11-versus-13 intent ownership — 2026-10-06
+
+The October 6 owner-provided Search Console export disclosed 44 generic MERV 11/13 query impressions at an impression-weighted position of approximately 39.09. Query and page sheets cannot be joined, so no query-to-URL attribution is claimed. The existing pages were clarified instead of creating another comparison URL: `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns generic MERV 11-versus-13 comparison and upgrade intent, while `/blog/merv-11-vs-merv-13-for-allergies.html` owns the allergy-related particle application. The generic page's description, opening answer, dedicated two-rating section, matched FAQs, and reciprocal link now reinforce that ownership. The allergy page's opening, comparison table, compatibility summary, checklist, recommendation, social descriptions, and six matched FAQs now stay allergy-specific. Both public URLs and publication dates remain unchanged; meaningful modified dates and sitemap `lastmod` values were updated.
 
 The 2026-09-30 guide `/blog/furnace-air-filter-vs-humidifier-filter.html` owns the distinction between a central HVAC particle filter and model-specific whole-house humidifier media. It passed fresh reality, intent, duplicate, cannibalization, terminology, configuration, humidifier-type, maintenance, safety, relevance, commercial-independence, information-gain, and post-draft gates without claiming exact-query GSC demand or verified numeric search volume. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, and nine matched FAQs distinguish it from furnace-versus-AC naming, HVAC-filter replacement timing, sizing, and portable-air-cleaner comparisons.
 

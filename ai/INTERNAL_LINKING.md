@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-09-30
+Last verified: 2026-10-06
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -46,7 +46,7 @@ The sitemap contains 57 indexable URLs: the homepage, blog index, 42 blog articl
 - Black and brown own color interpretation; wet owns moisture; dirty-on-one-side owns asymmetric loading.
 - Bending, movement, and whistling own their respective physical symptoms. Fit and restriction are supporting diagnoses, not alternate owners.
 - AC freeze, AC not cooling, energy cost, and furnace short cycling each own one downstream symptom. None should become another general clogged-filter page.
-- The MERV hub owns ordinary MERV selection; the MERV/MPR/FPR guide owns what the three labels mean and how to compare actual products without a universal conversion; the restriction guide owns general filter/system resistance; the furnace-HEPA guide owns true-HEPA definition, non-equivalence, and compatibility with central HVAC or purpose-built HEPA equipment.
+- The MERV hub owns ordinary MERV selection and the generic MERV 11-versus-13 comparison and upgrade decision. The MERV 11-versus-13 allergy guide owns only the allergy-related particle application, including pollen, pet-related airborne particles, source-control limits, and health-claim safeguards. The two pages cross-link at the point where the reader's intent narrows or broadens. The MERV/MPR/FPR guide owns what the three labels mean and how to compare actual products without a universal conversion; the restriction guide owns general filter/system resistance; the furnace-HEPA guide owns true-HEPA definition, non-equivalence, and compatibility with central HVAC or purpose-built HEPA equipment.
 - The HVAC-filter-versus-air-purifier guide owns where central and portable filtration act, their runtime and coverage distinctions, and why MERV and CADR are not interchangeable. It routes HVAC efficiency choice, true HEPA compatibility, contaminants, and fan-runtime detail to their established owners.
 - The electrostatic-versus-pleated guide owns charged-media terminology and category overlap. Fiberglass-versus-pleated retains basic media/construction comparison; washable-versus-disposable retains lifecycle and cleaning; MERV retains efficiency selection; restriction retains system resistance.
 - The furnace-filter-versus-humidifier-media guide owns the distinction between the HVAC particle filter and the water panel, evaporative pad, or other model-specific service component in a whole-house humidifier. Furnace-versus-AC retains central forced-air naming; replacement timing and sizing retain HVAC-filter schedules and dimensions. Filter Finder supports only the HVAC-filter side.
