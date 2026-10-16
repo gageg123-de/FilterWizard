@@ -1,6 +1,19 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-07
+Last verified: 2026-10-16
+
+## Article #44 thermostat-filter-reminder publication review — 2026-10-16
+
+**Decision: PUBLISHED.** *Why Does My Thermostat Say Change Filter?* independently passed a fresh publication workflow and was implemented at `/blog/why-does-my-thermostat-say-change-filter.html`. Article #45 remains unapproved.
+
+- Verified pre-publication state: 43 articles, nine filter-size guides, 58 sitemap URLs, and 54 non-legal content pages. No existing page or alternate URL owned thermostat filter-reminder meaning or reset behavior.
+- The requested October 16 Search Console workbook was not accessible in the repository, Downloads, or available attachment stores. The newest directly inspected workbook remained the October 6 export, filtered to Web / Last 7 days and covering September 28 through October 4: 7 clicks, 1,111 impressions, 0.63% CTR, and approximately 12.03 impression-weighted position. Its disclosed queries contained no thermostat-reminder wording. Exact-query GSC evidence: none. No verified numeric search-volume data was available.
+- Google Nest documents a system-runtime reminder with a last-changed record; Honeywell Home documents both calendar-day and fan-runtime reminder configurations plus model-specific reset actions; ecobee documents runtime-hour and calendar-month intervals. Honeywell Home and Rheem also document supported condition-monitoring arrangements, which require the article to reject the universal claim that all reminders are only timers while also rejecting the universal claim that thermostats directly sense dirt.
+- The final ownership boundary is thermostat Change/Replace Filter reminder interpretation: what the message represents, reminder-method differences, direct-sensing limits, recently replaced-filter persistence, high-level reset/dismiss behavior, and the need for exact model documentation. Full replacement timing, clean-filter interpretation, clog diagnosis, size/location, direction, MERV, fan-mode, and restriction guidance remain with their existing owners.
+- The article rejects universal reset steps, factory reset as routine maintenance, wiring or unrelated installer-setting changes, sensor bypass, universal immediate-replacement claims, visual cleanliness as proof, and equipment-damage conclusions from the reminder alone.
+- The finished guide contains nine visible/schema-matched FAQs, one inspected 1200×800 WebP, zero Finder CTAs, zero retailer blocks, one contextual incoming link from the timing guide, and current shared analytics, consent, Formspree, header, and footer behavior.
+
+All historical rejections remain in force. Publication of this distinct survivor does not reopen the rejected shutdown-before-filter-change topic or any location, count, thickness, torn/ripped, or same-brand candidate.
 
 ## Article #43 filter-slot-cover publication review — 2026-10-07
 

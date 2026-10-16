@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-10-07
+Last verified: 2026-10-16
+
+The 2026-10-16 thermostat-filter-reminder guide adds one generated and visually reviewed 1200×800 WebP: `thermostat-change-filter-reminder-hero.webp` (68,166 bytes). It shows a homeowner holding an unbranded pleated HVAC filter beside a generic thermostat displaying the exact words “CHANGE FILTER,” with a closed return grille nearby. It contains no real brand interface, diagnostic code, exposed wiring, open equipment, unsafe access, or visual claim that the thermostat scans filter dirt. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-10-07 furnace-filter-slot-cover guide adds two generated and visually reviewed 1200×800 WebPs: `furnace-filter-slot-cover-hero.webp` (89,968 bytes), showing a homeowner holding a narrow removable cover beside an accessible return-side filter slot while the larger equipment panels remain closed, and `filter-slot-cover-vs-service-panel.webp` (85,642 bytes), showing the size and location distinction between the narrow slot closure and the closed equipment panel. Neither image contains brands, labels, exposed wiring or blower parts, tape, fabricated repairs, reversed filters, or a suggestion that the two panels are interchangeable. The hero is eager/high priority and the supporting image is lazy-loaded.
 

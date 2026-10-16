@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-07
+Last verified: 2026-10-16
+
+## 2026-10-16 article #44 publication
+
+Article #44, *Why Does My Thermostat Say Change Filter?*, was published at `/blog/why-does-my-thermostat-say-change-filter.html` after a fresh review passed topic-reality, user-intent, duplicate, cannibalization, information-gain, technical-evidence, safety, Filter Wizard relevance, commercial-independence, and post-draft gates. It owns the interpretation of thermostat Change/Replace Filter reminders: calendar, fan-runtime, configurable, and supported condition-monitoring logic; direct-sensing limits; persistent reminders after replacement; and high-level model-specific reset guidance. Timing, clean-filter, clogged-filter, sizing/location, installation, fan-mode, MERV, and restriction pages retain their existing intents. The guide adds no retailer block, Filter Finder CTA, universal reset sequence, wiring or installer-menu instructions, or unsupported damage claim. No exact-query GSC evidence or verified numeric search-volume data was available. Article #45 remains unapproved.
 
 ## 2026-10-07 article #43 publication
 
@@ -84,7 +88,7 @@ Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), eac
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-three articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-four articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 

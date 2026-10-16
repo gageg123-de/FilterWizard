@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-10-07
+Last verified: 2026-10-16
+
+## Thermostat filter-reminder intent — 2026-10-16
+
+The new `/blog/why-does-my-thermostat-say-change-filter.html` page owns the meaning and limits of a thermostat Change/Replace Filter reminder, including calendar versus fan-runtime logic, direct-sensing exceptions, why a reminder can remain after replacement, and the model-specific reset boundary. It passed current duplicate and cannibalization review against the replacement-timing, still-clean, clogged-filter, sizing, direction, fan-mode, MERV, and restriction owners. No exact-query GSC evidence or verified numeric search volume is claimed. Its unique title and description, self-canonical URL, Article/FAQ/Breadcrumb schema, nine matched FAQs, and contextual incoming link from the timing guide reinforce the narrow ownership without creating a Finder or retailer path.
 
 ## Furnace filter-slot cover intent — 2026-10-07
 
@@ -69,7 +73,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 40 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 44 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

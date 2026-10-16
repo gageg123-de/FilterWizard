@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-10-07
+Last verified: 2026-10-16
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,11 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 58 indexable URLs: the homepage, blog index, 43 blog articles, nine size guides, and four legal pages. The 54 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 59 indexable URLs: the homepage, blog index, 44 blog articles, nine size guides, and four legal pages. The 55 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+
+The thermostat-filter-reminder guide owns the meaning and limits of a Change/Replace Filter message and routes detailed timing, appearance, clogging, location, and installation questions to their existing owners. The replacement-timing guide supplies its justified contextual incoming link. Related Articles reinforce timing, still-clean interpretation, and clogged-filter diagnosis. No Finder CTA or retailer path is added because the reminder question can be answered independently of shopping.
+
+The post-publication audit reports 1,827 internal links, 981 unique edges, 571 contextual links, 536 unique contextual edges, average incoming 29.00, average contextual incoming 10.38, median contextual incoming six, maximum homepage depth three, no pages at depth four or greater, no unreachable pages, no broken local links, and no broken fragments. The new guide has one contextual incoming source, which is appropriate for a newly published narrow-intent page.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
