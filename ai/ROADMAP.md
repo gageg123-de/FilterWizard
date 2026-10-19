@@ -90,6 +90,14 @@ Article #34, *Are Furnace Filters and AC Filters the Same?*, was selected from t
 
 Scores: user value (U), monetization (M), SEO (S), complexity (C), risk (R), each 1 low–5 high. Scores are directional judgments, not a mathematical priority formula or delivery commitment. Apply the evidence and investment gates in [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md); weak evidence or missing maintenance ownership can override a high score.
 
+## Article #45 discovery decision — 2026-10-19
+
+The October 19 opportunity audit does **not** authorize Article #45. The newest seven-day Search Console export covers October 11–17 and shows 4 clicks, 1,071 impressions, and 0.37% CTR. Its strongest actionable-looking observation is `/blog/filters-in-every-return-vent.html` at 177 impressions, zero clicks, and average position 7.47, but the export's privacy-limited Queries and Pages sheets cannot be joined. The separate return-plus-furnace owner and a disclosed four-impression “return grilles and unit both” query make a speculative title/body rewrite especially risky.
+
+**Highest-leverage next action:** obtain a URL-filtered, preferably 28-day Search Console query export for `/blog/filters-in-every-return-vent.html`. Use it to decide whether the page has a genuine snippet/intent deficiency or whether the current ownership should be preserved. Do not rewrite from aggregate CTR alone.
+
+Three fresh concepts remain research survivors, not implementation approvals: *Should You Run Your HVAC During Home Renovation?* (strongest), *Do HVAC UV Lights Replace Air Filters?*, and *Do Mini-Splits Have Air Filters?* If page-filtered evidence does not support an existing-page change, the renovation topic may receive a separate full publication-gate review. No tenth size guide has current exact-size GSC evidence or a complete distinct-utility case. Article #45 and Article #46 remain unapproved; all historical rejections remain in force.
+
 ## Implemented
 
 Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-four articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.

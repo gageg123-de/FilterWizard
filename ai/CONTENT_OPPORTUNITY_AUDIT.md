@@ -2,6 +2,98 @@
 
 Last verified: 2026-10-19
 
+## Article #45 opportunity discovery audit — 2026-10-19
+
+**Decision: WAIT / GATHER MORE DATA.** No Article #45 is approved or implemented. The highest-leverage next action is to obtain a URL-filtered Search Console query export for `/blog/filters-in-every-return-vent.html` before changing that page or authorizing another article. The current export makes this page the largest page-one/no-click observation, but its independent query and page dimensions cannot show whether the impressions belong to the page's intended “every return” question, the separately owned return-plus-furnace question, or other wording. Article #46 remains unapproved.
+
+### Repository and inventory basis
+
+- Verified clean, synchronized `main` at `0997a329158237736f4e985c0606e3d39f013856` (`Record dust around vents topic rejection`) before this documentation-only audit.
+- Verified production inventory remains 44 blog articles, nine filter-size guides, 59 sitemap URLs, and 55 non-legal content pages. Article #44, `/blog/why-does-my-thermostat-say-change-filter.html`, remains the newest article; no Article #45 exists.
+- The audit reviewed the complete 44-article semantic corpus: titles, H1s, descriptions, section headings, article bodies, visible and structured FAQs, contextual links, and Related Articles. The current ownership map is saturated across replacement timing; direction; size, nominal/actual dimensions, and fit; movement, bending, and whistling; dirty-fast, still-clean, black, brown, wet, and one-sided loading; dust around vents; restriction and clogging; AC freezing and cooling; furnace short cycling; filterless operation; return-filter configurations and location; furnace/AC and humidifier-media terminology; filter-slot covers; thermostat reminders; continuous fan use; HEPA; MERV and label systems; fiberglass, washable, electrostatic, and thickness comparisons; contaminant-specific selection; HVAC filtration versus portable purification; and vacuum/reuse.
+- All prior rejections remain in force, including torn/ripped media, household filter counts, thicker-filter substitution, shutdown-before-change, same-brand replacement, standalone filter location, sticky/greasy media without stronger evidence, weak-airflow variants, dust-immediately-after-change variants, pet-hair variants, and a second dust-around-vents URL. No wording change or adjacent example created new intent.
+
+### October 19 Search Console evidence
+
+The supplied `filter-wizard.com-Performance-on-Search-2026-10-19.xlsx` workbook was inspected directly. It is a Web (text-based), Last 7 days export covering **October 11–17, 2026**.
+
+- Daily total: **4 clicks, 1,071 impressions, 0.37% CTR**, and approximately **12.61 impression-weighted average position**.
+- Devices: mobile 3 clicks / 763 impressions / 0.39% CTR / 8.74 position; desktop 1 / 297 / 0.34% / 22.64; tablet 0 / 11 / 0% / 9.09.
+- United States: 4 clicks / 923 impressions / 0.43% CTR / 12.66 position. Canada supplied 57 impressions at 11.47; the United Kingdom 14 at 7.57; Australia 8 at 13.50; and India 7 at 21.29. These small non-US samples do not support localization work.
+- The Queries sheet contains 49 disclosed rows totaling only **110 impressions and zero clicks**. The Pages sheet contains 42 rows totaling **1,091 impressions and four clicks**, 20 impressions more than the daily total. These are separate, privacy-limited dimensions; they were not joined or normalized.
+- Disclosed clusters: generic MERV 8/11/13 comparisons 58 impressions at approximately 43.31 weighted position; continuous-fan wording 15 impressions at approximately 42.87; smoke 12 at 65.58; fiberglass/pleated 5 at 49.60; return-grille-plus-unit configuration 4 at 9.50; size-finder wording 2 at 52.50; bending/collapse 2 at 10.50; and dirty-filter/AC-freeze 1 at 29.00. No disclosed query establishes a new, unowned Article #45 intent.
+
+The independent Pages sheet shows:
+
+- Existing winners to protect: bending/bowing earned 3 clicks from 223 impressions at 6.69; brown-filter interpretation earned 1 click from 63 impressions at 6.10.
+- Largest page-one/no-click observations: filters in every return vent, 177 impressions at 7.47; new-filter smell, 126 at 8.02; filter movement, 52 at 7.29; filter-size guide, 37 at 8.95; vacuum/reuse, 33 at 8.58; fit, 26 at 7.88; dirty on one side, 20 at 5.10; restrictive filter, 19 at 7.26; return-plus-furnace, 13 at 6.69; and furnace short cycling, 13 at 8.31.
+- Deep-ranking owners: generic MERV, 56 impressions at 37.86; allergy MERV, 32 at 43.88; smoke, 30 at 49.70; continuous fan, 21 at 37.24; fiberglass versus pleated, 15 at 31.53. The generic/allergy MERV ownership split was changed on October 6, so this seven-day window is not authority for another immediate rewrite.
+- Emerging Articles #43 and #44 have insufficient observation time. The slot-cover and thermostat-reminder URLs do not appear in the Pages sheet; absence is not a failure signal.
+
+### Existing-page opportunity ranking
+
+| Rank | Existing owner | Evidence | Assessment / next evidence |
+|---:|---|---|---|
+| 1 | `/blog/filters-in-every-return-vent.html` | 177 impressions, 0 clicks, 7.47 position | Highest potential, but deficiency confidence is low. Request a URL-filtered query export to distinguish “every return” from return-plus-furnace/configuration wording before changing title, snippet, or scope. |
+| 2 | `/blog/why-does-my-new-air-filter-smell.html` | 126 impressions, 0 clicks, 8.02 position; up from 107 at 8.30 in the October 6 export | Strong observation, not yet a proven snippet problem. No smell query is disclosed and the current title/description already answer the primary question. Obtain URL-filtered queries before editing. |
+| 3 | `/blog/why-does-my-air-filter-move.html` | 52 impressions, 0 clicks, 7.29 position | Promising observation. The disclosed bending/collapse wording belongs to the separate bending owner and cannot be assigned to this page. Preserve ownership pending page-filtered evidence. |
+| 4 | `/blog/how-to-find-your-air-filter-size.html` | 37 impressions, 0 clicks, 8.95 position | Broad high-value owner, but the only disclosed finder/rare-size wording ranks deeply and is not attributable. No speculative rewrite. |
+| 5 | `/blog/can-you-vacuum-and-reuse-an-air-filter.html` | 33 impressions, 0 clicks, 8.58 position | The title and description directly express the decision. Page-filtered queries are needed to identify any mismatch. |
+
+The return-configuration pair deserves special care: `/blog/filters-in-every-return-vent.html` owns whether each return grille should contain a filter; `/blog/filter-at-return-and-furnace.html` owns whether two filtration stages should be used in series. The disclosed query “do i need filters in return grilles and unit both” has four impressions at 9.50, but the workbook cannot identify which page served it. That ambiguity is the reason to gather page-filtered evidence rather than merge, retitle, or broaden either owner now.
+
+### Fresh 25-concept screen
+
+| Concept | Classification | Result |
+|---|---|---|
+| Should You Run Your HVAC During Home Renovation? | Verified real-world | **Survives shortlist.** EPA renovation and duct-protection guidance supports a distinct before/during/after dust-control decision; moderate overlap with dirty-fast, dust-around-vents, and replacement timing is containable. |
+| Do Mini-Splits Have Air Filters? | Verified real-world | **Survives shortlist.** Carrier and Mitsubishi document indoor-unit washable filters and model-specific care; scope must remain a central-filter-versus-ductless identification decision. |
+| Do HVAC UV Lights Replace Air Filters? | Verified real-world | **Survives shortlist.** EPA and ASHRAE treat UV as supplemental to particle filtration; health and product-selection scope must remain tightly constrained. |
+| Does an HVAC Filter Remove Odors? | Verified real-world | Reject new URL: smoke and HVAC-versus-portable owners already distinguish particles from gases/odors. |
+| Can a Dirty Filter Cause High Indoor Humidity? | Plausible but weak | Reject: causal framing is system-specific and overlaps cooling/restriction pages. |
+| Can a Dirty Filter Cause an HVAC Water Leak? | Plausible but weak | Reject: freeze/wet owners already contain the safe filter-related boundary; plumbing/condensate diagnosis would sprawl. |
+| Can a Dirty Filter Make a Furnace Overheat? | Verified real-world | Reject: short-cycling, clogged, and restriction owners already cover the useful filter decision. |
+| Does a Dirty Filter Cause Weak Airflow? | Verified real-world | Fatal duplicate of clogged/restrictive-filter intent. |
+| Why Does My Filter Collapse? | Verified real-world | Fatal duplicate of bending/bowing owner. |
+| Why Does My Filter Rattle? | Plausible but weak | Reject: movement/whistling/fit owners absorb the safe diagnostic value. |
+| Why Does My Filter Smell Musty? | Verified real-world | Fatal/high duplicate of new-filter smell and wet-filter owners. |
+| Why Does a New Filter Smell Chemical? | Verified real-world | Fatal duplicate of new-filter smell owner. |
+| What Happens If an Air Filter Is Backward? | Verified real-world | Fatal duplicate of arrow-direction owner. |
+| Should Supply Vents Have Filters? | Verified real-world | Reject: return-configuration pages already distinguish supply and return locations. |
+| Does a Fresh-Air Intake Need a Filter? | Verified real-world | Reject: configuration-specific, weak Filter Wizard fit, and unsafe to generalize across ventilation equipment. |
+| What Is an HVAC Media Cabinet? | Verified real-world | Reject standalone page: thickness, HEPA, electrostatic, sizing, and compatibility owners leave too little distinct decision value. |
+| How Do You Replace a Media-Cabinet Filter? | Verified real-world | Reject: sizing, timing, thickness, and manufacturer-specific instructions own the safe guidance. |
+| Do Activated-Carbon Furnace Filters Remove Odors? | Verified real-world | Reject: smoke guide already owns particle-versus-gas/odor and carbon limits. |
+| Do Heat Pumps Have Air Filters? | Verified real-world | Reject: furnace-versus-AC terminology and location/sizing owners cover forced-air configurations; ductless nuance belongs in the mini-split candidate. |
+| Does a Boiler Have an Air Filter? | Verified real-world | Reject: limited filter relevance and likely generic equipment-terminology scope. |
+| Can You Put Filters in Floor or Ceiling Returns? | Verified real-world | Reject: return-configuration and filter-location guidance already owns the decision. |
+| What Is MERV-A? | Verified real-world | Reject now: niche, no first-party signal, weak homeowner recurrence, and a saturated rating cluster. |
+| What Filter Removes PM2.5? | Verified real-world | Reject: smoke, MERV, and purifier owners already cover the safe decision without a new label page. |
+| Should You Run the HVAC Fan During Wildfire Smoke? | Verified real-world | Reject: smoke and continuous-fan owners should retain this secondary intent. |
+| Do Air Filters Expire in Storage? | Plausible but weak | Reject: thin information gain and insufficient authoritative residential evidence. |
+
+### New-article shortlist and scoring
+
+Scores are directional 0–5 judgments in the required order: real-world evidence, first-party GSC alignment, external homeowner intent, distinct intent, information gain, authoritative evidence depth, Filter Wizard relevance, internal-link potential, and commercial/funnel relevance. Scores do not grant publication authority.
+
+| Rank | Candidate / proposed slug | Component scores | Raw | Overlap | Adjusted | Confidence |
+|---:|---|---|---:|---:|---:|---|
+| 1 | *Should You Run Your HVAC During Home Renovation?* — `/blog/should-you-run-hvac-during-renovation.html` | 5/0/4/5/5/5/4/4/2 | 34 | Moderate -3 | **31** | Moderate. EPA directly supports the dust-generating-work decision; no first-party query support. |
+| 2 | *Do HVAC UV Lights Replace Air Filters?* — `/blog/do-hvac-uv-lights-replace-air-filters.html` | 5/0/4/4/4/5/3/4/1 | 30 | Moderate -3 | **27** | Moderate. Evidence is deep, but scope and health/product-claim risks reduce relevance. |
+| 3 | *Do Mini-Splits Have Air Filters?* — `/blog/do-mini-splits-have-air-filters.html` | 5/0/4/4/4/4/3/3/2 | 29 | Moderate -3 | **26** | Moderate. Real and supportable, but farther from the central replacement-filter funnel. |
+
+The leading renovation candidate has genuine information gain: whether to operate the system during dust-producing work; protecting supply and return openings; why a normal furnace filter is not a construction-dust containment system; post-work inspection/replacement; and boundaries for lead, asbestos, mold, or hazardous-dust work. EPA says registers in a dusty work area should be sealed and the HVAC system should not operate during dust-producing renovation until cleanup; its Indoor airPLUS guidance also warns that basic fiberglass media do not prevent fine construction dust from entering equipment. This is technically stronger than an SEO-shaped candidate, but no October 19 GSC row aligns with it and no verified numeric search-volume data was available.
+
+The UV candidate can distinctly explain that UV treatment inactivates susceptible microorganisms but does not replace particle capture; EPA explicitly says residential UVGI should supplement, not replace, conventional filtration. It remains lower priority because it invites health, effectiveness, ozone, installation, and product-selection scope beyond Filter Wizard's core. The mini-split candidate is real—Carrier and Mitsubishi document accessible washable indoor-unit filters—but it would expand into a different filter ecosystem and must not imply that central disposable-filter guidance applies.
+
+### Filter-size opportunity result
+
+No new size page survives. The manifest contains nine indexed pages, 13 research records, and six rejected records. The October 19 query sheet discloses no exact nominal-size query; only two broad size-finder impressions appear at approximately 52.50 weighted position. Existing page rows show 20x25x1 (10 impressions), 20x20x1 (9), and 16x25x1 (5), but no evidence for a tenth nominal size. Research records such as 18x24x1, 18x25x1, 20x24x1, 20x30x1, 24x30x1, and 14x24x1 still lack first-party exact-size demand and a complete distinct-utility package. Four- and five-inch candidates remain cabinet- and product-specific. The controlled nine-page set should not expand from dimension substitution alone.
+
+### Decision and reconsideration trigger
+
+The current evidence does not justify publishing Article #45, rewriting a page from aggregate CTR alone, or adding a size guide. The strongest next action is one narrowly scoped evidence request: **export Search Console Queries with a page filter for `https://filter-wizard.com/blog/filters-in-every-return-vent.html` over a useful recent window (preferably 28 days, with the filter and dates preserved).** Reconsider an existing-page optimization if that export shows a coherent query cluster at useful positions whose intent or snippet promise is not answered clearly by the current title, description, Quick Answer, or ownership boundary. If it instead confirms strong intent alignment, preserve the page and proceed to a full publication-gate review of the renovation candidate. This is a discovery result, not Article #45 publication authority.
+
 ## Article #45 dust-around-air-vents publication review — 2026-10-19
 
 **Decision: REJECTED.** The proposed *Why Is There Dust Around My Air Vents?* page fails the duplicate-topic, dust-guide cannibalization, and information-gain gates because the current production guide `/blog/dust-around-air-vents-filter-problem.html` already owns the complete proposed homeowner decision. No Article #45 URL, article file, image, homepage or blog-index card, sitemap entry, production internal link, Finder CTA, retailer block, CSS, or JavaScript was created or changed. Article #45 remains unused, and Article #46 remains unapproved.
