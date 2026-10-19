@@ -1,6 +1,53 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-16
+Last verified: 2026-10-19
+
+## Article #45 dust-around-air-vents publication review — 2026-10-19
+
+**Decision: REJECTED.** The proposed *Why Is There Dust Around My Air Vents?* page fails the duplicate-topic, dust-guide cannibalization, and information-gain gates because the current production guide `/blog/dust-around-air-vents-filter-problem.html` already owns the complete proposed homeowner decision. No Article #45 URL, article file, image, homepage or blog-index card, sitemap entry, production internal link, Finder CTA, retailer block, CSS, or JavaScript was created or changed. Article #45 remains unused, and Article #46 remains unapproved.
+
+- Verified starting and ending production state: 44 articles, nine filter-size guides, 59 sitemap/indexable URLs, and 55 non-legal content pages. The proposed `/blog/why-is-there-dust-around-my-air-vents.html` route does not exist, but a different slug is not distinct intent.
+- All 44 production article bodies, headings, visible FAQs, FAQ schema, metadata, Related Articles, and meaningful internal-link anchors were included in the semantic search. The existing dust-around-vents page has the exact title, H1, primary question, and practical scope proposed for Article #45.
+- The requested October 16 Search Console workbook was not accessible in the repository, Downloads, or available attachment stores. The newest directly inspected workbook remains the October 6 export, filtered to Web / Last 7 days and covering September 28 through October 4: 7 clicks, 1,111 impressions, 0.63% CTR, and approximately 12.03 impression-weighted position. Its query sheet discloses no dust-around-vents wording. Its independent Pages sheet gives the existing dust-around-vents owner 8 impressions, zero clicks, and average position 6.75. Query and page sheets cannot be joined. No verified numeric search-volume data was available.
+- The same Pages sheet shows `/blog/why-does-my-new-air-filter-smell.html` at 107 impressions, zero clicks, and average position 8.30, a materially larger existing-page observation than the dust owner. Because the query sheet discloses no odor query and cannot be joined to that page, it supports a newer-evidence/snippet review rather than an immediate speculative rewrite.
+- Topic reality is verified independently of publication: EPA states that dusty return registers can be normal and do not establish heavy duct contamination, while repeated particles released from supply registers are a materially different observation. EPA also rejects routine duct-cleaning and visual mold assumptions. DOE/PNNL documents leakage at register-boot connections and entry of unconditioned, unfiltered air; ENERGY STAR likewise identifies vent/register connections as common duct-leak locations.
+- The production owner already distinguishes supply registers from return grilles; surface dust from visible discharge; one vent from many; ordinary room-particle deposition from HVAC-delivered material; filter absence, damage, loading, size, fit, and bypass; a possible local duct condition; higher-MERV limits; visible cleaning and recurrence monitoring; duct-cleaning limits; dark-material uncertainty; safe homeowner checks; and qualified-service thresholds.
+- Removing that owned material leaves no coherent standalone Article #45. DOE/PNNL's more explicit register-boot leakage detail is at most a potential enhancement to the current owner's local-duct-condition explanation, not a new primary intent. The only defensible action is to retain the existing URL as the primary owner. A future existing-page optimization requires newer query/snippet evidence or a factual correction; eight page impressions without disclosed matching queries do not justify speculative metadata or body changes.
+
+### Publication gates
+
+| Gate | Result | Finding |
+|---|---|---|
+| Topic Reality | **Passed** | EPA, DOE/PNNL, ENERGY STAR, the existing production page, and first-party page impressions establish a real homeowner observation. |
+| Search Demand / User Intent | **Passed with qualification** | The existing owner has first-party page impressions and authoritative sources address the decision, but the disclosed query sheet has no exact wording and no verified numeric volume exists. |
+| Current Audit Consistency | **Failed** | Current governance already lists the dust-around-vents page as the established owner; treating the same intent as a new candidate contradicts the production inventory. |
+| Duplicate Topic | **Failed — fatal** | The current page answers the same title-level question and every proposed primary and secondary sub-intent. |
+| Dust-Guide Cannibalization | **Failed — fatal** | The proposed URL would compete directly with `/blog/dust-around-air-vents-filter-problem.html`, not merely with the separate dust buying guide. |
+| Dirty-Fast Cannibalization | **Passed** | Rapid media loading remains owned by `/blog/why-is-my-air-filter-getting-dirty-so-fast.html`. |
+| Still-Clean Cannibalization | **Passed** | Clean-filter interpretation remains owned by `/blog/why-is-my-air-filter-still-clean.html`; the dust owner only routes that sub-question. |
+| Fit/Bypass Cannibalization | **Passed only for the existing owner** | The current dust page summarizes filter relevance and routes detailed fit diagnosis to `/blog/how-tight-should-an-air-filter-fit.html`. A second page cannot repeat that summary distinctly. |
+| Return-Configuration Cannibalization | **Passed only for the existing owner** | Supply-versus-return context is concise and routes filter-location/configuration decisions to their established owners. |
+| Duct-Cleaning Claim Gate | **Passed** | EPA supports rejecting routine cleaning, dust-as-proof, health promises, and visual mold diagnosis. The existing owner already applies that boundary. |
+| Technical Evidence | **Passed** | EPA, DOE/PNNL, and ENERGY STAR support the retained distinctions and configuration-specific leakage mechanism. |
+| Information Gain | **Failed — fatal** | No substantial unique decision remains after the existing page is excluded. |
+| Safety | **Passed** | The existing owner keeps checks accessible and rejects duct entry, sealed-equipment access, chemical spraying, improvised filter fit, and unsupported diagnosis. |
+| Filter Wizard Relevance | **Passed** | The topic is adjacent to filter fit, bypass, and replacement, but relevance does not override duplication. |
+| Commercial Independence | **Passed** | The answer requires no retailer block or product upgrade; the proposed duplicate would add no commercial value. |
+| Post-Draft Intent Audit | **Not run** | Drafting was prohibited after the fatal pre-draft failures. |
+
+### Semantic ownership and claim findings
+
+- **Existing dust owner:** visible dust or deposits on and immediately around a supply register or return grille, whether the filter could contribute, supply-versus-return context, room deposition versus HVAC delivery, one-versus-many patterns, safe cleaning/monitoring, duct-cleaning limits, and unusual-material escalation.
+- **Adjacent owners retained:** `/blog/best-air-filter-for-dust.html` owns dust-focused filter selection; dirty-fast and still-clean pages own loading-rate interpretation; black and brown pages own filter-color interpretation; fit, filter-slot-cover, movement, whistling, clogged-sign, and return-configuration pages own their detailed diagnostic and configuration decisions.
+- **Keep:** ordinary dust can collect at return grilles; repeated visible particles from supplies are different from passive surface dust; a missing, damaged, or poorly seated filter can permit bypass; register-boot leakage can occur; accessible surfaces can be cleaned and monitored; manufacturer-compatible filtration and proper fit matter.
+- **Qualify:** the filter, duct leakage, boot leakage, airflow patterns, a dirty register, or room particle sources may contribute. Pattern and system configuration affect plausibility; no one observation proves the route or amount.
+- **Reject:** dusty vents prove filter failure, clogged media, low MERV, dirty ducts, mold, soot, or a need for routine duct cleaning; a higher-MERV filter is a universal fix; visible color identifies a contaminant; one generic mechanism applies to both supplies and returns.
+
+### Final ownership contract and next action
+
+`/blog/dust-around-air-vents-filter-problem.html` remains the sole owner of **why visible dust/deposits appear on or around HVAC supply registers or return grilles, whether filtration may contribute, and what to check next**. It may summarize supply-versus-return behavior, ordinary deposition, filter bypass, accessible local register/duct conditions, recurrence, and unusual-material escalation while routing detailed filter selection, loading, fit, configuration, duct work, mold, combustion, and IAQ decisions to their established owners.
+
+The strongest next action is **do not create a second URL**. Preserve the existing owner and obtain a newer Search Console export with enough disclosed query/snippet evidence before considering a focused existing-page optimization. This rejection does not authorize a substitute Article #45.
 
 ## Article #44 thermostat-filter-reminder publication review — 2026-10-16
 

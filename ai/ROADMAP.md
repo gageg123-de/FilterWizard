@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-16
+Last verified: 2026-10-19
+
+## 2026-10-19 article #45 dust-around-vents rejection
+
+The proposed *Why Is There Dust Around My Air Vents?* candidate was rejected before drafting because `/blog/dust-around-air-vents-filter-problem.html` already owns the exact visible-register/grille dust decision, including supply-versus-return context, room deposition versus HVAC delivery, filter relevance and bypass, one-versus-many patterns, higher-MERV and duct-cleaning limits, safe inspection, and unusual-material escalation. The requested October 16 Search Console workbook was unavailable; the newest accessible October 6 export shows the existing owner at 8 impressions, zero clicks, and average position 6.75, but no disclosed matching query and no query-to-page attribution. EPA, DOE/PNNL, and ENERGY STAR confirm topic reality and the current technical boundaries; DOE/PNNL's explicit register-boot leakage detail is at most a possible enhancement to the current owner's local-duct-condition explanation, not distinct information gain for another URL. No production page or integration point changed. Article #45 remains unused, Article #46 remains unapproved, and any future work should strengthen the existing owner only when newer query/snippet evidence or a factual correction warrants it.
 
 ## 2026-10-16 article #44 publication
 
