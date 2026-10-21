@@ -1,6 +1,15 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-19
+Last verified: 2026-10-21
+
+## Article #45 renovation-HVAC publication review — 2026-10-21
+
+**Decision: PUBLISHED.** *Should You Run Your HVAC During Home Renovation?* independently passed the complete publication workflow and was implemented at `/blog/should-you-run-hvac-during-renovation.html`. The discovery-audit survivor was revalidated rather than promoted automatically. Topic reality, current-audit consistency, duplicate/cannibalization, dirty-fast, dust-guide, MERV, duct-cleaning, hazardous-dust, opening-protection, technical-evidence, information-gain, relevance, commercial-independence, and post-draft intent gates passed. No exact-query Filter Wizard GSC evidence existed, and no verified numeric search-volume data was available. Article #46 remains unapproved.
+
+- **Ownership contract:** the page owns whether and how to operate and protect central HVAC before, during, and after dust-producing renovation. It may explain shutdown, source capture, work-zone isolation, supply/return protection only while HVAC is off, compatible-filter inspection, safe restart, and escalation. It does not own generic replacement timing, dirty-filter diagnosis, filter/MERV selection, duct-cleaning decisions, hazardous-material remediation, mold remediation, or general construction safety.
+- **Authoritative basis:** EPA Indoor airPLUS says not to run HVAC during airborne-dust-producing activities and documents duct-opening protection and post-construction filter replacement. EPA remodeling and duct-cleaning guidance supports isolating dusty work, sealing supply and return registers while HVAC is off, and rejecting automatic duct cleaning. DOE/PNNL Building America guidance pairs register protection with central-air-handler shutdown during large dusty remodels. EPA lead and asbestos guidance establishes the hazardous-material stop boundary.
+- **Safety and claim limits:** no opening may remain covered when the system runs; the central filter is not jobsite containment; no universal MERV upgrade, pressure-drop benefit, filter-change interval, or duct-cleaning recommendation is made; no stacking or improvised filter fit is allowed; and ordinary dust controls are not extended to lead, asbestos, mold, silica, or unknown suspect material.
+- **Commercial and integration treatment:** zero Finder CTAs, zero retailer blocks, one generated and reviewed 1200×800 WebP, one contextual incoming link from the dirty-fast guide, three deliberate Related Articles, and no filter-size expansion. Verified post-publication inventory is 45 articles, nine size guides, 60 sitemap/indexable URLs, and 56 non-legal content pages.
 
 ## Article #45 opportunity discovery audit — 2026-10-19
 

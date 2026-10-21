@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-19
+Last verified: 2026-10-21
+
+## 2026-10-21 article #45 publication
+
+Article #45, *Should You Run Your HVAC During Home Renovation?*, was published at `/blog/should-you-run-hvac-during-renovation.html` after an independent review passed topic-reality, current-audit consistency, duplicate, dirty-fast, dust-guide, MERV, duct-cleaning, hazardous-dust, register/return-covering, technical-evidence, information-gain, relevance, commercial-independence, and post-draft gates. It owns the central-HVAC operation and protection decision during dust-producing renovation: shutdown during active dust generation, source control, opening protection only while HVAC is off, the compatible-filter role, safe restart, and escalation boundaries. Adjacent filter-loading, dust, MERV, replacement, duct-cleaning, and hazardous-material owners retain their intents. The guide adds zero retailer blocks and zero Finder CTAs. No exact-query GSC evidence or verified numeric search-volume data was available. Article #46 remains unapproved.
 
 ## 2026-10-19 article #45 dust-around-vents rejection
 

@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-10-16
+Last verified: 2026-10-21
+
+## HVAC renovation-dust intent — 2026-10-21
+
+The new `/blog/should-you-run-hvac-during-renovation.html` page owns whether and how to operate and protect central HVAC during dust-producing home renovation, including shutdown during active dust generation, source control, supply-and-return opening protection only while the system is off, compatible-filter inspection, post-work restart checks, and the boundary for duct cleaning and hazardous material. It passed duplicate and cannibalization review against dirty-fast, dust selection, MERV, restriction, vent-dust, replacement-timing, and duct-cleaning intents. No exact-query GSC evidence or verified numeric search volume is claimed. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, nine matched FAQs, and contextual incoming link from the dirty-fast guide reinforce the narrow ownership without adding a Finder or retailer path.
 
 ## Thermostat filter-reminder intent — 2026-10-16
 
@@ -73,7 +77,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 44 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 45 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

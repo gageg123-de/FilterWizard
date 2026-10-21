@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-10-16
+Last verified: 2026-10-21
+
+The 2026-10-21 HVAC-renovation-dust guide adds one generated and visually reviewed 1200×800 WebP: `hvac-renovation-dust-hero.webp` (94,312 bytes). It shows a homeowner preparing for dusty wall work with a shop vacuum and separately protected supply/return openings in a generic residential room. The scene contains no brands, hazardous-material claim, exposed equipment, fabricated diagnostic code, stacked filter, or suggestion that covered openings can remain blocked while HVAC runs. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-10-16 thermostat-filter-reminder guide adds one generated and visually reviewed 1200×800 WebP: `thermostat-change-filter-reminder-hero.webp` (68,166 bytes). It shows a homeowner holding an unbranded pleated HVAC filter beside a generic thermostat displaying the exact words “CHANGE FILTER,” with a closed return grille nearby. It contains no real brand interface, diagnostic code, exposed wiring, open equipment, unsafe access, or visual claim that the thermostat scans filter dirt. The hero is eager/high priority; no decorative supporting image was added.
 
