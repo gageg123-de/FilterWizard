@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-10-21
+Last verified: 2026-10-28
+
+## HVAC UV treatment versus filtration intent — 2026-10-28
+
+The new `/blog/do-hvac-uv-lights-replace-air-filters.html` page owns whether installed HVAC germicidal UV can replace the ordinary particle filter. It distinguishes microbial inactivation from particle capture, coil/surface irradiation from in-duct airstream treatment, and conditional product performance from whole-home guarantees. The HVAC-filter-versus-portable-cleaner page retains central-versus-room-device ownership; the HEPA and MERV pages retain filter-performance and compatibility ownership. No exact-query first-party GSC evidence or verified numeric search volume is claimed. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, eight matched FAQs, and contextual incoming link from the portable-cleaner comparison reinforce the narrow intent without a Finder or retailer path.
 
 ## HVAC renovation-dust intent — 2026-10-21
 
@@ -77,7 +81,7 @@ Pet-home cluster: `/blog/best-air-filter-for-pets.html` is the broad pillar. Fut
 ## Current architecture
 
 - Custom-domain URLs use `https://filter-wizard.com/` and root-relative internal links.
-- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 45 published articles, nine filter-size pages, and canonical legal pages.
+- [`../sitemap.xml`](../sitemap.xml) lists the homepage, blog index, 46 published articles, nine filter-size pages, and canonical legal pages.
 - [`../robots.txt`](../robots.txt) allows crawling and declares the sitemap.
 - Production pages use titles, descriptions, canonicals, Open Graph, and Twitter metadata. Articles use Article JSON-LD; visible FAQ sections generally have FAQPage schema; breadcrumb schema coverage varies.
 - Root legal compatibility pages canonicalize to `/legal/*`, use immediate meta refresh, and are `noindex, follow`.

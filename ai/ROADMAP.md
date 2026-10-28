@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-21
+Last verified: 2026-10-28
+
+## 2026-10-28 article #46 publication
+
+Article #46, *Do HVAC UV Lights Replace Air Filters?*, was published at `/blog/do-hvac-uv-lights-replace-air-filters.html` after independent review passed topic-reality, search-intent, duplicate, HVAC-filter-versus-portable-cleaner, MERV, information-gain, technical-accuracy, health-claim, ozone, UV-exposure, filter-replacement, relevance, commercial-independence, and post-draft intent gates. It owns the difference between microbial inactivation by properly applied germicidal UV and particle capture by the required HVAC filter, including coil versus in-duct purposes, conditional effectiveness, ozone nuance, and safety boundaries. Existing portable-cleaner, HEPA, MERV, contaminant, and filter-maintenance pages retain their intents. The guide adds zero retailer blocks and zero Finder CTAs. The requested October 28 Search Console export was unavailable; the newest accessible October 19 export disclosed no UV-specific query, and no verified numeric search-volume data was available. Article #47 remains unapproved.
 
 ## 2026-10-21 article #45 publication
 

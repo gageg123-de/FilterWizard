@@ -1,6 +1,15 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-21
+Last verified: 2026-10-28
+
+## Article #46 HVAC UV-lights publication review — 2026-10-28
+
+**Decision: PUBLISHED.** *Do HVAC UV Lights Replace Air Filters?* independently passed the complete publication workflow and was implemented at `/blog/do-hvac-uv-lights-replace-air-filters.html`. Topic reality, search intent, duplicate/cannibalization, MERV ownership, information gain, technical accuracy, health claims, ozone safety, UV exposure safety, filter-replacement claims, Filter Wizard relevance, commercial independence, and post-draft intent gates passed. The requested `filter-wizard.com-Performance-on-Search-2026-10-28.xlsx` workbook was not accessible. The newest accessible October 19 export covered October 11–17, 2026 and reported 4 clicks, 1,071 impressions, 0.37% CTR, and approximately 12.61 impression-weighted position; it disclosed no UV-specific query. Query and page sheets remain separate privacy-limited dimensions and were not joined. No verified numeric search-volume data was available. Article #47 remains unapproved.
+
+- **Ownership contract:** the page owns whether HVAC UV treatment replaces ordinary HVAC filtration, microbial inactivation versus particle capture, coil/surface versus in-duct applications, conditional effectiveness, ozone nuance, exposure safety, and separate maintenance. It does not own portable-room-cleaner selection, HEPA compatibility, general MERV selection, UV installation, product rankings, disease prevention, mold remediation, duct cleaning, or HVAC repair.
+- **Authoritative basis:** EPA's residential technical summary explicitly says UVGI does not capture particles and should supplement rather than replace conventional filtration; CDC/NIOSH describes germicidal UV as a layered intervention and notes treated particles remain in the air; ASHRAE distinguishes airstream and surface treatment and documents dose and exposure-safety requirements; current Carrier documentation supplies a narrowly scoped residential coil-UV example and separately confirms that the air filter remains required.
+- **Claim limits:** the article rejects universal kill, sterilization, infection-prevention, allergy-removal, health-guarantee, filter-life-extension, maintenance-savings, and ozone-free/ozone-producing claims. It gives no DIY installation, wiring, lamp-access, interlock-bypass, or service instructions.
+- **Commercial and integration treatment:** zero Finder CTAs, zero retailer blocks, one generated and reviewed 1200×800 WebP, one contextual incoming link from the HVAC-filter-versus-portable-cleaner guide, and three deliberate Related Articles. Verified post-publication inventory is 46 articles, nine size guides, 61 sitemap/indexable URLs, and 57 non-legal content pages.
 
 ## Article #45 renovation-HVAC publication review — 2026-10-21
 

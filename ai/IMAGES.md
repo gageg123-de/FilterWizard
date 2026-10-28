@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-10-21
+Last verified: 2026-10-28
+
+The 2026-10-28 HVAC-UV-versus-filter guide adds one generated and visually reviewed 1200×800 WebP: `hvac-uv-lights-vs-air-filter-hero.webp` (80,732 bytes). It shows a homeowner holding an unbranded pleated filter beside closed air-handling equipment and a separate, fully enclosed generic UV accessory housing. It contains no visible operating lamp, purple glow, exposed wiring, open service panel, product branding, health claim, universal equipment geometry, or implication that the UV device replaces the filter. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-10-21 HVAC-renovation-dust guide adds one generated and visually reviewed 1200×800 WebP: `hvac-renovation-dust-hero.webp` (94,312 bytes). It shows a homeowner preparing for dusty wall work with a shop vacuum and separately protected supply/return openings in a generic residential room. The scene contains no brands, hazardous-material claim, exposed equipment, fabricated diagnostic code, stacked filter, or suggestion that covered openings can remain blocked while HVAC runs. The hero is eager/high priority; no decorative supporting image was added.
 
