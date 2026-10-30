@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-10-28
+Last verified: 2026-10-29
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,9 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 61 indexable URLs: the homepage, blog index, 46 blog articles, nine size guides, and four legal pages. The 57 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 62 indexable URLs: the homepage, blog index, 47 blog articles, nine size guides, and four legal pages. The 58 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+
+The mini-split-filter guide owns indoor-unit filter presence, location, configuration, primary-mesh versus specialty-media care, model-specific maintenance boundaries, and typical fine-particle limits. It links contextually to furnace-versus-AC terminology, conventional washable-versus-disposable filters, and portable air cleaning. The furnace-versus-AC guide supplies one justified incoming contextual link. Related Articles reinforce those three boundaries. No Finder CTA or retailer path is added because Filter Finder does not identify appliance-specific mini-split screens or media.
 
 The HVAC-UV guide owns microbial inactivation versus HVAC particle capture, coil/surface versus in-duct applications, conditional effectiveness, ozone nuance, and the filter-retention decision. It links contextually to MERV selection, smoke-particle filtration, filterless operation, and replacement timing. The HVAC-filter-versus-portable-cleaner guide supplies one justified incoming contextual link. Related Articles reinforce portable-cleaner comparison, HEPA compatibility, and MERV selection. No Finder CTA or retailer path is added because the UV-versus-filter question is answered without a purchase flow.
 
@@ -31,7 +33,7 @@ The renovation-HVAC guide owns central-system operation and protection during du
 
 The thermostat-filter-reminder guide owns the meaning and limits of a Change/Replace Filter message and routes detailed timing, appearance, clogging, location, and installation questions to their existing owners. The replacement-timing guide supplies its justified contextual incoming link. Related Articles reinforce timing, still-clean interpretation, and clogged-filter diagnosis. No Finder CTA or retailer path is added because the reminder question can be answered independently of shopping.
 
-The post-publication audit reports 1,875 internal links, 1,008 unique edges, 589 contextual links, 551 unique contextual edges, average incoming 28.68, average contextual incoming 10.33, median contextual incoming six, maximum homepage depth three, no pages at depth four or greater, no unreachable pages, no broken local links, and no broken fragments. The HVAC-UV guide has one contextual incoming source, which is appropriate for a newly published narrow-intent page.
+The post-publication audit reports 1,898 internal links, 1,019 unique edges, 597 contextual links, 556 unique contextual edges, average incoming 28.52, average contextual incoming 10.29, median contextual incoming six, maximum homepage depth three, no pages at depth four or greater, no unreachable pages, no broken local links, and no broken fragments. The mini-split and HVAC-UV guides each have one contextual incoming source, which is appropriate for newly published narrow-intent pages.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|
@@ -41,7 +43,7 @@ The post-publication audit reports 1,875 internal links, 1,008 unique edges, 589
 | Sizing and fit | `/blog/how-to-find-your-air-filter-size.html` is the sizing hub | fit, slightly-different-size, thickness comparison, all nine size guides |
 | Placement and configuration | No forced hub; each configuration question is distinct | every-return filters, return-and-furnace filters, airflow-arrow direction, filter-slot-cover decision |
 | HVAC terminology | `/blog/are-furnace-and-ac-filters-the-same.html` owns whether seasonal filter names refer to the shared central-HVAC filter | placement pages own where/how many; sizing hub owns dimensions |
-| Adjacent HVAC components | `/blog/furnace-air-filter-vs-humidifier-filter.html` owns HVAC particle filter versus whole-house humidifier media | HVAC UV guide owns microbial treatment versus particle capture; furnace-versus-AC retains shared forced-air terminology; timing and sizing retain HVAC-filter maintenance and dimensions |
+| Adjacent HVAC components | `/blog/furnace-air-filter-vs-humidifier-filter.html` owns HVAC particle filter versus whole-house humidifier media | Mini-split guide owns appliance-specific indoor-unit filters and care; HVAC UV guide owns microbial treatment versus particle capture; furnace-versus-AC retains shared forced-air terminology; timing and sizing retain conventional HVAC-filter maintenance and dimensions |
 | MERV and filtration level | `/blog/merv-8-vs-merv-11-vs-merv-13.html` owns general MERV selection | MERV/MPR/FPR guide owns rating-system identification and cross-label comparison; MERV 11 vs 13 for allergies; restrictive-filter guide owns general resistance; furnace-HEPA guide owns true-HEPA/central-HVAC compatibility; continuous-fan guide owns fan runtime as a filtration/filter-loading decision; HVAC-filter-versus-air-purifier guide owns central filtration versus portable room air cleaning and the MERV/CADR boundary |
 | Filter type | No single hub | fiberglass vs pleated, washable vs disposable, electrostatic terminology vs pleated construction, vacuum/reuse |
 | Household contaminant selection | The individual selection page owns its contaminant | pets, dust, allergies, smoke |

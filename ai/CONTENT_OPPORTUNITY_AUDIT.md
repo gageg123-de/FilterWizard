@@ -1,6 +1,15 @@
 # Content Opportunity Audit
 
-Last verified: 2026-10-28
+Last verified: 2026-10-29
+
+## Article #47 mini-split-filter publication review — 2026-10-29
+
+**Decision: PUBLISHED.** *Do Mini-Splits Have Air Filters? Types, Location & Cleaning* independently passed the complete publication workflow and was implemented at `/blog/do-mini-splits-have-air-filters.html`. Topic reality, search intent, current-audit consistency, duplicate/cannibalization, furnace-versus-AC ownership, washable-versus-disposable ownership, portable-cleaner ownership, MERV ownership, information gain, technical accuracy, homeowner safety, Filter Wizard relevance, commercial independence, and post-draft intent gates passed. The newest accessible October 19 export covered October 11–17, 2026 and reported 4 clicks, 1,071 impressions, 0.37% CTR, and approximately 12.61 impression-weighted position; it disclosed no mini-split-specific query. Query and page sheets remain separate privacy-limited dimensions and were not joined. No verified numeric search-volume data was available. Article #48 remains unapproved.
+
+- **Ownership contract:** the page owns whether mini-split indoor units have filters, where common indoor-unit configurations place them, primary mesh versus model-specific specialty media, safe model-specific cleaning/replacement, multi-zone filter count logic, and the limits of built-in filtration. It does not own mini-split purchasing, installation, repair, central filter sizing, conventional washable-versus-disposable selection, MERV selection, or portable-air-cleaner purchasing.
+- **Authoritative basis:** EPA states that typical ductless mini-split filters primarily protect equipment from larger debris and generally do not filter fine particles. DOE-backed maintenance guidance distinguishes ductless filter cleaning and tells owners to confirm filter location and reusability. Current Trane and Carrier guidance confirms the real homeowner question; LG and Fujitsu/GENERAL documentation demonstrates wall-unit access variation, washable primary screens, and separately maintained specialty media.
+- **Safety and claim limits:** the article gives no electrical, refrigerant, coil, blower, drain, or deep-cleaning instructions; no universal cleaning interval; no universal washable-filter claim; no MERV assumption; no health promise; and no permission to cut, fold, tape, stack, or force central-HVAC filter media into an indoor head.
+- **Commercial and integration treatment:** zero Finder CTAs, zero retailer blocks, one generated and reviewed 1200×800 WebP, one contextual incoming link from the furnace-versus-AC guide, and three deliberate Related Articles. Verified post-publication inventory is 47 articles, nine size guides, 62 sitemap/indexable URLs, and 58 non-legal content pages.
 
 ## Article #46 HVAC UV-lights publication review — 2026-10-28
 

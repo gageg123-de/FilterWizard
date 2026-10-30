@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-10-28
+Last verified: 2026-10-29
+
+The 2026-10-29 mini-split-filter guide adds one generated and visually reviewed 1200×800 WebP: `mini-split-air-filter-hero.webp` (38,428 bytes). It shows a generic unbranded high-wall indoor unit with only the normal intake cover open and two intact reusable mesh screens visible. It contains no pleated furnace filter, text, logos, exposed wiring, removed service panel, outdoor-unit filter, dirt cloud, mold, water, unsafe access, or universal equipment claim. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-10-28 HVAC-UV-versus-filter guide adds one generated and visually reviewed 1200×800 WebP: `hvac-uv-lights-vs-air-filter-hero.webp` (80,732 bytes). It shows a homeowner holding an unbranded pleated filter beside closed air-handling equipment and a separate, fully enclosed generic UV accessory housing. It contains no visible operating lamp, purple glow, exposed wiring, open service panel, product branding, health claim, universal equipment geometry, or implication that the UV device replaces the filter. The hero is eager/high priority; no decorative supporting image was added.
 

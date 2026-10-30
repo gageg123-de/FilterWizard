@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-10-28
+Last verified: 2026-10-29
+
+## 2026-10-29 article #47 publication
+
+Article #47, *Do Mini-Splits Have Air Filters? Types, Location & Cleaning*, was published at `/blog/do-mini-splits-have-air-filters.html` after independent review passed topic-reality, search-intent, current-audit consistency, duplicate, furnace-versus-AC, washable-versus-disposable, HVAC-filter-versus-portable-cleaner, MERV, information-gain, technical-accuracy, safety, relevance, commercial-independence, and post-draft intent gates. It owns mini-split indoor-unit filter presence, location, configuration, primary-mesh versus specialty-media care, model-specific cleaning/replacement boundaries, and fine-particle limitations. Existing central-HVAC terminology, conventional washable/disposable, portable-cleaner, and MERV pages retain their intents. The guide adds zero retailer blocks and zero Finder CTAs. The newest accessible October 19 Search Console export disclosed no mini-split-specific query, and no verified numeric search-volume data was available. Article #48 remains unapproved.
 
 ## 2026-10-28 article #46 publication
 

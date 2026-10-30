@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-10-28
+Last verified: 2026-10-29
+
+## Mini-split air-filter intent — 2026-10-29
+
+The new `/blog/do-mini-splits-have-air-filters.html` page owns whether residential mini-split indoor units have filters, where common configurations place them, which primary screens or specialty media may be washable or replaceable, and why typical screens should not be treated as central-HVAC filters or assumed fine-particle filters. The furnace-versus-AC page retains central forced-air terminology; washable-versus-disposable retains conventional HVAC-filter lifecycle comparison; the portable-cleaner page retains room-air-cleaner selection; MERV pages retain rated-filter selection. No exact-query first-party GSC evidence or verified numeric search volume is claimed. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, nine matched FAQs, and contextual incoming link from the furnace-versus-AC guide reinforce the narrow intent without a Finder or retailer path.
 
 ## HVAC UV treatment versus filtration intent — 2026-10-28
 
