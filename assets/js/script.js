@@ -4,6 +4,11 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
 const heroFinderCta = document.querySelector("[data-hero-finder-cta]");
 const finderStartButton = document.querySelector("[data-finder-start]");
+const homepageShoppingForm = document.querySelector("[data-homepage-shopping-form]");
+const homepageFilterSize = document.querySelector("[data-homepage-filter-size]");
+const homepageMerv = document.querySelector("[data-homepage-merv]");
+const homepageShoppingError = document.querySelector("[data-homepage-shopping-error]");
+const homepageShoppingResults = document.querySelector("[data-homepage-shopping-results]");
 const finderModal = document.querySelector("[data-finder-modal]");
 const finderModalCard = document.querySelector(".finder-modal");
 const finderCloseButton = document.querySelector("[data-finder-close]");
@@ -99,6 +104,8 @@ let finderAnalysisStepTimer = null;
 let retailerViewedObserver = null;
 let retailerViewedTracked = false;
 let articlePageViewTracked = false;
+let homepageShoppingEngaged = false;
+let homepageShoppingResultSignature = "";
 const articleScrollDepthTracked = new Set();
 
 const finderAnalyticsState = {
@@ -1598,6 +1605,237 @@ function getRetailerLinks(result) {
   ];
 }
 
+function getHomepageMervPreference(value) {
+  if (value === "MERV 8") return "merv_8";
+  if (value === "MERV 11") return "merv_11";
+  if (value === "MERV 13") return "merv_13";
+  if (value === "not-sure") return "not_sure";
+  return "not_selected";
+}
+
+function trackHomepageShoppingEngagement() {
+  if (homepageShoppingEngaged || !homepageShoppingForm) return;
+  homepageShoppingEngaged = true;
+  trackEvent("homepage_shopping_selector_engaged", {
+    page_path: window.location.pathname
+  });
+}
+
+function clearHomepageShoppingResult() {
+  if (homepageShoppingError) {
+    homepageShoppingError.textContent = "";
+    homepageShoppingError.hidden = true;
+  }
+  if (homepageShoppingResults) {
+    homepageShoppingResults.innerHTML = "";
+    homepageShoppingResults.hidden = true;
+  }
+}
+
+function createHomepageGuidanceButton(label, entryPoint) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "btn btn-secondary";
+  button.textContent = label;
+  button.dataset.homepageFinderLaunch = "";
+  button.dataset.entryPoint = entryPoint;
+  return button;
+}
+
+function renderHomepageShoppingGuidance({ type, size = "", merv = "" }) {
+  if (!homepageShoppingResults) return;
+
+  const card = document.createElement("div");
+  card.className = "shopping-guidance-card";
+
+  const title = document.createElement("h3");
+  const copy = document.createElement("p");
+  const actions = document.createElement("div");
+  actions.className = "shopping-guidance-actions";
+
+  if (type === "size_help") {
+    title.textContent = "Confirm your full filter size first";
+    copy.textContent = "A retailer search is only shown after you select a supported three-part size. Check the label or measure the existing filter and holder before ordering.";
+
+    const sizingLink = document.createElement("a");
+    sizingLink.className = "btn btn-primary";
+    sizingLink.href = "/blog/how-to-find-your-air-filter-size.html";
+    sizingLink.textContent = "How to Find Your Size";
+    actions.append(sizingLink, createHomepageGuidanceButton("Launch Filter Finder", "homepage_size_help"));
+  } else {
+    title.textContent = "Choose a MERV rating with your system in mind";
+    copy.textContent = "Filter Wizard will not guess a rating. Review the MERV comparison or use the guided Finder, then confirm the equipment supports your choice.";
+
+    const mervLink = document.createElement("a");
+    mervLink.className = "btn btn-primary";
+    mervLink.href = "/blog/merv-8-vs-merv-11-vs-merv-13.html";
+    mervLink.textContent = "Compare MERV Ratings";
+    actions.append(mervLink);
+
+    const selectedOption = homepageFilterSize?.selectedOptions?.[0];
+    const sizeGuide = selectedOption?.dataset?.sizeGuide;
+    if (sizeGuide) {
+      const sizeLink = document.createElement("a");
+      sizeLink.className = "btn btn-secondary";
+      sizeLink.href = sizeGuide;
+      sizeLink.textContent = `${size} Size Guide`;
+      actions.append(sizeLink);
+    }
+    actions.append(createHomepageGuidanceButton("Launch Filter Finder", "homepage_merv_help"));
+  }
+
+  card.append(title, copy, actions);
+  homepageShoppingResults.replaceChildren(card);
+  homepageShoppingResults.hidden = false;
+  homepageShoppingResults.focus({ preventScroll: true });
+
+  trackEvent("homepage_shopping_guidance_viewed", {
+    guidance_type: type,
+    filter_size: size || "unknown",
+    merv_preference: getHomepageMervPreference(merv),
+    page_path: window.location.pathname
+  });
+}
+
+function renderHomepageBuyingOptions(size, merv) {
+  if (!homepageShoppingResults) return;
+
+  const result = {
+    productSize: size,
+    productMerv: merv,
+    recommendedFilterType: merv
+  };
+  const searchQuery = buildRetailerSearchQuery(result);
+  const header = document.createElement("div");
+  header.className = "shopping-result-header";
+
+  const headingGroup = document.createElement("div");
+  const title = document.createElement("h3");
+  title.textContent = `Buying options for ${size}`;
+  const summary = document.createElement("p");
+  summary.textContent = `${merv} selected. These links open retailer searches, not guaranteed product matches.`;
+  headingGroup.append(title, summary);
+
+  const pill = document.createElement("span");
+  pill.className = "shopping-result-pill";
+  pill.textContent = "Size confirmed by you";
+  header.append(headingGroup, pill);
+
+  const grid = document.createElement("div");
+  grid.className = "shopping-retailer-grid";
+  const retailerLinks = getRetailerLinks(result);
+
+  retailerLinks.forEach((retailer) => {
+    const card = document.createElement("article");
+    card.className = "finder-retailer-card";
+    if (retailer.featured) {
+      card.classList.add("is-recommended");
+      const badge = document.createElement("span");
+      badge.className = "finder-retailer-badge";
+      badge.textContent = retailer.badge || "Affiliate link";
+      card.appendChild(badge);
+    }
+
+    const retailerTitle = document.createElement("strong");
+    retailerTitle.textContent = retailer.name;
+    const retailerCopy = document.createElement("p");
+    retailerCopy.textContent = retailer.name === "Amazon"
+      ? "Search Amazon for your confirmed size and selected MERV"
+      : retailer.subtext;
+    const link = document.createElement("a");
+    link.className = "btn btn-secondary";
+    link.href = retailer.url;
+    link.target = "_blank";
+    link.rel = "nofollow sponsored noopener";
+    link.textContent = retailer.affiliate ? "Search Amazon" : "View Options";
+    link.dataset.retailerName = retailer.name;
+    link.dataset.retailerUrl = retailer.url;
+    link.dataset.linkLocation = "homepage-shopping-selector";
+    if (retailer.name === "Amazon") link.dataset.filterSize = size;
+    link.addEventListener("click", () => {
+      trackEvent("homepage_shopping_retailer_clicked", {
+        retailer: retailer.name,
+        filter_size: size,
+        merv_preference: getHomepageMervPreference(merv),
+        search_query: searchQuery,
+        link_location: "homepage_shopping_selector",
+        is_affiliate_retailer: Boolean(retailer.affiliate),
+        affiliate_tag_present: retailer.name === "Amazon" ? hasAmazonAffiliateTag(retailer.url) : false,
+        page_path: window.location.pathname
+      });
+    });
+    card.append(retailerTitle, retailerCopy, link);
+    grid.appendChild(card);
+  });
+
+  const disclosure = document.createElement("p");
+  disclosure.className = "shopping-affiliate-note";
+  disclosure.textContent = "Affiliate disclosure: We may earn a commission from qualifying purchases made through Amazon links, at no extra cost to you.";
+  const warning = document.createElement("p");
+  warning.className = "shopping-result-warning";
+  warning.textContent = merv === "MERV 13"
+    ? "Confirm actual dimensions, fit, and manufacturer guidance before ordering. MERV 13 is not automatically suitable for every HVAC system."
+    : "Confirm actual dimensions, fit, and manufacturer guidance before ordering. Matching the nominal label alone does not guarantee compatibility.";
+
+  homepageShoppingResults.replaceChildren(header, grid, disclosure, warning);
+  homepageShoppingResults.hidden = false;
+  homepageShoppingResults.focus({ preventScroll: true });
+
+  const signature = `${size}|${merv}`;
+  if (homepageShoppingResultSignature !== signature) {
+    homepageShoppingResultSignature = signature;
+    trackEvent("homepage_buying_options_viewed", {
+      filter_size: size,
+      merv_preference: getHomepageMervPreference(merv),
+      retailer_count: retailerLinks.length,
+      page_path: window.location.pathname
+    });
+  }
+}
+
+function handleHomepageShoppingSubmit(event) {
+  event.preventDefault();
+  trackHomepageShoppingEngagement();
+  clearHomepageShoppingResult();
+
+  const size = homepageFilterSize?.value || "";
+  const merv = homepageMerv?.value || "";
+  if (!size || !merv) {
+    if (homepageShoppingError) {
+      homepageShoppingError.textContent = !size
+        ? "Choose your full filter size before continuing."
+        : "Choose a MERV rating or select Not sure.";
+      homepageShoppingError.hidden = false;
+    }
+    (!size ? homepageFilterSize : homepageMerv)?.focus();
+    return;
+  }
+
+  if (size === "other") {
+    renderHomepageShoppingGuidance({ type: "size_help", merv });
+    return;
+  }
+
+  if (merv === "not-sure") {
+    renderHomepageShoppingGuidance({ type: "merv_help", size, merv });
+    return;
+  }
+
+  renderHomepageBuyingOptions(size, merv);
+}
+
+function handleHomepageFinderLaunch(event) {
+  const launch = event.target.closest?.("[data-homepage-finder-launch]");
+  if (!launch) return;
+  event.preventDefault();
+  const entryPoint = launch.dataset.entryPoint || "homepage_secondary";
+  trackEvent("homepage_filter_finder_launched", {
+    entry_point: entryPoint,
+    page_path: window.location.pathname
+  });
+  openFinderModal(launch);
+}
+
 function setupRetailerViewedTracking(result) {
   if (!finderRetailerBlock || typeof IntersectionObserver !== "function") return;
   if (!hasConfirmedFilterSize(result)) return;
@@ -2302,9 +2540,33 @@ window.addEventListener("scroll", updateReadingProgress, { passive: true });
 window.addEventListener("resize", updateReadingProgress);
 consentManager.initialize();
 
+homepageShoppingForm?.addEventListener("focusin", trackHomepageShoppingEngagement, { once: true });
+homepageShoppingForm?.addEventListener("submit", handleHomepageShoppingSubmit);
+homepageFilterSize?.addEventListener("change", () => {
+  clearHomepageShoppingResult();
+  const filterSize = homepageFilterSize.value;
+  if (!filterSize) return;
+  trackHomepageShoppingEngagement();
+  trackEvent("homepage_filter_size_selected", {
+    filter_size: filterSize === "other" ? "other_or_unknown" : filterSize,
+    selection_type: filterSize === "other" ? "other_or_unknown" : "published_size",
+    page_path: window.location.pathname
+  });
+});
+homepageMerv?.addEventListener("change", () => {
+  clearHomepageShoppingResult();
+  if (!homepageMerv.value) return;
+  trackHomepageShoppingEngagement();
+  trackEvent("homepage_merv_preference_selected", {
+    merv_preference: getHomepageMervPreference(homepageMerv.value),
+    page_path: window.location.pathname
+  });
+});
+
 document.addEventListener("click", trackAmazonClick);
 document.addEventListener("click", trackArticleFilterFinderClick);
 document.addEventListener("click", trackFilterSizePageClick);
+document.addEventListener("click", handleHomepageFinderLaunch);
 document.addEventListener("click", (event) => {
   const restartControl = event.target.closest?.('[data-filter-action="restart"]');
   if (!restartControl) return;
