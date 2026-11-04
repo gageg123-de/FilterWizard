@@ -1,6 +1,12 @@
 # Roadmap
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
+
+## 2026-11-04 shopping-first homepage redesign
+
+The homepage was redesigned around a direct size-first shopping selector while preserving the four-step Filter Finder as the guided alternative. The selector exposes only the nine published three-dimensional sizes, requires an explicit MERV 8, 11, or 13 selection before showing four retailer searches, and routes unknown size or MERV choices to sizing/MERV guidance without guessing. It reuses the established retailer URL builder, Amazon Store ID `filterwizard-20`, sponsored attributes, consent-first analytics, and compatibility warnings. The page also links all nine size guides and four established buying guides; no new size page, inventory, price, stock, rating, product, or compatibility claim was created.
+
+Rollback is protected by annotated tag `homepage-pre-shopping-redesign-2026-11-04`, implementation commit `9c37a1640aeeb7f0f61051e81b1a5b0809caba99`, the noindex `/legacy-homepage/` preview, and [`HOMEPAGE_ROLLBACK.md`](HOMEPAGE_ROLLBACK.md). Success is unproven at launch. Measure qualified affiliate retailer clicks per homepage session plus selector, buying-option, Finder, and outbound behavior before considering another conversion experiment.
 
 ## 2026-10-29 article #47 publication
 
@@ -112,7 +118,7 @@ Three fresh concepts remain research survivors, not implementation approvals: *S
 
 ## Implemented
 
-Static custom-domain site; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-four articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
+Static custom-domain site; shopping-first published-size selector; four-step Finder; known/unknown size safety; validation/autocomplete; MERV/schedule/cost logic; product illustrations; retailer comparisons; Amazon Store ID and click tracking; optional email capture; consent; GA4/Clarity; forty-seven articles; nine hand-authored size pages; text-only previews; legal/sitemap/robots/security files.
 
 ## Near-term candidates
 

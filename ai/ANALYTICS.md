@@ -1,6 +1,24 @@
 # Analytics
 
-Last verified: 2026-10-07
+Last verified: 2026-11-04
+
+## Shopping-first homepage measurement — 2026-11-04
+
+The redesigned homepage preserves GA4 `G-64VWBW3NHS`, Clarity `xbqsjc3yut`, denied-by-default Google consent, `filterWizardConsent`, the complete Finder taxonomy, Formspree tracking, and delegated `amazon_click`. It adds these direct-shopping events:
+
+| Event | Parameters | Meaning |
+|---|---|---|
+| `homepage_shopping_selector_engaged` | `page_path` | First focus or submission in the direct selector per page load |
+| `homepage_filter_size_selected` | `filter_size`, `selection_type`, `page_path` | Published size or static `other_or_unknown` selection |
+| `homepage_merv_preference_selected` | `merv_preference`, `page_path` | Static `merv_8`, `merv_11`, `merv_13`, or `not_sure` choice |
+| `homepage_buying_options_viewed` | `filter_size`, `merv_preference`, `retailer_count`, `page_path` | Qualified retailer results shown for a unique size/MERV pair |
+| `homepage_shopping_guidance_viewed` | `guidance_type`, `filter_size`, `merv_preference`, `page_path` | Size or MERV uncertainty guidance shown with no retailers |
+| `homepage_shopping_retailer_clicked` | `retailer`, `filter_size`, `merv_preference`, `search_query`, `link_location`, `is_affiliate_retailer`, `affiliate_tag_present`, `page_path` | One direct-selector retailer click |
+| `homepage_filter_finder_launched` | `entry_point`, `page_path` | Finder launched from a homepage shopping/guidance entry point |
+
+All values come from fixed controls or published size records; the selector has no free-form field and emits no email or raw invalid-size text. One Amazon click intentionally emits both `homepage_shopping_retailer_clicked` and existing `amazon_click`: the former attributes the direct-shopping funnel, while the latter retains sitewide Amazon attribution. Browser validation confirmed a single emission of each for one click. Repository tests prove event emission and consent updates, not GA4/Clarity dashboard receipt.
+
+Primary KPI: qualified affiliate retailer clicks per homepage session. Secondary observations: selector engagement, buying-option view rate, direct-shopping outbound click rate, Finder starts/completions, Finder-assisted outbound clicks, and homepage engagement. No conversion lift or baseline is claimed at launch.
 
 The filter-slot-cover guide reuses the existing consent-first GA4 and Clarity initializer plus shared article view, scroll-depth, share, and Formspree interaction behavior. Its article slug and email source are `does-furnace-filter-slot-need-cover` and `blog-furnace-filter-slot-cover`. It intentionally has no Filter Finder CTA or retailer block and adds no script, listener, event, parameter, or raw-email storage.
 
@@ -42,13 +60,14 @@ This file documents instrumentation, not legal compliance or confirmed dashboard
 - Inputs/errors: `filter_size_path_selected`, `filter_size_entered`, `filter_conditions_selected`, invalid size, conditions required, post-result size confirmation.
 - Actions: buying options, save/continue links, retailer click/view, confirm-size help, copy.
 - Affiliate: `amazon_click`, missing-tag diagnostic.
+- Homepage direct shopping: selector engagement, published-size/MERV selection, buying-options/guidance views, direct retailer click, and secondary Finder launch.
 - Articles: `article_page_view`, `article_scroll_depth`, `article_share_click`, `article_filter_finder_click`.
 - Filter-size pilot: `filter_size_page_view`, `filter_size_page_filter_finder_click`, `filter_size_page_retailer_click`, `filter_size_page_related_article_click`.
 - Leads: configured form-specific event plus `generate_lead`; hero Finder click is also tracked.
 
 Parameters include normalized size, MERV, interval, replacements/year, confidence, conditions, location, source, link URL/location, and article slug. Invalid inputs send length, not raw text. Email events send `has_email`, not the address.
 
-Size-page events use only the static page size (one of the six published nominal sizes), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
+Size-page events use only the static page size (one of the nine published nominal sizes), CTA location, retailer name/link location, related article slug and page path. They do not capture user-entered measurements. Amazon clicks also pass through the existing delegated `amazon_click` handler; this is a distinct attribution event, not a second `filter_size_page_retailer_click`.
 
 ## Testing and risks
 

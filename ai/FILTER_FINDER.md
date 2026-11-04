@@ -1,8 +1,8 @@
 # Filter Finder
 
-Last verified: 2026-09-21
+Last verified: 2026-11-04
 
-The Finder exists only on [`../index.html`](../index.html). Entry points include the hero CTA, inline Finder CTA, navigation/anchor links, article links to `/#filter-finder`, and restart controls. [`../assets/js/script.js`](../assets/js/script.js) controls it.
+The Finder exists only on [`../index.html`](../index.html). It is the guided alternative to the homepage's direct published-size shopping selector. Entry points include the selector's “Help Me Choose” action, guided-Finder card, navigation/anchor links, article and size-page links to `/#filter-finder`, dynamically rendered uncertainty guidance, and restart controls. [`../assets/js/script.js`](../assets/js/script.js) controls it. The direct selector is a separate entry path and does not change Finder questions, recommendation math, result storage, email behavior, or known/unknown-size safeguards.
 
 This file owns the user journey and interaction contract. Exact recommendation math belongs to [`FILTER_LOGIC.md`](FILTER_LOGIC.md), retailer eligibility/link rules to [`AFFILIATE.md`](AFFILIATE.md), event semantics to [`ANALYTICS.md`](ANALYTICS.md), and acceptance testing to [`TESTING.md`](TESTING.md).
 

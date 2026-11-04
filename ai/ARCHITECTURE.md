@@ -1,6 +1,6 @@
 # Architecture
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
 
 ## Actual stack
 
@@ -10,7 +10,8 @@ Architecture constraints are current facts, not permanent preferences. Adding a 
 
 ## Directory map
 
-- [`../index.html`](../index.html): homepage, Finder markup, modal, result UI, and general email form.
+- [`../index.html`](../index.html): shopping-first homepage, published-size/MERV selector, Finder markup, modal, result UI, and result email form.
+- [`../legacy-homepage/index.html`](../legacy-homepage/index.html): noindex archived preview of the pre-redesign homepage; it retains `/` as canonical and is excluded from the sitemap.
 - [`../assets/css/style.css`](../assets/css/style.css): all shared styles and responsive rules.
 - [`../assets/js/script.js`](../assets/js/script.js): navigation, reveal effects, consent, Finder, forms, shares, article tracking, retailer links.
 - [`../blog/`](../blog/): index plus forty-seven hand-authored articles.
@@ -37,6 +38,7 @@ Runtime integrations are GA4, Microsoft Clarity, Formspree, Amazon, Home Depot, 
 | Navigation/footer | Every production HTML page; verify duplication |
 | Add article | New `blog/*.html`, `blog/index.html`, homepage previews, `sitemap.xml`, reciprocal links |
 | Add filter-size page | Add one gated record to `data/filter-sizes.json`, follow `FILTER_SIZE_PAGES.md`, generate with `node tools/filter-size-pages.mjs generate <slug>`, and validate before indexing |
+| Homepage shopping selector | `index.html`, shopping-home rules in `style.css`, guarded selector logic in `script.js` |
 | Finder questions/UI | `index.html`, `style.css`, `script.js` |
 | Size/MERV/schedule/cost logic | `script.js` functions documented in `FILTER_LOGIC.md` |
 | Amazon behavior | `amazonAffiliateTag`, `buildRetailerSearchQuery`, `getRetailerLinks`, click tracking in `script.js` |

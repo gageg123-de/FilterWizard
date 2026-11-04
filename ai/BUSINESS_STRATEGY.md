@@ -1,12 +1,18 @@
 # Business Strategy
 
-Last verified: 2026-09-16
+Last verified: 2026-11-04
 
 ## Strategic thesis
 
 Filter Wizard earns trust by helping a homeowner move from uncertainty to a physically confirmed filter size, a cautious filtration recommendation, a practical replacement interval, and an informed retailer search. The free utility and useful content are the acquisition and trust products; near-term revenue is Amazon Associates commission after the user has enough information to shop safely.
 
 The defensible advantage is not a proprietary catalog today. It is a low-friction decision flow, clear uncertainty boundaries, useful homeowner education, and consistent measurement of where users need help. Do not trade those advantages for higher click volume through premature or overconfident recommendations.
+
+## Shopping-first homepage decision — 2026-11-04
+
+The homepage now gives a qualified shopper who already knows a published three-part size a direct path to retailer searches after an explicit MERV 8, 11, or 13 choice. The existing Filter Finder remains the secondary guided path for uncertainty. An unknown size, an unsupported size, or an uncertain MERV never receives a guessed retailer query. The primary evaluation KPI is qualified affiliate retailer clicks per homepage session; secondary observations are selector engagement, buying-option views, direct-shopping outbound clicks, Finder starts/completions, Finder-assisted outbound clicks, and overall homepage engagement.
+
+This is a measurement hypothesis, not evidence of improved conversion. Traffic is low enough that directional behavior and Clarity session review may become useful before statistical confidence. Compare post-launch data with the protected pre-redesign period and do not add another homepage experiment until enough clean data accumulates.
 
 ## Primary audience and jobs
 

@@ -1,6 +1,6 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
 
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
@@ -23,7 +23,7 @@ The audit tool treats contextual body and size-neighbor links as contextual. Sel
 
 ## Inventory and intent ownership
 
-The sitemap contains 62 indexable URLs: the homepage, blog index, 47 blog articles, nine size guides, and four legal pages. The 58 non-legal content pages are the graph-analysis set. The homepage owns the Filter Finder and product-entry intent; the blog index owns guide discovery rather than a substantive filter question.
+The sitemap contains 62 indexable URLs: the homepage, blog index, 47 blog articles, nine size guides, and four legal pages. The 58 non-legal content pages are the graph-analysis set. The homepage owns direct published-size/MERV shopping entry plus the guided Filter Finder; the blog index owns guide discovery rather than a substantive filter question. The noindex `/legacy-homepage/` preview is intentionally absent from the sitemap and graph set.
 
 The mini-split-filter guide owns indoor-unit filter presence, location, configuration, primary-mesh versus specialty-media care, model-specific maintenance boundaries, and typical fine-particle limits. It links contextually to furnace-versus-AC terminology, conventional washable-versus-disposable filters, and portable air cleaning. The furnace-versus-AC guide supplies one justified incoming contextual link. Related Articles reinforce those three boundaries. No Finder CTA or retailer path is added because Filter Finder does not identify appliance-specific mini-split screens or media.
 
@@ -33,7 +33,7 @@ The renovation-HVAC guide owns central-system operation and protection during du
 
 The thermostat-filter-reminder guide owns the meaning and limits of a Change/Replace Filter message and routes detailed timing, appearance, clogging, location, and installation questions to their existing owners. The replacement-timing guide supplies its justified contextual incoming link. Related Articles reinforce timing, still-clean interpretation, and clogged-filter diagnosis. No Finder CTA or retailer path is added because the reminder question can be answered independently of shopping.
 
-The post-publication audit reports 1,898 internal links, 1,019 unique edges, 597 contextual links, 556 unique contextual edges, average incoming 28.52, average contextual incoming 10.29, median contextual incoming six, maximum homepage depth three, no pages at depth four or greater, no unreachable pages, no broken local links, and no broken fragments. The mini-split and HVAC-UV guides each have one contextual incoming source, which is appropriate for newly published narrow-intent pages.
+The post-redesign audit reports 1,911 internal links, 1,029 unique edges, 613 contextual links, 570 unique contextual edges, average incoming 28.74, average contextual incoming 10.57, median contextual incoming 6.5, maximum homepage depth two, no pages at depth four or greater, no unreachable pages, no broken local links, and no broken fragments. The homepage now links every published size guide and four established buying-guide owners without creating a size hub or changing article intent. Its zero contextual incoming count is expected because the homepage is the graph root.
 
 | Cluster | Primary intent owner | Specialized members |
 |---|---|---|

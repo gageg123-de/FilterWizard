@@ -1,23 +1,24 @@
 # Project
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
 
 ## Mission and audience
 
-Filter Wizard helps homeowners—especially mobile users who may not know HVAC terminology—avoid buying the wrong air filter and remember practical replacement timing. The value proposition is free size guidance, cautious MERV guidance, replacement scheduling, estimated annual filter cost, and retailer comparison.
+Filter Wizard helps homeowners—especially mobile users who may not know HVAC terminology—avoid buying the wrong air filter and remember practical replacement timing. The value proposition is a direct, size-first retailer-search path for shoppers who already know their filter, plus free size guidance, cautious MERV guidance, replacement scheduling, estimated annual filter cost, and retailer comparison through the guided Filter Finder.
 
 ## Implemented now
 
 For the strategic thesis, audience jobs, funnel, success measures, and investment gates, see [`BUSINESS_STRATEGY.md`](BUSINESS_STRATEGY.md). This file owns the concise product definition and implementation-status boundary.
 
 - Static custom-domain website at `filter-wizard.com`.
-- Four-step Filter Finder in [`../index.html`](../index.html), powered by [`../assets/js/script.js`](../assets/js/script.js).
+- Shopping-first homepage selector in [`../index.html`](../index.html) for the nine published sizes and an explicit MERV 8, 11, or 13 choice; unknown size or MERV routes to guidance without guessing or exposing retailer links.
+- Four-step Filter Finder in [`../index.html`](../index.html), powered by [`../assets/js/script.js`](../assets/js/script.js), remains the secondary guided path.
 - Known-size validation and autocomplete; unknown-size measurement/location guidance.
 - MERV 8/11/13 recommendations with compatibility cautions.
 - 45/60/75/90-day schedules, reminder months, and price-range-based annual estimates.
 - Amazon, Home Depot, Lowe's, and Filterbuy search options after size confirmation.
 - Amazon Associates Store ID `filterwizard-20`.
-- Forty-seven blog articles, a blog index, homepage guide previews, legal pages, email-interest capture, GA4, Clarity, and consent controls.
+- Forty-seven blog articles, a blog index, concise homepage buying-guide cards, an archived noindex homepage preview, legal pages, email-interest capture, GA4, Clarity, and consent controls.
 - Nine production filter-size guides: 20x25x1, 16x25x1, 20x20x1, 16x20x1, 14x20x1, 14x25x1, 16x24x1, 18x20x1 and 24x24x1 under [`../filter-sizes/`](../filter-sizes/).
 - A dependency-free, authoring-time filter-size manifest/generator/validator. It preserves the nine static production pages and blocks unvalidated candidate sizes from deployment.
 
@@ -25,7 +26,7 @@ For the strategic thesis, audience jobs, funnel, success measures, and investmen
 
 - Current monetization: Amazon affiliate clicks. Other retailer links are comparisons, not verified affiliate relationships.
 - Acquisition: organic search, practical blog content, Pinterest assets already stored under [`../assets/images/social/pinterest/`](../assets/images/social/pinterest/), and social sharing.
-- Conversions: complete the Finder, click a retailer, submit an optional email, or continue reading.
+- Conversions: use the direct size-first shopping path, complete the Finder, click a retailer, submit an optional email, or continue reading.
 
 ## Status boundaries
 
@@ -40,6 +41,7 @@ Near-term direction: validate content traffic, Finder completion, affiliate clic
 ## Product invariants
 
 - Physical size is user-confirmed; the Finder does not discover or guarantee dimensions.
+- The homepage shopping selector is limited to published three-dimensional sizes. “Other or unknown” and “Not sure” choices must not produce retailer links.
 - MERV output is household guidance, not equipment compatibility approval or medical advice.
 - Retailer options require a parseable confirmed size and remain choices, not endorsements.
 - Email is optional. The repository submits reminder interest to Formspree, but contains no automated scheduler or delivery system and cannot prove that reminder emails are sent.

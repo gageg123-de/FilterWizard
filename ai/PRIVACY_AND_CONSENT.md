@@ -1,6 +1,6 @@
 # Privacy and Consent
 
-Last verified: 2026-09-21
+Last verified: 2026-11-04
 
 This is implementation documentation, not legal advice or a compliance guarantee. Policies require professional review when services or practices change.
 
@@ -11,6 +11,8 @@ This file owns the technical data-flow and consent contract. Security controls b
 The choice is stored in local storage as `filterWizardConsent` with version 1, timestamp, analytics value, and 183-day maximum age. Users can reopen settings through footer `data-cookie-settings` buttons. Google Consent Mode is defaulted before GA configuration. Clarity receives `consentv2`; it retries briefly until Clarity is available.
 
 Session storage key `filterWizardFinderEntryContext` holds only a static article slug or published nominal size, a fixed CTA-location label, and a timestamp. It exists to preserve the Finder entry source across same-tab navigation, is consumed on the next Finder open, and is ignored after 30 minutes. It contains no email, free-form text, or raw invalid-size value.
+
+The homepage direct-shopping selector adds no storage key, free-form input, personal data, or new third party. Analytics values are limited to fixed MERV choices, one of nine published sizes or the static `other_or_unknown` label, retailer identity, fixed entry/location labels, and the generated retailer search query. Consent behavior and script-loading order are unchanged.
 
 GA and Clarity script resources are loaded on production pages regardless of choice, while storage consent defaults denied. Do not describe this as “analytics scripts load only after acceptance.” If a jurisdiction or policy requires no pre-consent network load, the architecture must change and be legally reviewed.
 

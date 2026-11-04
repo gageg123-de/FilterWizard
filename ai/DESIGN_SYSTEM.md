@@ -1,6 +1,6 @@
 # Design System
 
-Last verified: 2026-07-19
+Last verified: 2026-11-04
 
 The project has a shared stylesheet and recognizable patterns, but not a fully formal component library.
 
@@ -18,8 +18,9 @@ Typography uses system UI/Inter fallbacks, responsive `clamp()` sizes, strong na
 - Article figures use 3:2 images, `width:100%`, `height:auto`, rounded corners, and captions.
 - `.page-breadcrumb` provides the reusable visible breadcrumb treatment; the 20x25x1 pilot also reuses article, table, MERV, FAQ, related-link and retailer-card components.
 - `.guide-link` marks an inline link to a deeper guide with primary blue, a default underline, medium emphasis and a trailing arrow while retaining the global focus outline.
+- The shopping homepage adds scoped `.shopping-*` and `.guided-finder-*` components for the hero selector, live results, size tiles, concise guide cards, trust panel, and secondary Finder card. It reuses the existing palette, buttons, retailer cards, reveal behavior, modal, and focus conventions rather than creating a second site theme. The archived preview uses only `.legacy-preview-banner` in addition to the original page markup.
 
-Breakpoints: 980px, 820px, and 640px; reduced motion is handled with `prefers-reduced-motion: reduce`. Mobile patterns collapse grids, simplify padding, keep touch controls large, and constrain modal height/scrolling.
+Breakpoints include 980px, 820/768px, and 640px; reduced motion is handled with `prefers-reduced-motion: reduce`. Mobile patterns collapse grids, simplify padding, keep touch controls large, and constrain modal height/scrolling.
 
 Rules: reuse tokens/classes; do not introduce a per-article visual language; test 320px and long text; maintain blue functional CTAs, green positive states, and amber caution states; preserve visible focus; cache-bust CSS query strings on affected pages after production CSS changes.
 

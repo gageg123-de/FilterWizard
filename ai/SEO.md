@@ -1,6 +1,12 @@
 # SEO
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
+
+## Shopping-first homepage — 2026-11-04
+
+The canonical homepage remains `https://filter-wizard.com/` and now owns direct replacement-filter shopping by a user-confirmed published size plus an explicit MERV choice, with the Filter Finder as the uncertainty path. Its unique title is `Filter Wizard | Find Air Filters by Size & MERV`; the description states size/MERV retailer searches and cautious Finder guidance without claiming inventory, fulfillment, automatic sizing, or guaranteed compatibility. Existing article, size-guide, sitemap, robots, and structured-data URLs are unchanged.
+
+The original homepage is available at `/legacy-homepage/` solely as a rollback preview. It has `noindex, follow`, retains the canonical homepage URL, is absent from `sitemap.xml`, and is visibly labeled as archived. It must never become a second indexable homepage or receive its own canonical.
 
 ## Mini-split air-filter intent — 2026-10-29
 

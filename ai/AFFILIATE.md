@@ -1,6 +1,12 @@
 # Affiliate Integration
 
-Last verified: 2026-10-07
+Last verified: 2026-11-04
+
+## Shopping-first homepage path — 2026-11-04
+
+The homepage direct-shopping selector reuses `buildRetailerSearchQuery` and `getRetailerLinks`; it does not introduce a second retailer URL builder or affiliate-tag source. A shopper receives Amazon, Home Depot, Lowe's, and Filterbuy searches only after selecting one of the nine published three-dimensional sizes and MERV 8, 11, or 13. `Other or unknown` size and `Not sure` MERV choices produce guidance and no retailer links. The Amazon query uses the selected size and MERV, carries `filterwizard-20`, opens in a new tab, and uses `nofollow sponsored noopener`. Amazon is labeled as an affiliate link, not an independently recommended retailer. Compatibility and affiliate disclosures appear beside the results; no price, inventory, availability, rating, savings, shipping, fulfillment, or guaranteed-fit claim is made.
+
+Direct-path clicks emit `homepage_shopping_retailer_clicked`; Amazon clicks also emit the existing `amazon_click` for Amazon-specific attribution. These two event names answer different questions and must not be interpreted as two outbound actions.
 
 The filter-slot-cover guide has maintenance and safety intent, zero retailer blocks, and zero Filter Finder CTAs. It adds no product recommendation, cover affiliate link, cabinet part link, retailer behavior, or tracking change. The existing size gate and Amazon Store ID `filterwizard-20` remain unchanged.
 

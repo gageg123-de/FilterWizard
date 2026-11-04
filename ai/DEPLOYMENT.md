@@ -1,6 +1,6 @@
 # Deployment
 
-Last verified: 2026-07-19
+Last verified: 2026-11-04
 
 ## Repository evidence
 
@@ -26,6 +26,8 @@ Evidence labels and inference rules are defined in [`DECISION_FRAMEWORK.md`](DEC
 Review/test a focused branch, merge or push only with approval, observe GitHub Pages deployment, then check homepage, blog, Finder, assets, legal/security URLs, sitemap, consent, analytics, and Amazon tag on production. Account for CDN/browser cache and asset query versions.
 
 Rollback by identifying the last known-good commit, creating a focused revert commit, reviewing/testing it, and deploying normally. Do not delete/reclone the repository or use destructive reset as the default.
+
+The 2026-11-04 homepage release has a dedicated tested runbook in [`HOMEPAGE_ROLLBACK.md`](HOMEPAGE_ROLLBACK.md), annotated baseline tag `homepage-pre-shopping-redesign-2026-11-04`, and noindex `/legacy-homepage/` preview. Prefer reverting its isolated implementation commit over restoring shared files blindly.
 
 Known failure risks: wrong workspace, stale cached CSS/JS, missing root files, broken root-relative paths, unverified Pages source, and DNS/cache differences.
 
