@@ -10,9 +10,9 @@ This file owns the user journey and interaction contract. Exact recommendation m
 flowchart TD
   A[Open modal] --> B{Know size?}
   B -->|Yes| C[Enter and validate L x W x D]
-  B -->|Not sure| D[Continue without size]
+  B -->|Not sure| D[Illustrated size-label guidance]
+  D --> E[Continue without size]
   C --> E[Choose location]
-  D --> E
   E --> F[Choose one or more home conditions]
   F --> G[Review]
   G --> H[1.5 second analysis state]
@@ -26,7 +26,7 @@ flowchart TD
 
 ## Steps and validation
 
-1. `Yes, I know it` or `Not sure`. Known-size requires a realistic three-part size; selecting `Not sure` clears size state.
+1. `Yes, I know it` or `Not sure`. Known-size requires a realistic three-part size; selecting `Not sure` clears size state and opens one illustrated help screen before location. The example `20 × 25 × 1` is educational only and never becomes the user's size.
 2. Ceiling return, wall return, furnace/air handler, or unknown location.
 3. Pets, allergies, heavy dust, kids, or mutually exclusive `None of these`; at least one selection required.
 4. Review and generate.
@@ -44,6 +44,7 @@ Errors cover missing choices, invalid dimensions, missing conditions, failed ima
 ## Journey invariants
 
 - A user can obtain educational guidance without knowing a size.
+- The conditional size-help screen preserves `Not sure`, keeps the four numbered recommendation steps, and cannot unlock retailer links.
 - A retailer path appears only after a size passes the current three-dimension parser and is explicitly confirmed.
 - “High confidence” means selected from the internal common-size list, not verified physical fit.
 - Back/restart/close must not trap users or silently convert an unknown size into a confirmed one.

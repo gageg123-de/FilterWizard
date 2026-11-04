@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-10-29
+Last verified: 2026-11-04
+
+The 2026-11-04 conditional Filter Finder size-help screen adds one generated and visually reviewed 1200×800 WebP: `filter-finder-size-frame-guide.webp` (66,706 bytes). It shows a homeowner naturally holding an unbranded pleated HVAC filter with a broad blank cardboard edge facing forward. The exact example `20 × 25 × 1` is rendered as controlled HTML over the frame rather than embedded in the generated photograph, preventing malformed AI lettering. The image contains no logos, retailer cues, exposed equipment, unsafe installation detail, or claim that the example is the user's size. It is lazy-loaded with explicit dimensions and descriptive alt text inside the existing Finder modal.
 
 The 2026-10-29 mini-split-filter guide adds one generated and visually reviewed 1200×800 WebP: `mini-split-air-filter-hero.webp` (38,428 bytes). It shows a generic unbranded high-wall indoor unit with only the normal intake cover open and two intact reusable mesh screens visible. It contains no pleated furnace filter, text, logos, exposed wiring, removed service panel, outdoor-unit filter, dirt cloud, mold, water, unsafe access, or universal equipment claim. The hero is eager/high priority; no decorative supporting image was added.
 

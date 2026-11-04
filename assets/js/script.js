@@ -19,6 +19,8 @@ const finderNextButton = document.querySelector("[data-finder-next]");
 const finderCompleteButton = document.querySelector("[data-finder-complete]");
 const finderProgressLabel = document.querySelector("[data-finder-progress-label]");
 const finderProgressBar = document.querySelector("[data-finder-progress-bar]");
+const finderSizeHelp = document.querySelector("[data-finder-size-help]");
+const finderSizeHelpHeading = document.querySelector("[data-finder-size-help-heading]");
 const knownSizeField = document.querySelector("[data-known-size-field]");
 const finderKnownSizeInput = document.querySelector("[data-finder-size-known]");
 const finderAnalyzing = document.querySelector("[data-finder-analyzing]");
@@ -95,6 +97,8 @@ const filterPriceRanges = {
 };
 
 let finderCurrentStep = 1;
+let finderSizeHelpVisible = false;
+let finderSizeHelpViewedTracked = false;
 let finderEmailEnteredTracked = false;
 let latestFinderReport = null;
 let finderModalOpener = null;
@@ -1024,6 +1028,8 @@ function resetFinderForModal() {
   finderState.recommendedSchedule = "";
   finderState.normalizedSize = "";
   finderState.sizeSelectedFromSuggestion = false;
+  finderSizeHelpVisible = false;
+  finderSizeHelpViewedTracked = false;
   finderEmailEnteredTracked = false;
 
   document.querySelectorAll("[data-finder-option]").forEach((option) => {
@@ -1031,6 +1037,10 @@ function resetFinderForModal() {
     option.setAttribute("aria-pressed", "false");
   });
   if (knownSizeField) knownSizeField.hidden = true;
+  if (finderSizeHelp) {
+    finderSizeHelp.hidden = true;
+    finderSizeHelp.classList.remove("is-active");
+  }
   if (finderKnownSizeInput) finderKnownSizeInput.value = "";
   if (finderConfirmSizeInput) finderConfirmSizeInput.value = "";
   if (finderConfirmSizeError) {
@@ -1132,6 +1142,10 @@ function updateFinderProgress() {
 
 function updateFinderActionLabels() {
   if (!finderNextButton) return;
+  if (finderSizeHelpVisible) {
+    finderNextButton.textContent = "Continue";
+    return;
+  }
   finderNextButton.textContent = finderCurrentStep === 1 && finderState.knowsSize === "Yes, I know it"
     ? "Continue"
     : "Next";
@@ -1152,6 +1166,11 @@ function setFinderError(stepEl, message) {
 }
 
 function showFinderStep(step) {
+  finderSizeHelpVisible = false;
+  if (finderSizeHelp) {
+    finderSizeHelp.hidden = true;
+    finderSizeHelp.classList.remove("is-active");
+  }
   finderCurrentStep = Math.min(finderTotalSteps, Math.max(1, step));
 
   finderSteps.forEach((stepEl) => {
@@ -1170,6 +1189,48 @@ function showFinderStep(step) {
   if (finderCompleteButton) finderCompleteButton.hidden = finderCurrentStep !== finderTotalSteps;
   updateFinderProgress();
   updateFinderActionLabels();
+}
+
+function focusFinderElement(element) {
+  window.setTimeout(() => {
+    element?.focus({ preventScroll: true });
+  }, 40);
+}
+
+function showFinderSizeHelp() {
+  if (!finderSizeHelp) {
+    showFinderStep(2);
+    return;
+  }
+
+  finderSizeHelpVisible = true;
+  finderSteps.forEach((stepEl) => {
+    stepEl.hidden = true;
+    stepEl.classList.remove("is-active");
+    clearFinderError(stepEl);
+  });
+  finderSizeHelp.hidden = false;
+  finderSizeHelp.classList.add("is-active");
+
+  if (finderBackButton) {
+    finderBackButton.hidden = false;
+    finderBackButton.disabled = false;
+    finderBackButton.setAttribute("aria-disabled", "false");
+  }
+  if (finderNextButton) finderNextButton.hidden = false;
+  if (finderCompleteButton) finderCompleteButton.hidden = true;
+  if (finderProgressLabel) finderProgressLabel.textContent = "Size help • before Step 2";
+  if (finderProgressBar) finderProgressBar.style.width = `${(1 / finderTotalSteps) * 100}%`;
+  updateFinderActionLabels();
+
+  if (!finderSizeHelpViewedTracked) {
+    finderSizeHelpViewedTracked = true;
+    trackEvent("filter_finder_size_help_viewed", {
+      entry_point: finderAnalyticsState.entryPoint
+    });
+  }
+
+  focusFinderElement(finderSizeHelpHeading);
 }
 
 function startFilterFinder(entryPoint = finderAnalyticsState.entryPoint) {
@@ -2657,12 +2718,30 @@ finderConfirmSizeInput?.addEventListener("input", () => {
 });
 
 finderNextButton?.addEventListener("click", () => {
+  if (finderSizeHelpVisible) {
+    showFinderStep(2);
+    focusFinderElement(document.querySelector('[data-finder-option="location"]'));
+    return;
+  }
   if (!validateFinderStep(finderCurrentStep)) return;
   trackFinderStepCompleted(finderCurrentStep);
+  if (finderCurrentStep === 1 && finderState.knowsSize === "Not sure" && finderSizeHelp) {
+    showFinderSizeHelp();
+    return;
+  }
   showFinderStep(finderCurrentStep + 1);
 });
 
 finderBackButton?.addEventListener("click", () => {
+  if (finderSizeHelpVisible) {
+    showFinderStep(1);
+    focusFinderElement(document.querySelector('[data-finder-option="knowsSize"][data-value="Not sure"]'));
+    return;
+  }
+  if (finderCurrentStep === 2 && finderState.knowsSize === "Not sure" && finderSizeHelp) {
+    showFinderSizeHelp();
+    return;
+  }
   showFinderStep(finderCurrentStep - 1);
 });
 
