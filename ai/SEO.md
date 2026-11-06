@@ -2,6 +2,50 @@
 
 Last verified: 2026-11-06
 
+## November 6 GSC optimization and mobile-quality pass — 2026-11-06
+
+The requested `filter-wizard.com-Performance-on-Search-2026-11-06.zip` was not accessible in the repository, `B:\Downloads`, `C:\Users\13182\Downloads`, or the available Codex attachment stores. No older workbook was substituted. The task supplied a Web / Last 3 months baseline for August 5 through November 4—81 clicks, 11,490 Chart impressions, approximately 0.705% CTR, and approximately 12.95 impression-weighted position; 58 Page rows with 11,698 impressions and 81 clicks; 267 disclosed Query rows with 1,455 impressions and two clicks; mobile at 8,015 impressions, 58 clicks, and position 8.86; and desktop at 3,344 impressions, 23 clicks, and position 22.94. Those figures remain owner-supplied and were not independently reproduced in this checkout. The differing Chart, Page, and Query totals are preserved rather than reconciled, and no Query-to-Page join is claimed.
+
+The supplied page observations were used only as a prioritization prompt. Full current-page review found no defensible CTR rewrite:
+
+| Page | Supplied three-month observation | Decision |
+|---|---|---|
+| `/blog/why-is-my-air-filter-bending.html` | 2,249 impressions; 22 clicks; 0.98% CTR; position 7.36 | **Preserve.** Strongest visible page and direct symptom answer; use as a control. |
+| `/blog/filters-in-every-return-vent.html` | 1,659; 6; 0.36%; 8.24 | **Investigate further.** Current title, opening, FAQs, and cross-link already own individual-return configuration; obtain a URL-filtered Query export before changing them. |
+| `/blog/why-is-my-air-filter-brown.html` | 937; 18; 1.92%; 5.63 | **Preserve.** Strong aligned control. |
+| `/blog/why-does-my-new-air-filter-smell.html` | 812; 5; 0.62%; 8.16 | **Preserve pending URL-filtered evidence.** Title, snippet, and opening already separate mild new-material odor from concerning or system-origin odor. |
+| `/blog/dirty-air-filter-cause-ac-freeze.html` | 469; 2; 0.43%; 9.40 | **Preserve.** Direct conditional answer and alternate-cause boundary are present. |
+| `/blog/why-does-my-air-filter-move.html` | 430; 8; 1.86%; 7.27 | **Preserve.** Strong aligned control. |
+| `/blog/how-to-find-your-air-filter-size.html` | 344; 0; 0%; 10.54 | **Investigate further.** High user/commercial value, but the current five-method answer and Finder safety path are correct; aggregate CTR does not identify a copy defect. |
+| `/blog/can-you-vacuum-and-reuse-an-air-filter.html` | 340; 1; 0.29%; 7.96 | **Preserve.** The first sentence says “Usually, no,” and disposable versus manufacturer-approved washable media is explicit. |
+| `/blog/can-air-filter-be-too-restrictive.html` | 306; 1; 0.33%; 9.25 | **Preserve.** It already states that MERV alone does not determine pressure drop or compatibility. |
+| `/blog/how-tight-should-an-air-filter-fit.html` | 241; 2; 0.83%; 7.72 | **Preserve.** Intent and direct answer remain aligned. |
+| `/blog/filter-at-return-and-furnace.html` | 104; 1; position 10.16 | **Preserve.** It remains the distinct owner for filters in series at the return and equipment. |
+| `/blog/merv-8-vs-merv-11-vs-merv-13.html` | 495; 0; 0%; 26.33 | **Defer.** Generic ownership was changed on October 6; deeper average position is not proof that another title/body change is warranted. |
+
+### Frozen before/after metadata and opening ledger
+
+No title, meta description, H1, canonical, opening answer, FAQ, schema, or internal-link text changed in this pass. The following current values are the before and after baseline for later comparison:
+
+| Page | HTML title | Meta description | Opening answer |
+|---|---|---|---|
+| Every return vent | `Do You Need Filters in Every Return Vent? How to Tell` | `Not every return vent needs a filter. Learn when systems use return-grille filters, when one central filter is enough, and why extra filters can restrict airflow.` | Some systems use return-grille filters; others use one central filter; follow the intended location. |
+| Return and furnace | `Return Vent Filter and Furnace Filter: Use Both?` | `Using a return filter and furnace filter together may add airflow resistance unless the HVAC system was designed for both. Learn how to identify the intended filter setup.` | Identify whether filters serve separate paths or sit in series before adding or removing anything. |
+| New-filter smell | `Why Does My New Air Filter Smell? What’s Normal?` | `Learn why a new HVAC filter may smell, how to check whether the filter is really the source, and when musty, smoky, burning, or chemical-like odor needs attention.` | A mild material or packaging odor can occur; strong or persistent odor is not automatically the filter. |
+| Vacuum and reuse | `Can You Vacuum and Reuse an Air Filter? Disposable vs. Washable` | `Can you vacuum an air filter and reuse it? Learn why disposable HVAC filters should be replaced, when a washable filter can be cleaned, and what to do safely.` | Usually no; disposable pleated and fiberglass filters are replaced, not vacuumed or washed. |
+| Restrictive filter | `Can an Air Filter Be Too Restrictive? Signs and Causes` | `An HVAC filter can be too restrictive, but MERV alone does not determine airflow resistance. Learn the signs, causes, and what to check before changing filters.` | Resistance depends on the filter design, loading, dimensions, and system—not MERV alone. |
+| AC freeze | `Can a Dirty Air Filter Cause Your AC to Freeze? | Filter Wizard` | `A dirty HVAC filter can restrict airflow and contribute to a frozen evaporator coil. Learn the warning signs, what to do safely, and when to call a professional.` | A heavily clogged filter can contribute, but several other faults can also cause freezing. |
+| Find size | `What Size Air Filter Do I Need? 5 Ways to Find It` | `Find your HVAC filter size from the printed label, equipment or slot, then measure correctly and compare nominal versus actual dimensions before ordering.` | Start with the printed three-part nominal size, then verify dimensions and fit without guessing. |
+| General MERV | `MERV 8 vs MERV 11 vs MERV 13: Which Is Best?` | `Compare MERV 8, 11, and 13—including MERV 11 vs. 13 differences, particle capture, airflow considerations, and HVAC compatibility.` | MERV 8, 11, and 13 are compared as compatible options, not a universal highest-is-best ladder. |
+
+### Implemented quality corrections
+
+The pass corrected two verified presentation defects without changing search intent: the existing `.table-scroll` and `.table-responsive` wrappers now receive the shared responsive-table overflow and cell styles, and the allergy guide's nonexistent supporting-image path now points to the already shipped `allergy-filter-selection-guide.webp` asset with accurate four-step alt text. These changes improve mobile table containment and restore a missing asset; they do not establish a CTR or ranking improvement.
+
+Interactive viewport testing was unavailable because Work settings disabled local browser use. Static checks confirmed the article shell changes to one column at 820px, tables use bounded horizontal overflow, images have explicit dimensions and responsive sizing, TOC targets resolve, and the current navigation script updates `aria-expanded`. Local HTTP responses, repository checks, and accessibility markup were tested, but those checks are not a substitute for visual testing at 320, 375, 390, 768, 1024, and 1440 pixels.
+
+After approximately 14 days, check indexing/snippet rendering and technical regressions. After approximately 28 days, compare equivalent Search Console windows, preferably with URL-filtered Query exports for both return-filter pages and the new-filter-smell and sizing pages. Keep search type, dates, and device slices comparable; review query composition as well as impressions, clicks, CTR, and position; and do not claim causation from an uncontrolled before/after comparison. Article #49 remains unapproved.
+
 ## ERV and HRV filter intent — 2026-11-06
 
 The new `/blog/do-ervs-and-hrvs-have-air-filters.html` page owns whether residential energy- and heat-recovery ventilators use dedicated filters, where those filters are commonly located, how supply/exhaust roles and recovery-core protection differ, which media may be washable or replaceable, and how model-specific replacement compatibility is established. The mini-split page retains room-recirculating appliance-filter ownership; furnace-versus-AC retains shared central return-air terminology; washable-versus-disposable retains conventional HVAC-filter lifecycle comparison; and MERV pages retain generic rated-filter selection. The newest accessible Search Console export disclosed no ERV/HRV query or page, and no verified numeric search-volume data was available. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, ten matched FAQs, and contextual incoming link from the mini-split guide reinforce the distinct ventilation-equipment intent without a Finder or retailer path.

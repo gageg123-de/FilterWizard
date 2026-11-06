@@ -1,5 +1,38 @@
 # Content Opportunity Audit
 
+## November 6 existing-page optimization audit — 2026-11-06
+
+**Decision: IMPLEMENT THE VERIFIED QUALITY DEFECTS; PRESERVE SEO COPY.** The requested November 6 Search Console ZIP was unavailable after checking the repository, both accessible Downloads locations, and Codex attachment stores, so its task-supplied figures could not be independently reproduced and no older export was substituted. The task supplied a three-month Web baseline of 81 clicks, 11,490 Chart impressions, approximately 0.705% CTR, and approximately 12.95 impression-weighted position. Separate supplied Page and Query totals differ, the disclosed Query set is privacy-limited, and no Query-to-Page relationship is inferred.
+
+The page-review score uses 1–5 directional judgments: visibility (V), ranking proximity (P), apparent CTR opportunity (C), evidence quality (E), confirmed deficiency confidence (D), implementation effort (F; lower is easier), and disruption risk (R; lower is safer). Scores organize review; they do not grant permission to rewrite.
+
+| Existing page | V | P | C | E | D | F | R | Classification |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| Why Is My Air Filter Bending? | 5 | 5 | 3 | 2 | 1 | 2 | 4 | **PRESERVE** as a strong control. |
+| Filters in Every Return Vent | 5 | 5 | 5 | 2 | 1 | 3 | 5 | **INVESTIGATE FURTHER** with URL-filtered queries. |
+| Why Is My Air Filter Brown? | 4 | 5 | 2 | 2 | 1 | 2 | 4 | **PRESERVE** as a strong control. |
+| Why Does My New Air Filter Smell? | 4 | 5 | 4 | 2 | 1 | 2 | 4 | **PRESERVE** content; implement only its confirmed responsive-table defect. |
+| Dirty Filter Cause AC Freeze | 3 | 4 | 4 | 2 | 1 | 2 | 4 | **PRESERVE** direct conditional answer. |
+| Why Does My Air Filter Move? | 3 | 5 | 2 | 2 | 1 | 2 | 4 | **PRESERVE** as an aligned control. |
+| How to Find Your Air Filter Size | 3 | 4 | 5 | 2 | 2 | 3 | 4 | **INVESTIGATE FURTHER** because commercial relevance is high but query evidence is absent. |
+| Can You Vacuum and Reuse a Filter? | 3 | 5 | 5 | 2 | 1 | 2 | 4 | **PRESERVE**; answer and washable/disposable boundary are already immediate. |
+| Can an Air Filter Be Too Restrictive? | 3 | 4 | 5 | 2 | 1 | 2 | 5 | **PRESERVE**; MERV and pressure-drop safeguards are already explicit. |
+| How Tight Should an Air Filter Fit? | 2 | 5 | 3 | 2 | 1 | 2 | 4 | **PRESERVE**. |
+| Filter at Return and Furnace | 2 | 4 | 3 | 2 | 1 | 2 | 5 | **PRESERVE** as the series-filtration owner. |
+| General MERV comparison | 3 | 1 | 5 | 2 | 1 | 4 | 5 | **DEFER** after the October 6 ownership change. |
+
+### Return-filter ownership verdict
+
+`/blog/filters-in-every-return-vent.html` owns whether individual return grilles require filters, the difference between designated filtered returns and ordinary returns, and why adding filters to every grille can be wrong. `/blog/filter-at-return-and-furnace.html` owns whether the same airflow should pass through a return filter and an equipment filter in series. Both openings, headings, FAQs, and cross-links reinforce that boundary; they do not conflict. The disclosed historical wording “do i need filters in the return grilles and the unit both” conceptually belongs to the second owner, but one privacy-limited query does not explain the first page's impressions. No metadata, opening, FAQ, schema, or anchor change is justified without page-filtered Query evidence.
+
+### Other page verdicts and implementation
+
+The new-filter-smell page already distinguishes plausible mild material/packaging odor from moisture, smoke, burning/electrical, irritating, or system-origin concerns. The vacuum/reuse page immediately rejects cleaning disposable media; the restrictive-filter page rejects MERV-only pressure-drop reasoning; the AC-freeze page keeps causation conditional; and the sizing guide preserves nominal/actual and unknown-size safeguards. The general MERV owner was recently changed and remains under observation. No production content or metadata changed.
+
+Two non-SEO defects did pass the implementation threshold. Three existing comparison tables used `.table-scroll` without a corresponding shared CSS rule, so the class now reuses the responsive-table overflow and cell styling; `.table-responsive` receives the same complete cell styling. The allergy guide referenced a nonexistent image filename containing a space; it now uses the existing verified `allergy-filter-selection-guide.webp` image and accurate alt text. These are quality and accessibility corrections, not search-performance experiments.
+
+The highest-priority remaining evidence request is a URL-filtered, preferably 28-day Query export for `/blog/filters-in-every-return-vent.html`, with a matching export for `/blog/filter-at-return-and-furnace.html` if ownership routing is being evaluated. Article #49 remains unapproved.
+
 ## Article #48 ERV/HRV-filter publication review — 2026-11-06
 
 **Decision: PUBLISHED.** *Do ERVs and HRVs Have Air Filters? Cleaning & Replacement* independently passed the complete publication workflow and was implemented at `/blog/do-ervs-and-hrvs-have-air-filters.html`. Repository sequence, topic reality, distinct user intent, duplicate/cannibalization, mini-split ownership, washable-filter ownership, furnace/AC ownership, information gain, manufacturer evidence, supply/exhaust accuracy, core-versus-filter accuracy, cleaning/replacement accuracy, MERV compatibility, filtration performance, homeowner safety, Filter Wizard relevance, commercial independence, and post-draft intent gates passed. Article #49 remains unapproved.

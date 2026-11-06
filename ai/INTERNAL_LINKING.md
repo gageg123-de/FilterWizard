@@ -2,6 +2,12 @@
 
 Last verified: 2026-11-06
 
+## November 6 optimization audit
+
+The current audit still reports 63 indexable URLs, 59 non-legal content pages, 1,934 internal links, 1,041 unique edges, 621 contextual links, 576 unique contextual edges, average incoming 28.58, average contextual incoming 10.53, median contextual incoming 6, maximum homepage depth two, no unreachable content, no broken local links, and no broken fragments. No internal link was added or changed during the November 6 optimization pass.
+
+The return-filter pair already uses correct reciprocal routing: `/blog/filters-in-every-return-vent.html` sends the same-airflow-path question to `/blog/filter-at-return-and-furnace.html`, and the latter sends the every-grille question back to the former. Their anchor concepts are distinct rather than generic. Aggregate page CTR and a separate privacy-limited query row do not justify more links or a change in ownership. The new-filter-smell, vacuum/reuse, restriction, AC-freeze, sizing, and MERV pages also retain their current links because no destination or ownership defect was found. Article #49 remains unapproved.
+
 This file owns Filter Wizard's internal-linking methodology. Its purpose is to help a homeowner move from an immediate question to the next useful answer, size or fit verification, and the Filter Finder when purchase intent develops. Link counts are diagnostic signals, not targets.
 
 ## Core rule
