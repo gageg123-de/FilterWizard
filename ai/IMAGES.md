@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-11-04
+Last verified: 2026-11-06
+
+The 2026-11-06 ERV/HRV-filter guide adds one generated and visually reviewed 1200×800 WebP: `erv-hrv-air-filters-hero.webp` (94,668 bytes). It shows a homeowner holding an unbranded mesh-style ventilator filter beside a generic wall-mounted recovery-ventilator cabinet with a second filter and a visibly separate central core. The caption identifies the layout as illustrative; the image contains no text, logos, MERV rating, furnace-filter substitution, exposed wiring, blower access, damaged media, water, mold, dust cloud, or claim that every unit uses two filters. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-11-04 conditional Filter Finder size-help screen adds one generated and visually reviewed 1200×800 WebP: `filter-finder-size-frame-guide.webp` (66,706 bytes). It shows a homeowner naturally holding an unbranded pleated HVAC filter with a broad blank cardboard edge facing forward. The exact example `20 × 25 × 1` is rendered as controlled HTML over the frame rather than embedded in the generated photograph, preventing malformed AI lettering. The image contains no logos, retailer cues, exposed equipment, unsafe installation detail, or claim that the example is the user's size. It is lazy-loaded with explicit dimensions and descriptive alt text inside the existing Finder modal.
 

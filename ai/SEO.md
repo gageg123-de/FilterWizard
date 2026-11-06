@@ -1,6 +1,10 @@
 # SEO
 
-Last verified: 2026-11-04
+Last verified: 2026-11-06
+
+## ERV and HRV filter intent — 2026-11-06
+
+The new `/blog/do-ervs-and-hrvs-have-air-filters.html` page owns whether residential energy- and heat-recovery ventilators use dedicated filters, where those filters are commonly located, how supply/exhaust roles and recovery-core protection differ, which media may be washable or replaceable, and how model-specific replacement compatibility is established. The mini-split page retains room-recirculating appliance-filter ownership; furnace-versus-AC retains shared central return-air terminology; washable-versus-disposable retains conventional HVAC-filter lifecycle comparison; and MERV pages retain generic rated-filter selection. The newest accessible Search Console export disclosed no ERV/HRV query or page, and no verified numeric search-volume data was available. Its unique metadata, self-canonical URL, Article/FAQ/Breadcrumb schema, ten matched FAQs, and contextual incoming link from the mini-split guide reinforce the distinct ventilation-equipment intent without a Finder or retailer path.
 
 ## Shopping-first homepage — 2026-11-04
 

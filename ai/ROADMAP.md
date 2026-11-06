@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-11-04
+Last verified: 2026-11-06
+
+## 2026-11-06 article #48 publication
+
+Article #48, *Do ERVs and HRVs Have Air Filters? Cleaning & Replacement*, was published at `/blog/do-ervs-and-hrvs-have-air-filters.html` after independent review passed repository-sequence, topic-reality, distinct-intent, duplicate, mini-split, washable-filter, furnace/AC, information-gain, manufacturer-evidence, supply/exhaust, core-versus-filter, cleaning/replacement, MERV, filtration-performance, homeowner-safety, relevance, commercial-independence, and post-draft gates. It owns dedicated residential ERV/HRV filter presence, location, supply/exhaust roles, recovery-core protection, model-specific service, replacement compatibility, and the central-HVAC relationship. Existing mini-split, conventional washable/disposable, furnace/AC, MERV, and portable-air-cleaner pages retain their intents. The guide adds zero retailer blocks and zero Finder CTAs because Filter Finder does not identify model-specific ventilation media. The newest accessible Search Console export disclosed no ERV/HRV query or page, and no verified numeric search-volume data was available. Article #49 remains unapproved.
 
 ## 2026-11-04 shopping-first homepage redesign
 
