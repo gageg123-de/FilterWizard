@@ -1,6 +1,12 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-11-06
+Last verified: 2026-11-09
+
+## Article #49 publication audit
+
+The post-publication audit reports 64 indexable URLs, 60 non-legal content pages, 1,959 internal links, 1,054 unique edges, 631 contextual links, 583 unique contextual edges, average incoming 28.45, average contextual incoming 10.52, median contextual incoming 6, maximum homepage depth two, no unreachable content, no broken local links, and no broken fragments. `/blog/are-activated-carbon-hvac-filters-worth-it.html` has one justified contextual incoming link from the activated-carbon section of the smoke guide, three deliberate Related Articles, zero Finder links, and homepage depth two.
+
+The new article owns the value and evaluation decision for carbon-enhanced central-HVAC replacement filters: sorbent amount and construction, thin layer versus substantial bed, gas-specific evidence, uncertain capacity/service life, odor-source fit, and buy/defer criteria. The smoke guide retains smoke-particle/MERV selection and smoke-event guidance; the new-filter-smell guide retains post-installation odor diagnosis; the HVAC-filter-versus-portable-cleaner guide retains central-versus-room equipment; and MERV pages retain particle selection. The smoke guide's incoming anchor names the activated-carbon buying guide at the point where its own carbon subsection reaches that boundary. No homepage, size-guide, Finder, or affiliate link was added.
 
 ## November 6 optimization audit
 

@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-11-06
+Last verified: 2026-11-09
+
+## 2026-11-09 article #49 publication
+
+Article #49, *Do Activated Carbon HVAC Filters Really Remove Odors?*, was published at `/blog/are-activated-carbon-hvac-filters-worth-it.html` after independent review passed repository-sequence, topic-reality, real-buying-decision, distinct-intent, duplicate, smoke, new-filter-smell, portable-cleaner, MERV, information-gain, EPA/ASHRAE-evidence, carbon-accuracy, gas-versus-particle, media-comparison, compatibility, health/hazard-safety, commercial-claim, Finder-integrity, commercial-independence, and post-draft gates. It owns whether carbon-enhanced residential HVAC filters are worth their added cost and how to evaluate sorbent quantity, evidence, target odor, service life, fit, and safety. Smoke-particle selection, new-filter odor diagnosis, portable-cleaner comparison, and MERV selection retain their established owners. The guide has zero retailer blocks and zero Finder CTAs because no named retail product had sufficiently comparable independent gas-performance evidence and Finder does not evaluate carbon media. The requested November 6 Search Console archive was inaccessible, no stale export was substituted, no exact-query first-party demand is claimed, and no verified numeric search-volume data was available. Article #50 remains unapproved.
 
 ## 2026-11-06 GSC optimization and mobile-quality execution
 

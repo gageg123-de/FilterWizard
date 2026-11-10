@@ -1,6 +1,12 @@
 # SEO
 
-Last verified: 2026-11-06
+Last verified: 2026-11-09
+
+## Article #49 activated-carbon HVAC filter guide — 2026-11-09
+
+`/blog/are-activated-carbon-hvac-filters-worth-it.html` owns the residential buying decision of whether carbon-enhanced forced-air HVAC filters provide enough odor reduction to justify their added cost. The H1, metadata, opening, and FAQs distinguish adsorption of some gases from MERV-rated particle capture, make thin-media capacity limits explicit, and preserve source control, ventilation, equipment compatibility, and emergency boundaries. The smoke page retains smoke-particle/MERV selection; the new-filter-smell page retains post-installation odor diagnosis; the HVAC-filter-versus-portable-cleaner page retains central-versus-room equipment; and MERV pages retain particle-efficiency selection. One precise contextual link from the smoke guide routes the broader carbon-media buying question to its new owner.
+
+The older opportunity audit classified a broad activated-carbon concept as duplicate. Full 48-page review supported a narrower ownership contract that the earlier concept did not test: media quantity and construction, thin layer versus substantial bed, product-evidence quality, odor-specific suitability, uncertain service life, total-cost evaluation, and explicit buy/defer criteria. The article therefore does not take over generic particles-versus-gases explanation from adjacent pages. No retailer block, product endorsement, or Finder CTA was added. The November 6 Search Console archive was unavailable in the repository, Downloads locations, and accessible attachment stores; no older export was substituted, no exact-query GSC demand is claimed, and no numeric keyword volume, CPC, difficulty, autocomplete, or PAA claim was invented.
 
 ## November 6 GSC optimization and mobile-quality pass — 2026-11-06
 

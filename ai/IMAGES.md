@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-11-06
+Last verified: 2026-11-09
+
+The 2026-11-09 activated-carbon HVAC-filter guide adds one generated and visually reviewed 1200×800 WebP: `activated-carbon-hvac-filter-hero.webp` (94,900 bytes). It shows a homeowner comparing an unbranded light pleated filter with an unbranded dark carbon-enhanced pleated filter beside closed residential HVAC equipment. It contains no logos, text, ratings, retailer cues, exposed electrical parts, open equipment, unsafe handling, exaggerated odor visualization, or claim that color proves carbon quantity, capacity, performance, or compatibility. The caption supplies those limits. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-11-06 ERV/HRV-filter guide adds one generated and visually reviewed 1200×800 WebP: `erv-hrv-air-filters-hero.webp` (94,668 bytes). It shows a homeowner holding an unbranded mesh-style ventilator filter beside a generic wall-mounted recovery-ventilator cabinet with a second filter and a visibly separate central core. The caption identifies the layout as illustrative; the image contains no text, logos, MERV rating, furnace-filter substitution, exposed wiring, blower access, damaged media, water, mold, dust cloud, or claim that every unit uses two filters. The hero is eager/high priority; no decorative supporting image was added.
 
