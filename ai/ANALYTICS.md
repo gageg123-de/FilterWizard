@@ -1,6 +1,24 @@
 # Analytics
 
-Last verified: 2026-11-04
+Last verified: 2026-11-11
+
+## Direct Amazon buying-guide pilot measurement — 2026-11-11
+
+The three pilot links reuse the existing delegated `amazon_click` event instead of adding a second direct-article event. One click emits one `amazon_click`; the handler now appends fixed route/context parameters while retaining `link_url`, `link_text`, `affiliate_tag`, `filter_size`, `link_location`, and `page_path`:
+
+| Parameter | Pilot value / purpose |
+|---|---|
+| `source_page` | Current path; duplicates `page_path` intentionally during this pilot for the requested source-page dimension |
+| `source_type` | `article`, `filter_finder`, `size_guide`, `homepage`, or `unknown` |
+| `outbound_destination` | `amazon` |
+| `affiliate_route` | `article_direct_amazon`, `finder_to_amazon`, `size_guide_to_amazon`, `homepage_direct_amazon`, or `unknown` |
+| `shopping_context` | Fixed pilot-article context or `unknown`; never free-form input |
+| `filter_rating_context` | Fixed content context such as `merv_8_11_13`; not a product-compatibility claim |
+| `article_slug` | Fixed pilot slug when the link is on an article; otherwise the current article slug or `unknown` |
+
+Article-to-Finder clicks continue to emit `article_filter_finder_click` and store the existing short-lived entry context. Finder retailer clicks continue to emit `filter_finder_retailer_clicked`; size pages continue to emit `filter_size_page_retailer_click`; and the homepage continues to emit `homepage_shopping_retailer_clicked`. Their Amazon links also emit the single sitewide `amazon_click` with an inferred route. This preserves route comparison without adding persistent user IDs, Associate sub-tags, email, free-form size text, or purchase claims.
+
+The default-denied Google consent state, ad-storage denial, Clarity consent behavior, and navigation behavior are unchanged. A link remains usable when analytics is denied or unavailable. Repository/browser checks can establish event construction and consent state, not GA4 dashboard receipt, Amazon attribution, qualifying orders, or commissions.
 
 ## Shopping-first homepage measurement — 2026-11-04
 
@@ -87,7 +105,7 @@ Recommended future taxonomy: keep `object_action_state` names, one documented pa
 
 Missing operational documentation: no repository-owned event dictionary with exact parameter types, dashboard definitions, baseline window, owner, or alert thresholds exists. Until externally verified, report these as unknown rather than inventing KPI targets.
 
-The MERV comparison article uses the shared article attributes and global listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listeners or retailer links, so it does not create duplicate article events or a new affiliate-click path.
+The MERV comparison article uses the shared article attributes and global listeners for page view, scroll depth, top/bottom sharing, Filter Finder CTA clicks, Formspree lead handling, and the controlled direct-Amazon pilot. It adds one static retailer search but no page-specific listener; the existing delegated `amazon_click` handler owns the route attribution.
 
 The rapid-loading troubleshooting article uses the same shared attributes and listeners for page view, scroll depth, top/bottom sharing, two Filter Finder CTA clicks, and Formspree lead handling. It adds no page-specific listener or retailer link.
 

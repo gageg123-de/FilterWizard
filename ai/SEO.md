@@ -1,6 +1,14 @@
 # SEO
 
-Last verified: 2026-11-09
+Last verified: 2026-11-11
+
+## Direct Amazon buying-guide pilot — 2026-11-11
+
+The dust, allergy-focused filtration, and MERV 8/11/13 guides each add one compact, disclosed Amazon search route beside the preserved Filter Finder alternative. Their URL, canonical, HTML title, meta description, H1, introduction, Quick Answer, established headings, FAQs, schema, publication date, and internal links are unchanged. The sections appear after substantive selection guidance, contain no Amazon product content or Product/Review schema, and do not displace the informational answer. All paid links use `sponsored nofollow noopener`.
+
+The newest accessible first-party workbook was the November 4 export with a `Last 6 months` / Web (text-based) filter and actual Chart dates July 5 through November 2, 2026. The Chart contained 85 clicks and 11,708 impressions (0.73% calculated CTR; approximately 13.15 impression-weighted position). Page rows reported 86 clicks and 11,945 impressions; disclosed Query rows reported two clicks and 1,506 impressions, so those dimensions are not reconciled or joined. Pilot-page rows were: general MERV 488 impressions, zero clicks, position 28.15; dust 63 impressions, zero clicks, position 32.44; allergies 32 impressions, zero clicks, position 36.44. Mobile reported 8,116 impressions and 58 clicks; desktop 3,462 and 27; tablet 130 and zero. These low-volume aggregate observations establish a frozen visibility baseline, not purchase intent, conversion performance, or a causal forecast.
+
+Review link integrity, event routing, consent, frontend errors, and indexing after about 14 days. After about 28 days, compare equivalent page/session windows for direct article Amazon clicks, article-to-Finder clicks, Finder completion/outbound clicks, pilot sessions, GSC impressions/CTR/position, and aggregate Associates results where available. Choose `EXPAND`, `PRESERVE PILOT`, `REVISE PILOT`, or `ROLLBACK`; do not expand automatically. Article #50 remains unapproved.
 
 ## Article #49 activated-carbon HVAC filter guide — 2026-11-09
 

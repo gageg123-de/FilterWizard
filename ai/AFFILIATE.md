@@ -1,6 +1,22 @@
 # Affiliate Integration
 
-Last verified: 2026-11-04
+Last verified: 2026-11-11
+
+## Direct Amazon buying-guide pilot — 2026-11-11
+
+Exactly three existing buying guides participate in the pilot:
+
+| Article | Direct Amazon search | Before → after |
+|---|---|---|
+| `/blog/best-air-filter-for-dust.html` | `pleated residential HVAC air filters for dust` | 0 → 1 direct Amazon link; 2 → 2 Finder CTAs |
+| `/blog/best-air-filter-for-allergies.html` | `pleated HVAC air filters MERV 11` | 0 → 1 direct Amazon link; 2 → 2 Finder CTAs |
+| `/blog/merv-8-vs-merv-11-vs-merv-13.html` | `HVAC air filters MERV 8 11 13` | 0 → 1 direct Amazon link; 2 → 2 Finder CTAs |
+
+Each destination is a static `https://www.amazon.com/s?k=...&tag=filterwizard-20` search link, so shopping continues if scripts or analytics are blocked. Each opens in a new tab, uses `rel="sponsored nofollow noopener"`, and has a near-link paid-link disclosure plus a warning to confirm nominal and actual dimensions, depth, fit, supported MERV, and manufacturer requirements. The links are retailer searches, not product endorsements, fit guarantees, or claims that Filter Wizard sells or fulfills filters. The allergy page limits its MERV 11 search to readers whose systems support that rating and expressly avoids a treatment or symptom-relief promise. The general MERV page includes all three covered ratings rather than privileging MERV 13.
+
+The existing required site statement remains in the footer. Official Google outbound-link and spam guidance, the current Amazon Operating Agreement/Program Policies and disclosure help, and FTC endorsement guidance were reviewed before launch. No Amazon price, availability, rating, product image, ASIN, discount, inventory, or product-specific claim was added.
+
+This is an observational pilot, not a sitewide rule. Do not copy it to troubleshooting articles or other buying guides without follow-up evidence and owner authorization. Article #50 remains unapproved.
 
 ## Shopping-first homepage path — 2026-11-04
 
@@ -22,7 +38,7 @@ The new-filter odor guide has troubleshooting intent and no direct retailer bloc
 
 The dirty-filter cooling guide has troubleshooting intent and no direct retailer block. Its two delayed Filter Finder CTAs follow safe filter diagnosis and size confirmation; retailer choices remain gated behind a valid three-dimensional size. It does not claim that buying a filter will solve an undiagnosed cooling failure, and the `filterwizard-20` path is unchanged.
 
-The dust pillar has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs appear after MERV, media, depth, source, and compatibility guidance; retailer choices remain gated behind a valid confirmed three-dimensional size. The existing `filterwizard-20` tag, disclosures, sponsored attributes, and delegated click tracking are unchanged.
+The dust pillar has high commercial-investigation intent and is one of the three controlled pilot pages described above. Its two delayed Filter Finder CTAs remain intact; the one new direct Amazon search appears only after MERV, media, depth, source, and compatibility guidance and carries the page-level size/MERV warning and disclosure.
 
 The smoke buyer guide has high commercial-investigation intent but no direct retailer block. Its two delayed Filter Finder CTAs follow particle-versus-gas/odor, MERV, size, fit, loading, and compatibility guidance; correctly sized retailer choices remain gated in the existing Finder. It makes no product-ranking, odor-elimination, or exposure-safety claim.
 

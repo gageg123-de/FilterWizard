@@ -679,11 +679,32 @@ function isAmazonLink(url) {
   }
 }
 
+function getAmazonAffiliateRoute(link) {
+  if (link.dataset.affiliateRoute) return link.dataset.affiliateRoute;
+  if (link.dataset.filterSizeRetailerLink !== undefined) return "size_guide_to_amazon";
+
+  const linkLocation = link.dataset.linkLocation || "";
+  if (linkLocation === "filter-finder-results") return "finder_to_amazon";
+  if (linkLocation === "homepage-shopping-selector") return "homepage_direct_amazon";
+  return "unknown";
+}
+
+function getAmazonSourceType(link, affiliateRoute) {
+  if (link.dataset.sourceType) return link.dataset.sourceType;
+  if (affiliateRoute === "article_direct_amazon") return "article";
+  if (affiliateRoute === "finder_to_amazon") return "filter_finder";
+  if (affiliateRoute === "size_guide_to_amazon") return "size_guide";
+  if (affiliateRoute === "homepage_direct_amazon") return "homepage";
+  return "unknown";
+}
+
 function trackAmazonClick(event) {
   if (typeof window.gtag !== "function") return;
 
   const link = event.target.closest?.("a[href]");
   if (!link || !isAmazonLink(link.href)) return;
+
+  const affiliateRoute = getAmazonAffiliateRoute(link);
 
   window.gtag("event", "amazon_click", {
     link_url: link.href,
@@ -691,6 +712,13 @@ function trackAmazonClick(event) {
     affiliate_tag: getAmazonAffiliateTag(link.href),
     filter_size: link.dataset.filterSize || "unknown",
     link_location: link.dataset.linkLocation || "unknown",
+    source_page: window.location.pathname,
+    source_type: getAmazonSourceType(link, affiliateRoute),
+    outbound_destination: "amazon",
+    affiliate_route: affiliateRoute,
+    shopping_context: link.dataset.shoppingContext || "unknown",
+    filter_rating_context: link.dataset.filterRatingContext || "unknown",
+    article_slug: link.dataset.articleSlug || getArticleSlug() || "unknown",
     page_path: window.location.pathname
   });
 }

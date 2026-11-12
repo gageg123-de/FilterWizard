@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-11-09
+Last verified: 2026-11-11
+
+## 2026-11-11 direct Amazon buying-guide pilot
+
+A controlled direct-Amazon pilot is implemented on exactly three existing commercial-investigation guides: dust, allergy-focused filtration, and the MERV 8/11/13 comparison. Each page adds one relevant static Amazon search link, the required tag and sponsored attributes, a nearby commission disclosure, and a compatibility warning while retaining both prior Finder CTAs. The shared `amazon_click` event now distinguishes `article_direct_amazon`, `finder_to_amazon`, `size_guide_to_amazon`, and `homepage_direct_amazon`; no second article-direct event, affiliate ID, sub-tag, product card, price, ASIN, Amazon image, or new URL was added. Recheck integrity and event semantics after about 14 days, then use comparable 28-day evidence to choose expand, preserve, revise, or rollback. Article #50 remains unapproved.
 
 ## 2026-11-09 article #49 publication
 
