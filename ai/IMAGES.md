@@ -1,6 +1,8 @@
 # Images
 
-Last verified: 2026-11-09
+Last verified: 2026-11-18
+
+The 2026-11-18 subscription-versus-bulk guide adds one generated and visually reviewed 1200×800 WebP: `air-filter-subscription-vs-bulk-hero.webp` (89,664 bytes). It shows a homeowner holding one unbranded pleated filter while comparing neutral single-delivery and multipack boxes in a clean utility area. The image contains no retailer or manufacturer logo, price, discount, subscription claim, dimensions, MERV rating, exposed equipment, unsafe access, or implication that the pictured filters are universally compatible. The hero is eager/high priority; no decorative supporting image was added.
 
 The 2026-11-09 activated-carbon HVAC-filter guide adds one generated and visually reviewed 1200×800 WebP: `activated-carbon-hvac-filter-hero.webp` (94,900 bytes). It shows a homeowner comparing an unbranded light pleated filter with an unbranded dark carbon-enhanced pleated filter beside closed residential HVAC equipment. It contains no logos, text, ratings, retailer cues, exposed electrical parts, open equipment, unsafe handling, exaggerated odor visualization, or claim that color proves carbon quantity, capacity, performance, or compatibility. The caption supplies those limits. The hero is eager/high priority; no decorative supporting image was added.
 

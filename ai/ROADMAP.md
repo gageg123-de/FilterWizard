@@ -1,6 +1,10 @@
 # Roadmap
 
-Last verified: 2026-11-11
+Last verified: 2026-11-18
+
+## 2026-11-18 article #50 publication
+
+Article #50, *Are HVAC Air Filter Subscriptions Worth It?*, was published at `/blog/are-air-filter-subscriptions-worth-it.html` after independent review passed repository-sequence, topic-reality, real-consumer-intent, distinct-intent, duplicate, replacement-timing, sizing, MERV, information-gain, provider-evidence, pricing-scope, like-for-like cost, arithmetic, subscription-terms, legal-accuracy, compatibility, commercial-independence, affiliate, Finder-integrity, and post-draft gates. It owns subscription versus multipack versus single-filter purchasing, including recurring and first-year cash cost, filters consumed versus remaining inventory, delivery flexibility, oversupply, cancellation terms, and a neutral selection framework. The page uses no retailer links and no Finder CTA; it does not extend the three-article direct-Amazon pilot or turn Filter Finder into a subscription engine. Provider prices were too inconsistent across current official surfaces for a durable live-price table, so the guide uses a labeled, checked hypothetical and a dated non-price terms snapshot. Article #51 remains unapproved.
 
 ## 2026-11-11 direct Amazon buying-guide pilot
 

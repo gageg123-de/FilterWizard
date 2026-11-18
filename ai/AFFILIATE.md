@@ -1,6 +1,10 @@
 # Affiliate Integration
 
-Last verified: 2026-11-11
+Last verified: 2026-11-18
+
+## Article #50 commercial treatment — 2026-11-18
+
+The subscription-versus-bulk guide is commercially independent: it has zero retailer links, zero Finder CTAs, no current-price claim, no subscription-affiliate claim, no named winner, and no provider partnership. Filterbuy, Filtrete, and Second Nature links are ordinary informational sources using `noopener noreferrer`, not paid links. The hypothetical cost example is explicitly not a retailer offer. Filter Finder remains a conventional size/MERV guidance tool and is not represented as a provider, delivery, cancellation, or annual-cost comparison engine. The direct-Amazon pilot remains exactly three existing articles, and `filterwizard-20`, sponsored attributes, delegated click tracking, retailer builders, and unknown-size gating are unchanged. Article #51 remains unapproved.
 
 ## Direct Amazon buying-guide pilot — 2026-11-11
 

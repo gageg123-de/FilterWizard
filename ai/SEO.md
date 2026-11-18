@@ -1,6 +1,14 @@
 # SEO
 
-Last verified: 2026-11-11
+Last verified: 2026-11-18
+
+## Article #50 subscription-versus-bulk guide — 2026-11-18
+
+`/blog/are-air-filter-subscriptions-worth-it.html` owns the commercial-investigation question of whether recurring deliveries, multipacks, or individual filter purchases are the better household buying method. The SEO title is `Air Filter Subscriptions vs. Buying in Bulk: Which Is Better?`; the H1 is `Are HVAC Air Filter Subscriptions Worth It?`. Replacement timing, filter size and fit, and MERV selection remain with their existing owners. The page's unique information is annual cash outlay versus filters consumed, leftover inventory, schedule flexibility, current terms, cancellation boundaries, like-for-like normalization, and a neutral decision framework.
+
+The newest directly accessible first-party files were the November 17 exports for Web (text-based) over Last 7 days (chart dates November 9–15), Last 28 days (October 19–November 15), and Last 3 months (August 16–November 15). The 28-day Chart reports 21 clicks and 3,857 impressions (approximately 0.54% CTR and 11.94 impression-weighted average position); separate Page rows report 21 clicks and 4,027 impressions, while privacy-limited Query rows report zero clicks and 809 impressions. No disclosed query in any of the three exports matched subscription, subscribe, delivery, bulk, multipack, cheapest, annual quantity, or cancellation wording. Query and Page sheets were not joined, and absence from the disclosed set is not treated as zero demand. No keyword volume, CPC, difficulty, autocomplete, PAA, or trend claim is published.
+
+No live provider price appears in the page because official current Filterbuy surfaces returned inconsistent values for the same configuration. The page instead uses an explicitly hypothetical same-specification calculation and dates its non-price provider-feature review. No title, metadata, body, or URL from another page changed; the replacement-timing owner receives one precise incoming link. Article #51 remains unapproved.
 
 ## Direct Amazon buying-guide pilot — 2026-11-11
 

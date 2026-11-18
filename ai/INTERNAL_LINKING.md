@@ -1,6 +1,12 @@
 # Internal Linking and Topical Architecture
 
-Last verified: 2026-11-09
+Last verified: 2026-11-18
+
+## Article #50 publication audit
+
+The post-publication audit reports 65 indexable URLs, 61 non-legal content pages, 1,985 internal links, 1,068 unique edges, 642 contextual links, 591 unique contextual edges, average incoming 28.34, average contextual incoming 10.52, median contextual incoming 6, maximum homepage depth two, no unreachable content, no broken local links, and no broken fragments. `/blog/are-air-filter-subscriptions-worth-it.html` has one justified contextual incoming link from the replacement-timing guide, three deliberate Related Articles, zero Finder links, and homepage depth two.
+
+The new page owns subscription versus multipack versus individual purchasing, including annual cash outlay, filters consumed, unused inventory, provider terms, and a neutral decision framework. The replacement-timing guide retains actual service timing and routes only the inventory-method question to the new owner. The sizing, fit, and MERV owners remain linked where a reader must confirm specifications before committing to multiple filters. No homepage, size-guide, Finder, or affiliate link was added.
 
 ## Article #49 publication audit
 
